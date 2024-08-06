@@ -36,6 +36,10 @@ trait-frontal-lisp-desc = You thpeak with a lithp.
 trait-socialanxiety-name = Stutter
 trait-socialanxiety-desc = You speak with a stutter.
 
+trait-name-CPRTraining = CPR Training
+trait-description-CPRTraining = At some point in your life, you have received training in how to perform CPR.
+                                This trait is automatically given for free to medical doctors, and is intended for non-medical characters
+
 trait-southern-name = Southern drawl
 trait-southern-desc = You have a different way of speakin'.
 

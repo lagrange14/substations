@@ -21,6 +21,11 @@
   #   components:
   #   - type: SurgerySpeedModifier
   #    speedModifier: 1.75
+  # TODO: L5 - make this a trait
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: CPRTraining
 
 - type: startingGear
   id: ChemistGear

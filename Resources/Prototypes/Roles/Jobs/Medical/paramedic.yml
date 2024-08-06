@@ -25,6 +25,10 @@
   #  components:
   #  - type: SurgerySpeedModifier
   #    speedModifier: 1.75
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: CPRTraining
 
 - type: startingGear
   id: ParamedicGear

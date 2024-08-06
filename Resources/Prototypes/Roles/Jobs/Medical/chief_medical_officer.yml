@@ -51,6 +51,7 @@
     components:
     - type: SurgerySpeedModifier
       speedModifier: 1.5 # DeltaV
+    - type: CPRTraining
 
 - type: startingGear
   id: CMOGear
