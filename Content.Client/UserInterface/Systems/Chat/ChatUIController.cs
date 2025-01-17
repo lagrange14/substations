@@ -540,13 +540,14 @@ public sealed partial class ChatUIController : UIController
             FilterableChannels |= ChatChannel.Whisper;
             FilterableChannels |= ChatChannel.Radio;
             FilterableChannels |= ChatChannel.Emotes;
-            FilterableChannels |= ChatChannel.Subtle; // Floofstation
             FilterableChannels |= ChatChannel.Notifications;
 
             // Can only send local / radio / emote when attached to a non-ghost entity.
             // TODO: this logic is iffy (checking if controlling something that's NOT a ghost), is there a better way to check this?
             if (_ghost is not {IsGhost: true})
             {
+                FilterableChannels |= ChatChannel.Subtle;
+
                 CanSendChannels |= ChatSelectChannel.Local;
                 CanSendChannels |= ChatSelectChannel.Whisper;
                 CanSendChannels |= ChatSelectChannel.Radio;
@@ -560,6 +561,11 @@ public sealed partial class ChatUIController : UIController
         {
             FilterableChannels |= ChatChannel.Dead;
             CanSendChannels |= ChatSelectChannel.Dead;
+        }
+
+        if (_admin.HasFlag(AdminFlags.Admin) && _ghost is { IsGhost: true })
+        {
+            FilterableChannels |= ChatChannel.Subtle;
         }
 
         // only admins can see / filter asay
