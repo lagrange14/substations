@@ -10,7 +10,7 @@ namespace Content.Server.Chat.Commands
     internal sealed class SubtleOOCCommand : IConsoleCommand
     {
         public string Command => "subtleooc";
-        public string Description => "Perform an subtle action.";
+        public string Description => "Perform a subtle OOC action.";
         public string Help => "subtleooc <text>";
 
         private const string SubtleOOCColor = "#ff7782";
