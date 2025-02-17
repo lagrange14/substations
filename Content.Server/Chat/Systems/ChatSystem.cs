@@ -241,7 +241,11 @@ public sealed partial class ChatSystem : SharedChatSystem
         message = SanitizeInGameICMessage(source, message, out var emoteStr, shouldCapitalize, shouldPunctuate, shouldCapitalizeTheWordI);
 
         // Was there an emote in the message? If so, send it.
-        if (player != null && emoteStr != message && emoteStr != null)
+        if (player != null
+            && emoteStr != message
+            && emoteStr != null
+            && desiredType != InGameICChatType.Subtle
+            && desiredType != InGameICChatType.SubtleOOC)
         {
             SendEntityEmote(source, emoteStr, range, nameOverride, ignoreActionBlocker);
         }
