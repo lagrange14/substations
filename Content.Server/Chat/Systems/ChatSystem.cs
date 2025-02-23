@@ -72,6 +72,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
     public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
     public const string DefaultAnnouncementSound = "/Audio/Announcements/announce.ogg";
+    public readonly Color DefaultSpeakColor = Color.White;
 
     private bool _loocEnabled = true;
     private bool _deadLoocEnabled;
@@ -178,7 +179,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         ICommonSession? player = null,
         string? nameOverride = null,
         bool checkRadioPrefix = true,
-        bool ignoreActionBlocker = false
+        bool ignoreActionBlocker = false,
+        string? color = null
         )
     {
         if (HasComp<GhostComponent>(source))
@@ -231,7 +233,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         }
         // DeltaV - End hushed trait logic
 
-        bool shouldCapitalize = (desiredType != InGameICChatType.Emote && desiredType != InGameICChatType.Subtle);
+        bool shouldCapitalize = (desiredType != InGameICChatType.Emote && desiredType != InGameICChatType.Subtle && desiredType != InGameICChatType.SubtleOOC);
         bool shouldPunctuate = _configurationManager.GetCVar(CCVars.ChatPunctuation);
         // Capitalizing the word I only happens in English, so we check language here
         bool shouldCapitalizeTheWordI = (!CultureInfo.CurrentCulture.IsNeutralCulture && CultureInfo.CurrentCulture.Parent.Name == "en")
@@ -272,7 +274,10 @@ public sealed partial class ChatSystem : SharedChatSystem
                 SendEntityEmote(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
                 break;
             case InGameICChatType.Subtle:
-                SendEntitySubtle(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
+                SendEntitySubtle(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker, color: color);
+                break;
+            case InGameICChatType.SubtleOOC:
+                SendEntitySubtle(source, $"ooc: {message}", range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker, color: color);
                 break;
             //Nyano - Summary: case adds the telepathic chat sending ability.
             case InGameICChatType.Telepathic:
@@ -633,7 +638,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         string? nameOverride,
         bool hideLog = false,
         bool ignoreActionBlocker = false,
-        NetUserId? author = null
+        NetUserId? author = null,
+        string? color = null
         )
     {
         if (!_actionBlocker.CanEmote(source) && !ignoreActionBlocker)
@@ -647,7 +653,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         var wrappedMessage = Loc.GetString("chat-manager-entity-subtle-wrap-message",
             ("entityName", name),
             ("entity", ent),
-            ("message", FormattedMessage.RemoveMarkup(action)));
+            ("color", color ?? DefaultSpeakColor.ToHex()),
+            ("message", FormattedMessage.RemoveMarkupPermissive(action)));
 
         foreach (var (session, data) in GetRecipients(source, WhisperClearRange))
         {
@@ -1035,6 +1042,7 @@ public enum InGameICChatType : byte
     Emote,
     Whisper,
     Subtle, // FloofStation
+    SubtleOOC, // Den
     Telepathic //Nyano - Summary: adds telepathic as a type of message users can receive.
 }
 
