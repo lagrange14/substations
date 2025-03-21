@@ -11,7 +11,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 5 # imp
         reagents:
         - ReagentId: Nutriment
           Quantity: 3
@@ -58,9 +58,9 @@
         maxVol: 10
         reagents:
         - ReagentId: Nutriment
-          Quantity: 8
+          Quantity: 6 # imp
         - ReagentId: Omnizine
-          Quantity: 2
+          Quantity: 2 # imp
 
 - type: entity
   name: dank-pocket
@@ -75,9 +75,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 5 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 3
+        - ReagentId: THC # imp
+          Quantity: 1
   - type: Sprite
     state: dank
 
@@ -94,11 +97,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 15 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 6 # imp
         - ReagentId: Omnizine
-          Quantity: 4
+          Quantity: 2 # imp
+        - ReagentId: THC # imp
+          Quantity: 5
 
 - type: entity
   name: spicy-pocket
@@ -111,6 +117,15 @@
       - spicy
       - meaty
       - cheap
+  - type: SolutionContainerManager # imp
+    solutions:
+      food:
+        maxVol: 5 # imp
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 3
+        - ReagentId: CapsaicinOil
+          Quantity: 1
   - type: Sprite
     state: plain
 
@@ -128,11 +143,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 15
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 6 # imp
         - ReagentId: Omnizine
           Quantity: 2
+        - ReagentId: CapsaicinOil # imp
+          Quantity: 5
   - type: Sprite
     state: spicy
 
@@ -147,6 +165,15 @@
       - meaty
       - sweet
       - cheap
+  - type: SolutionContainerManager # imp
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 3
+        - ReagentId: TeriyakiSauce
+          Quantity: 1
   - type: Sprite
     state: teriyaki
 
@@ -164,11 +191,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 15 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 6 # imp
         - ReagentId: Omnizine
           Quantity: 2
+        - ReagentId: TeriyakiSauce # imp
+          Quantity: 5
 
 - type: entity
   name: pizza-pocket
@@ -185,9 +215,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 10 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 8 # imp
   - type: Sprite
     state: pizza
 
@@ -206,9 +237,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 20 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 15
+          Quantity: 16 # imp
         - ReagentId: Omnizine
           Quantity: 2
 
@@ -222,14 +254,18 @@
     flavors:
       - funny
       - cheap
+      - banana # imp
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 5 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 3.4 # imp
         - ReagentId: Omnizine
-          Quantity: 2
+          Quantity: 1 # imp
+        - ReagentId: Vitamin # imp
+          Quantity: 0.1
   - type: Sprite
     state: banana
 
@@ -243,31 +279,39 @@
     flavors:
       - funny
       - cheap
+      - banana # imp
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 15 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 8 # imp
         - ReagentId: Omnizine
-          Quantity: 2
+          Quantity: 2 # imp
+        - ReagentId: Vitamin # imp
+          Quantity: 1
 
 - type: entity
   name: berry-pocket
   parent: FoodDonkpocketBase
   id: FoodDonkpocketBerry
-  description: A relentlessly sweet donk-pocket. Made with 100% artificial flavoring.
+  description: A relentlessly sweet donk-pocket first created for use in Operation Iraqi Freedom. # imp - sorry but i have not stopped laughing at this old description since i saw it
   components:
   - type: FlavorProfile
     flavors:
       - sweet
       - cheap
+      - berry # imp
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 5 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 3.5 # imp
+        - ReagentId: Vitamin
+          Quantity: 0.1
   - type: Sprite
     state: berry
 
@@ -281,15 +325,17 @@
     flavors:
       - sweet
       - cheap
+      - berry # imp
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 15 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 8.5 # imp
         - ReagentId: Omnizine
           Quantity: 2
-        - ReagentId: Sugar
+        - ReagentId: Vitamin # imp
           Quantity: 2
 
 - type: entity
@@ -327,7 +373,10 @@
         - ReagentId: Nutriment
           Quantity: 10
         - ReagentId: Omnizine
-          Quantity: 2
+          Quantity: 1 # imp
+  - type: RandomFillSolution # imp
+    solution: food
+    weightedRandomId: RandomFillStonk
 
 - type: entity
   name: carp-pocket
@@ -342,9 +391,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 5 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 3 # imp
+        - ReagentId: CarpoToxin # imp
+          Quantity: 1
   - type: Sprite
     state: carp
 
@@ -360,11 +412,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 20 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 6 # imp
         - ReagentId: Omnizine
-          Quantity: 2
+          Quantity: 4 # imp
+        - ReagentId: CarpoToxin # imp
+          Quantity: 5
 
 - type: entity
   name: dink-pocket
@@ -379,9 +434,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
+        maxVol: 5 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 2
+          Quantity: 3 # imp
         - ReagentId: JuiceCarrot
           Quantity: 1
   - type: Sprite

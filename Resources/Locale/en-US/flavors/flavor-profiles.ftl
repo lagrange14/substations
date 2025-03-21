@@ -49,6 +49,9 @@ flavor-base-alkaline = alkaline
 flavor-base-holy = holy
 flavor-base-horrible = horrible
 
+# just for the space bear dishes
+flavor-base-gamey = gamey
+
 # lmao
 flavor-base-terrible = terrible
 flavor-base-mindful = mindful
@@ -267,7 +270,7 @@ flavor-complex-white-gilgamesh = like lightly carbonated cream
 flavor-complex-antifreeze = warm
 flavor-complex-caipirinha = like Brazil
 flavor-complex-daiquiri = like rum, lime and sugar
-flavor-complex-deathintheafternoon = like anise and champagne 
+flavor-complex-deathintheafternoon = like anise and champagne
 flavor-complex-empress75 = like tyrian purple
 flavor-complex-espressomartini = like vodka and coffee
 flavor-complex-mayojito = like stomach turmoil
