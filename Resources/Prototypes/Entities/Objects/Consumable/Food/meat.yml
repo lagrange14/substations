@@ -736,6 +736,9 @@
     # L5 - beef until ingredient tags bubble up.
   - type: Sprite
     state: meatball
+  - type: Construction
+    graph: MeatMeatballCooked
+    node: start
 
 - type: entity
   name: slimeball
@@ -1278,6 +1281,9 @@
     entries:
       Burger: MeatBall
       Taco: MeatBall
+  - type: Construction
+    graph: MeatMeatballCooked
+    node: meatball cooked
 
 - type: entity
   name: boiled snail
