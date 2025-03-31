@@ -13,6 +13,7 @@
   naming: First
   sexes:
   - Unsexed
+  allowCustomSpeciesName: true # L5
 
 - type: speciesBaseSprites
   id: MobVoxSprites

@@ -231,6 +231,15 @@ namespace Content.Client.Lobby.UI
                 OnSkinColorOnValueChanged();
             };
 
+            #region L5: Custom Species
+
+            CCustomSpeciesEdit.OnTextChanged += args =>
+            {
+                SetCustomSpecies(args.Text);
+            };
+
+            #endregion
+
             // Begin CD - Character Records
             #region CDHeight
 
@@ -799,6 +808,7 @@ namespace Content.Client.Lobby.UI
             JobOverride = null;
 
             UpdateNameEdit();
+            UpdateCustomSpeciesEdit(); // L5: Custom species name
             UpdateFlavorTextEdit();
             UpdateSexControls();
             UpdateGenderControls();
@@ -1293,6 +1303,13 @@ namespace Content.Client.Lobby.UI
             ReloadPreview();
         }
 
+        // L5: Set the custom species name on the profile.
+        private void SetCustomSpecies(string customSpecies)
+        {
+            Profile = Profile?.WithCustomSpecies(!string.IsNullOrWhiteSpace(customSpecies) ? customSpecies : null);
+            SetDirty();
+        }
+
         private void SetName(string newName)
         {
             Profile = Profile?.WithName(newName);
@@ -1335,6 +1352,23 @@ namespace Content.Client.Lobby.UI
         private void UpdateNameEdit()
         {
             NameEdit.Text = Profile?.Name ?? "";
+        }
+
+        // L5: Custom species name
+        private void UpdateCustomSpeciesEdit()
+        {
+            // Apply the custom name for the profile, otherwise default to the selected species name
+            var profileSpecies = _species.FirstOrDefault(x => x.ID == Profile?.Species);
+            var speciesAllowsNameCustomization = profileSpecies?.AllowCustomSpeciesName ?? false;
+
+            // Apply the profile's custom species name if allowed and valid, or default to empty string
+            CCustomSpeciesEdit.Text =
+                speciesAllowsNameCustomization && !string.IsNullOrWhiteSpace(Profile?.CustomSpecies)
+                    ? Profile.CustomSpecies
+                    : "";
+
+            // Don't show the controls for editing custom species name if the species doesn't allow it
+            CCustomSpecies.Visible = speciesAllowsNameCustomization;
         }
 
         private void UpdateFlavorTextEdit()

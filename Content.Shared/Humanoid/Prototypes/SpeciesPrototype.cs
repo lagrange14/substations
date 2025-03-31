@@ -168,6 +168,12 @@ public sealed partial class SpeciesPrototype : IPrototype
     [DataField("scaleHeight")]
     public bool ScaleHeight = true;
     // End CD - Character Records
+
+    /// <summary>
+    /// L5: Whether to allow species name customization.
+    /// </summary>
+    [DataField]
+    public bool AllowCustomSpeciesName;
 }
 
 public enum SpeciesNaming : byte

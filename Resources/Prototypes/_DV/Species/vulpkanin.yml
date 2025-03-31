@@ -11,6 +11,7 @@
   maleFirstNames: NamesVulpkaninMale
   femaleFirstNames: NamesVulpkaninFemale
   lastNames: NamesVulpkaninLast
+  allowCustomSpeciesName: true # L5
 
 - type: speciesBaseSprites
   id: MobVulpkaninSprites

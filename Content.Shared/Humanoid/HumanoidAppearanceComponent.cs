@@ -48,6 +48,12 @@ public sealed partial class HumanoidAppearanceComponent : Component
     public ProtoId<SpeciesPrototype> Species { get; set; }
 
     /// <summary>
+    ///     L5: Custom species name to display instead of the species' localized name.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public string? CustomSpecies { get; set; }
+
+    /// <summary>
     ///     The initial profile and base layers to apply to this humanoid.
     /// </summary>
     [DataField]

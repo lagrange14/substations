@@ -108,7 +108,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     private void OnExamined(EntityUid uid, HumanoidAppearanceComponent component, ExaminedEvent args)
     {
         var identity = Identity.Entity(uid, EntityManager);
-        var species = GetSpeciesRepresentation(component.Species).ToLower();
+        var species = component.CustomSpecies ?? GetSpeciesRepresentation(component.Species).ToLower(); // L5: Custom species name
         var age = GetAgeRepresentation(component.Species, component.Age);
 
         args.PushText(Loc.GetString("humanoid-appearance-component-examine", ("user", identity), ("age", age), ("species", species)));
@@ -149,6 +149,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             return;
 
         targetHumanoid.Species = sourceHumanoid.Species;
+        targetHumanoid.CustomSpecies = sourceHumanoid.CustomSpecies; // L5: Custom species name
         targetHumanoid.SkinColor = sourceHumanoid.SkinColor;
         targetHumanoid.EyeColor = sourceHumanoid.EyeColor;
         targetHumanoid.Age = sourceHumanoid.Age;
@@ -379,6 +380,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         SetSpecies(uid, profile.Species, false, humanoid);
+        humanoid.CustomSpecies = profile.CustomSpecies;
         SetSex(uid, profile.Sex, false, humanoid);
         humanoid.EyeColor = profile.Appearance.EyeColor;
 

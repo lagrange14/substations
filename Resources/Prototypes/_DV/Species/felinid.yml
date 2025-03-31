@@ -9,6 +9,7 @@
   skinColoration: Hues
   baseScale: "0.8, 0.8"
   #minHeight: 0.95 # L5 - expand height selection
+  allowCustomSpeciesName: true # L5
 
 - type: markingPoints
   id: MobFelinidMarkingLimits

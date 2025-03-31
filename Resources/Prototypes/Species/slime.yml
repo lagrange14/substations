@@ -8,6 +8,7 @@
   markingLimits: MobSlimeMarkingLimits
   dollPrototype: MobSlimePersonDummy
   skinColoration: Hues
+  allowCustomSpeciesName: true # L5
 
 - type: speciesBaseSprites
   id: MobSlimeSprites

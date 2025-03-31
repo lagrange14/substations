@@ -1,3 +1,4 @@
+using System.Globalization;
 using Content.Server.Forensics;
 using Content.Server.GameTicking;
 using Content.Server.StationRecords.Systems;
@@ -71,12 +72,21 @@ public sealed class CharacterRecordsSystem : EntitySystem
             jobTitle = stationRecords.JobTitle;
         }
 
+        // L5: If a custom species is set by the player, display it in title-case in records
+        string capitalizedSpecies =  profile.Species; // this is already capitalized, if you're wondering
+        if (!string.IsNullOrEmpty(profile.CustomSpecies))
+        {
+            var textInfo = CultureInfo.InvariantCulture.TextInfo;
+            capitalizedSpecies = textInfo.ToTitleCase(profile.CustomSpecies);
+        }
+        // /L5
+
         var records = new FullCharacterRecords(
             pRecords: new PlayerProvidedCharacterRecords(profile.CDCharacterRecords),
             stationRecordsKey: stationRecordsKey?.Id,
             name: profile.Name,
             age: profile.Age,
-            species: profile.Species,
+            species: capitalizedSpecies, // L5: Custom species support
             jobTitle: jobTitle,
             jobIcon: jobPrototype.Icon,
             gender: profile.Gender,

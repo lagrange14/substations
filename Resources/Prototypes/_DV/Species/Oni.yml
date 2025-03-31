@@ -13,6 +13,7 @@
   naming: LastNoFirst
   baseScale: "1.2, 1.2"
   #maxHeight: 1.05 # L5 - expand height selection
+  allowCustomSpeciesName: true # L5
 
 - type: markingPoints
   id: MobOniMarkingLimits

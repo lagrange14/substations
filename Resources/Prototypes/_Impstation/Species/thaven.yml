@@ -17,6 +17,7 @@
   - Unsexed
   baseScale: "1, 1.05" # DeltaV - make sure Thaven are still scaled w/ CD records
   #maxHeight: 1.05 # DeltaV # L5 - expand height selection
+  allowCustomSpeciesName: true # L5
 
 - type: speciesBaseSprites
   id: MobThavenSprites

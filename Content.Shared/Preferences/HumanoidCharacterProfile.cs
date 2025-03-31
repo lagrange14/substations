@@ -39,6 +39,7 @@ namespace Content.Shared.Preferences
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
         public const int MaxNameLength = 32;
+        public const int MaxCustomSpeciesLength = 32; // L5: Maximum characters in custom species name.
         public const int MaxLoadoutNameLength = 32;
         public const int MaxDescLength = 512;
 
@@ -87,6 +88,12 @@ namespace Content.Shared.Preferences
         /// </summary>
         [DataField]
         public ProtoId<SpeciesPrototype> Species { get; set; } = SharedHumanoidAppearanceSystem.DefaultSpecies;
+
+        /// <summary>
+        /// L5: Custom species name which is shown to the player instead of the species' localized name.
+        /// </summary>
+        [DataField]
+        public string? CustomSpecies;
 
         [DataField]
         public int Age { get; set; } = 18;
@@ -148,6 +155,7 @@ namespace Content.Shared.Preferences
             string name,
             string flavortext,
             string species,
+            string? customSpecies, // L5: Custom species name
             int age,
             Sex sex,
             Gender gender,
@@ -167,6 +175,7 @@ namespace Content.Shared.Preferences
             Name = name;
             FlavorText = flavortext;
             Species = species;
+            CustomSpecies = customSpecies; // L5: Custom species name
             Age = age;
             Sex = sex;
             Gender = gender;
@@ -202,6 +211,7 @@ namespace Content.Shared.Preferences
             : this(other.Name,
                 other.FlavorText,
                 other.Species,
+                other.CustomSpecies,
                 other.Age,
                 other.Sex,
                 other.Gender,
@@ -325,6 +335,11 @@ namespace Content.Shared.Preferences
             return new(this) { Species = species };
         }
 
+        // L5: Custom species name
+        public HumanoidCharacterProfile WithCustomSpecies(string? customSpecies)
+        {
+            return new(this) { CustomSpecies = customSpecies };
+        }
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
@@ -507,6 +522,7 @@ namespace Content.Shared.Preferences
             if (Sex != other.Sex) return false;
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
+            if (CustomSpecies != other.CustomSpecies) return false; // L5: Custom species name
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
@@ -569,6 +585,21 @@ namespace Content.Shared.Preferences
             }
 
             name = name.Trim();
+
+            // L5: Custom species name validation.
+            string? customSpecies;
+
+            if (speciesPrototype.AllowCustomSpeciesName && !string.IsNullOrWhiteSpace(CustomSpecies))
+            {
+                customSpecies = FormattedMessage.RemoveMarkupOrThrow(CustomSpecies.Trim());
+                if (customSpecies.Length > MaxCustomSpeciesLength)
+                    customSpecies = customSpecies[..MaxCustomSpeciesLength];
+            }
+            else
+            {
+                customSpecies = null;
+            }
+            // /L5
 
             if (configManager.GetCVar(CCVars.RestrictedNames))
             {
@@ -649,6 +680,7 @@ namespace Content.Shared.Preferences
                          .ToList();
 
             Name = name;
+            CustomSpecies = customSpecies; // L5
             FlavorText = flavortext;
             Age = age;
             Sex = sex;
@@ -772,6 +804,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(Name);
             hashCode.Add(FlavorText);
             hashCode.Add(Species);
+            hashCode.Add(CustomSpecies); // L5: Custom species name
             hashCode.Add(Age);
             hashCode.Add((int)Sex);
             hashCode.Add((int)Gender);

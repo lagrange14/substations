@@ -9,6 +9,7 @@
   skinColoration: HumanToned
   baseScale: "0.9, 0.9"
   #minHeight: 0.95 # L5 - expand height selection
+  allowCustomSpeciesName: true # L5
 
 - type: speciesBaseSprites
   id: MobHarpySprites

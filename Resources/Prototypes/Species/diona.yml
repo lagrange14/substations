@@ -12,6 +12,7 @@
   femaleFirstNames: NamesDionaFirst
   lastNames: NamesDionaLast
   naming: TheFirstofLast
+  allowCustomSpeciesName: true # L5
 
 - type: speciesBaseSprites
   id: MobDionaSprites
