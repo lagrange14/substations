@@ -429,6 +429,8 @@
     - EVASuit
     # End DeltaV Additions
     dynamicPacks:
+    - SalvageSecurityBoards
+    - SalvageSecurityWeapons
     - SecurityEquipment
     - SecurityBoards
     - SecurityExplosives
