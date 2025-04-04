@@ -25,7 +25,7 @@ public sealed partial class CCVars
     /// </summary>
     [CVarControl(AdminFlags.VarEdit)]
     public static readonly CVarDef<float> MovementPushingVelocityProduct =
-        CVarDef.Create("movement.pushing_velocity_product", 0.0f, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("movement.pushing_velocity_product", -1f, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     /// Cap for how much an entity can be pushed per second.
