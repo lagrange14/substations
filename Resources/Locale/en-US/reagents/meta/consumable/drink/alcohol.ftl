@@ -37,8 +37,8 @@ reagent-desc-poison-wine = Is this even wine? Toxic! Hallucinogenic! Probably co
 reagent-name-rum = rum
 reagent-desc-rum = Distilled alcoholic drink made from sugarcane byproducts.
 
-#reagent-name-sake = sake
-#reagent-desc-sake = Alcoholic beverage made by fermenting rice that has been polished.
+# reagent-name-sake = sake
+# reagent-desc-sake = Alcoholic beverage made by fermenting rice that has been polished.
 
 reagent-name-tequila = tequila
 reagent-desc-tequila = A strong and mildly flavoured, mexican produced spirit.
@@ -304,19 +304,19 @@ reagent-desc-espresso-martini = To wake you up and wind you down. Garnished with
 reagent-name-mayojito = mayojito
 reagent-desc-mayojito = An affront to god and man. Do not drink it.
 
-reagent-name-mimeosa = mimeosa 
+reagent-name-mimeosa = mimeosa
 reagent-desc-mimeosa = It has an orange tang so sour you just can't describe it.
 
 reagent-name-mimosa = mimosa
 reagent-desc-mimosa = Perfect for a lively brunch out with the girls.
 
-reagent-name-moscow-mule = moscow mule 
+reagent-name-moscow-mule = moscow mule
 reagent-desc-moscow-mule = A surpsingly strong and refreshing mixed drink, served in an iconic copper mug.
 
 reagent-name-the-sun-also-rises = the sun also rises
 reagent-desc-the-sun-also-rises = A strong cocktail mixed into a murky blend. A secret favorite of tortured authors.
 
-reagent-name-whiskey-sour = whiskey sour 
+reagent-name-whiskey-sour = whiskey sour
 reagent-desc-whiskey-sour = What's the secret ingredient? Eggs. It's eggs.
 
 reagent-name-zombiecocktail = Zombie
