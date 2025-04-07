@@ -810,7 +810,7 @@
 - type: entity
   parent: BasePDA
   id: RnDPDA
-  name: desearch director PDA # DeltaV - Epistemics Department replacing Science # L5 undooo
+  name: research director PDA # DeltaV - Epistemics Department replacing Science # L5 undooo
   description: It appears surprisingly ordinary.
   components:
   - type: Pda

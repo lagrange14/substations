@@ -23,7 +23,7 @@
   parent: BaseFlag
   id: NTFlag
   name: System flag
-  description: Joy to System! Wait, they really made a flag for a system of uploaded consciousnesses?
+  description: Joy to the System! Wait, they really made a flag for a system of uploaded consciousnesses?
   components:
   - type: Sprite
     state: NT_flag

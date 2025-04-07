@@ -15,7 +15,7 @@
   parent: BaseItem
   id: NTHandyFlag
   name: System handheld flag
-  description: "Joy to the System! Wait, they really made a handheld flag for a corporation?"
+  description: "Joy to the System! Wait, they really made a flag for a system of uploaded consciousnesses?"
   components:
   - type: Sprite
     sprite: Objects/Misc/Handy_Flags/NT_handy_flag.rsi

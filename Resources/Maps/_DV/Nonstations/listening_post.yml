@@ -4389,8 +4389,8 @@ entities:
   - uid: 594
     components:
     - type: MetaData
-      desc: an evil cabinet designed to hold an Interdyne defibrilator
-      name: Interdyne defibrilator cabinet
+      desc: an evil cabinet designed to hold an International Trinitarian defibrilator # L5
+      name: International Trinitarian defibrilator cabinet # L5
     - type: Transform
       pos: -0.5,-1.5
       parent: 1
