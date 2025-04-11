@@ -1,0 +1,14 @@
+- type: entity
+  id: CrateServiceDogstarProducts
+  parent: CrateGenericSteel
+  name: Sirius Agritech's Dogstar product line
+  description: Contains various items from the Dogstar line of products.
+  components:
+  - type: StorageFill
+    contents:
+    - id: DrinkDogstarCoffeeJug
+    - id: DrinkMaomiChaJug
+    - id: ReagentContainerDogstarChocolate
+      amount: 2
+    - id: FoodSnackDogstarChocolate
+      amount: 5

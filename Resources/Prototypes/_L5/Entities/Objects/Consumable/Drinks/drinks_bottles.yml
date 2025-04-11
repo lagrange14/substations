@@ -1,0 +1,33 @@
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkDogstarCoffeeJug
+  name: coffee jug
+  description: Wake up juice, of the heated kind, now for dogs.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: DogstarCoffee
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-dogstar-coffee
+
+- type: entity
+  parent: DrinkBottlePlasticBaseFull
+  id: DrinkMaomiChaJug
+  name: Maomi-Cha jug
+  description: Sirius Agritech's hot tea, now for cats.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 300
+        reagents:
+        - ReagentId: MaomiCha
+          Quantity: 300
+  - type: Drink
+  - type: Label
+    currentLabel: reagent-name-maomi-cha

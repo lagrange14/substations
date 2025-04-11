@@ -1,0 +1,71 @@
+- type: reaction
+  id: DogstarHotCocoa
+  minTemp: 350
+  reactants:
+    Water:
+      amount: 1
+    DogstarCocoaPowder:
+      amount: 1
+  products:
+    DogstarHotCocoa: 2
+
+- type: reaction
+  id: DogstarOatHotCocoa
+  minTemp: 350
+  reactants:
+    MilkOat:
+      amount: 1
+    DogstarCocoaPowder:
+      amount: 1
+  products:
+    DogstarHotCocoa: 2
+
+- type: reaction
+  id: DogstarIcedCoffee
+  reactants:
+    DogstarCoffee:
+      amount: 2
+    Ice:
+      amount: 1
+  products:
+    IcedDogstarCoffee: 3
+
+- type: reaction
+  id: DogstarMocha
+  reactants:
+    DogstarCoffee:
+      amount: 1
+    DogstarHotCocoa:
+      amount: 2
+  products:
+    DogstarMocha: 3
+
+- type: reaction
+  id: DogstarOatMocha
+  reactants:
+    DogstarCoffee:
+      amount: 1
+    DogstarOatHotCocoa:
+      amount: 2
+  products:
+    DogstarMocha: 3
+
+- type: reaction
+  id: IcedMaomiCha
+  reactants:
+    MaomiCha:
+      amount: 2
+    Ice:
+      amount: 1
+  products:
+    IcedMaomiCha: 3
+
+- type: reaction
+  id: ArnoldPawmer
+  reactants:
+    IcedMaomiCha:
+      amount: 1
+    Lemonade:
+      amount: 1
+  products:
+    ArnoldPawmer: 2
