@@ -71,6 +71,19 @@ namespace Content.Server.Database
                 .IsRequired();
             // End CD - CD Character Data
 
+            // Begin L5 - L5 library data
+            modelBuilder.Entity<L5Model.Book>()
+                .HasOne(b => b.Collection)
+                .WithMany(p => p.Books)
+                .HasForeignKey(p => p.CollectionId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<L5Model.BookCheckOut>()
+                .HasOne(c => c.Book)
+                .WithMany(b => b.CheckOuts)
+                .HasForeignKey(c => c.BookId);
+            // End L5 - L5 library data
+
             modelBuilder.Entity<Antag>()
                 .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.AntagName})
                 .IsUnique();
