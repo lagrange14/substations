@@ -21,6 +21,26 @@
     DogstarHotCocoa: 2
 
 - type: reaction
+  id: DogstarCafeLatte
+  reactants:
+    Milk:
+      amount: 1
+    DogstarCoffee:
+      amount: 1
+  products:
+    DogstarCafeLatte: 2
+
+- type: reaction
+  id: DogstarSoyLatte
+  reactants:
+    MilkSoy:
+      amount: 1
+    DogstarCoffee:
+      amount: 1
+  products:
+    DogstarSoyLatte: 2
+
+- type: reaction
   id: DogstarIcedCoffee
   reactants:
     DogstarCoffee:

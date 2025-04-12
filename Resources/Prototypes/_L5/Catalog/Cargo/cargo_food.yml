@@ -3,7 +3,7 @@
   icon:
     sprite: Objects/Consumable/Food/snacks.rsi
     state: chocolatebar
-  product: CrateFoodSoftdrinks
+  product: CrateServiceDogstarProducts
   cost: 1500
   category: cargoproduct-category-name-food
   group: market

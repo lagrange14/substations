@@ -18,7 +18,7 @@
   parent: DrinkBaseCup
   id: DrinkDogstarHotCoffee
   name: Dogstar coffee
-  description: \"Dogs can't tell the difference between coffee and Dogstar Coffee!\" A hot drink brewed with Sirius Agritech's genetically modified coffee; safe for animals, not so safe for humans.
+  description: "\"Dogs can't tell the difference between coffee and Dogstar Coffee!\" A hot drink brewed with Sirius Agritech's genetically modified coffee; safe for animals, not so safe for humans."
   components:
   - type: SolutionContainerManager
     solutions:

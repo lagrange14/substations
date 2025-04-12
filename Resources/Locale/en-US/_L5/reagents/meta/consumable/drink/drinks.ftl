@@ -13,7 +13,7 @@ reagent-desc-dogstar-cafe-latte = A coffee drink made with Sirius Agritech's Dog
 
 # Chocolate drinks
 reagent-name-dogstar-hot-cocoa = Dogstar Hot Cocoa
-reagent-name-dogstar-oat-hot-cocoa = Dogstar Oatmilk Mocha
+reagent-name-dogstar-oat-hot-cocoa = Dogstar Oatmilk Hot Cocoa
 reagent-desc-dogstar-hot-cocoa = Rich and chocolatey, this cocoa is perfect for a winter's day, and is safe for animals to drink. Humans...not so much...
 
 reagent-name-dogstar-mocha = Dogstar Mocha
