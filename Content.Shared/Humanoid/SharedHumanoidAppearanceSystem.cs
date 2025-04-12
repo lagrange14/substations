@@ -110,7 +110,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     private void OnExamined(EntityUid uid, HumanoidAppearanceComponent component, ExaminedEvent args)
     {
         var identity = Identity.Entity(uid, EntityManager);
-        var species = component.CustomSpecies ?? GetSpeciesRepresentation(component.Species).ToLower(); // L5: Custom species name
+        var species = component.CustomSpecies ?? GetSpeciesRepresentation(component.Species, component.Synthetic).ToLower(); // L5: Custom species name
         var age = GetAgeRepresentation(component.Species, component.Age);
 
         args.PushText(Loc.GetString("humanoid-appearance-component-examine", ("user", identity), ("age", age), ("species", species)));
@@ -548,11 +548,12 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     /// <summary>
     /// Takes ID of the species prototype, returns UI-friendly name of the species.
     /// </summary>
-    public string GetSpeciesRepresentation(string speciesId)
+    public string GetSpeciesRepresentation(string speciesId, bool synthetic)
     {
+        var syntheticPrefix = synthetic ? $"{Loc.GetString("humanoid-appearance-component-synthetic")} " : "";
         if (_proto.TryIndex<SpeciesPrototype>(speciesId, out var species))
         {
-            return Loc.GetString(species.Name);
+            return syntheticPrefix + Loc.GetString(species.Name);
         }
 
         Log.Error("Tried to get representation of unknown species: {speciesId}");
