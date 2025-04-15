@@ -4361,3 +4361,13 @@
   id: 1265
   time: '2025-04-15T17:14:17.0000000+00:00'
   url: https://github.com/DeltaV-Station/Delta-v/pull/3403
+- author: deltanedas
+  changes:
+  - message: Holofans now work like in SS13, you can place up to 6 at once with charges
+      reclaimed by removing unused holofans.
+    type: Tweak
+  - message: Removed the battery requirement from holofan projectors.
+    type: Remove
+  id: 1266
+  time: '2025-04-15T18:28:24.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/3462
