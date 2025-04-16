@@ -113,7 +113,7 @@
   icon:
     sprite: Structures/Storage/tanks.rsi
     state: highwatertank
-  product: WaterTankHighCapacityFull
+  product: WaterTankHighCapacity
   cost: 6000 # it has 10,000u of water so roughly 6x the cost makes sense to me
   category: cargoproduct-category-name-materials
   group: market
