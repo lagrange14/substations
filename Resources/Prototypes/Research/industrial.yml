@@ -92,6 +92,7 @@
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
   - EmitterCircuitboard
+  - PowerComputerCircuitBoard #readding the power monitor board
 
 - type: technology
   id: AtmosphericTech

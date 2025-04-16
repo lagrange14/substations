@@ -83,6 +83,7 @@
   - PortableScrubberMachineCircuitBoard
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
+  - PowerComputerCircuitBoard # readd the power monitor board to lathes
   - GasRecyclerMachineCircuitboard
   - PortableGeneratorPacmanMachineCircuitboard
   - PortableGeneratorSuperPacmanMachineCircuitboard

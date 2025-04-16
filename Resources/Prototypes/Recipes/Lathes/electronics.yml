@@ -151,6 +151,11 @@
 
 - type: latheRecipe
   parent: BaseCircuitboardRecipe
+  id: PowerComputerCircuitBoard
+  result: PowerComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseCircuitboardRecipe
   id: PortableScrubberMachineCircuitBoard
   result: PortableScrubberMachineCircuitBoard
 
