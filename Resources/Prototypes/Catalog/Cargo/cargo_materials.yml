@@ -108,12 +108,12 @@
   category: cargoproduct-category-name-materials
   group: market
 
-- type: cargoProduct # making the highcap water tank purchasable
-  id: MaterialHighCapacityWaterTank
-  icon:
-    sprite: Structures/Storage/tanks.rsi
-    state: highwatertank
-  product: WaterTankHighCapacity
-  cost: 5000
-  category: cargoproduct-category-name-materials
-  group: market
+#- type: cargoProduct # making the highcap water tank purchasable
+#  id: MaterialHighCapacityWaterTank
+#  icon:
+#    sprite: Structures/Storage/tanks.rsi
+#    state: highwatertank
+#  product: WaterTankHighCapacity
+#  cost: 5000
+#  category: cargoproduct-category-name-materials
+#  group: market
