@@ -612,3 +612,8 @@
   parent: BaseCircuitboardRecipe
   id: PowerComputerCircuitBoard
   result: PowerComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseCircuitboardRecipe
+  id: AtmosMonitoringComputerCircuitBoard
+  result: AtmosMonitoringComputerCircuitboard
