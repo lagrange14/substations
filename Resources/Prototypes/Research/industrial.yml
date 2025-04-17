@@ -84,7 +84,7 @@
     state: portgen0
   discipline: Industrial
   tier: 1
-  cost: 7500
+  cost: 8000
   recipeUnlocks:
   - PortableGeneratorPacmanMachineCircuitboard
   - PortableGeneratorSuperPacmanMachineCircuitboard
@@ -102,7 +102,7 @@
     state: freezerOff
   discipline: Industrial
   tier: 1
-  cost: 7500
+  cost: 8000
   recipeUnlocks:
   - ThermomachineFreezerMachineCircuitBoard
   - GasRecyclerMachineCircuitboard
