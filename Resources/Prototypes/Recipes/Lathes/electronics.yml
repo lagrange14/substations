@@ -607,3 +607,8 @@
   parent: BaseCircuitboardRecipe
   id: HolopadMachineCircuitboard
   result: HolopadMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseCircuitboardRecipe
+  id: PowerComputerCircuitBoard
+  result: PowerComputerCircuitboard
