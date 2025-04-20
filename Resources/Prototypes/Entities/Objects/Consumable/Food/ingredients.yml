@@ -605,7 +605,7 @@
     slice: FoodCroissantRawCotton
   - type: Tag
     tags:
-    - CottonMade
+    - ClothMade
     - Vegan # L5
     - Wheat # L5
 
@@ -972,6 +972,6 @@
     state: croissant-raw-cotton
   - type: Tag
     tags:
-    - CottonMade
+    - ClothMade
     - Vegan # L5
     - Wheat # L5

@@ -428,6 +428,7 @@
     - Dairy # L5
     - Meat
     - Pizza
+    - Treyf # L5
     - Wheat # L5
 
 - type: entity
@@ -451,6 +452,7 @@
     - Meat
     - Pizza
     - Slice
+    - Treyf # L5
     - Wheat # L5
 # Tastes like crust, tomato, cheese, sausage, sass.
 
@@ -478,6 +480,7 @@
     - LatexInteraction # L5
     - Meat
     - Pizza
+    - Treyf # L5
     - Wheat # L5
 
 - type: entity
