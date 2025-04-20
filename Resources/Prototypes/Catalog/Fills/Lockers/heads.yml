@@ -42,6 +42,7 @@
     - id: CigarGoldCase
       prob: 0.25
     - id: ClothingBeltSheathFilled
+    - id: ClothingBeltPaperworkFilled # L5 - you're an administrator, tbh...
     - id: ClothingHeadsetAltCommand
     - id: ClothingOuterArmorCaptainCarapace
     - id: CommsComputerCircuitboard
