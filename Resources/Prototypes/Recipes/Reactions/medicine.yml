@@ -114,17 +114,18 @@
     Dexalin: 3
 
 # Funkychem - no more dex+
-# - type: reaction
-#   id: DexalinPlus
-#   reactants:
-#     Dexalin:
-#       amount: 1
-#     Carbon:
-#       amount: 1
-#     Iron:
-#       amount: 1
-#   products:
-#     DexalinPlus: 3
+# L5 - revert
+- type: reaction
+  id: DexalinPlus
+  reactants:
+    Dexalin:
+      amount: 1
+    Carbon:
+      amount: 1
+    Iron:
+      amount: 1
+  products:
+    DexalinPlus: 3
 
 - type: reaction
   id: Hyronalin
@@ -562,7 +563,7 @@
   id: Opporozidone
   minTemp: 400 #Maybe if a method of reducing reagent temp exists one day, this could be -50
   reactants:
-    Cognizine: 
+    Cognizine:
       amount: 1
     Plasma:
       amount: 2
