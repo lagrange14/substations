@@ -246,6 +246,13 @@
           Quantity: 10.5
         - ReagentId: Vitamin
           Quantity: 1.5
+    # Funkychem
+  - type: Extractable
+    grindableSolutionName: food
+    juiceSolution:
+      reagents:
+      - ReagentId: LiquidPie
+        Quantity: 2
 # Tastes like pie, cream, banana.
 
 - type: entity

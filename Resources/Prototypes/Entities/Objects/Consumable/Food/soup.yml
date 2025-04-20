@@ -788,7 +788,8 @@
   - type: FlavorProfile
     flavors:
     - vegetables
-    - sadness
+    - savory # L5: let vegans enjoy a thing
+    #- sadness # L5: let vegans enjoy a thing
     - potatoes # imp
   - type: Sprite
     layers:

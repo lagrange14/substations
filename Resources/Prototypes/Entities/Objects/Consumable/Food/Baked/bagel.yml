@@ -43,7 +43,7 @@
       food:
         maxVol: 15 # imp
         reagents:
-        - ReagentId: Bicaridine
+        - ReagentId: SalicylicAcid
           Quantity: 4 # imp
         - ReagentId: Nutriment
           Quantity: 6.5 # imp
