@@ -126,7 +126,7 @@
   physicalDesc: reagent-physical-desc-fluffy
   flavor: medicine
   color: "#ffaa00"
-  metabolisms: [] # L5 - little TOO silly, but leaving in the ability to create a corgi puppy as an Easter egg (see also: buzzchloric bees)
+#  metabolisms: # L5 - little TOO silly, but leaving in the ability to create a corgi puppy as an Easter egg (see also: buzzchloric bees)
 #    Poison:
 #      effects:
 #      - !type:Polymorph
