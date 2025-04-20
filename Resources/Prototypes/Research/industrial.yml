@@ -84,7 +84,7 @@
     state: portgen0
   discipline: Industrial
   tier: 1
-  cost: 7500
+  cost: 8000
   recipeUnlocks:
   - PortableGeneratorPacmanMachineCircuitboard
   - PortableGeneratorSuperPacmanMachineCircuitboard
@@ -92,6 +92,7 @@
   - SolarControlComputerCircuitboard
   - SolarTrackerElectronics
   - EmitterCircuitboard
+  - PowerComputerCircuitBoard
 
 - type: technology
   id: AtmosphericTech
@@ -101,11 +102,12 @@
     state: freezerOff
   discipline: Industrial
   tier: 1
-  cost: 7500
+  cost: 8000
   recipeUnlocks:
   - ThermomachineFreezerMachineCircuitBoard
   - GasRecyclerMachineCircuitboard
   - AlertsComputerCircuitboard # DeltaV - Allows atmos computers to be researched
+  - AtmosMonitoringComputerCircuitBoard
 
 - type: technology
   id: RipleyAPLU

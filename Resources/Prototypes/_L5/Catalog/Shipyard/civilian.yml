@@ -1,0 +1,34 @@
+# Service
+- type: vessel
+  id: Cryptid
+  name: UNCS Cryptid
+  description: A very large, luxurious library, bringing knowledge to stations near and far.
+  price: 71000
+  path: /Maps/_L5/Shuttles/cryptid.yml
+  categories:
+  - Civilian
+  - Large
+
+- type: vessel
+  id: Borough
+  name: UNCS Borough
+  description: A little foodtruck for zooming around and serving snacks to hungry folk everywhere.
+  price: 20500
+  path: /Maps/_L5/Shuttles/borough.yml
+  categories:
+  - Civilian
+  - Small
+
+# Logistics
+- type: vessel
+  id: Bufo
+  name: UNMS Bufo
+  description: Mining? Partying? Why not both? Die on the red rock in luxury with this decked-out mining shuttle.
+  price: 43500
+  path: /Maps/_L5/Shuttles/bufo.yml
+  categories:
+  - Civilian
+  - Medium
+  - Mining
+  - Shipping
+

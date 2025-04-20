@@ -6,7 +6,16 @@
     DrinkTeacup: 5
     DrinkGreenTea: 5
     DrinkHotCoco: 5
+    # Begin L5: Sirius Agritech's animal-safe drinks
+    DrinkDogstarHotCoffee: 3
+    DrinkMaomiCha: 3
+    DrinkDogstarHotCocoa: 3
+    # End L5: animal-safe drinks
   contrabandInventory:
     DrinkTeapot: 2
+    # Begin L5: Sirius Agritech's animal-safe drinks
+    DrinkDogstarOatHotCocoa: 3
+    DrinkDogstarOatMocha: 3
+    # End L5: animal-safe drinks
   emaggedInventory:
     DrinkNothing: 2

@@ -243,6 +243,10 @@
       - id: DrinkTeaJug
       - id: DrinkTonicWaterBottleFull
       - id: DrinkWaterMelonJuiceJug
+      # Begin: L5 - Sirius Agritech
+      - id: DrinkDogstarCoffeeJug
+      - id: DrinkMaomiChaJug
+      # End: L5 - Sirius Agritech
 
 - type: entity
   id: CrateServiceBoozeDispenser

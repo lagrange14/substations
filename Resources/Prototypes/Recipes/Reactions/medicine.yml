@@ -113,6 +113,8 @@
   products:
     Dexalin: 3
 
+# Funkychem - no more dex+
+# L5 - revert
 - type: reaction
   id: DexalinPlus
   reactants:
@@ -130,7 +132,7 @@
   reactants:
     Radium:
       amount: 1
-    Dylovene:
+    PotassiumIodide: # Funkychem - no more dylovene + potassium iodide makes more sense here
       amount: 1
   products:
     Hyronalin: 2
@@ -253,7 +255,7 @@
 - type: reaction
   id: HeartbreakerToxin
   reactants:
-    DexalinPlus:
+    Salbutamol: # Funkychem - no more dex+
       amount: 1
     MindbreakerToxin:
       amount: 1
@@ -561,7 +563,7 @@
   id: Opporozidone
   minTemp: 400 #Maybe if a method of reducing reagent temp exists one day, this could be -50
   reactants:
-    Cognizine: 
+    Cognizine:
       amount: 1
     Plasma:
       amount: 2

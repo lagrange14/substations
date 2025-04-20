@@ -33,16 +33,6 @@
   - Medical
 
 - type: vessel
-  id: Cryptid
-  name: UNCS Cryptid
-  description: A very large, luxurious library, bringing knowledge to stations near and far.
-  price: 71000
-  path: /Maps/_L5/Shuttles/cryptid.yml
-  categories:
-  - Civilian
-  - Large
-
-- type: vessel
   id: Prospector
   name: NT-7 Prospector
   description: A small mining vessel designed to assist salvage operations.

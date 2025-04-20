@@ -6,6 +6,7 @@ using Content.Shared.GameTicking.Components;
 using Content.Shared.Popups;
 using Content.Shared.Silicons.Laws.Components;
 using Content.Shared.Station.Components;
+using Robust.Shared.Random;
 
 namespace Content.Server.StationEvents.Events;
 
@@ -35,10 +36,13 @@ public sealed class IonStormRule : StationEventSystem<IonStormRuleComponent>
         var synthQuery = EntityQueryEnumerator<SynthComponent, TransformComponent>();
         while (synthQuery.MoveNext(out var ent, out var synth, out var xform))
         {
+            if (RobustRandom.Prob(synth.AlertChance))
+                continue;
+
             if (CompOrNull<StationMemberComponent>(xform.GridUid)?.Station != chosenStation)
                 continue;
 
-            _popup.PopupEntity("You feel an electric thrill down your spine as an ion storm washes over the station!", ent, ent, PopupType.Medium);
+            _popup.PopupEntity(Loc.GetString("station-event-ion-storm-synth"), ent, ent, PopupType.Medium);
         }
         // end L5 - synths
     }

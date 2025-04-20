@@ -44,7 +44,7 @@
   - EnergyScalpel
   - EnergyCautery
   - AdvancedRetractor
-  #- OmnimedTool # DeltaV - Removed medical multi tool as a tech.
+  - OmnimedTool # DeltaV - Removed medical multi tool as a tech. # L5 - revert
 
 - type: latheRecipePack
   id: CyberneticsMedical
@@ -54,5 +54,6 @@
 - type: latheRecipePack
   id: MedicalBoardsShitmed
   recipes:
+  - AutoclaveMachineCircuitboard
   - AutodocCircuitboard
   - OperatingTableAdvancedCircuitboard

@@ -1,0 +1,238 @@
+# Coffee drinks
+- type: reagent
+  id: DogstarCoffee
+  name: reagent-name-dogstar-coffee
+  parent: BaseDrink
+  desc: reagent-desc-dogstar-coffee
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: coffee
+  color: "#664300"
+  recognizable: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        time: 2.0
+        type: Remove
+      - !type:AdjustReagent
+        reagent: Neobromine
+        amount: 0.05
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/coffeeglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: DogstarIcedCoffee
+  name: reagent-name-dogstar-iced-coffee
+  parent: BaseDrink
+  desc: reagent-desc-dogstar-iced-coffee
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: coffee
+  color: "#102838"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/icedcoffeeglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 5
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        time: 2.0
+        type: Remove
+      - !type:AdjustReagent
+        reagent: Neobromine
+        amount: 0.05
+
+# Chocolate drinks
+- type: reagent
+  id: DogstarHotCocoa
+  name: reagent-name-dogstar-hot-cocoa
+  parent: BaseDrink
+  desc: reagent-desc-dogstar-hot-cocoa
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: chocolate
+  color: "#664300"
+  recognizable: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Neobromine
+        amount: 0.05
+
+- type: reagent
+  id: DogstarOatHotCocoa
+  name: reagent-name-dogstar-oat-hot-cocoa
+  parent: DogstarHotCocoa
+
+# Mixed coffee drinks
+- type: reagent
+  id: DogstarCafeLatte
+  name: reagent-name-dogstar-cafe-latte
+  parent: BaseDrink
+  desc: reagent-desc-dogstar-cafe-latte
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: creamy
+  color: "#664300"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/cafe_latte.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 1
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        time: 2.0
+        type: Remove
+      - !type:AdjustReagent
+        reagent: Neobromine
+        amount: 0.04
+
+- type: reagent
+  id: DogstarSoyLatte
+  name: reagent-name-dogstar-soy-latte
+  parent: BaseDrink
+  desc: reagent-desc-dogstar-soy-latte
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: soy
+  color: "#664300"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/soy_latte.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 1
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        time: 2.0
+        type: Remove
+      - !type:AdjustReagent
+        reagent: Neobromine
+        amount: 0.04
+
+- type: reagent
+  id: DogstarMocha
+  name: reagent-name-dogstar-mocha
+  parent: BaseDrink
+  desc: reagent-desc-dogstar-mocha
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: chocolate
+  color: "#654200"
+  recognizable: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        time: 1.8
+        type: Remove
+      - !type:AdjustReagent
+        reagent: Neobromine
+        amount: 0.07
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/coffeeglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: DogstarOatMocha
+  name: reagent-name-dogstar-oat-mocha
+  parent: DogstarMocha
+
+# Tea drinks
+- type: reagent
+  id: MaomiCha
+  name: reagent-name-maomi-cha
+  parent: BaseDrink
+  desc: reagent-desc-maomi-cha
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: tea
+  color: "#8a5a3a"
+  recognizable: true
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Neobromine
+        amount: 0.05
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/teaglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: IcedMaomiCha
+  name: reagent-name-iced-maomi-cha
+  parent: BaseDrink
+  desc: reagent-desc-iced-maomi-cha
+  physicalDesc: reagent-physical-desc-aromatic
+  flavor: icedtea
+  color: "#6C3916"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/icedteaglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Neobromine
+        amount: 0.05
+
+- type: reagent
+  id: ArnoldPawmer
+  name: reagent-name-arnold-pawmer
+  parent: BaseAlcohol
+  desc: reagent-desc-arnold-pawmer
+  physicalDesc: reagent-physical-desc-sweet
+  flavor: arnoldpalmer
+  color: "#d8cc5d"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/arnoldpalmer.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 4
+      - !type:AdjustReagent
+        reagent: Neobromine
+        amount: 0.05

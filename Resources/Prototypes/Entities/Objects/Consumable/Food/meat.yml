@@ -311,7 +311,7 @@
       food:
         maxVol: 25 # imp
         reagents:
-        - ReagentId: Bicaridine
+        - ReagentId: SalicylicAcid # Funkychem - bicaridine -> salicylic acid
           Quantity: 20
   - type: StaticPrice
     price: 750

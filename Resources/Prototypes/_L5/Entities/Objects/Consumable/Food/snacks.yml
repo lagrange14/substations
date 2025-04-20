@@ -1,0 +1,27 @@
+- type: entity
+  name: Dogstar chocolate bar
+  parent: FoodSnackBase
+  id: FoodSnackDogstarChocolate
+  description: "Chocolate status: passable."
+  components:
+  - type: FlavorProfile
+    flavors:
+    - chocolate
+  - type: Sprite
+    state: chocolatebar-open
+  - type: Item
+  - type: Tag
+    tags:
+    - FoodSnack
+    - ReptilianFood
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: Neobromine
+          Quantity: 3
+        - ReagentId: DogstarCocoaPowder
+          Quantity: 1

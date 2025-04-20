@@ -1,0 +1,239 @@
+- type: entity
+  parent: DrinkGlass
+  id: DrinkDogstarCoffeeGlass
+  suffix: Dogstar coffee
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: DogstarCoffee
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/coffee.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkBaseCup
+  id: DrinkDogstarHotCoffee
+  name: Dogstar coffee
+  description: "\"Dogs can't tell the difference between coffee and Dogstar Coffee!\" A hot drink brewed with Sirius Agritech's genetically modified coffee; safe for animals, not so safe for humans."
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: DogstarCoffee
+          Quantity: 20
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/hot_coffee.rsi
+    state: icon-vend
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/hot_coffee.rsi
+    layers:
+    - state: icon-0
+    - map: ["enum.SolutionContainerLayers.Fill"]
+      state: icon-4
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: icon-
+  - type: TrashOnSolutionEmpty
+    solution: drink
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkDogstarIcedCoffeeGlass
+  suffix: Dogstar iced coffee
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: DogstarIcedCoffee
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/icedcoffeeglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkBaseCup
+  id: DrinkDogstarHotCocoa
+  name: Dogstar hot chocolate
+  description: Rich and chocolatey, this cocoa is perfect for a winter's day, and is safe for animals to drink. Humans...not so much...
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: DogstarHotCocoa
+          Quantity: 20
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/hot_coco.rsi
+    state: icon-vend
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/hot_coco.rsi
+    layers:
+    - state: icon-0
+    - map: ["enum.SolutionContainerLayers.Fill"]
+      state: icon-4
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: icon-
+  - type: TrashOnSolutionEmpty
+    solution: drink
+
+- type: entity
+  parent: DrinkBaseCup
+  id: DrinkDogstarOatHotCocoa
+  name: Dogstar oatmilk hot chocolate
+  description: Rich and chocolatey, this cocoa is perfect for a winter's day, and is safe for animals to drink. This one is made with oatmilk for extra creaminess.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: DogstarOatHotCocoa
+          Quantity: 20
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/hot_coco.rsi
+    state: icon-vend
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/hot_coco.rsi
+    layers:
+    - state: icon-0
+    - map: ["enum.SolutionContainerLayers.Fill"]
+      state: icon-4
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: icon-
+  - type: TrashOnSolutionEmpty
+    solution: drink
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkDogstarMocha
+  suffix: Dogstar mocha
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: DogstarMocha
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/chocolateglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkDogstarOatMocha
+  suffix: Dogstar oatmilk mocha
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: DogstarOatMocha
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/chocolateglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkDogstarSoyLatte
+  suffix: Dogstar soy latte
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: DogstarSoyLatte
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/soy_latte.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkDogstarCafeLatte
+  suffix: Dogstar cafe latte
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: DogstarCafeLatte
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/cafe_latte.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkBaseCup
+  id: DrinkMaomiCha
+  name: Maomi Cha teacup
+  description: A plain white porcelain teacup.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: MaomiCha
+          Quantity: 20
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/teacup.rsi
+    state: icon-vend-tea
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/teacup.rsi
+    layers:
+    - state: icon-0
+    - map: ["enum.SolutionContainerLayers.Fill"]
+      state: icon-4
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: icon-
+  - type: TrashOnSolutionEmpty
+    solution: drink
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkIcedMaomiChaGlass
+  suffix: iced Maomi Cha
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: IcedMaomiCha
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/icedteaglass.rsi
+    state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkArnoldPawmer
+  suffix: arnold pawmer
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: ArnoldPawmer
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/arnoldpalmer.rsi
+    state: icon
