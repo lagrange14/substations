@@ -383,12 +383,10 @@
       - dough
   - type: Tag
     tags:
+    - Slice
     - Vegan # L5
   - type: Sprite
     state: cornmealdough-slice
-  - type: Tag
-    tags:
-    - Slice
 
 - type: entity
   name: tortilla dough
@@ -421,15 +419,13 @@
       - dough
   - type: Tag
     tags:
+    - Slice
     - Vegan # L5
   - type: Sprite
     state: tortilladough-slice
   - type: Construction
     graph: Tortilla
     node: start
-  - type: Tag
-    tags:
-    - Slice
 
 - type: entity
   name: flattened tortilla dough

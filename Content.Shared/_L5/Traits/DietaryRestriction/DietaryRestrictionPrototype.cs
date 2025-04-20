@@ -7,7 +7,7 @@ namespace Content.Shared._L5.Traits.DietaryRestriction;
 /// <summary>
 /// Prototype representing a dietary restriction. The DietaryRestrictionComponent may hold several of these.
 /// </summary>
-[Prototype("DietaryRestriction")]
+[Prototype]
 public sealed partial class DietaryRestrictionPrototype : IPrototype
 {
     [IdDataField, ViewVariables]
@@ -57,5 +57,11 @@ public sealed partial class DietaryRestrictionPrototype : IPrototype
     /// replaced by the mood system when added.
     /// </summary>
     [DataField]
-    public float ChanceOfVomiting = 0.3f;
+    public float ChanceOfVomiting = 0.05f;
+
+    /// <summary>
+    /// The amount of histamine to add  when an allergen is ingested. Three bites should send you to crit.
+    /// </summary>
+    [DataField]
+    public float HistamineAmount = 5f;
 }

@@ -1,11 +1,8 @@
-using Content.Server.Body.Components;
+using Content.Server.Body.Systems;
 using Content.Server.Medical;
 using Content.Server.Popups;
 using Content.Shared._L5.Traits.DietaryRestriction;
-using Content.Shared.Body.Organ;
 using Content.Shared.Chemistry.Components;
-using Content.Shared.Damage;
-using Content.Shared.FixedPoint;
 using Content.Shared.Popups;
 using Content.Shared.Whitelist;
 using Robust.Shared.Prototypes;
@@ -15,22 +12,97 @@ namespace Content.Server._L5.Traits.DietaryRestriction;
 
 public sealed class DietaryRestrictionSystem : EntitySystem
 {
-    [Dependency] private readonly DamageableSystem _damageable = default!;
+    [Dependency] private readonly BloodstreamSystem _bloodstream = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly VomitSystem _vomit = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
 
-    public bool TryFood(EntityUid user, EntityUid food, List<Entity<StomachComponent,OrganComponent>> stomachs)
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<PescetarianRestrictionComponent, MapInitEvent>(InitPescetarianRestriction);
+        SubscribeLocalEvent<VegetarianRestrictionComponent, MapInitEvent>(InitVegetarianRestriction);
+        SubscribeLocalEvent<VeganRestrictionComponent, MapInitEvent>(InitVeganRestriction);
+
+        SubscribeLocalEvent<KosherRestrictionComponent, MapInitEvent>(InitKosherRestriction);
+        SubscribeLocalEvent<HalalRestrictionComponent, MapInitEvent>(InitHalalRestriction);
+
+        SubscribeLocalEvent<DairyAllergyComponent, MapInitEvent>(InitDairyAllergy);
+        SubscribeLocalEvent<GlutenAllergyComponent, MapInitEvent>(InitGlutenAllergy);
+        SubscribeLocalEvent<LatexAllergyComponent, MapInitEvent>(InitLatexAllergy);
+        SubscribeLocalEvent<NightshadeAllergyComponent, MapInitEvent>(InitNightshadeAllergy);
+    }
+
+    private void InitPescetarianRestriction(Entity<PescetarianRestrictionComponent> entity, ref MapInitEvent args)
+    {
+        var restriction = EnsureComp<DietaryRestrictionComponent>(entity);
+        restriction.Restrictions.Add("PescetarianRestriction");
+    }
+
+    private void InitVegetarianRestriction(Entity<VegetarianRestrictionComponent> entity, ref MapInitEvent args)
+    {
+        var restriction = EnsureComp<DietaryRestrictionComponent>(entity);
+        restriction.Restrictions.Add("VegetarianRestriction");
+    }
+
+    private void InitVeganRestriction(Entity<VeganRestrictionComponent> entity, ref MapInitEvent args)
+    {
+        var restriction = EnsureComp<DietaryRestrictionComponent>(entity);
+        restriction.Restrictions.Add("VeganRestriction");
+    }
+
+    private void InitKosherRestriction(Entity<KosherRestrictionComponent> entity, ref MapInitEvent args)
+    {
+        var restriction = EnsureComp<DietaryRestrictionComponent>(entity);
+        restriction.Restrictions.Add("KosherRestriction");
+    }
+
+    private void InitHalalRestriction(Entity<HalalRestrictionComponent> entity, ref MapInitEvent args)
+    {
+        var restriction = EnsureComp<DietaryRestrictionComponent>(entity);
+        restriction.Restrictions.Add("HalalRestriction");
+    }
+
+    private void InitDairyAllergy(Entity<DairyAllergyComponent> entity, ref MapInitEvent args)
+    {
+        var restriction = EnsureComp<DietaryRestrictionComponent>(entity);
+        restriction.Restrictions.Add("DairyAllergy");
+    }
+
+    private void InitGlutenAllergy(Entity<GlutenAllergyComponent> entity, ref MapInitEvent args)
+    {
+        var restriction = EnsureComp<DietaryRestrictionComponent>(entity);
+        restriction.Restrictions.Add("GlutenAllergy");
+    }
+
+    private void InitLatexAllergy(Entity<LatexAllergyComponent> entity, ref MapInitEvent args)
+    {
+        var restriction = EnsureComp<DietaryRestrictionComponent>(entity);
+        restriction.Restrictions.Add("LatexAllergy");
+    }
+
+    private void InitNightshadeAllergy(Entity<NightshadeAllergyComponent> entity, ref MapInitEvent args)
+    {
+        var restriction = EnsureComp<DietaryRestrictionComponent>(entity);
+        restriction.Restrictions.Add("NightshadeAllergy");
+    }
+
+    public bool TryFood(EntityUid user, EntityUid food)
     {
         if (!TryComp<DietaryRestrictionComponent>(user, out var restrictions))
         {
             return true;
         }
 
-        foreach (var restriction in restrictions.Restrictions)
+        var hasVomited = false;
+        foreach (var proto in restrictions.Restrictions)
         {
+            if (!_prototype.TryIndex<DietaryRestrictionPrototype>(proto, out var restriction))
+                continue;
+
             // If they CAN'T eat it, bail early.
             if (_whitelist.IsWhitelistPass(restriction.MustNotHave, food)
                 || _whitelist.IsWhitelistFail(restriction.MustHave, food))
@@ -41,14 +113,12 @@ public sealed class DietaryRestrictionSystem : EntitySystem
             // If they're allergic, they can eat it, but it makes them sick.
             if (_whitelist.IsWhitelistPass(restriction.AllergicTo, food))
             {
-                // Add histamine to each stomach and notify user.
-                _popup.PopupEntity(Loc.GetString($"trait-dietary-restriction-{restriction.ID}-fail"), food, user, PopupType.SmallCaution);
-                foreach (var ent in stomachs)
+                // Add histamine to the chemstream and potentially vomit.
+                _bloodstream.TryAddToChemicals(user, new Solution("Histamine", restriction.HistamineAmount));
+                if (_random.Prob(restriction.ChanceOfVomiting) && !hasVomited)
                 {
-                    if (TryComp<SolutionComponent>(ent.Comp1.Solution, out var solution))
-                    {
-                        solution.Solution.AddReagent("Histamine", FixedPoint2.New(5));
-                    }
+                    _vomit.Vomit(user);
+                    hasVomited = true;
                 }
             }
 
@@ -58,11 +128,11 @@ public sealed class DietaryRestrictionSystem : EntitySystem
                 || _whitelist.IsWhitelistFail(restriction.Wants, food))
             {
                 // notify the user, give a chance of them vomiting.
-                _popup.PopupEntity(Loc.GetString($"trait-dietary-restriction-{restriction.ID}-fail"), food, user, PopupType.SmallCaution);
-                if (_random.Prob(restrictions.ChanceOfVomiting))
+                _popup.PopupEntity(Loc.GetString($"trait-dietary-restriction-{restriction.ID}-fail"), user, user, PopupType.MediumCaution);
+                if (_random.Prob(restriction.ChanceOfVomiting) && !hasVomited)
                 {
-                    // TODO delay this
                     _vomit.Vomit(user);
+                    hasVomited = true;
                 }
             }
         }

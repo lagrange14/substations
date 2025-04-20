@@ -274,6 +274,9 @@ public sealed class FoodSystem : EntitySystem
             return;
         }
 
+        if (!_dietaryRestriction.TryFood(args.Target.Value, entity.Owner))
+            return;
+
         _reaction.DoEntityReaction(args.Target.Value, solution, ReactionMethod.Ingestion);
         _stomach.TryTransferSolution(stomachToUse!.Value.Owner, split, stomachToUse);
 
@@ -411,7 +414,7 @@ public sealed class FoodSystem : EntitySystem
         if (!_body.TryGetBodyOrganEntityComps<StomachComponent>(uid, out var stomachs))
             return false;
 
-        return IsDigestibleBy(food, foodComp, stomachs) && _dietaryRestriction.TryFood(uid, food, stomachs);
+        return IsDigestibleBy(food, foodComp, stomachs);
     }
 
     /// <summary>

@@ -7,6 +7,7 @@
   exceptions:
     tags:
     - Fish
+  chanceOfVomiting: 0
 
 - type: dietaryRestriction
   id: VegetarianRestriction
@@ -14,14 +15,13 @@
     tags:
     - Meat
     - Fish
-  chanceOfVomiting: 0.4
+  chanceOfVomiting: 0
 
 - type: dietaryRestriction
   id: VeganRestriction
   wants:
     tags:
     - Vegan
-  chanceOfVomiting: 0.5
 
 # Cultural
 - type: dietaryRestriction
@@ -29,39 +29,43 @@
   doesNotWant:
     tags:
     - Treyf
-  chanceOfVomiting: 0.4
+  chanceOfVomiting: 0
 
 - type: dietaryRestriction
   id: HalalRestriction
   doesNotWant:
     tags:
     - Haram
-  chanceOfVomiting: 0.4
+  chanceOfVomiting: 0
 
 # Allergies
 - type: dietaryRestriction
-  id: DairyAllergyRestriction
+  id: DairyAllergy
   allergicTo:
     tags:
     - Dairy
+  chanceOfVomiting: 0.1
 
 - type: dietaryRestriction
-  id: GlutenAllergyRestriction
+  id: GlutenAllergy
   allergicTo:
     tags:
     - Wheat
+  chanceOfVomiting: 0.1
 
 - type: dietaryRestriction
-  id: LatexAllergyRestriction
+  id: LatexAllergy
   allergicTo:
     tags:
     - LatexInteraction
+  chanceOfVomiting: 0.1
 
 - type: dietaryRestriction
-  id: NightshadeAllergyRestriction
+  id: NightshadeAllergy
   allergicTo:
     tags:
     - Nightshade
+  chanceOfVomiting: 0.1
 
 # Species
 # This is currently just an example and doesn't replace the way stomachs work.
