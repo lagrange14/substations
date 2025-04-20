@@ -236,7 +236,6 @@
     flavors:
     - bun
     - meaty
-    - gamey
   - type: Sprite
     state: bearger
   - type: SolutionContainerManager

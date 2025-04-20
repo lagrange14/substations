@@ -349,7 +349,6 @@
   - type: FlavorProfile
     flavors:
     - meaty
-    - gamey
   - type: Sprite
     state: bearsteak
   - type: SolutionContainerManager

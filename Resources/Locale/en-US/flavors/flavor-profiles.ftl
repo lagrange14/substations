@@ -49,9 +49,6 @@ flavor-base-alkaline = alkaline
 flavor-base-holy = holy
 flavor-base-horrible = horrible
 
-# just for the space bear dishes
-flavor-base-gamey = gamey
-
 # lmao
 flavor-base-terrible = terrible
 flavor-base-mindful = mindful

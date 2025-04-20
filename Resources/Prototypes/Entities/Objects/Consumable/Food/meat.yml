@@ -198,9 +198,6 @@
   components:
   - type: Sprite
     state: bear
-  - type: FlavorProfile
-    flavors:
-      - gamey
   - type: SolutionContainerManager
     solutions:
       food:
@@ -923,9 +920,6 @@
     - Cooked
     - Meat
     - Steak
-    - type: FlavorProfile
-      flavors:
-        - gamey
   - type: Sprite
     layers:
     - state: product-cooked
@@ -1368,9 +1362,6 @@
     - Raw
     - Cutlet
     - Meat
-  - type: FlavorProfile
-    flavors:
-      - gamey
   - type: Sprite
     layers:
     - state: cutlet
@@ -1660,9 +1651,6 @@
     - Cooked
     - Cutlet
     - Meat
-  - type: FlavorProfile
-    flavors:
-      - gamey
   - type: Sprite
     layers:
     - state: cutlet-cooked
