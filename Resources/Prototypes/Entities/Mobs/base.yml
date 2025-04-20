@@ -60,15 +60,15 @@
   components:
   - type: Damageable
     damageContainer: Biological
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Blunt
-        damage: 400
-      behaviors:
-      - !type:GibBehavior { }
-#    - trigger:                       # DeltaV- We don't like round removing people for being in the same room as a plasma trapped crate. 
+#  - type: Destructible               # L5 - The DV comment below is kind of funny in retrospect. How about we don't round-remove people for rotting on lowpop, either?
+#    thresholds:
+#    - trigger:
+#        !type:DamageTypeTrigger
+#        damageType: Blunt
+#        damage: 400
+#      behaviors:
+#      - !type:GibBehavior { }
+#    - trigger:                       # DeltaV- We don't like round removing people for being in the same room as a plasma trapped crate.
 #        !type:DamageTypeTrigger
 #        damageType: Heat
 #        damage: 1500
@@ -118,6 +118,13 @@
     priority: 2
     lightningExplode: false
   - type: SurgeryContaminable # DeltaV - surgery cross contamination
+    # L5 - Begin nerfing contamination because it's a good idea but holy shit
+    dirtinessThreshold: 100.0
+    baseDamage: 0.1
+    inverseDamageCoefficient: 500
+    toxinStepLimit: 1
+    # L5 - End nerf
+
 
 # Used for mobs that can enter combat mode and can attack.
 - type: entity

@@ -20,6 +20,7 @@
   - EnergyCautery
   - AdvancedRetractor
   - BorgModuleAdvancedSurgery
+  - AutoclaveMachineCircuitboard
 
 - type: technology
   id: MinuteActuators
@@ -67,15 +68,16 @@
 # Tier 3
 
 # Start DeltaV changes - Removed the medical multitool.
-#- type: technology
-#  id: HighEndSurgery
-#  name: research-technology-high-end-surgery
-#  icon:
-#    sprite: _Shitmed/Objects/Specific/Medical/Surgery/omnimed.rsi
-#    state: omnimed
-#  discipline: Biochemical # DeltaV
-#  tier: 3
-#  cost: 10000
-#  recipeUnlocks:
-#  - OmnimedTool
+# L5 - revert
+- type: technology
+  id: HighEndSurgery
+  name: research-technology-high-end-surgery
+  icon:
+    sprite: _Shitmed/Objects/Specific/Medical/Surgery/omnimed.rsi
+    state: omnimed
+  discipline: Biochemical # DeltaV
+  tier: 3
+  cost: 15000 # L5
+  recipeUnlocks:
+  - OmnimedTool
 # End of DeltaV changes

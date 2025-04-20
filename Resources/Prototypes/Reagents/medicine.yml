@@ -279,6 +279,7 @@
 - type: reagent
   id: DexalinPlus
   name: reagent-name-dexalin-plus
+  #abstract: true # Funkychem - no more dex+ # L5 - revert
   group: Medicine
   desc: reagent-desc-dexalin-plus
   physicalDesc: reagent-physical-desc-cloudy
@@ -1219,7 +1220,7 @@
         conditions:
         - !type:ReagentThreshold
           min: 12
-          
+
 - type: reagent
   id: Opporozidone #Name based of an altered version of the startreck chem "Opporozine"
   name: reagent-name-opporozidone
