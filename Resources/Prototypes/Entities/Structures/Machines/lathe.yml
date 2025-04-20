@@ -413,6 +413,7 @@
     - SecurityAmmoStatic
     - SecurityWeaponsStatic
     - SecurityRubberAmmoStatic # DeltaV
+    - ReportingStatic # DeltaV
     dynamicPacks:
     - SecurityEquipment
     - SecurityBoards
@@ -490,6 +491,7 @@
     - MedicalClothingStatic
     - EmptyMedkitsStatic
     - SurgeryStatic
+    - ReportingStatic # DeltaV
     dynamicPacks:
     - Chemistry
     - CyberneticsMedical # Shitmed change

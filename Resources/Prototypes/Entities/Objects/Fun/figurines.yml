@@ -124,7 +124,7 @@
 - type: entity
   parent: BaseFigurine
   id: ToyFigurineCaptain
-  name: station administrataor figure
+  name: station administrator figure
   description: A figurine depicting the standard outfit of a station administrator belonging to a civilian-sector SysCon vessel.
   components:
   - type: Sprite

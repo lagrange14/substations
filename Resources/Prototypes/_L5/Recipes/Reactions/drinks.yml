@@ -2,7 +2,7 @@
   id: DogstarHotCocoa
   minTemp: 350
   reactants:
-    Water:
+    Milk:
       amount: 1
     DogstarCocoaPowder:
       amount: 1
@@ -18,7 +18,7 @@
     DogstarCocoaPowder:
       amount: 1
   products:
-    DogstarHotCocoa: 2
+    DogstarOatHotCocoa: 2
 
 - type: reaction
   id: DogstarCafeLatte
@@ -68,7 +68,7 @@
     DogstarOatHotCocoa:
       amount: 2
   products:
-    DogstarMocha: 3
+    DogstarOatMocha: 3
 
 - type: reaction
   id: IcedMaomiCha
