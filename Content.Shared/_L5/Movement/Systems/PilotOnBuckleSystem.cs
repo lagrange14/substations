@@ -1,8 +1,9 @@
+using Content.Shared._L5.Movement.Components;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 
-namespace Content.Server.Movement.Systems
+namespace Content.Shared._L5.Movement.Systems
 {
     public sealed class PilotOnBuckleSystem() : EntitySystem
     {
@@ -10,14 +11,14 @@ namespace Content.Server.Movement.Systems
         public override void Initialize()
         {
             // When strapping into an object, update entity associations.
-            SubscribeLocalEvent<PilotOnBuckleComponent, StrappedEvent>(ON_STRAP);
-            SubscribeLocalEvent<PilotOnBuckleComponent, UnstrappedEvent>(ON_UNSTRAP);
+            SubscribeLocalEvent<PilotOnBuckleComponent, StrappedEvent>(OnStrap);
+            SubscribeLocalEvent<PilotOnBuckleComponent, UnstrappedEvent>(OnUnstrap);
         }
 
         /// <summary>
         /// When strapping into an object with an attach on sit component, update entity associations.
         /// </summary>
-        private void ON_STRAP(Entity<PilotOnBuckleComponent> ent, ref StrappedEvent args)
+        private void OnStrap(Entity<PilotOnBuckleComponent> ent, ref StrappedEvent args)
         {
             var moverEntity = args.Buckle.Owner;
             var movedEntity = args.Strap.Owner;
@@ -33,7 +34,7 @@ namespace Content.Server.Movement.Systems
         /// When unstrapping from a moved entity, update entity associations.
         /// TODO: Not important for initial PR, but technically we'd want to do this on AttachOnSitComponent removal.
         /// </summary>
-        private void ON_UNSTRAP(Entity<PilotOnBuckleComponent> ent, ref UnstrappedEvent args)
+        private void OnUnstrap(Entity<PilotOnBuckleComponent> ent, ref UnstrappedEvent args)
         {
             var moverEntity = args.Buckle.Owner;
             var movedEntity = args.Strap.Owner;

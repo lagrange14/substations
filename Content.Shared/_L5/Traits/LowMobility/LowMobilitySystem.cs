@@ -1,6 +1,6 @@
 using Content.Shared.Movement.Systems;
 
-namespace Content.Shared.Traits.Assorted
+namespace Content.Shared._L5.Traits.Assorted
 {
     /// <summary>
     /// Applies low mobility to entities with a LowMobilityComponent.

@@ -1,7 +1,7 @@
-using Content.Server.Movement.Systems;
+using Content.Shared._L5.Movement.Systems;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.Movement.Components;
+namespace Content.Shared._L5.Movement.Components;
 
 /// <summary>
 /// Raises the engine movement inputs for a particular entity onto the designated entity

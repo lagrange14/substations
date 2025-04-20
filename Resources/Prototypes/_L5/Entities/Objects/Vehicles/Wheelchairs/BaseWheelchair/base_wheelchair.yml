@@ -5,7 +5,7 @@
   id: BaseWheelchair
   components:
   - type: Sprite
-    sprite: Objects/Vehicles/basewheelchair.rsi
+    sprite: _L5/Objects/Vehicles/basewheelchair.rsi
     state: vehicle_deployed
   - type: Strap
   - type: Rotatable

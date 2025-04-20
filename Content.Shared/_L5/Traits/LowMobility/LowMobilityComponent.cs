@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.Traits.Assorted;
+namespace Content.Shared._L5.Traits.Assorted;
 
 /// <summary>
 /// Determines the move speed that should be given to entities with low mobility.
