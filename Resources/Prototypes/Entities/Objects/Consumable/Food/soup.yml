@@ -213,6 +213,7 @@
           Quantity: 2
         - ReagentId: Allicin
           Quantity: 3
+  - type: Tag
     tags:
     - Vegan # L5
 
@@ -928,7 +929,7 @@
     tags:
     - ChiliBowl
     - Meat
-    - Nigthsade # L5
+    - Nightshade # L5
 
 - type: entity
   name: monkey's delight
