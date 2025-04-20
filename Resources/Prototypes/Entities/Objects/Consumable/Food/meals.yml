@@ -37,6 +37,9 @@
       - potatoes
   - type: Sprite
     state: loadedbakedpotato
+  - type: Tag
+    tags:
+    - Dairy # L5
 # Tastes like potato.
 
 - type: entity
@@ -51,6 +54,9 @@
       - salty
   - type: Sprite
     state: fries
+  - type: Tag
+    tags:
+    - Vegan # L5
 # Tastes like fries, salt.
 
 - type: entity
@@ -66,6 +72,9 @@
       - cheesy
   - type: Sprite
     state: fries-cheesy
+  - type: Tag
+    tags:
+    - Dairy # L5
 # Tastes like fries, cheese.
 
 - type: entity
@@ -83,6 +92,7 @@
   - type: Tag
     tags:
     - CarrotFries
+    - Vegan # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -117,6 +127,9 @@
           Quantity: 1
         - ReagentId: TableSalt
           Quantity: 1
+  - type: Tag
+    tags:
+    - Vegan # L5
 # Tastes like nachos.
 
 - type: entity
@@ -145,6 +158,9 @@
           Quantity: 3
         - ReagentId: TableSalt
           Quantity: 1
+  - type: Tag
+    tags:
+    - Dairy # L5
 # Tastes like nachos, cheese.
 
 - type: entity
@@ -174,6 +190,9 @@
           Quantity: 7
         - ReagentId: Vitamin
           Quantity: 5
+  - type: Tag
+    tags:
+    - Vegan # L5
 # Tastes like nachos, hot pepper.
 
 - type: entity
@@ -195,6 +214,9 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 1
+  - type: Tag
+    tags:
+    - Vegan # L5 (I guess?)
 # Tastes like parsnips, salt.
 
 - type: entity
@@ -221,6 +243,8 @@
   - type: Tag
     tags:
     - Fruit
+    - Dairy # L5
+    - Nightshade # L5
 # Tastes like eggplant, cheese.
 
 - type: entity
@@ -264,6 +288,8 @@
     tags:
     - CubanCarp
     - Meat
+    - Dairy # L5
+    - Nightshade # L5
 # Tastes like fish, batter, hot peppers.
 
 - type: entity
@@ -316,6 +342,8 @@
   - type: Tag
     tags:
     - Meat
+    - Haram # L5
+    - Treyf # L5
 # Tastes like meat, salmon.
 
 - type: entity
@@ -342,6 +370,9 @@
   - type: Tag
     tags:
     - Meat
+    - Dairy # L5
+    - Haram # L5
+    - Treyf # L5
 # Tastes like meat, butter.
 
 - type: entity
@@ -351,7 +382,7 @@
   description: BBQ ribs, slathered in a healthy coating of BBQ sauce. The least vegan thing to ever exist.
   components:
   - type: Food
-    trash: 
+    trash:
     - FoodKebabSkewer
   - type: FlavorProfile
     flavors:
@@ -373,6 +404,8 @@
   - type: Tag
     tags:
     - Meat
+    - Haram # L5 - even if made with beef, until ingredient tags are bubbled up
+    - Treyf # L5
 # Tastes like meat, smokey sauce.
 
 - type: entity
@@ -399,7 +432,9 @@
           Quantity: 4
   - type: Tag
     tags:
+    - Haram # L5
     - Meat
+    - Treyf # L5
 # Tastes like eggs, bacon, bun.
 
 - type: entity
@@ -424,6 +459,7 @@
   - type: Tag
     tags:
     - Meat
+    - Dairy # L5
 # Tastes like egg, cheese.
 
 - type: entity
@@ -467,6 +503,9 @@
       - chocolate
   - type: Sprite
     state: milkape
+  - type: Tag
+    tags:
+    - Dairy # L5
 # Tastes like milk, chocolate, the jungle.
 
 - type: entity
@@ -523,6 +562,9 @@
         - cheesy
     - type: Sprite
       state: queso
+    - type: Tag
+      tags:
+      - Dairy # L5
 # Its queso! Everyone loves queso... Right?.
 
 - type: entity
@@ -549,6 +591,7 @@
   - type: Tag
     tags:
     - Meat
+    - Fish # L5
 # tastes exotic
 
 - type: entity
@@ -606,6 +649,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan
 
 - type: entity
   name: corn in butter
@@ -614,7 +658,7 @@
   description: Buttery.
   components:
   - type: Food
-    trash: 
+    trash:
     - FoodPlate
   - type: FlavorProfile
     flavors:
@@ -631,3 +675,6 @@
           Quantity: 4
         - ReagentId: Vitamin
           Quantity: 4
+  - type: Tag
+    tags:
+    - Dairy

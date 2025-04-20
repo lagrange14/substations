@@ -26,6 +26,7 @@
   - type: Tag
     tags:
     - Cake
+    - Vegan # L5 - until ingredient tags bubble up
 
 - type: entity
   parent: FoodCakeBase
@@ -52,6 +53,7 @@
     tags:
     - Cake
     - Slice
+    - Vegan # L5 - until ingredient tags bubble up
 
 # Custom Cake Example
 
@@ -138,7 +140,10 @@
   - type: Tag
     tags:
     - Cake
+    - LatexInteraction # L5
+    - Wheat # L5
     - Vegetable
+    - Vegan # L5
 
 - type: entity
   name: slice of carrot cake
@@ -162,8 +167,10 @@
   - type: Tag
     tags:
     - Cake
-    - Vegetable
+    - LatexInteraction # L5
     - Slice
+    - Wheat # L5
+    - Vegetable
 
 # Tastes like sweetness, cake, carrot.
 
@@ -181,6 +188,7 @@
     tags:
     - Cake
     - Meat
+    - Wheat # L5
 
 - type: entity
   name: slice of brain cake
@@ -195,6 +203,7 @@
     - Cake
     - Meat
     - Slice
+    - Wheat # L5
 # Tastes like sweetness, cake, brains.
 
 - type: entity
@@ -207,6 +216,11 @@
     state: cheese
   - type: SliceableFood
     slice: FoodCakeCheeseSlice
+  - type: Tag
+    tags:
+    - Cake
+    - Dairy # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of cheese cake
@@ -216,6 +230,12 @@
   components:
   - type: Sprite
     state: cheese-slice
+  - type: Tag
+    tags:
+    - Cake
+    - Dairy # L5
+    - Slice
+    - Wheat # L5
 # Tastes like sweetness, cream cheese.
 
 - type: entity
@@ -232,6 +252,8 @@
     tags:
     - Cake
     - Fruit
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of orange cake
@@ -245,6 +267,8 @@
     - Cake
     - Fruit
     - Slice
+    - Vegan # L5
+    - Wheat # L5
 # Tastes like sweetness, cake, oranges.
 
 - type: entity
@@ -261,6 +285,8 @@
     tags:
     - Cake
     - Fruit
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of lime cake
@@ -274,6 +300,8 @@
     - Cake
     - Fruit
     - Slice
+    - Vegan # L5
+    - Wheat # L5
 # Tastes like sweetness, cake, limes.
 
 - type: entity
@@ -290,6 +318,8 @@
     tags:
     - Cake
     - Fruit
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of lemon cake
@@ -303,6 +333,8 @@
     - Cake
     - Fruit
     - Slice
+    - Vegan # L5
+    - Wheat # L5
 # Tastes like sweetness, cake, lemons.
 
 - type: entity
@@ -334,6 +366,8 @@
     tags:
     - Cake
     - Fruit
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: shard of lemoon cake
@@ -363,6 +397,8 @@
     - Cake
     - Fruit
     - Slice
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: chocolate cake
@@ -420,6 +456,9 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of apple cake
@@ -433,7 +472,10 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
     - Slice
+    - Vegan # L5
+    - Wheat # L5
 # Tastes like sweetness, cake, slime.
 
 - type: entity
@@ -449,7 +491,10 @@
   - type: Tag
     tags:
     - Cake
+    - Haram # L5
     - Meat
+    - Treyf # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of slime cake
@@ -464,6 +509,7 @@
     - Cake
     - Meat
     - Slice
+    - Wheat # L5
 # Tastes like sweetness, cake, slime.
 
 - type: entity
@@ -489,6 +535,9 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of pumpkin-spice cake
@@ -511,7 +560,10 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
     - Slice
+    - Vegan # L5
+    - Wheat # L5
 # Tastes like sweetness, cake, pumpkin.
 
 - type: entity
@@ -528,6 +580,9 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of christmas cake
@@ -540,7 +595,10 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
     - Slice
+    - Vegan # L5
+    - Wheat # L5
 # Tastes like sweetness, cake, christmas.
 
 - type: entity
@@ -553,6 +611,10 @@
     state: birthday
   - type: SliceableFood
     slice: FoodCakeBirthdaySlice
+  - type: Tag
+    tags:
+    - Cake
+    - Wheat # L5
 
 - type: entity
   name: slice of birthday cake
@@ -562,6 +624,11 @@
   components:
   - type: Sprite
     state: birthday-slice
+  - type: Tag
+    tags:
+    - Cake
+    - Slice
+    - Wheat # L5
 # Tastes like sweetness, cake, christmas.
 
 - type: entity
@@ -763,9 +830,13 @@
     baseSprintSpeed : 3
   - type: Tag
     tags:
-    - VimPilot
-    - DoorBumpOpener
     - Cake
+    - Dairy
+    - DoorBumpOpener
+    - Haram # L5
+    - Treyf # L5
+    - VimPilot
+    - Wheat # L5
   - type: CanEscapeInventory
     baseResistTime: 2
   - type: Puller
@@ -810,6 +881,10 @@
     color: "#FFFF00"
     radius: 2
     energy: 1.4
+  - type: Tag
+    tags:
+    - Cake
+    - Vegan # L5
 
 - type: entity
   name: suppermatter shard
@@ -834,7 +909,9 @@
     energy: 1.4
   - type: Tag
     tags:
+    - Cake
     - Slice
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Suppermatter

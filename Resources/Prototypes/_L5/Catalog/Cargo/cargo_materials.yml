@@ -1,0 +1,19 @@
+- type: cargoProduct
+  id: MaterialWaterTankHighCapacity
+  icon:
+    sprite: Structures/Storage/tanks.rsi
+    state: highwatertank
+  product: WaterTankHighCapacity
+  cost: 5000 # Bit of a discount; 6.6x the size of a water tank, 5x the cost.
+  category: cargoproduct-category-name-materials
+  group: market
+
+- type: cargoProduct
+  id: MaterialWeldingFuelTankHighCapacity
+  icon:
+    sprite: Structures/Storage/tanks.rsi
+    state: highfueltank
+  product: WeldingFuelTankHighCapacity
+  cost: 4000 # Bit of a discount; 3.3x the size of a water tank, 2.3x the cost.
+  category: cargoproduct-category-name-materials
+  group: market

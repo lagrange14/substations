@@ -10,6 +10,7 @@
   - type: Tag
     tags:
       - FoodSnack
+      - Vegan # L5 - unless otherwise specified.
   - type: Sprite
     sprite: Objects/Consumable/Food/snacks.rsi
   - type: SolutionContainerManager
@@ -41,7 +42,7 @@
     state: boritos
   - type: Item
   - type: Food
-    trash: 
+    trash:
     - FoodPacketBoritosTrash
 
 - type: entity
@@ -57,7 +58,7 @@
     state: cnds
   - type: Item
   - type: Food
-    trash: 
+    trash:
     - FoodPacketCnDsTrash
 
 - type: entity
@@ -74,8 +75,12 @@
     state: cheesiehonkers
   - type: Item
   - type: Food
-    trash: 
+    trash:
     - FoodPacketCheesieTrash
+  - type: Tag
+    tags:
+    - Dairy
+    - FoodSnack
 
 - type: entity
   name: chips
@@ -92,7 +97,7 @@
     state: chips
   - type: Item
   - type: Food
-    trash: 
+    trash:
     - FoodPacketChipsTrash
 
 - type: entity
@@ -107,9 +112,6 @@
   - type: Item
     heldPrefix: chocolatebar
     size: Tiny
-  - type: Tag
-    tags:
-      - FoodSnack
   - type: SpawnItemsOnUse
     items:
       - id: FoodPacketChocolateTrash
@@ -133,6 +135,7 @@
     tags:
       - FoodSnack
       - ReptilianFood
+      - Vegan # L5 - assuming dark chocolate
   - type: SolutionContainerManager
     solutions:
       food:
@@ -191,11 +194,12 @@
     state: pistachio
   - type: Item
   - type: Food
-    trash: 
+    trash:
     - FoodPacketPistachioTrash
   - type: Tag
     tags:
     - Fruit # Seed of a fruit, you can yell at me
+    - Vegan # L5
 
 - type: entity
   name: popcorn
@@ -207,13 +211,13 @@
     flavors:
       - corn
       - salt
-      - butter
+      - butter # L5 - doesn't actually contain butter.
   - type: Sprite
     state: popcorn
   - type: Item
     heldPrefix: popcorn
   - type: Food
-    trash: 
+    trash:
     - FoodPacketPopcornTrash
 
 - type: entity
@@ -229,11 +233,12 @@
     state: raisins
   - type: Item
   - type: Food
-    trash: 
+    trash:
     - FoodPacketRaisinsTrash
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
 
 - type: entity
   name: bob's semki sunflower seeds
@@ -248,7 +253,7 @@
     state: semki
   - type: Item
   - type: Food
-    trash: 
+    trash:
     - FoodPacketSemkiTrash
 
 - type: entity
@@ -264,7 +269,7 @@
     state: susjerky
   - type: Item
   - type: Food
-    trash: 
+    trash:
     - FoodPacketSusTrash
   - type: Tag
     tags:
@@ -283,7 +288,7 @@
     state: syndicakes
   - type: Item
   - type: Food
-    trash: 
+    trash:
     - FoodPacketSyndiTrash
 
 - type: entity
@@ -308,8 +313,9 @@
   - type: Sprite
     state: ramen
   - type: Food
-    trash: 
+    trash:
     - FoodPacketCupRamenTrash
+# L5 - artificial chicken extract flavoring
 
 - type: entity
   parent: DrinkRamen
@@ -351,7 +357,7 @@
         - ReagentId: Soysauce
           Quantity: 2
   - type: Food
-    trash: 
+    trash:
     - FoodPacketChowMeinTrash
 
 - type: entity
@@ -380,8 +386,9 @@
         - ReagentId: Soysauce
           Quantity: 2
   - type: Food
-    trash: 
+    trash:
     - FoodPacketDanDanTrash
+# L5 - uses TVP...?
 
 - type: entity
   name: fortune cookie
@@ -406,8 +413,9 @@
     heldPrefix: packet
     size: Tiny
   - type: Food
-    trash: 
+    trash:
     - FoodCookieFortune
+# L5 - finally some vegan fucking fortune cookies.
 
 - type: entity
   id: FoodSnackNutribrick
@@ -444,6 +452,7 @@
   - type: Tag
     tags:
       - ReptilianFood
+      - Vegan # L5
   - type: Sprite
     state: nutribrick-open
   - type: Food
@@ -467,6 +476,7 @@
   - type: Tag
     tags:
       - FoodSnack
+      - Vegan # L5
   - type: SpawnItemsOnUse
     items:
       - id: FoodPacketMRETrash

@@ -727,7 +727,7 @@
   group: Pasta
   reagents:
     Flour: 15
-    Egg: 6
+    # Egg: 6 # L5 - spaghetti is semolina and water. Please let vegans have more options...
     OilOlive: 5
 
 - type: microwaveMealRecipe
@@ -948,6 +948,7 @@
   solids:
     FoodBowlBig: 1
     FoodMushroom: 2
+
 
 - type: microwaveMealRecipe
   id: RecipeStewSoup

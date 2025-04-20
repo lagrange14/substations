@@ -118,8 +118,9 @@
           Quantity: 8
   - type: Tag
     tags:
-    - Soup
     - Fruit # I don't know what this is but its' a salad so sure
+    - Soup
+    - Vegan # L5 - sure
 
 - type: entity
   name: herb salad
@@ -147,7 +148,9 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5 - apple
     - Soup
+    - Vegan # L5
 
 - type: entity
   name: valid salad
@@ -180,6 +183,8 @@
     tags:
     - Meat
     - Fruit
+    - LatexInteraction # L5 - Potato
+    - Nightshade # L5
     - Soup
 
 - type: entity
@@ -208,6 +213,9 @@
           Quantity: 2
         - ReagentId: Allicin
           Quantity: 3
+  - type: Tag
+    tags:
+    - Vegan # L5
 
 - type: entity
   name: caesar salad
@@ -234,6 +242,9 @@
           Quantity: 8
         - ReagentId: Vitamin
           Quantity: 6
+  - type: Tag
+    tags:
+    - Dairy # L5
 
 - type: entity
   name: kimchi salad
@@ -261,6 +272,10 @@
           Quantity: 2
         - ReagentId: Allicin
           Quantity: 2
+  - type: Tag
+    tags:
+    - LatexInteraction # L5 - carrot
+    - Vegan # L5
 
 - type: entity
   name: fruit salad
@@ -287,7 +302,9 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5 - apple
     - Soup
+    - Vegan # L5
 
 - type: entity
   name: jungle salad
@@ -315,6 +332,7 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5 - apple
     - Soup
 
 - type: entity
@@ -344,6 +362,7 @@
     tags:
     - Fruit
     - Soup
+    - Vegan # L5
 
 - type: entity
   name: salad of eden
@@ -370,6 +389,9 @@
           Quantity: 5
         - ReagentId: Omnizine
           Quantity: 5
+  - type: Tag
+    tags:
+    - Vegan # L5
 
 # Rice
 
@@ -386,6 +408,9 @@
     layers:
     - state: bowl
     - state: rice
+  - type: Tag
+    tags:
+    - Vegan # L5
 
 - type: entity
   name: egg-fried rice
@@ -412,7 +437,8 @@
           Quantity: 4
   - type: Tag
     tags:
-    - Meat
+    #- Meat # L5 - doesn't contain meat ?.?
+    - LatexInteraction # L5 - carrot
     - Soup
 
 - type: entity
@@ -474,6 +500,9 @@
           Quantity: 5
         - ReagentId: Sugar
           Quantity: 5
+  - type: Tag
+    tags:
+    - Dairy # L5
 
 - type: entity
   name: black-eyed gumbo
@@ -505,6 +534,7 @@
   - type: Tag
     tags:
     - Meat
+    - Nightshade # L5
     - Soup
 
 # Misc
@@ -601,7 +631,9 @@
           Quantity: 10
   - type: Tag
     tags:
+    - LatexInteraction # L5 - potato
     - Meat
+    - Nightshade # L5
     - Soup
 
 - type: entity
@@ -657,7 +689,9 @@
   - type: Tag
     tags:
     - Fruit
+    - Haram # L5
     - Soup
+    - Treyf # L5
 
 - type: entity
   name: wing fang chu
@@ -684,6 +718,11 @@
           Quantity: 10
         - ReagentId: Vitamin
           Quantity: 7
+  - type: Tag
+    tags:
+    - Haram # L5
+    - Meat
+    - Treyf # L5
 
 - type: entity
   name: clown's tears
@@ -709,6 +748,10 @@
           Quantity: 9
         - ReagentId: Water
           Quantity: 10
+  - type: Tag
+    tags:
+    - LatexInteraction # L5 - banana
+    - Vegan # L5
 
 - type: entity
   name: vegetable soup
@@ -738,6 +781,11 @@
           Quantity: 10
         - ReagentId: Oculine
           Quantity: 1
+  - type: Tag
+    tags:
+    - LatexInteraction # L5
+    - Nightshade # L5
+    - Vegan # L5
 
 - type: entity
   name: nettle soup
@@ -767,6 +815,10 @@
           Quantity: 5
         - ReagentId: Histamine
           Quantity: 0.5
+  - type: Tag
+    tags:
+    - LatexInteraction # L5 - potato
+    - Nightshade # L5
 
 - type: entity
   name: mystery soup
@@ -811,6 +863,8 @@
   - type: Tag
     tags:
     - ChiliBowl
+    - Meat
+    - Nightshade # L5
 
 
 - type: entity
@@ -839,6 +893,8 @@
   - type: Tag
     tags:
     - ChiliBowl
+    - Meat
+    - Nightshade # L5
 
 - type: entity
   name: chili con carnival
@@ -872,6 +928,8 @@
   - type: Tag
     tags:
     - ChiliBowl
+    - Meat
+    - Nightshade # L5
 
 - type: entity
   name: monkey's delight
@@ -902,6 +960,7 @@
             Quantity: 1
   - type: Tag
     tags:
+    - LatexInteraction # L5
     - Meat
     - Soup
 
@@ -932,6 +991,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Nightshade # L5
     - Soup
 
 - type: entity
@@ -1021,6 +1081,10 @@
             Quantity: 5
           - ReagentId: Milk
             Quantity: 5
+  - type: Tag
+    tags:
+    - Dairy
+    - Soup
 
 - type: entity
   name: beet soup
@@ -1096,6 +1160,8 @@
     tags:
     - Meat
     - Fruit
+    - LatexInteraction # L5
+    - Nightshade # L5
     - Soup
 
 - type: entity
@@ -1120,6 +1186,10 @@
             Quantity: 4
           - ReagentId: Vitamin
             Quantity: 5
+  - type: Tag
+    tags:
+    - Nightshade # L5
+    - Soup
 # Tastes like sweet potato.
 
 - type: entity
@@ -1146,6 +1216,10 @@
             Quantity: 5
           - ReagentId: Allicin
             Quantity: 5
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Soup
 
 - type: entity
   name: bisque
@@ -1173,6 +1247,12 @@
             Quantity: 6
           - ReagentId: Water
             Quantity: 5
+  - type: Tag
+    tags:
+    - Fish # L5
+    - Meat
+    - Nightshade # L5
+    - Soup
 # Tastes like crab.
 
 - type: entity
@@ -1227,6 +1307,7 @@
     tags:
     - Fruit
     - Soup
+    - Vegan # L5
 # Tastes like bungo, hot curry.
 
 - type: entity
@@ -1256,5 +1337,7 @@
             Quantity: 3
   - type: Tag
     tags:
+    - Haram # L5
     - Meat
     - Soup
+    - Treyf # L5
