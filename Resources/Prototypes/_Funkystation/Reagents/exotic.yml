@@ -126,11 +126,11 @@
   physicalDesc: reagent-physical-desc-fluffy
   flavor: medicine
   color: "#ffaa00"
-  metabolisms:
-    Poison:
-      effects:
-      - !type:Polymorph
-        prototype: CorgiMorph # PERMANENT. There's a reason this chem's an exotic chem, not a low-mid level chem. Exotic's primary toxin.
-        conditions:
-        - !type:ReagentThreshold
-          min: 20
+  metabolisms: [] # L5 - little TOO silly, but leaving in the ability to create a corgi puppy as an Easter egg (see also: buzzchloric bees)
+#    Poison:
+#      effects:
+#      - !type:Polymorph
+#        prototype: CorgiMorph # PERMANENT. There's a reason this chem's an exotic chem, not a low-mid level chem. Exotic's primary toxin.
+#        conditions:
+#        - !type:ReagentThreshold
+#          min: 20

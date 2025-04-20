@@ -42,8 +42,9 @@ cargo-console-insufficient-funds = Insufficient funds (require {$cost})
 cargo-console-unfulfilled = No room to fulfill order
 cargo-console-trade-station = Sent to {$destination}
 cargo-console-unlock-approved-order-broadcast = [bold]{$productName} x{$orderAmount}[/bold], which cost [bold]{$cost}[/bold], was approved by [bold]{$approver}[/bold]
-cargo-console-fund-withdraw-broadcast = [bold]{$name} withdrew {$amount} spesos from {$name1} \[{$code1}\]
-cargo-console-fund-transfer-broadcast = [bold]{$name} transferred {$amount} spesos from {$name1} \[{$code1}\] to {$name2} \[{$code2}\][/bold]
+# L5
+cargo-console-fund-withdraw-broadcast = [bold]{$name} withdrew {$amount} RACs from {$name1} \[{$code1}\]
+cargo-console-fund-transfer-broadcast = [bold]{$name} transferred {$amount} RACs from {$name1} \[{$code1}\] to {$name2} \[{$code2}\][/bold]
 cargo-console-fund-transfer-user-unknown = Unknown
 
 cargo-console-paper-reason-default = None
@@ -72,6 +73,7 @@ cargo-funding-alloc-console-label-code = [bold] Code [/bold]
 cargo-funding-alloc-console-label-balance = [bold] Balance [/bold]
 cargo-funding-alloc-console-label-cut = [bold] Revenue Division (%) [/bold]
 
+# L5 - cargo to logistics
 cargo-funding-alloc-console-label-help = Cargo receives {$percent}% of all profits. The rest is split as specified below:
 cargo-funding-alloc-console-button-save = Save Changes
 cargo-funding-alloc-console-label-save-fail = [bold]Revenue Divisions Invalid![/bold] [color=red]({$pos ->

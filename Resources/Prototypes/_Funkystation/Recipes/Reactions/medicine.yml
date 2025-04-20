@@ -66,17 +66,18 @@
     Convermol: 3
 
 # misc
-- type: reaction
-  id: Pielovene
-  reactants:
-    Silicon:
-      amount: 1
-    Nitrogen:
-      amount: 1
-    LiquidPie:
-      amount: 1
-  products:
-    Pielovene: 3
+# L5 - little TOO silly
+#- type: reaction
+#  id: Pielovene
+#  reactants:
+#    Silicon:
+#      amount: 1
+#    Nitrogen:
+#      amount: 1
+#    LiquidPie:
+#      amount: 1
+#  products:
+#    Pielovene: 3
 
 - type: reaction
   id: Hypothium

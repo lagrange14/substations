@@ -106,6 +106,7 @@
   products:
     Ichor: 1
 
+# L5 - little TOO silly, but leaving in the ability to create a corgi puppy as an Easter egg
 - type: reaction
   id: Corgium
   reactants:

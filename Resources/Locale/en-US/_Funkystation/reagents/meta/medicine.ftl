@@ -40,7 +40,8 @@ reagent-desc-hypothium = A difficult to synthesize drug used to cure most wounds
 reagent-name-pyroxadone = pyroxadone
 reagent-desc-pyroxadone = A chemical that works inversely of cryoxadone, requiring high temperatures in order to work. Heals most damage.
 
-reagent-name-ardthyrnkole = ardthyrnkole
+# L5 - Pagetos = frost (Greek)
+reagent-name-ardthyrnkole = pagetodone
 reagent-desc-ardthyrnkole = A pyrogenics chemical used to treat severe frostbite on corpses by rapidly defrosting and regenerating frozen tissue.
 
 reagent-name-natusixadone = natusixadone
