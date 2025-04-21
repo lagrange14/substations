@@ -500,6 +500,7 @@
     - EmptyMedkitsStatic
     - SurgeryStatic
     - ReportingStatic # DeltaV
+    - PowerCellsStatic # DeltaV
     dynamicPacks:
     - Chemistry
     - CyberneticsMedical # Shitmed change
