@@ -561,6 +561,8 @@
     tags:
     - Ingredient
     - ClothMade
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: raw pastry base
