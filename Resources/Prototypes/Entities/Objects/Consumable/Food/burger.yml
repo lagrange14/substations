@@ -195,6 +195,8 @@
   - type: Tag
     tags:
     - Meat
+    - Haram # L5
+    - Treyf
 # Tastes like bun, bacon.
 
 - type: entity
@@ -252,6 +254,8 @@
   - type: Tag
     tags:
     - Meat
+    - Haram # L5
+    - Treyf # L5
 
 - type: entity
   name: big bite burger
@@ -283,6 +287,9 @@
   - type: Tag
     tags:
     - Meat
+    - Dairy # L5
+    - Nightshade
+    - Treyf # L5
 # Tastes like bun, silver, magic.
 
 - type: entity
@@ -342,6 +349,7 @@
   - type: Tag
     tags:
     - Meat
+    # L5 - Turns out cat ears headbands are not treyf or haram, just weird
 
 - type: entity
   name: cheese burger
@@ -370,7 +378,9 @@
   - type: Tag
     tags:
     - Meat
-  # TODO: Make this work.
+    - Dairy # L5
+    - Treyf # L5
+# TODO: Make this work.
   # - type: Sprite
   #   state: plate
   # - type: RandomSpriteState
@@ -466,6 +476,8 @@
   - type: Tag
     tags:
     - Meat
+    - Haram # L5
+    - Treyf # L5
 
 - type: entity
   name: crab burger
@@ -493,6 +505,8 @@
   - type: Tag
     tags:
     - Meat
+    - Haram # L5 (mostly agreed on...)
+    - Treyf # L5
 
 - type: entity
   name: crazy hamburger # Burger for you euro-cucks
@@ -528,6 +542,9 @@
   - type: Tag
     tags:
     - Meat
+    - Dairy # L5
+    - Nightshade # L5
+    - Treyf # L5
 
 - type: entity
   name: duck sandwich # Burger for you sick bastards
@@ -555,6 +572,8 @@
   - type: Tag
     tags:
     - Meat
+    - Dairy # L5
+    - Treyf # L5
 # Tastes like bun, duck.
 
 - type: entity
@@ -595,6 +614,8 @@
   - type: Tag
     tags:
     - Meat
+    - Dairy # L5
+    - Fish # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -634,6 +655,7 @@
   - type: Tag
     tags:
     - Meat
+    - Nightshade # L5
 
 # Tastes like bun, HEAT.
 
@@ -693,6 +715,8 @@
   - type: Tag
     tags:
     - Meat
+    - Treyf # L5
+    - Haram # L5
 
 - type: entity
   name: McGuffin
@@ -722,6 +746,7 @@
   - type: Tag
     tags:
     - Meat
+    - Dairy # L5
 
 - type: entity
   name: BBQ Rib Sandwich
@@ -757,6 +782,8 @@
   - type: Tag
     tags:
     - Meat
+    - Haram # L5 - TODO: even if this is made with cow meat, until we can bubble up tags from ingredients.
+    - Treyf
 # Tastes like bun, pork patty.
 
 - type: entity
@@ -839,6 +866,8 @@
   - type: Tag
     tags:
     - Meat
+    - Haram # L5
+    - Treyf # L5
 # Tastes like bun, HEAT.
 
 - type: entity
@@ -891,6 +920,13 @@
         #  Quantity: 6
         #- ReagentId: Vitamin
         # Quantity: 4
+        - ReagentId: Protein
+          Quantity: 6
+        - ReagentId: Vitamin
+          Quantity: 4
+  - type: Tag
+    tags:
+    - Dairy # L5
 # Tastes like bun, redditors.
 
 - type: entity
@@ -956,6 +992,9 @@
   - type: Tag
     tags:
     - Meat
+    - Dairy # L5
+    - Nightshade # L5
+    - Treyf # L5
 # Tastes like bun, diabetes.
 
 - type: entity
@@ -981,6 +1020,11 @@
           Quantity: 3 # imp
         #- ReagentId: Vitamin # imp
         #  Quantity: 3
+        - ReagentId: Vitamin
+          Quantity: 3
+  - type: Tag
+    tags:
+    - Vegan # L5
 # Tastes like bun, tofu.
 
 - type: entity
@@ -1010,6 +1054,8 @@
   - type: Tag
     tags:
     - Meat
+    - Haram # L5
+    - Treyf # L5
 # Tastes like bun, acid.
 
 # Note: I would put a bunch of colored burgers here as listed in the tg .dm but
@@ -1044,4 +1090,5 @@
   - type: Tag
     tags:
     - Meat
-
+    - Haram # L5
+    - Treyf # L5

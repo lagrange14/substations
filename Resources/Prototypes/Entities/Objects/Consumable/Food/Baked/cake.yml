@@ -26,6 +26,7 @@
   - type: Tag
     tags:
     - Cake
+    - Vegan # L5 - until ingredient tags bubble up
 
 - type: entity
   parent: FoodCakeBase
@@ -52,6 +53,7 @@
     tags:
     - Cake
     - Slice
+    - Vegan # L5 - until ingredient tags bubble up
 
 # Custom Cake Example
 
@@ -176,7 +178,10 @@
   - type: Tag
     tags:
     - Cake
+    - LatexInteraction # L5
+    - Wheat # L5
     - Vegetable
+    - Vegan # L5
 
 - type: entity
   name: slice of carrot cake
@@ -202,8 +207,10 @@
   - type: Tag
     tags:
     - Cake
-    - Vegetable
+    - LatexInteraction # L5
     - Slice
+    - Wheat # L5
+    - Vegetable
 
 # Tastes like sweetness, cake, carrot.
 
@@ -221,6 +228,7 @@
     tags:
     - Cake
     - Meat
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -246,6 +254,7 @@
     - Cake
     - Meat
     - Slice
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -257,7 +266,6 @@
           Quantity: 1
         - ReagentId: GreyMatter
           Quantity: 1
-
 # Tastes like sweetness, cake, brains.
 
 - type: entity
@@ -279,6 +287,11 @@
           Quantity: 32
         - ReagentId: Vitamin
           Quantity: 5
+  - type: Tag
+    tags:
+    - Cake
+    - Dairy # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of cheese cake
@@ -297,6 +310,12 @@
           Quantity: 6.4
         - ReagentId: Vitamin
           Quantity: 1
+  - type: Tag
+    tags:
+    - Cake
+    - Dairy # L5
+    - Slice
+    - Wheat # L5
 # Tastes like sweetness, cream cheese.
 
 - type: entity
@@ -317,6 +336,8 @@
     tags:
     - Cake
     - Fruit
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -343,6 +364,8 @@
     - Cake
     - Fruit
     - Slice
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -372,6 +395,8 @@
     tags:
     - Cake
     - Fruit
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -398,6 +423,8 @@
     - Cake
     - Fruit
     - Slice
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -427,6 +454,8 @@
     tags:
     - Cake
     - Fruit
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -453,6 +482,8 @@
     - Cake
     - Fruit
     - Slice
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -493,6 +524,8 @@
     tags:
     - Cake
     - Fruit
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: shard of lemoon cake
@@ -522,6 +555,8 @@
     - Cake
     - Fruit
     - Slice
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: chocolate cake
@@ -587,6 +622,9 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -613,7 +651,10 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
     - Slice
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -638,7 +679,10 @@
   - type: Tag
     tags:
     - Cake
+    - Haram # L5
     - Meat
+    - Treyf # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -664,6 +708,7 @@
     - Cake
     - Meat
     - Slice
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -702,6 +747,9 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of pumpkin-spice cake
@@ -726,7 +774,10 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
     - Slice
+    - Vegan # L5
+    - Wheat # L5
 # Tastes like sweetness, cake, pumpkin.
 
 - type: entity
@@ -743,6 +794,9 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of christmas cake
@@ -755,7 +809,10 @@
     tags:
     - Cake
     - Fruit
+    - LatexInteraction # L5
     - Slice
+    - Vegan # L5
+    - Wheat # L5
 # Tastes like sweetness, cake, christmas.
 
 - type: entity
@@ -779,6 +836,10 @@
           Quantity: 5
         - ReagentId: Cream # imp
           Quantity: 5
+  - type: Tag
+    tags:
+    - Cake
+    - Wheat # L5
 
 - type: entity
   name: slice of birthday cake
@@ -799,6 +860,11 @@
           Quantity: 1
         - ReagentId: Cream
           Quantity: 1
+  - type: Tag
+    tags:
+    - Cake
+    - Slice
+    - Wheat # L5
 # Tastes like sweetness, cake, christmas.
 
 - type: entity
@@ -1004,9 +1070,13 @@
     baseSprintSpeed : 3
   - type: Tag
     tags:
-    - VimPilot
-    - DoorBumpOpener
     - Cake
+    - Dairy
+    - DoorBumpOpener
+    - Haram # L5
+    - Treyf # L5
+    - VimPilot
+    - Wheat # L5
   - type: CanEscapeInventory
     baseResistTime: 2
   - type: Puller
@@ -1057,6 +1127,7 @@
     tags:
     - Cake
     - Suppermatter
+    - Vegan # L5
 
 - type: entity
   name: suppermatter shard
@@ -1083,7 +1154,9 @@
     energy: 1.4
   - type: Tag
     tags:
+    - Cake
     - Slice
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Suppermatter

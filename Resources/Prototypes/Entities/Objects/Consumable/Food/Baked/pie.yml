@@ -30,6 +30,7 @@
   - type: Tag
     tags:
     - Pie
+    - Wheat # L5
 
 - type: entity
   parent: FoodInjectableBase # Not sliceable
@@ -57,6 +58,7 @@
     tags:
     - Pie
     - Slice
+    - Wheat # L5
 
 # Pie
 
@@ -80,6 +82,7 @@
     tags:
     - Fruit
     - Pie
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -109,6 +112,7 @@
     - Fruit
     - Pie
     - Slice
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -206,7 +210,9 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
     - Pie
+    - Wheat # L5
   - type: SliceableFood
     slice: FoodPieBananaCreamSlice
   - type: SolutionContainerManager # imp
@@ -235,8 +241,10 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
     - Pie
     - Slice
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -276,6 +284,7 @@
     tags:
     - Fruit
     - Pie
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -305,6 +314,7 @@
     - Fruit
     - Pie
     - Slice
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -336,6 +346,7 @@
     tags:
     - Fruit
     - Pie
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -364,6 +375,7 @@
     - Fruit
     - Pie
     - Slice
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -394,6 +406,7 @@
     tags:
     - Meat
     - Pie
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -422,6 +435,7 @@
     - Meat
     - Pie
     - Slice
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -452,6 +466,7 @@
   - type: Tag
     tags:
     - Pie
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -480,6 +495,7 @@
     tags:
     - Pie
     - Slice
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -509,8 +525,11 @@
     slice: FoodPieXenoSlice
   - type: Tag
     tags:
+    - Haram # L5
     - Meat
     - Pie
+    - Treyf # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -537,9 +556,12 @@
       color: green
   - type: Tag
     tags:
+    - Haram # L5
     - Meat
     - Pie
     - Slice
+    - Treyf # L5
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -577,6 +599,13 @@
           Quantity: 30
         - ReagentId: Vitamin
           Quantity: 12
+  - type: Tag
+    tags:
+    - Fruit
+    - LatexInteraction # L5
+    - Nightshade # L5
+    - Pie
+    - Wheat # L5
 
 - type: entity
   name: slice of frosty pie
@@ -602,6 +631,14 @@
           Quantity: 6
         - ReagentId: Vitamin
           Quantity: 2.4
+  - type: Tag
+    tags:
+    - Fruit
+    - LatexInteraction # L5
+    - Nightshade # L5
+    - Pie
+    - Slice
+    - Wheat # L5
 # Tastes like pie, mint.
 
 - type: entity
@@ -632,6 +669,12 @@
           Quantity: 5
         - ReagentId: Nothing
           Quantity: 15
+  - type: Tag
+    tags:
+    - Fruit
+    - LatexInteraction # L5
+    - Pie
+    - Wheat # L5
 
 - type: entity
   name: slice of mime tart
@@ -659,6 +702,13 @@
           Quantity: 1.25
         - ReagentId: Nothing
           Quantity: 3.75
+  - type: Tag
+    tags:
+    - Fruit
+    - LatexInteraction # L5
+    - Pie
+    - Slice
+    - Wheat # L5
 # Tastes like nothing.
 
 # No Slice
@@ -731,6 +781,7 @@
     tags:
     - Fruit
     - Pie
+    - Wheat # L5
 # Tastes like tart, grape.
 
 - type: entity
@@ -748,7 +799,10 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
     - Pie
+    - Slice
+    - Wheat # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -792,4 +846,8 @@
           Quantity: 3
         - ReagentId: Milk # imp
           Quantity: 5
+  - type: Tag
+    tags:
+    - Pie
+    - Wheat # L5
 # Tastes like tart, dark chocolate.

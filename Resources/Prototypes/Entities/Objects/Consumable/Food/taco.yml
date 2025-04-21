@@ -64,7 +64,9 @@
     storedRotation: -90
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
+    - Treyf # L5
 
 - type: entity
   name: beef taco
@@ -132,6 +134,11 @@
           Quantity: 5
         - ReagentId: Allicin # imp
           Quantity: 2
+  - type: Tag
+    tags:
+    - Fish # L5
+    - Meat
+    - Nightshade # L5
 
 - type: entity
   name: rat taco
@@ -153,6 +160,12 @@
         #  Quantity: 4
         - ReagentId: Protein # imp
           Quantity: 3
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Haram # L5
+    - Meat
+    - Treyf # L5
 
 - type: entity
   name: beef taco supreme
@@ -181,6 +194,13 @@
           Quantity: 3
         - ReagentId: Allicin # imp
           Quantity: 1
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Haram # L5
+    - Meat
+    - Nightshade # L5
+    - Treyf # L5
 
 - type: entity
   name: chicken taco supreme
@@ -209,6 +229,13 @@
           Quantity: 3
         - ReagentId: Allicin # imp
           Quantity: 1
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Haram # L5
+    - Meat
+    - Nightshade
+    - Treyf # L5
 
 - type: entity
   name: soft taco

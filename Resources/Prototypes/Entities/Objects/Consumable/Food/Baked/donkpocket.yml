@@ -21,6 +21,7 @@
     tags:
     - DonkPocket
     - Meat
+# L5 - beef until proven otherwise
 
 # Donkpocket
 
@@ -221,6 +222,11 @@
           Quantity: 8 # imp
   - type: Sprite
     state: pizza
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - DonkPocket
+    - Treyf # L5
 
 - type: entity
   name: warm pizza-pocket
@@ -243,6 +249,11 @@
           Quantity: 16 # imp
         - ReagentId: Omnizine
           Quantity: 2
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - DonkPocket
+    - Treyf # L5
 
 - type: entity
   name: honk-pocket
@@ -268,6 +279,10 @@
           Quantity: 0.1
   - type: Sprite
     state: banana
+  - type: Tag
+    tags:
+    - DonkPocket
+    - LatexInteraction # L5
 
 - type: entity
   name: warm honk-pocket
@@ -291,6 +306,10 @@
           Quantity: 2 # imp
         - ReagentId: Vitamin # imp
           Quantity: 1
+  - type: Tag
+    tags:
+    - DonkPocket
+    - LatexInteraction # L5
 
 - type: entity
   name: berry-pocket
@@ -314,6 +333,10 @@
           Quantity: 0.1
   - type: Sprite
     state: berry
+  - type: Tag
+    tags:
+    - DonkPocket
+    - Vegan
 
 - type: entity
   name: warm berry-pocket
@@ -337,6 +360,10 @@
           Quantity: 2
         - ReagentId: Vitamin # imp
           Quantity: 2
+  - type: Tag
+    tags:
+    - DonkPocket
+    - Vegan
 
 - type: entity
   name: stonk-pocket
@@ -399,6 +426,11 @@
           Quantity: 1
   - type: Sprite
     state: carp
+  - type: Tag
+    tags:
+    - DonkPocket
+    - Fish # L5
+    - Meat
 
 - type: entity
   name: warm carp-pocket
@@ -420,6 +452,11 @@
           Quantity: 4 # imp
         - ReagentId: CarpoToxin # imp
           Quantity: 5
+  - type: Tag
+    tags:
+    - DonkPocket
+    - Fish # L5
+    - Meat
 
 - type: entity
   name: dink-pocket
@@ -442,3 +479,9 @@
           Quantity: 1
   - type: Sprite
     state: dink
+  - type: Tag
+    tags:
+    - DonkPocket
+    - Haram # L5
+    - Meat
+    - Treyf # L5

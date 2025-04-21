@@ -532,6 +532,9 @@
     damage:
       types:
         Blunt: 6
+  - type: Tag
+    tags:
+    - Folder # L5 - allow storage in paperwork belt
 
 # L5
 - type: entity

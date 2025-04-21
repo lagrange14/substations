@@ -57,6 +57,7 @@
   - type: Tag
     tags:
     - Wheat
+    - Vegan # L5
 
 - type: entity
   name: meatwheat bushel
@@ -81,6 +82,10 @@
       path: /Audio/Voice/Slime/slime_squish.ogg
   - type: Produce
     seedId: meatwheat
+  - type: Tag
+    tags:
+    - Vegan # L5 - uh...meat alternative...?
+# L5 - Okay but...what is the halakha and fiqh on meatwheat...?
 
 - type: entity
   name: oat bushel
@@ -103,6 +108,9 @@
       reagents:
       - ReagentId: MilkOat
         Quantity: 5
+  - type: Tag
+    tags:
+    - Vegan # L5
 
 - type: entity
   name: sugarcane
@@ -122,6 +130,9 @@
           Quantity: 10
   - type: Produce
     seedId: sugarcane
+  - type: Tag
+    tags:
+    - Vegan # L5
 
 - type: entity
   name: papercane roll
@@ -139,6 +150,9 @@
   - type: Log
     spawnedPrototype: SheetPaper1
     spawnCount: 2
+  - type: Tag
+    tags:
+    - Vegan # L5
 
 - type: entity
   parent: FoodProduceBase
@@ -173,6 +187,7 @@
     seedId: laughinPea
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
 
 - type: entity
@@ -193,6 +208,9 @@
   - type: Produce
     seedId: towercap
   - type: Log
+  - type: Tag
+    tags:
+    - Vegan # L5
 
 - type: entity
   name: steel-cap log
@@ -214,6 +232,9 @@
   - type: Log
     spawnedPrototype: SheetSteel1
     spawnCount: 1
+  - type: Tag
+    tags:
+    - Vegan # L5 - I don't know if you can actually eat these, but ProduceBase calls it a food (even if only for cows)
 
 - type: entity
   name: nettle
@@ -245,6 +266,9 @@
     pierceArmor: false
   - type: Extractable
     grindableSolutionName: food
+  - type: Tag
+    tags:
+    - Vegan # L5
 
 - type: entity
   name: death nettle
@@ -279,6 +303,9 @@
     pierceArmor: false
   - type: Extractable
     grindableSolutionName: food
+  - type: Tag
+    tags:
+    - Vegan # L5
 
 - type: entity
   name: banana
@@ -314,8 +341,10 @@
         Quantity: 10
   - type: Tag
     tags:
-    - Fruit
     - Banana
+    - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: Banana
@@ -358,7 +387,10 @@
         Quantity: 5
   - type: Tag
     tags:
+    - Banana
     - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: Mimana
@@ -478,6 +510,8 @@
   - type: Tag
     tags:
     - Carrot
+    - LatexInteraction # L5
+    - Vegan # L5
     - Vegetable
   - type: SolutionContainerManager
     solutions:
@@ -534,6 +568,7 @@
     seedId: cabbage
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -566,6 +601,7 @@
     seedId: garlic
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -603,8 +639,9 @@
         Quantity: 10
   - type: Tag
     tags:
-    - Lemon
     - Fruit
+    - Lemon
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: Lemon
@@ -642,6 +679,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5 - the...the only time...the only time you can drink milk...
   - type: FoodSequenceElement
     entries:
       Burger: Lemoon
@@ -669,8 +707,9 @@
         Quantity: 10
   - type: Tag
     tags:
-    - Lime
     - Fruit
+    - Lime
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: Lime
@@ -699,6 +738,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: Orange
@@ -742,6 +782,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: ExtradimensionalOrangeBurger
@@ -784,6 +825,8 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
 
 - type: entity
   name: potato
@@ -817,6 +860,8 @@
   - type: Tag
     tags:
     - Potato
+    - Nightshade # L5
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -879,6 +924,8 @@
   - type: Tag
     tags:
     - Fruit
+    - Nightshade # L5
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -931,6 +978,8 @@
   - type: Tag
     tags:
     - Fruit
+    - Nightshade # L5 - ???
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -981,6 +1030,7 @@
     tags:
     - Fruit # Fuck you they're a fruit
     - Vegetable
+    - Vegan # L5 - ...uh...frick. What's the halakha and fiqh on plants that generate blood?
   - type: FoodSequenceElement
     entries:
       Skewer: TomatoSkewer
@@ -1014,6 +1064,8 @@
   - type: Tag
     tags:
     - Fruit
+    - Nightshade # L5
+    - Vegan # L5
     - Vegetable
 
 - type: entity
@@ -1046,6 +1098,8 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: Apple
@@ -1088,6 +1142,8 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: GoldenApple
@@ -1125,6 +1181,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
 
 - type: entity
   name: ear of corn
@@ -1150,6 +1207,7 @@
   - type: Tag
     tags:
     - Corn
+    - Vegan # L5
     - Vegetable
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/corn.rsi
@@ -1222,6 +1280,7 @@
     slice: FoodOnionSlice
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
 
 - type: entity
@@ -1255,6 +1314,7 @@
     slice: FoodOnionRedSlice
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
 
 - type: entity
@@ -1277,6 +1337,7 @@
     seedId: chanterelle
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
 
 # Slices
@@ -1320,7 +1381,9 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
     - Slice
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: PineappleSliceBurger
@@ -1350,6 +1413,7 @@
           Quantity: 1
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
     - Slice
   - type: FoodSequenceElement
@@ -1381,8 +1445,9 @@
           Quantity: 1
   - type: Tag
     tags:
-    - Vegetable
     - Slice
+    - Vegan # L5
+    - Vegetable
   - type: FoodSequenceElement
     entries:
       Burger: OnionRedSliceBurger
@@ -1416,6 +1481,8 @@
     seedId: chili
   - type: Tag
     tags:
+    - Nightshade # L5
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -1433,6 +1500,11 @@
     flavors:
       - spicy
       - cold
+  - type: Tag
+    tags:
+    - Nightshade # L5
+    - Vegan # L5
+    - Vegetable
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1484,6 +1556,7 @@
     grindableSolutionName: food
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -1521,6 +1594,7 @@
   - type: Tag
     tags:
     - Flower # TODO add "RedFlower" or "Poppy" tag, when other color flowers will be
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Poppy
@@ -1553,6 +1627,7 @@
   - type: Tag
     tags:
     - Flower
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Lily
@@ -1568,6 +1643,10 @@
     flavors:
       - mushroom
       - medicine
+  - type: Tag
+    tags:
+    - Vegan # L5
+    - Vegetable
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1630,6 +1709,8 @@
   - type: Tag
     tags:
     - Ambrosia
+    - Vegan # L5
+    - Vegetable
   - type: FoodSequenceElement
     entries:
       Taco: AmbrosiaVulgaris
@@ -1673,6 +1754,8 @@
   - type: Tag
     tags:
     - Ambrosia
+    - Vegan # L5
+    - Vegetable
   - type: FoodSequenceElement
     entries:
       Taco: AmbrosiaDeus
@@ -1704,8 +1787,9 @@
     grindableSolutionName: food
   - type: Tag
     tags:
-    - Galaxythistle
     - Fruit # Probably?
+    - Galaxythistle
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Galaxythistle
@@ -1774,6 +1858,7 @@
   - type: Tag
     tags:
     - Galaxythistle
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Glasstle
@@ -1788,6 +1873,10 @@
   - type: FlavorProfile
     flavors:
       - mushroom
+  - type: Tag
+    tags:
+    - Vegetable
+    - Vegan # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1839,6 +1928,7 @@
   - type: Tag
     tags:
     - Fruit # It's in the name
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Gatfruit
@@ -1874,6 +1964,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Capfruit
@@ -1909,6 +2000,9 @@
           Quantity: 10
   - type: Produce
     seedId: rice
+  - type: Tag
+    tags:
+    - Vegan # L5
 
 - type: entity
   name: soybeans
@@ -1934,6 +2028,7 @@
         Quantity: 5
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -1967,6 +2062,7 @@
   - type: Tag
     tags:
     - Flower
+    - Vegan # L5
   - type: Instrument #hehe trumpet
     program: 56
   - type: FoodSequenceElement
@@ -2000,6 +2096,7 @@
         Quantity: 2
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -2068,6 +2165,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
 
 - type: entity
   name: watermelon slice
@@ -2102,6 +2200,7 @@
     tags:
     - Fruit
     - Slice
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: WatermelonSliceBurger
@@ -2171,6 +2270,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
 
 - type: entity
   name: holymelon slice
@@ -2206,6 +2306,7 @@
     tags:
     - Fruit
     - Slice
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Burger: HolymelonSliceBurger
@@ -2244,6 +2345,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
 
 - type: entity
   name: berries
@@ -2277,6 +2379,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Berries
@@ -2315,6 +2418,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Bungo
@@ -2374,6 +2478,7 @@
     seedId: pea
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -2408,6 +2513,7 @@
     seedId: worldPea
   - type: Tag
     tags:
+    - Vegan # L5
     - Vegetable
   - type: FoodSequenceElement
     entries:
@@ -2462,6 +2568,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
     - Vegetable
 
 - type: entity
@@ -2514,6 +2621,8 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
+    - Vegetable
 
 - type: entity
   name: cotton boll
@@ -2541,8 +2650,9 @@
     seedId: cotton
   - type: Tag
     tags:
-    - ClothMade
     - CottonBoll
+    - ClothMade
+    - Vegan # L5
 
 - type: entity
   name: pyrotton boll
@@ -2572,8 +2682,9 @@
     seedId: pyrotton
   - type: Tag
     tags:
-    - ClothMade
     - CottonBoll
+    - ClothMade
+    - Vegan
   - type: Extractable
     grindableSolutionName: food
 
@@ -2610,6 +2721,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: Cherry
@@ -2677,6 +2789,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
   - type: FoodSequenceElement
     entries:
       Taco: AnomalyBerry

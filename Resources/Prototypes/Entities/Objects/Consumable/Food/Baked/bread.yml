@@ -15,6 +15,8 @@
   - type: Tag
     tags:
     - Bread
+    - Wheat # L5
+    - Vegan # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -37,6 +39,8 @@
     tags:
     - Bread
     - Slice
+    - Wheat # L5
+    - Vegan # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -97,8 +101,11 @@
     slice: FoodBreadBananaSlice
   - type: Tag
     tags:
-    - Fruit
     - Bread
+    - Fruit
+    - LatexInteraction # L5
+    - Wheat
+    - Vegan
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -126,9 +133,12 @@
     - state: banana-slice
   - type: Tag
     tags:
-    - Fruit
     - Bread
+    - Fruit
+    - LatexInteraction # L5
     - Slice
+    - Wheat # L5
+    - Vegan # L5
   - type: SolutionContainerManager # imp
     solutions:
       food:
@@ -158,8 +168,10 @@
     slice: FoodBreadCottonSlice
   - type: Tag
     tags:
-    - ClothMade
     - Bread
+    - ClothMade
+    - Wheat # L5
+    - Vegan # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -187,9 +199,11 @@
     - state: cotton-slice
   - type: Tag
     tags:
-    - ClothMade
     - Bread
+    - ClothMade
     - Slice
+    - Wheat # L5
+    - Vegan # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -210,6 +224,10 @@
     flavors:
       - bread
       - corn
+  - type: Tag
+    tags:
+    - Bread
+    - Vegan
   - type: Food
   - type: Sprite
     layers:
@@ -235,6 +253,11 @@
     flavors:
       - bread
       - corn
+  - type: Tag
+    tags:
+    - Bread
+    - Slice
+    - Vegan
   - type: Food
   - type: Sprite
     layers:
@@ -259,6 +282,11 @@
       - creamy
       - bread
   - type: Food
+  - type: Tag
+    tags:
+    - Bread
+    - Dairy # L5
+    - Wheat # L5
   - type: Sprite
     layers:
     - state: creamcheese
@@ -288,6 +316,12 @@
       - cheesy
       - creamy
       - bread
+  - type: Tag
+    tags:
+    - Bread
+    - Dairy # L5
+    - Slice
+    - Wheat # L5
   - type: Food
   - type: Sprite
     layers:
@@ -331,8 +365,9 @@
           Quantity: 6
   - type: Tag
     tags:
-    - Meat
     - Bread
+    - Meat
+    - Wheat # L5
 # Tastes like bread, meat.
 
 - type: entity
@@ -362,9 +397,10 @@
           Quantity: 1.2
   - type: Tag
     tags:
-    - Meat
     - Bread
+    - Meat
     - Slice
+    - Wheat # L5
 
 - type: entity
   name: mimana bread
@@ -376,6 +412,12 @@
     flavors:
       - nothing
       - bread
+  - type: Tag
+    tags:
+    - Bread
+    - LatexInteraction # L5
+    - Wheat # L5
+    - Vegan # L5
   - type: Food
   - type: Sprite
     layers:
@@ -407,6 +449,13 @@
     flavors:
       - nothing
       - bread
+  - type: Tag
+    tags:
+    - Bread
+    - LatexInteraction # L5
+    - Slice
+    - Wheat # L5
+    - Vegan # L5
   - type: Food
   - type: Sprite
     layers:
@@ -478,8 +527,9 @@
           Quantity: 9 # imp
   - type: Tag
     tags:
-    - Meat
     - Bread
+    - Meat
+    - Wheat # L5
 
 - type: entity
   name: sausage bread slice
@@ -508,9 +558,10 @@
           Quantity: 1.8 # imp
   - type: Tag
     tags:
-    - Meat
     - Bread
+    - Meat
     - Slice
+    - Wheat # L5
 
 - type: entity
   name: spider meat bread
@@ -541,8 +592,11 @@
           Quantity: 6 # imp
   - type: Tag
     tags:
-    - Meat
     - Bread
+    - Haram # L5
+    - Meat
+    - Treyf # L5
+    - Wheat # L5
 # Tastes like bread, cobwebs.
 
 - type: entity
@@ -572,9 +626,12 @@
           Quantity: 1.2
   - type: Tag
     tags:
-    - Meat
     - Bread
+    - Haram # L5
+    - Meat
     - Slice
+    - Treyf # L5
+    - Wheat # L5
 
 - type: entity
   name: tofu bread
@@ -586,6 +643,11 @@
     flavors:
       - tofu
       - bread
+  - type: Tag
+    tags:
+    - Bread
+    - Wheat # L5
+    - Vegan # L5
   - type: Food
   - type: Sprite
     layers:
@@ -613,6 +675,12 @@
     flavors:
       - tofu
       - bread
+  - type: Tag
+    tags:
+    - Bread
+    - Slice
+    - Wheat # L5
+    - Vegan # L5
   - type: Food
   - type: Sprite
     layers:
@@ -658,8 +726,11 @@
           Quantity: 2 # imp
   - type: Tag
     tags:
-    - Meat
     - Bread
+    - Haram # L5
+    - Meat
+    - Treyf # L5
+    - Wheat # L5
 # Tastes like bread, acid.
 
 - type: entity
@@ -689,9 +760,12 @@
           Quantity: 0.4 # imp
   - type: Tag
     tags:
-    - Meat
     - Bread
+    - Haram # L5
+    - Meat
     - Slice
+    - Treyf # L5
+    - Wheat # L5
 
 # Other than bread/slices
 
@@ -752,6 +826,8 @@
     tags:
     - Bread
     - ClothMade
+    - Wheat # L5
+    - Vegan # L5
   - type: Clothing
     equippedPrefix: baguette-cotton
   - type: Item
@@ -811,8 +887,10 @@
   - type: Tag
     tags:
     - Bread
-    - Slice
     - ClothMade
+    - Slice
+    - Wheat # L5
+    - Vegan # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -852,6 +930,12 @@
           Quantity: 5
         #- ReagentId: Vitamin # imp
         #  Quantity: 1
+  - type: Tag
+    tags:
+    - Bread
+    - Dairy # L5
+    - Slice
+    - Wheat # L5
 # Tastes like bread, butter.
 
 - type: entity
@@ -879,6 +963,12 @@
           Quantity: 12
         #- ReagentId: Vitamin # imp
         #  Quantity: 2
+  - type: Tag
+    tags:
+    - Bread
+    - Dairy # L5
+    - Slice
+    - Wheat # L5
 # Tastes like bread, butter.
 
 - type: entity
@@ -907,6 +997,12 @@
           Quantity: 5
         - ReagentId: Allicin # imp
           Quantity: 4
+  - type: Tag
+    tags:
+    - Bread
+    - Dairy # L5
+    - Slice
+    - Wheat # L5
 # Tastes like garlic, Italy.
 
 - type: entity
@@ -1044,10 +1140,12 @@
     baseSprintSpeed : 3
   - type: Tag
     tags:
-    - VimPilot
-    - DoorBumpOpener
     - Bread
+    - DoorBumpOpener
+    - Haram # L5 - ???
     - Meat
+    - Treyf # L5 - ???
+    - VimPilot
   - type: CanEscapeInventory
     baseResistTime: 2
   - type: Puller

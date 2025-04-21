@@ -10,6 +10,8 @@
   - type: Tag
     tags:
     - Donut
+    - Vegan # L5
+    - Wheat # L5
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/donut.rsi
   - type: SolutionContainerManager
@@ -108,8 +110,9 @@
     state: meat
   - type: Tag
     tags:
+    - Donut
     - Meat
-    - Donut # imp
+    - Wheat
 # Tastes like meat.
 
 - type: entity
@@ -313,7 +316,11 @@
           Quantity: 1
   - type: Tag
     tags:
+    - Donut
     - Fruit
+    - LatexInteraction # L5
+    - Wheat # L5
+    - Vegan # L5
 # Tastes like jelly-donut, green apples.
 
 - type: entity
@@ -379,7 +386,11 @@
           Quantity: 1
   - type: Tag
     tags:
+    - Donut
     - Fruit
+    - LatexInteraction # L5
+    - Wheat # L5
+    - Vegan # L5
 # Tastes like jelly-donut, blue pumpkin.
 
 - type: entity
@@ -401,7 +412,10 @@
           Quantity: 1
   - type: Tag
     tags:
-    - Fruit # Apparently this is a fruit. Huh.
+    - Donut
+    - Fruit
+    - Wheat # L5
+    - Vegan # L5
 # Tastes like jelly-donut, tropical sweetness.
 
 - type: entity

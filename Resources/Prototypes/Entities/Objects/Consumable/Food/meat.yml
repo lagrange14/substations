@@ -129,6 +129,12 @@
   - type: SliceableFood
     count: 3
     slice: FoodMeatCutlet
+  - type: Tag
+    tags:
+    - Meat
+    - Haram # L5
+    - Raw
+    - Treyf # L5
 
 - type: entity
   name: raw carp fillet
@@ -142,6 +148,7 @@
       - fishy
   - type: Tag
     tags:
+    - Fish
     - Raw
     - Meat
   - type: Sprite
@@ -168,8 +175,10 @@
   components:
   - type: Tag
     tags:
+    - Fish # L5
     - Raw
     - Meat
+    - Treyf # L5
   - type: Sprite
     state: bacon
   - type: SolutionContainerManager
@@ -214,6 +223,12 @@
     graph: BearSteak
     node: start
     defaultTarget: filet migrawr
+  - type: Tag
+    tags:
+    - Haram # L5
+    - Meat
+    - Raw
+    - Treyf # L5
 
 - type: entity
   name: raw penguin meat
@@ -301,9 +316,11 @@
   components:
   - type: Tag
     tags:
-    - Raw
+    - Haram # L5
     - HighRiskItem
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Sprite
     state: corgi
   - type: SolutionContainerManager
@@ -342,6 +359,13 @@
     graph: CrabSteak
     node: start
     defaultTarget: cooked crab
+  - type: Tag
+    tags:
+    - Fish
+    - Haram # L5
+    - Meat
+    - Raw
+    - Treyf # L5
 
 - type: entity
   name: raw goliath meat
@@ -366,6 +390,12 @@
     graph: GoliathSteak
     node: start
     defaultTarget: goliath steak
+  - type: Tag
+    tags:
+    - Haram # L5 - assuming predator
+    - Raw
+    - Meat
+    - Treyf # L5
 
 - type: entity
   name: dragon flesh
@@ -375,8 +405,10 @@
   components:
   - type: Tag
     tags:
-    - Raw
+    - Haram # L5 - assuming predator, maaaybe fish?
     - Meat
+    - Raw
+    - Treyf
   - type: Sprite
     layers:
     - state: dragon
@@ -415,6 +447,12 @@
   - type: SliceableFood
     count: 3
     slice: FoodMeatCutlet
+  - type: Tag
+    tags:
+    - Haram # L5
+    - Meat
+    - Raw
+    - Treyf # L5
 
 - type: entity
   name: raw lizard meat
@@ -440,6 +478,12 @@
     graph: LizardSteak
     node: start
     defaultTarget: lizard steak
+  - type: Tag
+    tags:
+    - Haram # L5
+    - Meat
+    - Raw
+    - Treyf # L5
 
 - type: entity
   name: raw plant meat
@@ -449,6 +493,7 @@
   components:
   - type: Sprite
     state: plant
+# L5 - not used anywhere, so I don't know what it's made of...
 
 - type: entity
   name: rotten meat
@@ -499,6 +544,12 @@
   - type: SliceableFood
     count: 3
     slice: FoodMeatSpiderCutlet
+  - type: Tag
+    tags:
+    - Haram # L5
+    - Meat
+    - Raw
+    - Treyf # L5
 
 - type: entity
   name: raw spider leg
@@ -517,6 +568,12 @@
           Quantity: 10
         - ReagentId: Fat
           Quantity: 3
+  - type: Tag
+    tags:
+    - Haram # L5
+    - Meat
+    - Raw
+    - Treyf # L5
 
 - type: entity
   name: meatwheat clump
@@ -536,6 +593,7 @@
         reagents:
         - ReagentId: UncookedAnimalProteins
           Quantity: 1
+# L5 - Okay but...what is the halakha and fiqh on meatwheat...?
 
 - type: entity
   name: raw snake meat
@@ -545,8 +603,10 @@
   components:
   - type: Tag
     tags:
-    - Raw
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Sprite
     state: snake
   - type: SolutionContainerManager
@@ -575,8 +635,10 @@
       - acid
   - type: Tag
     tags:
-    - Raw
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Sprite
     state: xeno
   - type: SolutionContainerManager
@@ -604,8 +666,10 @@
     - lostfriendship
   - type: Tag
     tags:
-    - Raw
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Sprite
     state: rouny
   - type: SolutionContainerManager
@@ -633,6 +697,9 @@
     slice: FoodMeatTomatoCutlet
   - type: StaticPrice
     price: 100
+  - type: Tag
+    tags:
+    - Vegan # L5 - ???
 
 - type: entity
   name: salami
@@ -642,8 +709,10 @@
   components:
   - type: Tag
     tags:
-    - Raw
+    - Haram # L5 - guessing pork/human are options....
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Sprite
     sprite: Objects/Consumable/Food/salami.rsi
     state: salami
@@ -681,8 +750,10 @@
       - funny
   - type: Tag
     tags:
-    - Raw
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Sprite
     state: clown
   - type: SliceableFood
@@ -707,6 +778,7 @@
     tags:
     - Raw
     - Meat
+    # L5 - beef until ingredient tags bubble up.
   - type: Sprite
     state: meatball
   - type: SolutionContainerManager # imp
@@ -733,8 +805,10 @@
       - slimy
   - type: Tag
     tags:
-    - Raw
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Extractable
     juiceSolution:
       reagents:
@@ -772,6 +846,12 @@
           Quantity: 3
         - ReagentId: Water
           Quantity: 4 #It makes saline if you add salt!
+  - type: Tag
+    tags:
+    - Haram # L5
+    - Meat
+    - Raw
+    - Treyf # L5
 
 - type: entity
   name: anomalous meat mass
@@ -802,7 +882,10 @@
     defaultTarget: anomaly steak
   - type: Tag
     tags:
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5
 
 # Cooked
 
@@ -834,10 +917,12 @@
         - ReagentId: Iron
           Quantity: 10
   - type: StaticPrice
-    price: 3000 #It has so much Omnizin in it
+    price: 3000 #It has so much Omnizine in it
   - type: Tag
     tags:
+    - Haram # L5
     - Meat
+    - Treyf # L5
 
 - type: entity
   name: steak
@@ -850,6 +935,7 @@
     - Cooked
     - Meat
     - Steak
+    # L5 - beef until ingredient tags bubble up.
   - type: Sprite
     layers:
     - state: plain-cooked
@@ -882,7 +968,9 @@
   - type: Tag
     tags:
     - Cooked
+    - Haram # L5
     - Meat
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: bacon-cooked
@@ -918,8 +1006,9 @@
   - type: Tag
     tags:
     - Cooked
+    - Haram # L5
     - Meat
-    - Steak
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: product-cooked
@@ -1087,7 +1176,9 @@
   - type: Tag
     tags:
     - Cooked
+    - Haram # L5
     - Meat
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: crab-cooked
@@ -1117,8 +1208,10 @@
   - type: Tag
     tags:
     - Cooked
+    - Haram # L5
     - Meat
     - Steak
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: goliath-cooked
@@ -1152,8 +1245,10 @@
   - type: Tag
     tags:
     - Cooked
+    - Haram # L5
     - Meat
     - Steak
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: rouny-cooked
@@ -1183,8 +1278,10 @@
   - type: Tag
     tags:
     - Cooked
+    - Haram # L5
     - Meat
     - Steak
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: lizard-cooked
@@ -1217,7 +1314,9 @@
   - type: Tag
     tags:
     - Cooked
+    - Haram # L5
     - Meat
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: spiderleg-cooked
@@ -1245,6 +1344,7 @@
     tags:
     - Cooked
     - Meat
+    # L5 - beef until ingredient tags bubble up.
   - type: Sprite
     state: meatball-cooked
   - type: SolutionContainerManager
@@ -1270,7 +1370,9 @@
   - type: Tag
     tags:
     - Cooked
+    - Haram # L5
     - Meat
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: snail-cooked
@@ -1299,7 +1401,9 @@
   - type: Tag
     tags:
     - Cooked
+    - Haram # L5
     - Meat
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: anomalymeat-cooked #Kinda hard to cook this... thing evenly
@@ -1332,9 +1436,10 @@
   components:
   - type: Tag
     tags:
-    - Raw
     - Cutlet
     - Meat
+    - Raw
+    # L5 - don't know how to categorize yet.
   - type: Sprite
     state: cutlet
   - type: SolutionContainerManager
@@ -1359,9 +1464,11 @@
   components:
   - type: Tag
     tags:
-    - Raw
     - Cutlet
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: cutlet
@@ -1389,9 +1496,9 @@
   components:
   - type: Tag
     tags:
-    - Raw
     - Cutlet
     - Meat
+    - Raw
   - type: Sprite
     state: cutlet
     color: white
@@ -1473,9 +1580,11 @@
   components:
   - type: Tag
     tags:
-    - Raw
     - Cutlet
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5v
   - type: Sprite
     layers:
     - state: cutlet
@@ -1504,9 +1613,11 @@
   components:
   - type: Tag
     tags:
-    - Raw
     - Cutlet
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Sprite
     state: spidercutlet
   - type: SolutionContainerManager
@@ -1535,9 +1646,11 @@
       - acid
   - type: Tag
     tags:
-    - Raw
     - Cutlet
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Sprite
     state: xenocutlet
   - type: SolutionContainerManager
@@ -1561,7 +1674,8 @@
   - type: Tag
     tags:
     - Cutlet
-    - Meat
+    #- Meat # L5
+    - Vegan # L5 - switching to vegan; they're like Venus Fly Traps!
   - type: Sprite
     state: salami-slice
     color: red
@@ -1590,9 +1704,11 @@
   components:
   - type: Tag
     tags:
-    - Raw
     - Cutlet
+    - Haram # L5
     - Meat
+    - Raw
+    - Treyf # L5
   - type: Sprite
     state: salami-slice
   - type: SolutionContainerManager
@@ -1650,7 +1766,9 @@
     tags:
     - Cooked
     - Cutlet
+    - Haram # L5
     - Meat
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: cutlet-cooked
@@ -1776,7 +1894,9 @@
     tags:
     - Cooked
     - Cutlet
+    - Haram # L5
     - Meat
+    - Treyf # L5
   - type: Sprite
     layers:
     - state: cutlet-cooked
@@ -1808,7 +1928,9 @@
     tags:
     - Cooked
     - Cutlet
+    - Haram # L5
     - Meat
+    - Treyf # L5
   - type: Sprite
     state: spidercutlet-cooked
   - type: SolutionContainerManager
@@ -1838,7 +1960,9 @@
     tags:
     - Cooked
     - Cutlet
+    - Haram # L5
     - Meat
+    - Treyf # L5
   - type: Sprite
     state: xenocutlet-cooked
   - type: SolutionContainerManager
