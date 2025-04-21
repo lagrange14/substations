@@ -218,8 +218,8 @@
     Plastic: 100
 
 - type: latheRecipe
-  id: WalkingCane
-  result: WalkingCane
+  id: Cane
+  result: Cane
   completetime: 2
   materials:
     Steel: 100
