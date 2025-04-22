@@ -41,7 +41,7 @@ namespace Content.Shared.Preferences
         public const int MaxNameLength = 32;
         public const int MaxCustomSpeciesLength = 32; // L5: Maximum characters in custom species name.
         public const int MaxLoadoutNameLength = 32;
-        public const int MaxDescLength = 512;
+        public const int MaxDescLength = 2048; // L5: Four times the default; why this isn't a CVar or part of a prototype is beyond me.
 
         /// <summary>
         /// Job preferences for initial spawn.
