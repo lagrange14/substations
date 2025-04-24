@@ -32,6 +32,12 @@
   id: Nightshade
 
 - type: Tag
+  id: Tank
+
+- type: Tag
+  id: TankBig
+
+- type: Tag
   id: Treyf
 
 - type: Tag

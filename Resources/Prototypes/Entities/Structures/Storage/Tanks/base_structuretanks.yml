@@ -66,6 +66,9 @@
   - type: ReagentTank
   - type: Transform
     noRot: true
+  - type: Tag
+    tags:
+    - Tank
 
 # For highcap tanks
 - type: entity
@@ -84,3 +87,6 @@
         - MachineMask
         layer:
         - WallLayer
+  - type: Tag
+    tags:
+    - TankBig
