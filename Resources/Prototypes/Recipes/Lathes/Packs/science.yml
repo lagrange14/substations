@@ -9,7 +9,6 @@
   - ExosuitFabricatorMachineCircuitboard
   - CutterMachineCircuitboard
   - BorgChargerCircuitboard
-  - MaterialSiloCircuitboard
 
 - type: latheRecipePack
   id: CircuitFloorsStatic
@@ -55,10 +54,10 @@
   id: ScienceWeapons
   recipes:
   - WeaponPistolCHIMP
-  #- WeaponForceGun # DeltaV
-  #- WeaponLaserSvalinn # DeltaV
+  - WeaponForceGun # DeltaV # L5 - revert
+  - WeaponLaserSvalinn # DeltaV # L5 - revert
   - WeaponProtoKineticAccelerator
-  #- WeaponTetherGun # DeltaV
+  - WeaponTetherGun # DeltaV # L5 - revert
   - WeaponGauntletGorilla
 
 - type: latheRecipePack

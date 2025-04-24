@@ -91,7 +91,7 @@
     Gold: 500
 
 - type: latheRecipe
-  abstract: true # DeltaV - removed svalinn
+  # abstract: true # DeltaV - removed svalinn # L5 - revert
   parent: BaseWeaponRecipeLong
   id: WeaponLaserSvalinn
   result: WeaponLaserSvalinn

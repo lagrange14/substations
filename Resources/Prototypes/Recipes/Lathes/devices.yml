@@ -162,7 +162,7 @@
     Glass: 200
 
 - type: latheRecipe
-  abstract: true # DeltaV - LRP
+  # abstract: true # DeltaV - LRP # L5 - revert
   id: WeaponForceGun
   result: WeaponForceGun
   categories:
@@ -194,7 +194,7 @@
     Silver: 100
 
 - type: latheRecipe
-  abstract: true # DeltaV - LRP
+  # abstract: true # DeltaV - LRP # L5 - revert
   id: WeaponTetherGun
   result: WeaponTetherGun
   categories:

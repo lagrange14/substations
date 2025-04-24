@@ -2,3 +2,83 @@
   parent: BaseGoldCircuitboardRecipe
   id: AutoclaveMachineCircuitboard
   result: AutoclaveMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: AtmosMonitoringComputerCircuitboard
+  result: AtmosMonitoringComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: PowerComputerCircuitboard
+  result: PowerComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: ShipyardComputerCircuitboard
+  result: ShipyardComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: StationRecordsComputerCircuitboard
+  result: StationRecordsComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MedicalRecordsComputerCircuitboard
+  result: MedicalRecordsComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: CriminalRecordsComputerCircuitboard
+  result: CriminalRecordsComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: EngineeringTechFabCircuitboard
+  result: EngineeringTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: LogisticsTechFabCircuitboard
+  result: LogisticsTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: ServiceTechFabCircuitboard
+  result: ServiceTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: EpistemicsTechFabCircuitboard
+  result: EpistemicsTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: SecurityTechFabCircuitboard
+  result: SecurityTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: AmmoTechFabCircuitboard
+  result: AmmoTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MedicalTechFabCircuitboard
+  result: MedicalTechFabCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MedicalBiofabMachineBoard
+  result: MedicalBiofabMachineBoard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: WallmountGeneratorElectronics
+  result: WallmountGeneratorElectronics
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: WallmountGeneratorAPUElectronics
+  result: WallmountGeneratorAPUElectronics

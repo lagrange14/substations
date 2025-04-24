@@ -273,6 +273,8 @@
     - CameraBoards
     - MechBoards
     - ShuttleBoards
+    - TechFabBoards # L5
+    - MaterialSiloBoard # L5
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards

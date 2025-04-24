@@ -1,0 +1,4 @@
+- type: latheRecipe
+  parent: BaseCarpetRecipe
+  id: CarpetSkyBlue
+  result: FloorCarpetItemSkyBlue

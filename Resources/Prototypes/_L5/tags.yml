@@ -1,4 +1,19 @@
 - type: Tag
+  id: CandleBlack
+
+- type: Tag
+  id: CandleBlue
+
+- type: Tag
+  id: CandleGreen
+
+- type: Tag
+  id: CandlePurple
+
+- type: Tag
+  id: CandleRed
+
+- type: Tag
   id: Dairy
 
 - type: Tag
