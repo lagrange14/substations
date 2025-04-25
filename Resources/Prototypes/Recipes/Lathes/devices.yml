@@ -215,3 +215,12 @@
     Steel: 500
     Glass: 400
     Gold: 100
+
+- type: latheRecipe
+  id: GlimmerMonitor
+  result: GlimmerMonitorCartridge
+  completetime: 8
+  materials:
+    Glass: 600
+    Gold: 400
+    Silver: 200
