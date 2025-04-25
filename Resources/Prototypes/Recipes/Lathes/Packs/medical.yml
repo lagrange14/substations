@@ -51,6 +51,7 @@
   - BodyBag
   - WhiteCane
   - Cane
+  - MedTek
 
 - type: latheRecipePack
   id: RollerBedsStatic
