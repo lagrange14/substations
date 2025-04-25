@@ -1,4 +1,5 @@
-- type: latheRecipePack
-  id: ExperimentalDevices
-  recipes:
-  - HandTeleporter
+# Unsure if multiple teleporters
+#- type: latheRecipePack
+#  id: ExperimentalDevices
+#  recipes:
+#  - HandTeleporter

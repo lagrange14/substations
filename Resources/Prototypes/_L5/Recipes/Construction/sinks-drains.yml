@@ -11,8 +11,8 @@
     state: sink_stem
   objectType: Structure
   placementMode: SnapgridCenter
+  canBuildInImpassable: true # because tables
   canRotate: true
-  canBuildInImpassible: true # Because tables...
 
 - type: construction
   name: wide sink
@@ -27,8 +27,8 @@
     state: sink_wide
   objectType: Structure
   placementMode: SnapgridCenter
+  canBuildInImpassable: true # because tables
   canRotate: true
-  canBuildInImpassible: true # Because tables...
 
 - type: construction
   name: drain
@@ -43,5 +43,5 @@
     state: icon
   objectType: Structure
   placementMode: SnapgridCenter
+  canBuildInImpassable: true # because tables
   canRotate: true
-  canBuildInImpassible: true # Because tables...
