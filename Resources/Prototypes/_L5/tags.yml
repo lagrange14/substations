@@ -1,0 +1,44 @@
+- type: Tag
+  id: CandleBlack
+
+- type: Tag
+  id: CandleBlue
+
+- type: Tag
+  id: CandleGreen
+
+- type: Tag
+  id: CandlePurple
+
+- type: Tag
+  id: CandleRed
+
+- type: Tag
+  id: Dairy
+
+- type: Tag
+  id: Haram
+
+- type: Tag
+  id: Jug # Let me put jugs in chem bags, please...
+
+- type: Tag
+  id: Fish
+
+- type: Tag
+  id: LatexInteraction
+
+- type: Tag
+  id: Nightshade
+
+- type: Tag
+  id: Tank
+
+- type: Tag
+  id: TankBig
+
+- type: Tag
+  id: Treyf
+
+- type: Tag
+  id: Vegan

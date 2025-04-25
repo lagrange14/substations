@@ -289,6 +289,10 @@
   - type: FlavorProfile
     flavors:
       - dough
+  - type: Tag
+    tags:
+    - Wheat # L5
+    - Vegan # L5
   - type: Sprite
     state: dough
   - type: SliceableFood
@@ -312,6 +316,8 @@
   - type: Tag
     tags:
     - Slice
+    - Wheat # L5
+    - Vegan # L5
   - type: Construction
     graph: DoughRope
     node: start
@@ -332,6 +338,10 @@
   - type: FlavorProfile
     flavors:
       - dough
+  - type: Tag
+    tags:
+    - Wheat # L5
+    - Vegan # L5
   - type: Sprite
     state: dough-rope
   - type: Construction
@@ -371,11 +381,12 @@
     flavors:
       - chalky
       - dough
-  - type: Sprite
-    state: cornmealdough-slice
   - type: Tag
     tags:
     - Slice
+    - Vegan # L5
+  - type: Sprite
+    state: cornmealdough-slice
 
 - type: entity
   name: tortilla dough
@@ -387,6 +398,9 @@
     flavors:
       - chalky
       - dough
+  - type: Tag
+    tags:
+    - Vegan # L5
   - type: Sprite
     state: tortilladough
   - type: SliceableFood
@@ -403,14 +417,15 @@
     flavors:
       - chalky
       - dough
+  - type: Tag
+    tags:
+    - Slice
+    - Vegan # L5
   - type: Sprite
     state: tortilladough-slice
   - type: Construction
     graph: Tortilla
     node: start
-  - type: Tag
-    tags:
-    - Slice
 
 - type: entity
   name: flattened tortilla dough
@@ -422,6 +437,9 @@
     flavors:
       - chalky
       - dough
+  - type: Tag
+    tags:
+    - Vegan # L5
   - type: Sprite
     state: tortilladough-flat
   - type: Construction
@@ -448,8 +466,10 @@
     node: start
   - type: Tag
     tags:
-    - Ingredient
     - ClothMade
+    - Ingredient
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -475,6 +495,8 @@
   - type: Tag
     tags:
     - Slice
+    - Vegan # L5
+    - Wheat # L5
   - type: Construction
     graph: DoughRopeCotton
     node: start
@@ -498,6 +520,11 @@
     flavors:
     - dough
     - cotton
+  - type: Tag
+    tags:
+    - ClothMade
+    - Vegan # L5
+    - Wheat # L5
   - type: Sprite
     state: cotton-dough-rope
   - type: Construction
@@ -539,6 +566,9 @@
   components:
   - type: Sprite
     state: dough-pie
+  - type: Tag
+    tags:
+    - Wheat # L5
 
 - type: entity
   name: flat dough
@@ -554,6 +584,10 @@
   - type: SliceableFood
     count: 3
     slice: FoodCroissantRaw
+  - type: Tag
+    tags:
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: flat cotton dough
@@ -569,6 +603,11 @@
   - type: SliceableFood
     count: 3
     slice: FoodCroissantRawCotton
+  - type: Tag
+    tags:
+    - ClothMade
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: pizza bread
@@ -578,6 +617,10 @@
   components:
   - type: Sprite
     state: pizzabread
+  - type: Tag
+    tags:
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: cake batter
@@ -590,6 +633,10 @@
       - sweetdough
   - type: Sprite
     state: cakebatter
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Wheat # L5
 
 - type: entity
   name: stick of butter
@@ -629,6 +676,9 @@
         reagents:
         - ReagentId: Butter
           Quantity: 15
+  - type: Tag
+    tags:
+    - Dairy # L5
   - type: SliceableFood
     count: 3
     slice: FoodButterSlice
@@ -650,6 +700,7 @@
           Quantity: 5
   - type: Tag
     tags:
+    - Dairy # L5
     - Slice
 
 - type: entity
@@ -672,6 +723,9 @@
           Quantity: 82
   - type: Extractable
     grindableSolutionName: food
+  - type: Tag
+    tags:
+    - Dairy # L5
 
 - type: entity
   name: cheese wheel
@@ -682,6 +736,9 @@
   - type: FlavorProfile
     flavors:
       - cheesy
+  - type: Tag
+    tags:
+    - Dairy # L5
   - type: Sprite
     state: cheesewheel
   - type: SliceableFood
@@ -708,6 +765,7 @@
           Quantity: 5
   - type: Tag
     tags:
+    - Dairy # L5
     - Slice
   - type: FoodSequenceElement
     entries:
@@ -724,6 +782,9 @@
     flavors:
       - nutty
       - creamy
+  - type: Tag
+    tags:
+    - Dairy # L5
   - type: Sprite
     state: chevrelog
   - type: SliceableFood
@@ -762,6 +823,7 @@
           Quantity: 0.2
   - type: Tag
     tags:
+    - Dairy # L5
     - Slice
 
 - type: entity
@@ -773,6 +835,9 @@
   - type: FlavorProfile
     flavors:
       - tofu
+  - type: Tag
+    tags:
+    - Vegan # L5
   - type: Sprite
     state: tofu
   - type: SolutionContainerManager
@@ -811,6 +876,7 @@
   - type: Tag
     tags:
     - Slice
+    - Vegan # L5
 
 - type: entity
   name: burned mess
@@ -867,6 +933,7 @@
   - type: Tag
     tags:
       - Ingredient
+      - Vegan # L5
 
 - type: entity
   name: raw croissant
@@ -886,6 +953,10 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 3
+  - type: Tag
+    tags:
+    - Vegan # L5
+    - Wheat # L5
 
 - type: entity
   name: raw cotton croissant
@@ -899,3 +970,8 @@
     - cotton
   - type: Sprite
     state: croissant-raw-cotton
+  - type: Tag
+    tags:
+    - ClothMade
+    - Vegan # L5
+    - Wheat # L5

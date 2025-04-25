@@ -1,0 +1,81 @@
+# Regarding meat
+- type: dietaryRestriction
+  id: PescetarianRestriction
+  doesNotWant:
+    tags:
+    - Meat
+  exceptions:
+    tags:
+    - Fish
+  chanceOfVomiting: 0
+
+- type: dietaryRestriction
+  id: VegetarianRestriction
+  doesNotWant:
+    tags:
+    - Meat
+    - Fish
+  chanceOfVomiting: 0
+
+- type: dietaryRestriction
+  id: VeganRestriction
+  wants:
+    tags:
+    - Vegan
+
+# Cultural
+- type: dietaryRestriction
+  id: KosherRestriction
+  doesNotWant:
+    tags:
+    - Treyf
+  chanceOfVomiting: 0
+
+- type: dietaryRestriction
+  id: HalalRestriction
+  doesNotWant:
+    tags:
+    - Haram
+  chanceOfVomiting: 0
+
+# Allergies
+- type: dietaryRestriction
+  id: DairyAllergy
+  allergicTo:
+    tags:
+    - Dairy
+  chanceOfVomiting: 0.1
+
+- type: dietaryRestriction
+  id: GlutenAllergy
+  allergicTo:
+    tags:
+    - Wheat
+  chanceOfVomiting: 0.1
+
+- type: dietaryRestriction
+  id: LatexAllergy
+  allergicTo:
+    tags:
+    - LatexInteraction
+  chanceOfVomiting: 0.1
+
+- type: dietaryRestriction
+  id: NightshadeAllergy
+  allergicTo:
+    tags:
+    - Nightshade
+  chanceOfVomiting: 0.1
+
+# Species
+# This is currently just an example and doesn't replace the way stomachs work.
+- type: dietaryRestriction
+  id: LizardDiet
+  mustHave:
+    tags:
+    - Fruit
+    - ReptilianFood
+    - Meat
+    - Pill
+    - Crayon
+    - Paper

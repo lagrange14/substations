@@ -8,6 +8,8 @@
   - Gauze
 
 - type: latheRecipePack
+  parent:
+  - BasicChemistryStaticDeltaV # DeltaV
   id: BasicChemistryStatic
   recipes:
   - Beaker
@@ -48,6 +50,7 @@
   - DiseaseSwab
   - BodyBag
   - WhiteCane
+  - Cane
 
 - type: latheRecipePack
   id: RollerBedsStatic

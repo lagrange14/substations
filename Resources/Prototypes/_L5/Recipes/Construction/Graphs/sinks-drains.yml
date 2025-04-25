@@ -1,0 +1,59 @@
+- type: constructionGraph
+  id: Sink
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: sink
+      steps:
+      - material: Steel
+        amount: 10
+      - tag: Pipe
+        name: pipe
+        icon:
+          sprite: Structures/Piping/Atmospherics/pipe.rsi
+          state: pipeBend
+      - tag: Tank
+        name: water tank
+        icon:
+          sprite: Structures/Storage/tanks.rsi
+          state: watertank-2
+        doAfter: 15
+    - to: sinkWide
+      steps:
+      - material: Steel
+        amount: 20
+      - tag: Pipe
+        name: pipe
+        icon:
+          sprite: Structures/Piping/Atmospherics/pipe.rsi
+          state: pipeBend
+      - tag: TankBig
+        name: high-capacity water tank
+        icon:
+          sprite: Structures/Storage/tanks.rsi
+          state: highwatertank-2
+        doAfter: 15
+  - node: sink
+    entity: Sink
+  - node: sinkWide
+    entity: SinkWide
+
+- type: constructionGraph
+  id: Drain
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: drain
+      steps:
+      - material: Steel
+        amount: 10
+      - tag: Pipe
+        name: pipe
+        icon:
+          sprite: Structures/Piping/Atmospherics/pipe.rsi
+          state: pipeBend
+        doAfter: 15
+  - node: drain
+    entity: FloorDrain

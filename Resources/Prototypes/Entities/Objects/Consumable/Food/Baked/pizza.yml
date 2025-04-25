@@ -30,8 +30,10 @@
     - 0,0,2,1
   - type: Tag
     tags:
+    - Dairy # L5
     - Pizza
     - ReptilianFood
+    - Wheat # L5
 
 - type: entity
   parent: FoodInjectableBase # Not sliceable
@@ -59,9 +61,11 @@
     size: Tiny
   - type: Tag
     tags:
+    - Dairy # L5
     - Pizza
     - ReptilianFood
     - Slice
+    - Wheat # L5
 
 # Pizza
 
@@ -116,8 +120,11 @@
     slice: FoodPizzaMeatSlice
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
     - Pizza
+    - ReptilianFood
+    - Wheat # L5
 
 - type: entity
   name: slice of meat pizza
@@ -136,9 +143,12 @@
     - state: meat-slice
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
     - Pizza
     - Slice
+    - ReptilianFood
+    - Wheat # L5
 # Tastes like crust, tomato, cheese, meat.
 
 - type: entity
@@ -157,6 +167,11 @@
     - state: mushroom
   - type: SliceableFood
     slice: FoodPizzaMushroomSlice
+  - type: Tag
+    tags:
+    - Pizza
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: slice of mushroom pizza
@@ -172,6 +187,12 @@
   - type: Sprite
     layers:
     - state: mushroom-slice
+  - type: Tag
+    tags:
+    - Pizza
+    - Slice
+    - Wheat # L5
+    - Vegan # L5
 # Tastes like crust, tomato, cheese, mushroom.
 
 - type: entity
@@ -204,6 +225,13 @@
           Quantity: 5
         - ReagentId: Vitamin
           Quantity: 5
+  - type: Tag
+    tags:
+    - LatexInteraction # L5
+    - Nightshade # L5
+    - Pizza
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: slice of vegetable pizza
@@ -234,6 +262,14 @@
           Quantity: 1
         - ReagentId: Vitamin
           Quantity: 1
+  - type: Tag
+    tags:
+    - LatexInteraction # L5
+    - Nightshade # L5
+    - Pizza
+    - Slice
+    - Wheat # L5
+    - Vegan # L5
 
 # Tastes like crust, tomato, cheese, carrot.
 
@@ -264,8 +300,11 @@
           Quantity: 9
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
+    - Nightshade # L5
     - Pizza
+    - Wheat # L5
 
 
 - type: entity
@@ -293,9 +332,12 @@
           Quantity: 1.5
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
+    - Nightshade # L5
     - Pizza
     - Slice
+    - Wheat # L5
 # Tastes like crust, tomato, cheese, meat, laziness.
 
 - type: entity
@@ -324,6 +366,12 @@
           Quantity: 20
         - ReagentId: THC
           Quantity: 30
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Nightshade # L5
+    - Pizza
+    - Wheat # L5
 
 - type: entity
   name: slice of dank pizza
@@ -349,6 +397,13 @@
           Quantity: 3.5
         - ReagentId: THC
           Quantity: 5
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Nightshade # L5
+    - Pizza
+    - Slice
+    - Wheat # L5
 # Tastes like crust, tomato, cheese, meat, satisfaction.
 
 - type: entity
@@ -370,8 +425,11 @@
     slice: FoodPizzaSassysageSlice
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
     - Pizza
+    - Treyf # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of sassysage pizza
@@ -390,9 +448,12 @@
     - state: sassysage-slice
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
     - Pizza
     - Slice
+    - Treyf # L5
+    - Wheat # L5
 # Tastes like crust, tomato, cheese, sausage, sass.
 
 - type: entity
@@ -415,8 +476,12 @@
     slice: FoodPizzaPineappleSlice
   - type: Tag
     tags:
+    - Dairy # L5
+    - LatexInteraction # L5
     - Meat
     - Pizza
+    - Treyf # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of Hawaiian pizza
@@ -436,9 +501,12 @@
     - state: pineapple-slice
   - type: Tag
     tags:
+    - Dairy # L5
+    - LatexInteraction # L5
     - Meat
     - Pizza
     - Slice
+    - Wheat # L5
 # Tastes like crust, tomato, cheese, pineapple, ham.
 
 #TODO: This is a meme pizza from /tg/. It has specially coded mechanics.
@@ -475,8 +543,10 @@
           Quantity: 30
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
     - Pizza
+    - Wheat # L5
 
 - type: entity
   name: slice of Arnold's pizza
@@ -509,9 +579,11 @@
           Quantity: 5
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
     - Pizza
     - Slice
+    - Wheat # L5
 # Tastes like crust, tomato, cheese, pepperoni, 9 millimeter bullets.
 
 #TODO: Make this do poison damage and make cut pizza slices eventually rot into this.
@@ -565,8 +637,10 @@
     slice: FoodPizzaUraniumSlice
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
     - Pizza
+    - Wheat # L5
   - type: PointLight
     enabled: true
     radius: 2
@@ -599,9 +673,11 @@
     - state: uranium-slice
   - type: Tag
     tags:
+    - Dairy # L5
     - Meat
     - Pizza
     - Slice
+    - Wheat # L5
   - type: PointLight
     enabled: true
     radius: 2
@@ -640,6 +716,8 @@
     tags:
     - ClothMade
     - Pizza
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -670,6 +748,8 @@
     - ClothMade
     - Pizza
     - Slice
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager
     solutions:
       food:

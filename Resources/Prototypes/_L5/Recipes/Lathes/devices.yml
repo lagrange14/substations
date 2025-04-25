@@ -1,0 +1,11 @@
+# Unsure if this works with multiple teleporters on the same map
+#- type: latheRecipe
+#  id: HandTeleporter
+#  result: HandTeleporter
+#  completetime: 5
+#  materials:
+#    Steel: 700
+#    Plastic: 100
+#    Gold: 100
+#    Plasma: 200
+#    Bluespace: 200

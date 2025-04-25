@@ -32,6 +32,9 @@
       - pasta
   - type: Sprite
     state: boiled
+  - type: Tag
+    tags:
+    - Vegan # L5
 # Tastes like pasta.
 
 - type: entity
@@ -49,6 +52,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
 # Tastes like pasta, tomato.
 
 - type: entity
@@ -75,6 +79,9 @@
           Quantity: 12
         - ReagentId: Vitamin
           Quantity: 8
+  - type: Tag
+    tags:
+    - Vegan # L5
 # Tastes like pasta, bad humor.
 
 - type: entity
@@ -149,6 +156,9 @@
           Quantity: 7
         - ReagentId: Vitamin
           Quantity: 6
+  - type: Tag
+    tags:
+    - Vegan # L5
 # Tastes like pasta, tomato.
 
 - type: entity
@@ -172,4 +182,7 @@
           Quantity: 8
         - ReagentId: Vitamin
           Quantity: 1
+  - type: Tag
+    tags:
+    - Dairy # L5
 # Tastes like pasta, butter.

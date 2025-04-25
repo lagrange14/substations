@@ -30,6 +30,7 @@
   - type: Tag
     tags:
     - Pie
+    - Wheat # L5
 
 - type: entity
   parent: FoodInjectableBase # Not sliceable
@@ -57,6 +58,7 @@
     tags:
     - Pie
     - Slice
+    - Wheat # L5
 
 # Pie
 
@@ -80,6 +82,7 @@
     tags:
     - Fruit
     - Pie
+    - Wheat # L5
 
 - type: entity
   name: slice of apple pie
@@ -100,6 +103,7 @@
     - Fruit
     - Pie
     - Slice
+    - Wheat # L5
 # Tastes like pie, apple.
 
 - type: entity
@@ -170,7 +174,9 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
     - Pie
+    - Wheat # L5
   - type: SliceableFood
     slice: FoodPieBananaCreamSlice
 
@@ -190,8 +196,17 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
     - Pie
     - Slice
+    - Wheat # L5
+  # Funkychem
+  - type: Extractable 
+    grindableSolutionName: food
+    juiceSolution:
+      reagents:
+      - ReagentId: LiquidPie
+        Quantity: 2
 # Tastes like pie, cream, banana.
 
 - type: entity
@@ -215,6 +230,7 @@
     tags:
     - Fruit
     - Pie
+    - Wheat # L5
 
 - type: entity
   name: slice of berry clafoutis
@@ -235,6 +251,7 @@
     - Fruit
     - Pie
     - Slice
+    - Wheat # L5
 # Tastes like pie, blackberries.
 
 - type: entity
@@ -256,6 +273,7 @@
     tags:
     - Fruit
     - Pie
+    - Wheat # L5
 
 - type: entity
   name: slice of cherry pie
@@ -275,6 +293,7 @@
     - Fruit
     - Pie
     - Slice
+    - Wheat # L5
 # Tastes like pie, cherries.
 
 - type: entity
@@ -296,6 +315,7 @@
     tags:
     - Meat
     - Pie
+    - Wheat # L5
 
 - type: entity
   name: slice of meat pie
@@ -315,6 +335,7 @@
     - Meat
     - Pie
     - Slice
+    - Wheat # L5
 # Tastes like pie, meat.
 
 - type: entity
@@ -336,6 +357,7 @@
   - type: Tag
     tags:
     - Pie
+    - Wheat # L5
 
 - type: entity
   name: slice of pumpkin pie
@@ -353,6 +375,7 @@
     tags:
     - Pie
     - Slice
+    - Wheat # L5
 
 - type: entity
   name: xeno pie
@@ -371,8 +394,11 @@
     slice: FoodPieXenoSlice
   - type: Tag
     tags:
+    - Haram # L5
     - Meat
     - Pie
+    - Treyf # L5
+    - Wheat # L5
 
 - type: entity
   name: slice of xeno pie
@@ -390,9 +416,12 @@
       color: green
   - type: Tag
     tags:
+    - Haram # L5
     - Meat
     - Pie
     - Slice
+    - Treyf # L5
+    - Wheat # L5
 # Tastes like pie, meat, acid.
 
 - type: entity
@@ -410,6 +439,13 @@
     - state: frosty
   - type: SliceableFood
     slice: FoodPieFrostySlice
+  - type: Tag
+    tags:
+    - Fruit
+    - LatexInteraction # L5
+    - Nightshade # L5
+    - Pie
+    - Wheat # L5
 
 - type: entity
   name: slice of frosty pie
@@ -424,6 +460,14 @@
     - state: plain-slice
     - state: alpha-slice-filling
       color: blue
+  - type: Tag
+    tags:
+    - Fruit
+    - LatexInteraction # L5
+    - Nightshade # L5
+    - Pie
+    - Slice
+    - Wheat # L5
 # Tastes like pie, mint.
 
 - type: entity
@@ -441,6 +485,12 @@
     heldPrefix: mime
   - type: SliceableFood
     slice: FoodTartMimeSlice
+  - type: Tag
+    tags:
+    - Fruit
+    - LatexInteraction # L5
+    - Pie
+    - Wheat # L5
 
 - type: entity
   name: slice of mime tart
@@ -455,6 +505,13 @@
     - state: mimetart-slice
   - type: Item
     heldPrefix: mime
+  - type: Tag
+    tags:
+    - Fruit
+    - LatexInteraction # L5
+    - Pie
+    - Slice
+    - Wheat # L5
 # Tastes like nothing.
 
 # No Slice
@@ -513,6 +570,7 @@
     tags:
     - Fruit
     - Pie
+    - Wheat # L5
 # Tastes like tart, grape.
 
 - type: entity
@@ -529,7 +587,10 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
     - Pie
+    - Slice
+    - Wheat # L5
 # Tastes like tart, apple, expensive metal.
 
 - type: entity
@@ -552,4 +613,8 @@
           Quantity: 15
         - ReagentId: Theobromine
           Quantity: 2
+  - type: Tag
+    tags:
+    - Pie
+    - Wheat # L5
 # Tastes like tart, dark chocolate.

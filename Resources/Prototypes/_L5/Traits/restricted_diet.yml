@@ -1,0 +1,125 @@
+- type: trait
+  category: Diet
+  id: PescetarianDiet
+  name: trait-dietary-restriction-PescetarianRestriction-name
+  description: trait-dietary-restriction-PescetarianRestriction-desc
+  components:
+  - type: PescetarianRestriction
+  blacklist:
+    components:
+    - Silicon
+    - BorgChassis
+  excludedSpecies:
+  - IPC
+
+- type: trait
+  category: Diet
+  id: VegetarianDiet
+  name: trait-dietary-restriction-VegetarianRestriction-name
+  description: trait-dietary-restriction-VegetarianRestriction-desc
+  components:
+    - type: VegetarianRestriction
+  blacklist:
+    components:
+      - Silicon
+      - BorgChassis
+  excludedSpecies:
+    - IPC
+
+- type: trait
+  category: Diet
+  id: VeganDiet
+  name: trait-dietary-restriction-VeganRestriction-name
+  description: trait-dietary-restriction-VeganRestriction-desc
+  components:
+    - type: VeganRestriction
+  blacklist:
+    components:
+      - Silicon
+      - BorgChassis
+  excludedSpecies:
+    - IPC
+
+- type: trait
+  category: Diet
+  id: KosherDiet
+  name: trait-dietary-restriction-KosherRestriction-name
+  description: trait-dietary-restriction-KosherRestriction-desc
+  components:
+    - type: KosherRestriction
+  blacklist:
+    components:
+      - Silicon
+      - BorgChassis
+  excludedSpecies:
+    - IPC
+
+- type: trait
+  category: Diet
+  id: HalalDiet
+  name: trait-dietary-restriction-HalalRestriction-name
+  description: trait-dietary-restriction-HalalRestriction-desc
+  components:
+    - type: HalalRestriction
+  blacklist:
+    components:
+      - Silicon
+      - BorgChassis
+  excludedSpecies:
+    - IPC
+
+- type: trait
+  category: Diet
+  id: DairyAllergy
+  name: trait-dietary-restriction-DairyAllergy-name
+  description: trait-dietary-restriction-DairyAllergy-desc
+  components:
+    - type: DairyAllergy
+  blacklist:
+    components:
+      - Silicon
+      - BorgChassis
+  excludedSpecies:
+    - IPC
+
+- type: trait
+  category: Diet
+  id: GlutenAllergy
+  name: trait-dietary-restriction-GlutenAllergy-name
+  description: trait-dietary-restriction-GlutenAllergy-desc
+  components:
+    - type: GlutenAllergy
+  blacklist:
+    components:
+      - Silicon
+      - BorgChassis
+  excludedSpecies:
+    - IPC
+
+- type: trait
+  category: Diet
+  id: LatexAllergy
+  name: trait-dietary-restriction-LatexAllergy-name
+  description: trait-dietary-restriction-LatexAllergy-desc
+  components:
+    - type: LatexAllergy
+  blacklist:
+    components:
+      - Silicon
+      - BorgChassis
+  excludedSpecies:
+    - IPC
+
+- type: trait
+  category: Diet
+  id: NightshadeAllergy
+  name: trait-dietary-restriction-NightshadeAllergy-name
+  description: trait-dietary-restriction-NightshadeAllergy-desc
+  components:
+    - type: NightshadeAllergy
+  blacklist:
+    components:
+      - Silicon
+      - BorgChassis
+  excludedSpecies:
+    - IPC

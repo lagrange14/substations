@@ -34,7 +34,7 @@
     nameGeneration: food-sequence-taco-gen
     contentSeparator: ", "
   - type: Appearance
-  
+
 # Old tacos
 
 - type: entity
@@ -64,7 +64,9 @@
     storedRotation: -90
   - type: Tag
     tags:
+      - Dairy # L5
       - Meat
+      - Treyf # L5
 
 - type: entity
   name: beef taco
@@ -108,6 +110,11 @@
           Quantity: 10
         - ReagentId: Vitamin
           Quantity: 6
+  - type: Tag
+    tags:
+    - Fish # L5
+    - Meat
+    - Nightshade # L5
 
 - type: entity
   name: rat taco
@@ -127,6 +134,12 @@
           Quantity: 6
         - ReagentId: Vitamin
           Quantity: 4
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Haram # L5
+    - Meat
+    - Treyf # L5
 
 - type: entity
   name: beef taco supreme
@@ -146,6 +159,13 @@
           Quantity: 14
         - ReagentId: Vitamin
           Quantity: 6
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Haram # L5
+    - Meat
+    - Nightshade
+    - Treyf # L5
 
 - type: entity
   name: chicken taco supreme
@@ -165,6 +185,13 @@
           Quantity: 14
         - ReagentId: Vitamin
           Quantity: 6
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Haram # L5
+    - Meat
+    - Nightshade
+    - Treyf # L5
 
 - type: entity
   name: soft taco

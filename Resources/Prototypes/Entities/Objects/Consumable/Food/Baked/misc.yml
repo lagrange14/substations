@@ -47,6 +47,10 @@
       - sweet
   - type: Item
     size: Tiny
+  - type: Tag
+    tags:
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: berry muffin
@@ -70,6 +74,8 @@
   - type: Tag
     tags:
     - Fruit
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: cherry muffin
@@ -93,6 +99,8 @@
   - type: Tag
     tags:
     - Fruit
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: bluecherry muffin
@@ -105,6 +113,8 @@
   - type: Tag
     tags:
     - Fruit
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: chocolate muffin
@@ -148,6 +158,9 @@
   - type: Tag
     tags:
     - Fruit
+    - LatexInteraction # L5
+    - Wheat # L5
+    - Vegan # L5
 
 # Buns
 
@@ -159,6 +172,10 @@
   components:
   - type: Sprite
     state: bun-honey
+  - type: Tag
+    tags:
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: hotcross bun
@@ -168,6 +185,10 @@
   components:
   - type: Sprite
     state: bun-hotcross
+  - type: Tag
+    tags:
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: meat bun
@@ -186,6 +207,10 @@
           Quantity: 6
         - ReagentId: Vitamin
           Quantity: 2
+  - type: Tag
+    tags:
+    - Meat # L5
+    - Wheat # L5
 
 # Cookies
 
@@ -197,6 +222,10 @@
   components:
   - type: Sprite
     state: COOKIE!!!
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Wheat # L5
 
 - type: entity
   name: oatmeal cookie
@@ -215,6 +244,10 @@
           Quantity: 5
         - ReagentId: Vitamin
           Quantity: 1
+  - type: Tag
+    tags:
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: raisin cookie
@@ -236,6 +269,8 @@
   - type: Tag
     tags:
     - Fruit
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: sugar cookie
@@ -245,6 +280,10 @@
   components:
   - type: Sprite
     state: cookie-sugar
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Wheat # L5
 
 # Nuggets
 
@@ -256,8 +295,8 @@
   components:
   - type: Tag
     tags:
-      - Nugget
       - Meat
+      - Nugget
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/nuggets.rsi
     layers:
@@ -342,6 +381,7 @@
   - type: Appearance
   - type: Tag
     tags:
+    - Dairy # L5
     - Pancake
 
 - type: entity
@@ -465,6 +505,10 @@
     layers:
       - state: tray
       - state: waffles
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Wheat # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -485,6 +529,9 @@
     layers:
       - state: tray
       - state: waffles-soy
+  - type: Tag
+    tags:
+    - Wheat # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -505,6 +552,10 @@
     layers:
       - state: tray
       - state: waffles-soylent
+  - type: Tag
+    tags:
+    - Dairy # L5 - soylent burger is just cheese and soy
+    - Wheat # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -545,6 +596,10 @@
   components:
   - type: Sprite
     state: pretzel
+  - type: Tag
+    tags:
+    - Wheat # L5
+    - Vegan # L5
 
 - type: entity
   name: cannoli
@@ -563,6 +618,10 @@
           Quantity: 5
         - ReagentId: Vitamin
           Quantity: 1
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Wheat # L5
 
 - type: entity
   name: dumplings
@@ -588,6 +647,7 @@
   - type: Tag
     tags:
     - Meat
+    - Wheat # L5
 
 - type: entity
   name: chèvre chaud
@@ -612,6 +672,10 @@
           Quantity: 2
         - ReagentId: Vitamin
           Quantity: 0.5
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Wheat # L5
 
 - type: entity
   name: cotton chèvre chaud
@@ -633,6 +697,8 @@
   - type: Tag
     tags:
     - ClothMade
+    - Dairy # L5
+    - Wheat # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -655,6 +721,10 @@
     flavors:
       - sweet
       - chocolate
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Wheat # L5
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/brownie.rsi
     state: brownie-batch
@@ -696,7 +766,9 @@
           Quantity: 3
   - type: Tag
     tags:
+    - Dairy # L5
     - Slice
+    - Wheat # L5
 
 - type: entity
   name: special brownies
@@ -726,6 +798,10 @@
   - type: SliceableFood
     count: 6
     slice: FoodBakedCannabisBrownie
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Wheat # L5
 
 - type: entity
   name: special brownie
@@ -754,7 +830,9 @@
           Quantity: 25
   - type: Tag
     tags:
+    - Dairy # L5
     - Slice
+    - Wheat # L5
 
 - type: entity
   name: onion rings
@@ -766,6 +844,9 @@
       flavors:
         - onion
         - oily
+    - type: Tag
+      tags:
+      - Vegan # L5
     - type: Sprite
       state: onionrings
     - type: SolutionContainerManager
@@ -790,6 +871,10 @@
     flavors:
       - bread
       - butter
+  - type: Tag
+    tags:
+    - Vegan # L5
+    - Wheat # L5
   - type: Sprite
     state: croissant
   - type: SolutionContainerManager
@@ -826,6 +911,8 @@
   - type: Tag
     tags:
     - ClothMade
+    - Vegan # L5
+    - Wheat # L5
   - type: SolutionContainerManager
     solutions:
       food:
@@ -840,7 +927,7 @@
         - ReagentId: Vitamin
           Quantity: 1
 
-- type: entity         
+- type: entity
   name: grilled cheese sandwich
   parent: FoodBakedBase
   id: FoodBakedGrilledCheeseSandwich
@@ -850,6 +937,10 @@
     flavors:
       - cheesy
       - bread
+  - type: Tag
+    tags:
+    - Dairy # L5
+    - Wheat # L5
   - type: Sprite
     sprite: Objects/Consumable/Food/Baked/misc.rsi
     state: grilled-cheese

@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseItem
+  name: basic wheelchair
+  description: Moves people without them needing to use their legs. Unfortunately, the 'tokyo drift' module is missing.
+  id: BaseWheelchair
+  components:
+  - type: Sprite
+    sprite: _L5/Objects/Vehicles/basewheelchair.rsi
+    state: vehicle_deployed
+  - type: Strap
+  - type: Rotatable
+  - type: PilotOnBuckle
+  - type: InputMover

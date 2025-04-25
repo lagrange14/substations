@@ -22,6 +22,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SecurityAmmoStatic
@@ -176,6 +178,7 @@
     - ScienceWeapons
     - Chemistry
     - PowerCells
+    #- ExperimentalDevices # L5 - commented out until we figure out hand teleporters
   - type: Machine
     board: EpistemicsTechFabCircuitboard
   - type: StealTarget

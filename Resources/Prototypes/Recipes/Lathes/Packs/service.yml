@@ -24,6 +24,7 @@
   - MopItem
   - Holoprojector
   - WetFloorSign
+  - DiseaseSwab # botanists can make swabs at their fab now
 
 - type: latheRecipePack
   parent:

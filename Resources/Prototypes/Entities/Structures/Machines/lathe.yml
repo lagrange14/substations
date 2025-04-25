@@ -273,6 +273,8 @@
     - CameraBoards
     - MechBoards
     - ShuttleBoards
+    - TechFabBoards # L5
+    - MaterialSiloBoard # L5
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards
@@ -407,6 +409,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit # DeltaV - added animation sprite layers
+    unlitRunningState: unlit-building # DeltaV - added animation sprite layers
     staticPacks:
     - SecurityEquipmentStatic
     - SecurityPracticeStatic
@@ -452,6 +456,8 @@
     - type: Lathe
       idleState: icon
       runningState: icon
+      unlitIdleState: unlit # DeltaV - added animation sprite layers
+      unlitRunningState: unlit-building # DeltaV - added animation sprite layers
       staticPacks:
       - SecurityAmmoStatic
     - type: MaterialStorage
@@ -483,6 +489,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit # DeltaV - added animation sprite layers
+    unlitRunningState: unlit-building # DeltaV - added animation sprite layers
     staticPacks:
     - TopicalsStatic
     - ChemistryStatic
