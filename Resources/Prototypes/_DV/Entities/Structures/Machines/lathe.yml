@@ -178,7 +178,7 @@
     - ScienceWeapons
     - Chemistry
     - PowerCells
-    - ExperimentalDevices # L5
+    #- ExperimentalDevices # L5 - commented out until we figure out hand teleporters
   - type: Machine
     board: EpistemicsTechFabCircuitboard
   - type: StealTarget
