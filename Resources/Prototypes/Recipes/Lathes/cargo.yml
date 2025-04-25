@@ -12,3 +12,27 @@
   completetime: 4
   materials:
     Steel: 500
+
+- type: latheRecipe
+  id: BaseCartridgeRecipe
+  abstract: true
+  completetime: 8
+  materials:
+    Glass: 600
+    Gold: 400
+    Silver: 200
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: AstroNav
+  result: AstroNavCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: MailMetric
+  result: MailMetricCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: StockTrading
+  result: StockTradingCartridge

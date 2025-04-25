@@ -5,6 +5,9 @@
   recipes:
   - AppraisalTool
   - Pickaxe
+  - AstroNav
+  - StockTrading
+  - MailMetric
 
 - type: latheRecipePack
   id: CargoBoardsStatic

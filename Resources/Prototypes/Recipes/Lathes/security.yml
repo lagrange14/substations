@@ -700,8 +700,17 @@
 - type: latheRecipe
   id: CrimeAssist
   result: CrimeAssistCartridge
-  completetime: 10
+  completetime: 8
   materials:
+    Glass: 600
     Gold: 400
     Silver: 200
+
+- type: latheRecipe
+  id: LogProbe
+  result: LogProbeCartridge
+  completetime: 8
+  materials:
     Glass: 600
+    Gold: 400
+    Silver: 200

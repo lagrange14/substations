@@ -32,6 +32,7 @@
   - HoloprojectorField
   - SignallerAdvanced
   - DeviceQuantumSpinInverter
+  - GlimmerMonitor
 
 - type: latheRecipePack
   id: ScienceClothing
