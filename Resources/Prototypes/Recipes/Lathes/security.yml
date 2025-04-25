@@ -696,3 +696,12 @@
     Plastic: 1000
     Plasma: 500
     Glass: 500
+
+- type: latheRecipe
+  id: CrimeAssist
+  result: CrimeAssistCartridge
+  completetime: 10
+  materials:
+    Gold: 400
+    Silver: 200
+    Glass: 600
