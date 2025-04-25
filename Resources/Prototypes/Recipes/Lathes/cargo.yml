@@ -14,8 +14,8 @@
     Steel: 500
 
 - type: latheRecipe
-  id: BaseCartridgeRecipe
   abstract: true
+  id: BaseCartridgeRecipe
   completetime: 8
   materials:
     Glass: 600
