@@ -7,14 +7,21 @@ namespace Content.Client.Medical.CrewMonitoring;
 
 public sealed partial class CrewMonitoringNavMapControl : NavMapControl
 {
+    [Dependency] private readonly IEntitySystemManager _entitySystem = default!; // L5 - map-global suit sensors
+
     public NetEntity? Focus;
     public Dictionary<NetEntity, string> LocalizedNames = new();
 
+    private SharedTransformSystem _transformSystem; // L5 - map-global suit sensors
     private Label _trackedEntityLabel;
     private PanelContainer _trackedEntityPanel;
 
     public CrewMonitoringNavMapControl() : base()
     {
+        // L5 - map-global suit sensors:
+        IoCManager.InjectDependencies(this);
+        _transformSystem = _entitySystem.GetEntitySystem<SharedTransformSystem>();
+
         WallColor = new Color(192, 122, 196);
         TileColor = new(71, 42, 72);
         BackgroundColor = Color.FromSrgb(TileColor.WithAlpha(BackgroundOpacity));
@@ -64,7 +71,12 @@ public sealed partial class CrewMonitoringNavMapControl : NavMapControl
             if (!LocalizedNames.TryGetValue(netEntity, out var name))
                 name = "Unknown";
 
-            var message = name + "\nLocation: [x = " + MathF.Round(blip.Coordinates.X) + ", y = " + MathF.Round(blip.Coordinates.Y) + "]";
+            // L5 - map-global suit sensors:
+            var (gridX, gridY) = (MathF.Round(blip.Coordinates.X), MathF.Round(blip.Coordinates.Y));
+            var (mapX, mapY) = _transformSystem.ToMapCoordinates(blip.Coordinates);
+            (mapX, mapY) = (MathF.Round(mapX), MathF.Round(mapY));
+            var message =
+                $"{name}\nLocation: ({gridX}, {gridY})\nGPS: ({mapX}, {mapY})";
 
             _trackedEntityLabel.Text = message;
             _trackedEntityPanel.Visible = true;

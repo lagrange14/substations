@@ -79,8 +79,9 @@ public sealed class SuitSensorSystem : EntitySystem
             if (curTime < sensor.NextUpdate)
                 continue;
 
-            if (!CheckSensorAssignedStation(uid, sensor))
-                continue;
+            // L5 - map-global suit sensors
+            // if (!CheckSensorAssignedStation(uid, sensor))
+            //     continue;
 
             // TODO: This would cause imprecision at different tick rates.
             sensor.NextUpdate = curTime + sensor.UpdateRate;
@@ -93,7 +94,8 @@ public sealed class SuitSensorSystem : EntitySystem
             //Retrieve active server address if the sensor isn't connected to a server
             if (sensor.ConnectedServer == null)
             {
-                if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(sensor.StationId!.Value, out var address))
+                // L5 - map-global suit sensors
+                if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(Transform(uid).MapID, out var address))
                     continue;
 
                 sensor.ConnectedServer = address;
@@ -113,6 +115,8 @@ public sealed class SuitSensorSystem : EntitySystem
         }
     }
 
+    /*
+    L5 - map-global suit sensors
     /// <summary>
     /// Checks whether the sensor is assigned to a station or not
     /// and tries to assign an unassigned sensor to a station if it's currently on a grid
@@ -126,6 +130,7 @@ public sealed class SuitSensorSystem : EntitySystem
         sensor.StationId = _stationSystem.GetOwningStation(uid);
         return sensor.StationId.HasValue;
     }
+    */
 
     private void OnPlayerSpawn(PlayerSpawnCompleteEvent ev)
     {
@@ -369,7 +374,8 @@ public sealed class SuitSensorSystem : EntitySystem
             return null;
 
         // check if sensor is enabled and worn by user
-        if (sensor.Mode == SuitSensorMode.SensorOff || sensor.User == null || !HasComp<MobStateComponent>(sensor.User) || transform.GridUid == null)
+        // L5 - map-global suit sensors:
+        if (sensor.Mode == SuitSensorMode.SensorOff || sensor.User == null || !HasComp<MobStateComponent>(sensor.User))
             return null;
 
         // try to get mobs id from ID slot

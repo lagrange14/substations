@@ -94,9 +94,9 @@
     - type: DeviceNetwork
       deviceNetId: Wireless
       transmitFrequencyId: SuitSensor
-    - type: StationLimitedNetwork
+    # - type: StationLimitedNetwork # L5 - map-global suit sensors
     - type: WirelessNetworkConnection
-      range: 500
+      range: 10000 # L5 - map-global (ish) suit sensors
     - type: TriggerOnMobstateChange
       mobState:
       - Critical

@@ -104,7 +104,7 @@
     transmitFrequencyId: ShuttleTimer
   - type: WirelessNetworkConnection
     range: 500
-  - type: StationLimitedNetwork
+  # - type: StationLimitedNetwork # L5 - map-global suit sensors
   - type: Thieving
     stripTimeReduction: 9999
     stealthy: true
