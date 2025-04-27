@@ -169,6 +169,15 @@
     - barks
     - barked
     - barking
+    # L5 additions
+    - yelp
+    - yelps
+    - yelped
+    - yelping
+    - yip
+    - yips
+    - yipped
+    - yipping
 
 - type: emote
   id: Snarl

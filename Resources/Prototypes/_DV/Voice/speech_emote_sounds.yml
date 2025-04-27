@@ -81,7 +81,7 @@
     variation: 0.125
   sounds:
     Scream:
-      collection: MaleScreams
+      collection: KitsuneScream # L5
     Laugh:
       collection: MaleLaugh
     Sneeze:
@@ -125,7 +125,7 @@
     variation: 0.125
   sounds:
     Scream:
-      collection: FemaleScreams
+      collection: KitsuneScream # L5
     Laugh:
       collection: FemaleLaugh
     Sneeze:
@@ -188,6 +188,8 @@
   sounds:
     Scream:
       path: /Audio/Animals/mouse_squeak.ogg
+    Chitter:
+      path: /Audio/_DV/Voice/Kitsune/fox_squeal1.ogg # L5
     Laugh:
       collection: MaleLaugh
     Sneeze:
@@ -222,6 +224,8 @@
   sounds:
     Scream:
       path: /Audio/Animals/mouse_squeak.ogg
+    Chitter:
+      path: /Audio/_DV/Voice/Kitsune/fox_squeal1.ogg # L5
     Laugh:
       collection: FemaleLaugh
     Sneeze:
@@ -386,6 +390,8 @@
       collection: KitsuneSqueal
     Growl:
       collection: KitsuneGrowl
+    Whine:
+      collection: Fox
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
@@ -422,6 +428,8 @@
       collection: KitsuneSqueal
     Growl:
       collection: KitsuneGrowl
+    Whine:
+      collection: Fox
     Gasp:
       collection: FemaleGasp
     DefaultDeathgasp:
