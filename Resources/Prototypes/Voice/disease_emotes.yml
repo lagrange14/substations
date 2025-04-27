@@ -3,6 +3,12 @@
   name: chat-emote-name-sneeze
   category: Vocal
   chatMessages: ["chat-emote-msg-sneeze"]
+  # L5
+  chatTriggers:
+    - sneeze
+    - sneezes
+    - sneeze.
+    - sneezes.
 
 - type: emote
   id: Cough
@@ -15,11 +21,13 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-cough"]
   chatTriggers:
     - cough
     - coughs
-    - coughed 
+    - coughed
     - cough.
     - coughs.
     - coughed.
@@ -62,6 +70,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-yawn"]
   chatTriggers:
     - yawn

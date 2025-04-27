@@ -12,7 +12,7 @@
     interactFailureString: petting-failure-generic
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
-      path: /Audio/Animals/fox_squeak.ogg
+      collection: Fox
   - type: MeleeWeapon
     soundHit:
       path: /Audio/Items/hiss.ogg

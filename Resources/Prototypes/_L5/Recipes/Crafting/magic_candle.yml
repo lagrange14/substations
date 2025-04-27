@@ -1,0 +1,77 @@
+- type: construction
+  name: Magic Candle
+  id: MagicCandle
+  graph: MagicCandle
+  startNode: start
+  targetNode: candle
+  category: construction-category-misc
+  description: A candle that lasts forever! Pretty too
+  icon:
+    sprite: Objects/Misc/candles.rsi
+    state: candle-big
+  objectType: Item
+
+- type: construction
+  name: Magic Candle (Black)
+  id: MagicCandleBlack
+  graph: MagicCandle
+  startNode: start
+  targetNode: candleBlack
+  category: construction-category-misc
+  description: A candle that lasts forever! Pretty too
+  icon:
+    sprite: Objects/Misc/candles.rsi
+    state: candle-big
+  objectType: Item
+
+- type: construction
+  name: Magic Candle (Blue)
+  id: MagicCandleBlue
+  graph: MagicCandle
+  startNode: start
+  targetNode: candleBlue
+  category: construction-category-misc
+  description: A candle that lasts forever! Pretty too
+  icon:
+    sprite: Objects/Misc/candles.rsi
+    state: candle-big
+  objectType: Item
+
+- type: construction
+  name: Magic Candle (Green)
+  id: MagicCandleGreen
+  graph: MagicCandle
+  startNode: start
+  targetNode: candleGreen
+  category: construction-category-misc
+  description: A candle that lasts forever! Pretty too
+  icon:
+    sprite: Objects/Misc/candles.rsi
+    state: candle-big
+  objectType: Item
+
+- type: construction
+  name: Magic Candle (Purple)
+  id: MagicCandlePurple
+  graph: MagicCandle
+  startNode: start
+  targetNode: candlePurple
+  category: construction-category-misc
+  description: A candle that lasts forever! Pretty too
+  icon:
+    sprite: Objects/Misc/candles.rsi
+    state: candle-big
+  objectType: Item
+
+- type: construction
+  name: Magic Candle (Red)
+  id: MagicCandleRed
+  graph: MagicCandle
+  startNode: start
+  targetNode: candleRed
+  category: construction-category-misc
+  description: A candle that lasts forever! Pretty too
+  icon:
+    sprite: Objects/Misc/candles.rsi
+    state: candle-big
+  objectType: Item

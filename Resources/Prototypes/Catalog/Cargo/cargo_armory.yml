@@ -35,7 +35,7 @@
     state: implanter0
   product: CrateTrackingImplants
   cost: 4000 # DeltaV - was 1000
-  category: cargoproduct-category-name-armory
+  category: cargoproduct-category-name-medical # L5 - Move to medical
   group: market
 
 - type: cargoProduct

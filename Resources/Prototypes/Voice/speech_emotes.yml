@@ -10,6 +10,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
     - scream
@@ -40,6 +42,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
     - laugh
@@ -68,6 +72,8 @@
     - BorgChassis
     - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
     - Synth # L5 - synths can do this, too
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-honk"]
   chatTriggers:
     - honk
@@ -86,6 +92,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-sigh"]
   chatTriggers:
     - sigh
@@ -103,6 +111,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-whistle"]
   chatTriggers:
     - whistle
@@ -120,6 +130,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-crying"]
   chatTriggers:
     - cry
@@ -141,6 +153,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-squish"]
   chatTriggers:
     - squish
@@ -159,6 +173,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-chitter"]
   chatTriggers:
    - chitter
@@ -177,6 +193,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-squeak"]
   chatTriggers:
    - squeak
@@ -195,6 +213,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-click"]
   chatTriggers:
    - click
@@ -212,6 +232,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-clap"]
   chatTriggers:
     - claps
@@ -229,6 +251,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: [ "chat-emote-msg-clap-single" ]
   chatTriggers:
     - clap
@@ -248,6 +272,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-snap"]
   chatTriggers:
     - snap
@@ -275,6 +301,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-thump"]
   chatTriggers:
     - thump
@@ -299,6 +327,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-salute"]
   chatTriggers:
     - salute
@@ -343,6 +373,8 @@
     - BorgChassis
     - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
     - Synth # L5 - synths can do this, too
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-buzz"]
   chatTriggers:
     - buzzing
@@ -377,6 +409,8 @@
   blacklist:
     components:
     - BorgChassis
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-chirp"]
   chatTriggers:
     - chirp
@@ -395,6 +429,8 @@
     - BorgChassis
     - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
     - Synth # L5 - synths can do this, too
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-beep"]
   chatTriggers:
     - beep
@@ -412,6 +448,8 @@
     - BorgChassis
     - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
     - Synth # L5 - synths can do this, too
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-chime"]
   chatTriggers:
     - chime
@@ -429,6 +467,8 @@
     - BorgChassis
     - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
     - Synth # L5 - synths can do this, too
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-buzzestwo"]
   chatTriggers:
     - buzztwice
@@ -452,6 +492,8 @@
     - BorgChassis
     - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
     - Synth # L5 - synths can do this, too
+    tags: # DeltaV - Allow bots to emote
+    - Bot
   chatMessages: ["chat-emote-msg-ping"]
   chatTriggers:
     - ping

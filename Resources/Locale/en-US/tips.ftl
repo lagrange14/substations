@@ -139,3 +139,4 @@ tips-dataset-135 = Instead of picking it up, you can alt-click food to eat it. T
 tips-dataset-136 = If you're trapped behind an electrified door, disable the APC or throw your ID at the door to avoid getting shocked!
 # L5
 tips-dataset-137 = If the station's Sys-Side Representative electrifies a door and you have insulated gloves, snip and mend the power wire to reset their electrification!
+tips-dataset-138 = If you want to stop your prisoner from escaping from the cell right after being uncuffed, turn on combat mode while uncuffing - this will shove the prisoner down.

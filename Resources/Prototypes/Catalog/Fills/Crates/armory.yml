@@ -27,8 +27,8 @@
 - type: entity
   id: CrateTrackingImplants
   parent: [ CrateWeaponSecure, BaseSecurityContraband ]
-  name: tracking implants
-  description: Contains a handful of tracking implanters. Good for prisoners you'd like to release but still keep track of.
+  name: tracking implant crate # L5 - consistent naming
+  description: Contains a handful of tracking implanters. Useful for letting paramedics find you when you inevitably get hurt. Requires Armory access to open. # L5 - tracking implanters are for medical, not sec
   components:
   - type: StorageFill
     contents:

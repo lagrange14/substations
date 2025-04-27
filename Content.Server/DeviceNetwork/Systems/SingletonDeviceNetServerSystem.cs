@@ -4,6 +4,7 @@ using Content.Server.Medical.CrewMonitoring;
 using Content.Server.Power.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.Power;
+using Robust.Shared.Map;
 
 namespace Content.Server.DeviceNetwork.Systems;
 
@@ -30,29 +31,32 @@ public sealed class SingletonDeviceNetServerSystem : EntitySystem
         return Resolve(serverId, ref serverComponent) && serverComponent.Active;
     }
 
+    // Begin L5 changes - map-global suit sensors
     /// <summary>
-    /// Returns the address of the currently active server for the given station id if there is one.<br/>
+    /// Returns the address of the currently active server for the given map id if there is one.<br/>
     /// What kind of server you're trying to get the active instance of is determined by the component type parameter TComp.<br/>
     /// <br/>
     /// Setting TComp to <see cref="CrewMonitoringServerComponent"/>, for example, gives you the address of an entity containing the crew monitoring server component.<br/>
     /// </summary>
-    /// <param name="stationId">The entityUid of the station</param>
+    /// <param name="mapId">The mapId of the main station's map</param>
     /// <param name="address">The address of the active server if it exists</param>
     /// <typeparam name="TComp">The component type that determines what type of server you're getting the address of</typeparam>
     /// <returns>True if there is an active serve. False otherwise</returns>
-    public bool TryGetActiveServerAddress<TComp>(EntityUid stationId, [NotNullWhen(true)] out string? address) where TComp : IComponent
+    public bool TryGetActiveServerAddress<TComp>(MapId mapId, [NotNullWhen(true)] out string? address) where TComp : IComponent
     {
         var servers = EntityQueryEnumerator<
             SingletonDeviceNetServerComponent,
             DeviceNetworkComponent,
-            TComp
+            TComp,
+            TransformComponent // L5
         >();
 
         (EntityUid id, SingletonDeviceNetServerComponent server, DeviceNetworkComponent device)? last = default;
 
-        while (servers.MoveNext(out var uid, out var server, out var device, out _))
+        // L5:
+        while (servers.MoveNext(out var uid, out var server, out var device, out _, out var xform))
         {
-            if (!_stationSystem.GetOwningStation(uid)?.Equals(stationId) ?? true)
+            if (xform.MapID != mapId) // L5
                 continue;
 
             if (!server.Available)
@@ -81,6 +85,7 @@ public sealed class SingletonDeviceNetServerSystem : EntitySystem
         address = null;
         return address != null;
     }
+    // End L5 changes - map-global suit sensors
 
     /// <summary>
     /// Disconnects the server losing power
