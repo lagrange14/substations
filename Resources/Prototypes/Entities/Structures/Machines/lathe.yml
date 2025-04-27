@@ -536,8 +536,8 @@
 - type: entity
   parent: [BaseLathe, BaseMaterialSiloUtilizer]
   id: UniformPrinter
-  name: uniform printer
-  description: Prints new or replacement uniforms.
+  name: universal textile fabricator  # L5 - rename because it does more than print uniforms
+  description: Weaves, dyes, sews and finishes items such as uniforms, bedsheets or carpet tiles. # L5
   components:
   - type: Transform
     noRot: false

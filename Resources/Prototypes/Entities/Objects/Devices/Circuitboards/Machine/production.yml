@@ -221,7 +221,7 @@
 - type: entity
   id: UniformPrinterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: uniform printer machine board
+  name: universal textile fabricator machine board # L5 - rename because it does more than print uniforms
   components:
   - type: MachineBoard
     prototype: UniformPrinter
