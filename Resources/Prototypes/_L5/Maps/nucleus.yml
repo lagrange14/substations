@@ -15,7 +15,7 @@
           prefixCreator: 'NY'
       - type: StationJobs
         availableJobs:
-          Captain: [ 1, 1 ]
+          Captain: [ 1, -1 ]
           AdministrativeAssistant: [ 0, -1 ]
           StationAi: [ 1, 1 ]
           #service
