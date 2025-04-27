@@ -467,7 +467,7 @@
       food:
         maxVol: 30 # imp
         reagents:
-        - ReagentId: SalicylicAcid #keeping it somewhat consistent with the meat itself
+        - ReagentId: Bicaridine #keeping it somewhat consistent with the meat itself
           Quantity: 20 # imp
         # - ReagentId: Vitamin # imp
         #  Quantity: 12
