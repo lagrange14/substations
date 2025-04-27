@@ -1,0 +1,70 @@
+# cartridge base recipe
+- type: latheRecipe
+  abstract: true
+  id: BaseCartridgeRecipe
+  completetime: 8
+  materials:
+    Glass: 600
+    Gold: 400
+    Silver: 200
+
+# every PDA cartridge known to man
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: AstroNav
+  result: AstroNavCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: MailMetrics
+  result: MailMetricsCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: StockTrading
+  result: StockTradingCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: CrimeAssist
+  result: CrimeAssistCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: LogProbe
+  result: LogProbeCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: MedTek
+  result: MedTekCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: NanoChat
+  result: NanoChatCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: NanoTask
+  result: NanoTaskCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: CrewManifest
+  result: CrewManifestCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: Notekeeper
+  result: NotekeeperCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: NewsReader
+  result: NewsReaderCartridge
+
+- type: latheRecipe
+  parent: BaseCartridgeRecipe
+  id: NetProbe
+  result: NetProbeCartridge

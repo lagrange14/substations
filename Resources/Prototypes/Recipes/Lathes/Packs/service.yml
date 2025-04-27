@@ -25,6 +25,11 @@
   - Holoprojector
   - WetFloorSign
   - DiseaseSwab # botanists can make swabs at their fab now
+  - CrewManifest
+  - NanoChat
+  - NanoTask
+  - Notekeeper
+  - NewsReader
 
 - type: latheRecipePack
   parent:

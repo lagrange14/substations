@@ -224,12 +224,3 @@
   materials:
     Steel: 100
     Wood: 200
-
-- type: latheRecipe
-  id: MedTek
-  result: MedTekCartridge
-  completetime: 8
-  materials:
-    Glass: 600
-    Gold: 400
-    Silver: 200
