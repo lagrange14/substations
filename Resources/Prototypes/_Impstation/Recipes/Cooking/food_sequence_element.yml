@@ -96,19 +96,20 @@
   - sprite: Objects/Consumable/Food/meals.rsi
     state: queso
 
-- type: foodSequenceElement
-  id: FinfinSashimiBurger
-  name: food-sequence-burger-content-finfin
-  sprites:
-  - sprite: Objects/Consumable/Food/meals.rsi
-    state: sashimi
-
-- type: foodSequenceElement
-  id: FinfinCutlet
-  name: food-sequence-burger-content-finfin
-  sprites:
-  - sprite: Objects/Consumable/Food/meat.rsi
-    state: cutlet-cooked
+# L5 - no Finfin
+#- type: foodSequenceElement
+#  id: FinfinSashimiBurger
+#  name: food-sequence-burger-content-finfin
+#  sprites:
+#  - sprite: Objects/Consumable/Food/meals.rsi
+#    state: sashimi
+#
+#- type: foodSequenceElement
+#  id: FinfinCutlet
+#  name: food-sequence-burger-content-finfin
+#  sprites:
+#  - sprite: Objects/Consumable/Food/meat.rsi
+#    state: cutlet-cooked
 
 - type: foodSequenceElement
   id: RawCarpFilletBurger
@@ -145,12 +146,12 @@
   - sprite: Objects/Consumable/Food/meat.rsi
     state: slime
 
-- type: foodSequenceElement
-  id: FriedFinfinBurger
-  name: food-sequence-burger-content-finfin
-  sprites:
-  - sprite: Objects/Consumable/Food/meat.rsi
-    state: finfin
+#- type: foodSequenceElement
+#  id: FriedFinfinBurger
+#  name: food-sequence-burger-content-finfin
+#  sprites:
+#  - sprite: Objects/Consumable/Food/meat.rsi
+#    state: finfin
 
 - type: foodSequenceElement
   id: MeatTomatoCutletBurger
@@ -173,12 +174,13 @@
   - sprite: Objects/Consumable/Food/meat.rsi
     state: fish
 
-- type: foodSequenceElement
-  id: BrosBurger
-  name: food-sequence-burger-content-bros
-  sprites:
-  - sprite: Mobs/Animals/bros.rsi
-    state: bros
+# L5 - no bros burger, sorry bro
+#- type: foodSequenceElement
+#  id: BrosBurger
+#  name: food-sequence-burger-content-bros
+#  sprites:
+#  - sprite: Mobs/Animals/bros.rsi
+#    state: bros
 
 - type: foodSequenceElement
   id: CigarBurger

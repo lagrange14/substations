@@ -401,9 +401,10 @@
           Quantity: 10
         - ReagentId: Omnizine
           Quantity: 1 # imp
-  - type: RandomFillSolution # imp
-    solution: food
-    weightedRandomId: RandomFillStonk
+# L5 - don't have this
+#  - type: RandomFillSolution # imp
+#    solution: food
+#    weightedRandomId: RandomFillStonk
 
 - type: entity
   name: carp-pocket

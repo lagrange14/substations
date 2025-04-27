@@ -261,6 +261,7 @@
         - ReagentId: Vitamin
           Quantity: 5 # imp
         - ReagentId: Allicin # imp
+          Quantity: 1 # imp
   - type: Tag
     tags:
     - Dairy # L5

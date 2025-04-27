@@ -344,8 +344,8 @@
           Quantity: 9 # imp
         #- ReagentId: Vitamin # imp
         #  Quantity: 2
-        - ReagentId: MouseBites # imp - mq's request
-          Quantity: 5
+        #- ReagentId: MouseBites # imp - mq's request # L5 - we don't have these
+        #  Quantity: 5
   - type: Tag
     tags:
     - Meat
