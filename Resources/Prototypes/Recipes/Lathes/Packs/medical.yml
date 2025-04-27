@@ -50,8 +50,8 @@
   - DiseaseSwab
   - BodyBag
   - WhiteCane
-  - Cane
-  - MedTek
+  - Cane # L5
+  - MedTek # L5
 
 - type: latheRecipePack
   id: RollerBedsStatic
