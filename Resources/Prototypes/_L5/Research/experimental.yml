@@ -1,0 +1,12 @@
+# Not sure multiple hand teleporters works on the same map
+#- type: technology
+#  id: GeneralizedQuantumLeaping
+#  name: research-technology-generalized-quantum-leaping
+#  icon:
+#    sprite: Objects/Devices/hand_teleporter.rsi
+#    state: icon
+#  discipline: Experimental
+#  tier: 3
+#  cost: 20000
+#  recipeUnlocks:
+#  - HandTeleporter

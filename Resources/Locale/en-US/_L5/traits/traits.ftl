@@ -5,6 +5,9 @@
 trait-synth-name = Synthetic
 trait-synth-desc = You are a biomechanical construct, whether a cladist or not. You are susceptible to ion storms and EMPs, bleed coolant, and have a unique brain.
 
+trait-lowmobility-name = Low Mobility
+trait-lowmobility-desc = You aren't able to get around very fast. Not for the faint of heart.
+
 # Dietary restrictions traits
 trait-category-diet = Dietary Restrictions
 

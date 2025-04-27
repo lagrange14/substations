@@ -1,0 +1,7 @@
+- type: trait
+  id: LowMobility
+  name: trait-lowmobility-name
+  description: trait-lowmobility-desc
+  category: Disabilities
+  components:
+    - type: LowMobility

@@ -65,6 +65,10 @@
   parent: Candle
   id: CandleRed
   components:
+  - type: Tag
+    tags:
+    - Candle
+    - CandleRed # L5
   - type: Sprite
     layers:
       - state: candle-big
@@ -84,6 +88,10 @@
   parent: Candle
   id: CandleBlue
   components:
+  - type: Tag
+    tags:
+    - Candle
+    - CandleBlue # L5
   - type: Sprite
     layers:
       - state: candle-big
@@ -102,6 +110,10 @@
   parent: Candle
   id: CandleBlack
   components:
+  - type: Tag
+    tags:
+    - Candle
+    - CandleBlack # L5
   - type: Sprite
     layers:
       - state: candle-big
@@ -120,6 +132,10 @@
   parent: Candle
   id: CandleGreen
   components:
+  - type: Tag
+    tags:
+    - Candle
+    - CandleGreen # L5
   - type: Sprite
     layers:
       - state: candle-big
@@ -138,6 +154,10 @@
   parent: Candle
   id: CandlePurple
   components:
+  - type: Tag
+    tags:
+    - Candle
+    - CandlePurple # L5
   - type: Sprite
     layers:
       - state: candle-big
@@ -288,6 +308,9 @@
     color: "#e39c40"
     radius: 2.5
     power: 10
+  - type: Construction # L5
+    graph: MagicCandle
+    node: CandleInfinite
 
 - type: entity
   name: magic red candle
@@ -308,6 +331,9 @@
       right:
       - state: inhand-right
         color: "#a12349"
+  - type: Construction # L5
+    graph: MagicCandle
+    node: CandleRedInfinite
 
 - type: entity
   name: magic blue candle
@@ -328,6 +354,9 @@
       right:
       - state: inhand-right
         color: "#425d7d"
+  - type: Construction # L5
+    graph: MagicCandle
+    node: CandleBlueInfinite
 
 - type: entity
   name: magic black candle
@@ -348,6 +377,9 @@
       right:
       - state: inhand-right
         color: "#1b1724"
+  - type: Construction # L5
+    graph: MagicCandle
+    node: CandleBlackInfinite
 
 - type: entity
   name: magic green candle
@@ -368,6 +400,9 @@
       right:
       - state: inhand-right
         color: "#5d997e"
+  - type: Construction # L5
+    graph: MagicCandle
+    node: CandleGreenInfinite
 
 - type: entity
   name: magic purple candle
@@ -388,6 +423,9 @@
       right:
       - state: inhand-right
         color: "#984aa1"
+  - type: Construction # L5
+    graph: MagicCandle
+    node: CandlePurpleInfinite
 
 - type: entity
   name: small magic red candle

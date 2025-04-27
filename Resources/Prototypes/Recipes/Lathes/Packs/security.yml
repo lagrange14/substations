@@ -12,6 +12,8 @@
   - TargetHuman
   - TargetSyndicate
   - Zipties
+  - CrimeAssist # L5
+  - LogProbe # L5
 
 # Practice ammo/mags and practice weapons
 - type: latheRecipePack

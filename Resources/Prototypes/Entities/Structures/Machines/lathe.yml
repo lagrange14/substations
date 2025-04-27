@@ -273,6 +273,8 @@
     - CameraBoards
     - MechBoards
     - ShuttleBoards
+    - TechFabBoards # L5
+    - MaterialSiloBoard # L5
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards
@@ -330,10 +332,16 @@
   - type: EmagLatheRecipes # DeltaV
     emagStaticPacks:
     - RoboticsEmagStatic
+    # Being DeltaV Additions
+    - EVASuit
     emagDynamicPacks:
     - SecurityCybernetics # having sechud eyes is good for evil people
     - SecurityHardsuits
-    - BorgModulesSecurityDeltaV # DeltaV - secfab borg modules
+    - BorgModulesSecurityDeltaV
+    - SalvageHardsuits
+    - ParamedicHardsuit
+    - EngineeringHardsuits
+    # End DeltaV Additions
   - type: MaterialStorage
     whitelist:
       tags:
@@ -414,9 +422,15 @@
     - SecurityPracticeStatic
     - SecurityAmmoStatic
     - SecurityWeaponsStatic
-    - SecurityRubberAmmoStatic # DeltaV
-    - ReportingStatic # DeltaV
+    # Being DeltaV Additions
+    - ReportingStatic
+    - SecurityRubberAmmoStatic
+    - PrisonerSoftsuits
+    - EVASuit
+    # End DeltaV Additions
     dynamicPacks:
+    - SalvageSecurityBoards
+    - SalvageSecurityWeapons
     - SecurityEquipment
     - SecurityBoards
     - SecurityExplosives
@@ -429,6 +443,8 @@
         - Sheet
         - RawMaterial
         - Ingot
+  - type: LatheAnnouncing
+    channels: [Security]
 
 - type: entity
   id: AmmoTechFab
@@ -497,22 +513,31 @@
     - MedicalClothingStatic
     - EmptyMedkitsStatic
     - SurgeryStatic
-    - ReportingStatic # DeltaV
+    # Being DeltaV Additions
+    - ReportingStatic
+    - EVASuit
+    - PowerCellsStatic
+    # End DeltaV Additions
     dynamicPacks:
     - Chemistry
     - CyberneticsMedical # Shitmed change
     - Surgery # Shitmed change
-    - MedicalDeltaV # DeltaV
+    # Being DeltaV Additions
+    - MedicalDeltaV
+    - ParamedicHardsuit
+    # End DeltaV Additions
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget
     stealGroup: MedicalTechFabCircuitboard
+  - type: LatheAnnouncing
+    channels: [Medical]
 
 - type: entity
   parent: [BaseLathe, BaseMaterialSiloUtilizer]
   id: UniformPrinter
-  name: uniform printer
-  description: Prints new or replacement uniforms.
+  name: universal textile fabricator  # L5 - rename because it does more than print uniforms
+  description: Weaves, dyes, sews and finishes items such as uniforms, bedsheets or carpet tiles. # L5
   components:
   - type: Transform
     noRot: false

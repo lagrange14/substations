@@ -1,4 +1,19 @@
 - type: Tag
+  id: CandleBlack
+
+- type: Tag
+  id: CandleBlue
+
+- type: Tag
+  id: CandleGreen
+
+- type: Tag
+  id: CandlePurple
+
+- type: Tag
+  id: CandleRed
+
+- type: Tag
   id: Dairy
 
 - type: Tag
@@ -15,6 +30,12 @@
 
 - type: Tag
   id: Nightshade
+
+- type: Tag
+  id: Tank
+
+- type: Tag
+  id: TankBig
 
 - type: Tag
   id: Treyf

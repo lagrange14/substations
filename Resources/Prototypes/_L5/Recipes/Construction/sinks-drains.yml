@@ -1,0 +1,47 @@
+- type: construction
+  name: sink
+  id: Sink
+  graph: Sink
+  startNode: start
+  targetNode: sink
+  category: construction-category-structures
+  description: A small sink with faucets for dispensing water
+  icon:
+    sprite: Structures/Furniture/sink.rsi
+    state: sink_stem
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true # because tables
+  canRotate: true
+
+- type: construction
+  name: wide sink
+  id: WideSink
+  graph: Sink
+  startNode: start
+  targetNode: sinkWide
+  category: construction-category-structures
+  description: A large sink with faucets for dispensing water
+  icon:
+    sprite: Structures/Furniture/sink.rsi
+    state: sink_wide
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true # because tables
+  canRotate: true
+
+- type: construction
+  name: drain
+  id: Drain
+  graph: Drain
+  startNode: start
+  targetNode: drain
+  category: construction-category-structures
+  description: A floor drain for capturing spilt fluids. Probably blood, if we're being honest
+  icon:
+    sprite: Objects/Specific/Janitorial/drain.rsi
+    state: icon
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true # because tables
+  canRotate: true

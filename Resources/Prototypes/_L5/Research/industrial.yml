@@ -1,0 +1,31 @@
+- type: technology
+  id: IndustrialManufacturing
+  name: research-technology-industrial-manufacturing
+  icon:
+    sprite: Structures/Machines/techfab.rsi
+    state: icon
+  discipline: Industrial
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - MedicalTechFabCircuitboard
+  - EngineeringTechFabCircuitboard
+  - LogisticsTechFabCircuitboard
+  - ServiceTechFabCircuitboard
+  - EpistemicsTechFabCircuitboard
+  - SecurityTechFabCircuitboard
+  - AmmoTechFabCircuitboard
+
+# L5 - bit toooo easymode. Leaving for reference
+#- type: technology
+#  id: ShuttlePowerSource
+#  name: research-technology-shuttle-power-source
+#  icon:
+#    sprite: Structures/Power/Generation/wallmount_generator.rsi
+#    state: static
+#  discipline: Industrial
+#  tier: 3
+#  cost: 20000
+#  recipeUnlocks:
+#  - WallmountGeneratorElectronics
+#  - WallmountGeneratorAPUElectronics

@@ -311,7 +311,7 @@ public sealed partial class CrewMonitoringWindow : FancyWindow
                     else
                     {
                         _trackedEntity = sensor.SuitSensorUid;
-                        NavMap.CenterToCoordinates(coordinates.Value);
+                        NavMap.CenterToCoordinates(CoordinatesToLocal(coordinates.Value)); // L5 - map-global suit sensors
                     }
 
                     NavMap.Focus = _trackedEntity;

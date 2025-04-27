@@ -75,6 +75,7 @@
     - Service
     - Supply
     - Prison # DeltaV
+    - Traffic # DeltaV
     defaultChannel: Command
   - type: Sprite
     layers:
