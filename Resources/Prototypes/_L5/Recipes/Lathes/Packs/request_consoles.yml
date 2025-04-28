@@ -1,0 +1,9 @@
+- type: latheRecipePack
+  id: RequestConsoleBoards
+  recipes:
+  - CargoRequestComputerCircuitboard
+  - CargoRequestEngineeringComputerCircuitboard
+  - CargoRequestMedicalComputerCircuitboard
+  - CargoRequestScienceComputerCircuitboard
+  - CargoRequestSecurityComputerCircuitboard
+  - CargoRequestServiceComputerCircuitboard

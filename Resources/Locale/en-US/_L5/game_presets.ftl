@@ -1,0 +1,1 @@
+outpost-preset-title = "Outpost"

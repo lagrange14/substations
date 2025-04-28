@@ -1,0 +1,8 @@
+- type: gamePreset
+  id: Outpost
+  alias:
+  - byos
+  name: outpost-preset-title
+  showInVote: false # Only for the outpost server
+  rules:
+  - BasicRoundstartVariation

@@ -82,3 +82,33 @@
   parent: BaseGoldCircuitboardRecipe
   id: WallmountGeneratorAPUElectronics
   result: WallmountGeneratorAPUElectronics
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: CargoRequestComputerCircuitboard
+  result: CargoRequestComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: CargoRequestEngineeringComputerCircuitboard
+  result: CargoRequestEngineeringComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: CargoRequestMedicalComputerCircuitboard
+  result: CargoRequestMedicalComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: CargoRequestScienceComputerCircuitboard
+  result: CargoRequestScienceComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: CargoRequestSecurityComputerCircuitboard
+  result: CargoRequestSecurityComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: CargoRequestServiceComputerCircuitboard
+  result: CargoRequestServiceComputerCircuitboard

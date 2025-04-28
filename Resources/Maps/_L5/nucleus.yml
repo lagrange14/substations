@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 249.0.0
+  engineVersion: 250.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/27/2025 17:50:50
+  time: 04/28/2025 08:48:38
   entityCount: 393
 maps:
 - 1
@@ -197,6 +197,8 @@ entities:
       - 197
       - 199
       - 201
+      - 196
+      - 203
 - proto: AirlockCommand
   entities:
   - uid: 7
@@ -206,7 +208,7 @@ entities:
       pos: 1.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -28734.305
+      secondsUntilStateChange: -28762.898
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -220,7 +222,7 @@ entities:
       pos: 0.5,-3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -28733.555
+      secondsUntilStateChange: -28762.148
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1088,7 +1090,7 @@ entities:
       pos: -1.5,-0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -26842.695
+      secondsUntilStateChange: -26871.29
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -1466,6 +1468,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,-2.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 4
     - type: AtmosPipeColor
       color: '#0335FCFF'
   - uid: 197
@@ -1540,6 +1547,11 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -3.5,-2.5
       parent: 2
+    - type: DeviceNetwork
+      configurators:
+      - invalid
+      deviceLists:
+      - 4
     - type: AtmosPipeColor
       color: '#FF1212FF'
 - proto: GeneratorBasic15kW

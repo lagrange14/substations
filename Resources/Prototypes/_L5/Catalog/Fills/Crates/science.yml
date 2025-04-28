@@ -1,0 +1,12 @@
+# This is a temporary solution until we get the ability to generate bluespace
+# crystals via researching artifacts.
+- type: entity
+  id: CrateMaterialBluespace
+  parent: CrateScienceSecure
+  name: bluespace crystal crate
+  description: 3 bluespace crystals packed securely in foam.
+  components:
+  - type: StorageFill
+    contents:
+    - id: MaterialBluespace1
+      amount: 3

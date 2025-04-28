@@ -1,3 +1,23 @@
+# These are mostly needed for Outpost gameplay, but not sure if we can make
+# research techs gated on game preset. Oh well, substations players will just
+# have to live with yet another tech to research!
+- type: technology
+  id: StreamlinedOrdering
+  name: research-technology-streamlined-ordering
+  icon:
+    sprite: Structures/Machines/computers.rsi
+    state: computer
+  discipline: Industrial
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - CargoRequestComputerCircuitboard
+  - CargoRequestEngineeringComputerCircuitboard
+  - CargoRequestMedicalComputerCircuitboard
+  - CargoRequestScienceComputerCircuitboard
+  - CargoRequestSecurityComputerCircuitboard
+  - CargoRequestServiceComputerCircuitboard
+
 - type: technology
   id: IndustrialManufacturing
   name: research-technology-industrial-manufacturing

@@ -1,6 +1,4 @@
 [game]
-hostname                = "[EN][HRP][18+] Lagrange Substations"
-desc                    = "An HRP Space Station 14 server centered around the System, a machine that dreams. You, however, will be stationed on one of the support substations."
 lobbyenabled            = true
 lobbyduration           = 300
 round_restart_time      = 600
@@ -11,7 +9,7 @@ showgreentext           = false # focus more on telling a story
 secret_weight_prototype = "SecretDeltaV"
 role_timers             = false # no time requirements for roles
 cryo_sleep_rejoining    = true
-hostname_in_titlebar    = false # use "$defaultwindowtitle" instead of "$hostname - $defaultwindowtitle" since there is only one server
+hostname_in_titlebar    = true
 
 [vote]
 preset_enabled = true
@@ -63,7 +61,7 @@ time = 15
 [infolinks]
 github     = "https://github.com/lagrange14/substations"
 website    = "https://lagrange14.com/"
-wiki       = "https://wiki.lagrange14.com/wiki/Main_Page"
+wiki       = "https://lagrange14.com/wiki/Main_Page"
 bug_report = "https://github.com/lagrange14/substations/issues/new/choose"
 
 [net]
@@ -85,7 +83,6 @@ admin_prefix         = false
 admin_prefix_webhook = false
 
 [server]
-id           = "lagrange14_substations"
 rules_header = "Lagrange Station Guidelines"
 rules_file   = "L5Ruleset"
 uptime_restart_minutes = 10080 # 1 week

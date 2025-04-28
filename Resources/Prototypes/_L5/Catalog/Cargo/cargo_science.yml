@@ -1,0 +1,11 @@
+# This is a temporary solution until we get the ability to generate bluespace
+# crystals via researching artifacts.
+- type: cargoProduct
+  id: CrateBluespace
+  icon:
+    sprite: Nyanotrasen/Objects/Materials/materials.rsi
+    state: bluespace_2
+  product: CrateMaterialBluespace
+  cost: 15000
+  category: cargoproduct-category-name-epistemics # DeltaV - Science renamed to Epistemics
+  group: market
