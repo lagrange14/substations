@@ -3,6 +3,7 @@ using System.Linq;
 using System.Text;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
+using Content.Server.Atmos.Components;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
 using Content.Server.Players.RateLimiting;
@@ -44,6 +45,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Dynamics.Joints;
 using Content.Server.Effects;
+using Robust.Shared.Physics;
 
 namespace Content.Server.Chat.Systems;
 
@@ -71,6 +73,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly IMapManager _mapManager = default!; // Floof
+    [Dependency] private readonly ExamineSystemShared _examine = default!; // Floof
 
     //Nyano - Summary: pulls in the nyano chat system for psionics.
     [Dependency] private readonly NyanoChatSystem _nyanoChatSystem = default!;
@@ -78,6 +81,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     public const int VoiceRange = 10; // how far voice goes in world units
     public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
     public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
+    public const float InSpaceRange = .3f; // Floof - how far speech travels in space
     public const string DefaultAnnouncementSound = "/Audio/Announcements/announce.ogg";
     public readonly Color DefaultSpeakColor = Color.White;
 
@@ -515,6 +519,11 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         var speech = GetSpeechVerb(source, message);
 
+        var obfuscatedMessage = ObfuscateMessageReadability(message, 0.2f); // Floof
+
+        // Floof - get the entity's name by visual identity (if no override provided).
+        string nameIdentity = FormattedMessage.EscapeText(nameOverride ?? Identity.Name(source, EntityManager));
+
         // get the entity's apparent name (if no override provided).
         string name;
         if (nameOverride != null)
@@ -539,6 +548,12 @@ public sealed partial class ChatSystem : SharedChatSystem
             ("fontType", speech.FontId),
             ("fontSize", speech.FontSize),
             ("message", FormattedMessage.EscapeText(message)));
+
+        var obfuscated = Loc.GetString("chat-manager-entity-whisper-wrap-message",
+            ("entityName", nameIdentity), ("message", FormattedMessage.EscapeText(obfuscatedMessage)));
+
+        var wrappedObfuscated = Loc.GetString("chat-manager-entity-whisper-unknown-wrap-message",
+            ("message", FormattedMessage.EscapeText(obfuscatedMessage)));
 
         SendInVoiceRange(
             ChatChannel.Local,
@@ -863,6 +878,29 @@ public sealed partial class ChatSystem : SharedChatSystem
     }
 
     /// <summary>
+    /// Floof - determines whether sound is trasmittable in range
+    /// </summary>
+    /// <param name="mapId"></param>
+    /// <returns></returns>
+    public bool IsSoundTransmittable(MapId mapId)
+    {
+        try
+        {
+            var map = _mapManager.GetMapEntityIdOrThrow(mapId);
+            if (!map.Valid)
+                return false;
+            if (!EntityManager.TryGetComponent<MapAtmosphereComponent>(map, out var _))
+                return false;
+        }
+        catch (Exception ex)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    /// <summary>
     ///     Sends a chat message to the given players in range of the source entity.
     /// </summary>
     private void SendInVoiceRange(
@@ -884,17 +922,17 @@ public sealed partial class ChatSystem : SharedChatSystem
             {
                 var sourceGrid = Transform(source).GridUid;
                 float transmitRange = VoiceRange;
-                if (sourceGrid == null && !isSoundTransmittable(Transform(source).MapID))
+                if (sourceGrid == null && !IsSoundTransmittable(Transform(source).MapID))
                     transmitRange = InSpaceRange;
 
                 if (session.AttachedEntity != null
                     && Transform(session.AttachedEntity.Value).GridUid == null
-                    && !isSoundTransmittable(Transform(session.AttachedEntity.Value).MapID))
+                    && !IsSoundTransmittable(Transform(session.AttachedEntity.Value).MapID))
                     transmitRange = InSpaceRange;
 
                 if (session.AttachedEntity != null
                     && Transform(session.AttachedEntity.Value).GridUid != sourceGrid
-                    && !isSoundTransmittable(Transform(session.AttachedEntity.Value).MapID)
+                    && !IsSoundTransmittable(Transform(session.AttachedEntity.Value).MapID)
                     && !CheckAttachedGrids(source, session.AttachedEntity.Value))
                     transmitRange = InSpaceRange;
 
@@ -912,7 +950,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             EntityUid listener = session.AttachedEntity.Value;
 
             // If the channel does not support languages, or the entity can understand the message, send the original message, otherwise send the obfuscated version
-            if (channel == ChatChannel.LOOC || channel == ChatChannel.Emotes))
+            if (channel == ChatChannel.LOOC || channel == ChatChannel.Emotes)
             {
                 _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
             }
@@ -1118,6 +1156,19 @@ public sealed partial class ChatSystem : SharedChatSystem
             sb.Append(_random.Pick(charOptions));
         }
         return sb.ToString();
+    }
+
+    private bool CheckAttachedGrids(EntityUid source, EntityUid receiver)
+    {
+        if (!TryComp<JointComponent>(Transform(source).GridUid, out var sourceJoints)
+            || !TryComp<JointComponent>(Transform(receiver).GridUid, out var receiverJoints))
+            return false;
+
+        foreach (var (id, _) in sourceJoints.GetJoints)
+            if (receiverJoints.GetJoints.ContainsKey(id))
+                return true;
+
+        return false;
     }
 
     #endregion
