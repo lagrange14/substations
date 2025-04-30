@@ -1,5 +1,4 @@
-namespace Content.Server.Speech.Components;
-using Content.Shared.Chat;
+namespace Content.Server._Floof.Speech.Components;
 
 /// <summary>
 ///     Sends a random message from a list with a provided min/max time.

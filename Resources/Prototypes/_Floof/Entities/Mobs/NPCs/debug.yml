@@ -53,18 +53,18 @@
     flavorKind: station-event-random-sentience-flavor-organic
   - type: Bloodstream
     bloodMaxVolume: 50
-# L5: no languages yet...
-#  - type: LanguageKnowledge
-#    speaks:
-#    - TauCetiBasic
-#    understands:
-#    - TauCetiBasic
   - type: RandomBark
     barkType: chatterboySpeak
     barkChatKind: "Speak"
     minTime: 1
     maxTime: 1
     chatLog: true
+# L5: no languages yet...
+#  - type: LanguageKnowledge
+#    speaks:
+#    - TauCetiBasic
+#    understands:
+#    - TauCetiBasic
 
 - type: entity
   name: debug emotelad
