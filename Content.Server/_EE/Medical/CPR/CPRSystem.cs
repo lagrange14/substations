@@ -6,7 +6,6 @@ using Content.Shared.Atmos.Rotting;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
 using Content.Shared.Inventory;
-using Content.Shared.Medical;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
@@ -16,7 +15,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
-namespace Content.Server.Medical.CPR;
+namespace Content.Server._EE.Medical.CPR;
 
 public sealed class CPRSystem : EntitySystem
 {
@@ -35,7 +34,7 @@ public sealed class CPRSystem : EntitySystem
     {
         base.Initialize();
         SubscribeLocalEvent<CPRTrainingComponent, GetVerbsEvent<InnateVerb>>(AddCPRVerb);
-        SubscribeLocalEvent<CPRTrainingComponent, CPRDoAfterEvent>(OnCPRDoAfter);
+        SubscribeLocalEvent<CPRTrainingComponent, Shared._EE.Medical.CPRDoAfterEvent>(OnCPRDoAfter);
     }
 
     private void AddCPRVerb(Entity<CPRTrainingComponent> performer, ref GetVerbsEvent<InnateVerb> args)
@@ -77,7 +76,7 @@ public sealed class CPRSystem : EntitySystem
         _popupSystem.PopupEntity(Loc.GetString("cpr-start-second-person-patient", ("user", performer)), target, target);
 
         var doAfterArgs = new DoAfterArgs(
-            EntityManager, performer, performer.Comp.DoAfterDuration, new CPRDoAfterEvent(), performer, target,
+            EntityManager, performer, performer.Comp.DoAfterDuration, new Shared._EE.Medical.CPRDoAfterEvent(), performer, target,
             performer)
         {
             BreakOnMove = true,
@@ -94,7 +93,7 @@ public sealed class CPRSystem : EntitySystem
         performer.Comp.CPRPlayingStream = playingStream.Value.Entity;
     }
 
-    private void OnCPRDoAfter(Entity<CPRTrainingComponent> performer, ref CPRDoAfterEvent args)
+    private void OnCPRDoAfter(Entity<CPRTrainingComponent> performer, ref Shared._EE.Medical.CPRDoAfterEvent args)
     {
         if (args.Cancelled || args.Handled || !args.Target.HasValue)
         {

@@ -1,7 +1,7 @@
 using Content.Shared.Damage;
 using Robust.Shared.Audio;
 
-namespace Content.Server.Medical.CPR;
+namespace Content.Server._EE.Medical.CPR;
 
 [RegisterComponent]
 public sealed partial class CPRTrainingComponent : Component
