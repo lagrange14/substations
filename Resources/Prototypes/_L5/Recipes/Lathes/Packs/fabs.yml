@@ -8,3 +8,8 @@
   - EpistemicsTechFabCircuitboard
   - SecurityTechFabCircuitboard
   - AmmoTechFabCircuitboard
+
+- type: latheRecipePack
+  id: MedicalBiofabMachineboard
+  recipes:
+  - MedicalBiofabMachineBoard

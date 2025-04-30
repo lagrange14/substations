@@ -30,9 +30,6 @@ punctuation      = true
 name_case        = false
 restricted_names = false
 
-[ambience]
-restart_sounds_enabled = false
-
 [atmos]
 space_wind   = true
 #grid_impulse = true # this just sends some salvage wrecks flying.
@@ -83,9 +80,8 @@ admin_prefix         = false
 admin_prefix_webhook = false
 
 [server]
-rules_header = "Lagrange Station Guidelines"
-rules_file   = "L5Ruleset"
-uptime_restart_minutes = 10080 # 1 week
+rules_file             = "L5Ruleset"
+uptime_restart_minutes = 20160 # 2 weeks
 
 [rmc]
 mentor_help_sound = "/Audio/_DV/Effects/Admin/chord2.ogg" # we get our own sound

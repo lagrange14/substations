@@ -276,6 +276,7 @@
     - RequestConsoleBoards # L5
     - TechFabBoards # L5
     - MaterialSiloBoard # L5
+    - MedicalBiofabMachineboard # L5
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityBoards

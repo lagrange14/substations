@@ -310,7 +310,7 @@
     power: 10
   - type: Construction # L5
     graph: MagicCandle
-    node: CandleInfinite
+    node: candle
 
 - type: entity
   name: magic red candle
@@ -333,7 +333,7 @@
         color: "#a12349"
   - type: Construction # L5
     graph: MagicCandle
-    node: CandleRedInfinite
+    node: candleRed
 
 - type: entity
   name: magic blue candle
@@ -356,7 +356,7 @@
         color: "#425d7d"
   - type: Construction # L5
     graph: MagicCandle
-    node: CandleBlueInfinite
+    node: candleBlue
 
 - type: entity
   name: magic black candle
@@ -379,7 +379,7 @@
         color: "#1b1724"
   - type: Construction # L5
     graph: MagicCandle
-    node: CandleBlackInfinite
+    node: candleBlack
 
 - type: entity
   name: magic green candle
@@ -402,7 +402,7 @@
         color: "#5d997e"
   - type: Construction # L5
     graph: MagicCandle
-    node: CandleGreenInfinite
+    node: candleGreen
 
 - type: entity
   name: magic purple candle
@@ -425,7 +425,7 @@
         color: "#984aa1"
   - type: Construction # L5
     graph: MagicCandle
-    node: CandlePurpleInfinite
+    node: candlePurple
 
 - type: entity
   name: small magic red candle
