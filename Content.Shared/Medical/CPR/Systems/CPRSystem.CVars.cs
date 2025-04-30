@@ -1,4 +1,4 @@
-using Content.Shared.CCVar;
+using Content.Shared._EE.CCVars;
 using Robust.Shared.Configuration;
 
 namespace Content.Shared.Medical.CPR
@@ -16,12 +16,12 @@ namespace Content.Shared.Medical.CPR
 
         private void InitializeCVars()
         {
-            Subs.CVar(_cfg, CCVars.EnableCPR, value => EnableCPR = value, true);
-            Subs.CVar(_cfg, CCVars.CPRHealsAirloss, value => HealsAirloss = value, true);
-            Subs.CVar(_cfg, CCVars.CPRReducesRot, value => ReducesRot = value, true);
-            Subs.CVar(_cfg, CCVars.CPRResuscitationChance, value => ResuscitationChance = value, true);
-            Subs.CVar(_cfg, CCVars.CPRRotReductionMultiplier, value => RotReductionMultiplier = value, true);
-            Subs.CVar(_cfg, CCVars.CPRAirlossReductionMultiplier, value => AirlossReductionMultiplier = value, true);
+            Subs.CVar(_cfg, CPRCCVars.EnableCPR, value => EnableCPR = value, true);
+            Subs.CVar(_cfg, CPRCCVars.CPRHealsAirloss, value => HealsAirloss = value, true);
+            Subs.CVar(_cfg, CPRCCVars.CPRReducesRot, value => ReducesRot = value, true);
+            Subs.CVar(_cfg, CPRCCVars.CPRResuscitationChance, value => ResuscitationChance = value, true);
+            Subs.CVar(_cfg, CPRCCVars.CPRRotReductionMultiplier, value => RotReductionMultiplier = value, true);
+            Subs.CVar(_cfg, CPRCCVars.CPRAirlossReductionMultiplier, value => AirlossReductionMultiplier = value, true);
         }
     }
 }
