@@ -526,6 +526,7 @@
     - EVASuit
     - PowerCellsStatic
     # End DeltaV Additions
+    - ClothingNeckVetCone # TheDen
     dynamicPacks:
     - Chemistry
     - CyberneticsMedical # Shitmed change
