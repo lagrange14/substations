@@ -1,6 +1,4 @@
-# L5
-# TODO: consider changing the key names and putting in _L5
-guide-entry-deltav-Rules = Lagrange Rules
+guide-entry-deltav-Rules = Delta-V Rules
 guide-entry-deltav-rule-0 = 0. Admin Discretion
 guide-entry-deltav-rule-a1 = A1. No Sexual Content/Themes
 guide-entry-deltav-rule-a2 = A2. Use English and be respectful
