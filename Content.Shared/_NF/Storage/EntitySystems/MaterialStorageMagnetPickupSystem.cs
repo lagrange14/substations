@@ -67,10 +67,10 @@ public sealed class MaterialStorageMagnetPickupSystem : EntitySystem
     // Frontier, used to show the magnet state on examination
     private void OnExamined(EntityUid uid, MaterialStorageMagnetPickupComponent component, ExaminedEvent args)
     {
-        args.PushMarkup(Loc.GetString("magnet-pickup-component-on-examine-main",
-                        ("stateText", Loc.GetString(component.MagnetEnabled
-                        ? "magnet-pickup-component-magnet-on"
-                        : "magnet-pickup-component-magnet-off"))));
+        // L5 - improved magnet localization
+        args.PushMarkup(Loc.GetString(component.MagnetEnabled
+            ? "magnet-pickup-component-magnet-on"
+            : "magnet-pickup-component-magnet-off"));
     }
 
     public override void Update(float frameTime)
