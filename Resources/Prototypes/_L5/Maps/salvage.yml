@@ -3,7 +3,7 @@
 - type: salvageMap
   id: MeteorAtmos
   mapPath: /Maps/_L5/Salvage/miner-wreck1.yml
-  sizeString: salvage-map-wreck-size-large
+  sizeString: salvage-map-wreck-size-medium
 
 - type: salvageMap
   id: RedRockAtmos
