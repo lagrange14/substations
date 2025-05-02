@@ -11,6 +11,9 @@ role_timers             = false # no time requirements for roles
 cryo_sleep_rejoining    = true
 hostname_in_titlebar    = true
 
+[nf14.respawn]
+time = 0
+
 [vote]
 preset_enabled = true
 map_enabled    = true
