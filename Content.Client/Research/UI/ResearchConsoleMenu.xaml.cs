@@ -21,6 +21,7 @@ public sealed partial class ResearchConsoleMenu : FancyWindow
 {
     public Action<string>? OnTechnologyCardPressed;
     public Action? OnServerButtonPressed;
+    public Action? OnPurchaseCrystalButtonPressed;
 
     [Dependency] private readonly IEntityManager _entity = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
@@ -41,6 +42,8 @@ public sealed partial class ResearchConsoleMenu : FancyWindow
         _accessReader = _entity.System<AccessReaderSystem>();
 
         ServerButton.OnPressed += _ => OnServerButtonPressed?.Invoke();
+        // L5 - purchase crystals with extra points
+        PurchaseCrystalButton.OnPressed += _ => OnPurchaseCrystalButtonPressed?.Invoke();
     }
 
     public void SetEntity(EntityUid entity)
@@ -97,6 +100,13 @@ public sealed partial class ResearchConsoleMenu : FancyWindow
             disciplineText = Loc.GetString(discipline.Name);
             disciplineColor = discipline.Color;
         }
+
+        // L5 - bluespace crystal purchasing: disable if there aren't enough points or the user doesn't have access
+        var hasAccess = _player.LocalEntity is not { } local ||
+                        !_entity.TryGetComponent<AccessReaderComponent>(Entity, out var access) ||
+                        _accessReader.IsAllowed(local, Entity, access);
+        PurchaseCrystalButton.Disabled = state.Points < 10_000 || !hasAccess;
+        // end L5 - bluespace crystal purchasing
 
         var msg = new FormattedMessage();
         msg.AddMarkupOrThrow(Loc.GetString("research-console-menu-main-discipline",
