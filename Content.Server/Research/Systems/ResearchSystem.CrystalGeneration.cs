@@ -27,7 +27,7 @@ public sealed partial class ResearchSystem
         if (server.Points < _pointCost)
             return;
 
-        ModifyServerPoints(serverEnt.Value, -_pointCost); // TODO make CVar
+        ModifyServerPoints(serverEnt.Value, -_pointCost);
         SpawnNextToOrDrop("MaterialBluespace1", client);
 
         _adminLog.Add(LogType.Action, LogImpact.Medium,
