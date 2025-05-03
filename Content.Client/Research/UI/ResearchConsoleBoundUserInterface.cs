@@ -37,9 +37,9 @@ public sealed class ResearchConsoleBoundUserInterface : BoundUserInterface
         };
 
         // L5 - bluespace crystal purchasing
-        _consoleMenu.OnPurchaseCrystalButtonPressed += () =>
+        _consoleMenu.OnGenerateCrystalButtonPressed += () =>
         {
-            SendMessage(new PurchaseCrystalMessage());
+            SendMessage(new GenerateCrystalMessage());
         };
     }
 

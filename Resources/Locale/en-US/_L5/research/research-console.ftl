@@ -1,1 +1,1 @@
-research-console-menu-purchase-crystal-button = Purchase bluespace crystal
+research-console-menu-generate-crystal-button = Generate bluespace crystal

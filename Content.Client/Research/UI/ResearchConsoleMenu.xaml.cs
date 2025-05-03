@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Numerics;
 using Content.Client.UserInterface.Controls;
+using Content.Shared._L5.CCVar;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Research.Components;
@@ -11,6 +12,7 @@ using Robust.Client.Player;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
+using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -21,8 +23,9 @@ public sealed partial class ResearchConsoleMenu : FancyWindow
 {
     public Action<string>? OnTechnologyCardPressed;
     public Action? OnServerButtonPressed;
-    public Action? OnPurchaseCrystalButtonPressed;
+    public Action? OnGenerateCrystalButtonPressed;
 
+    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly IEntityManager _entity = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
@@ -42,8 +45,8 @@ public sealed partial class ResearchConsoleMenu : FancyWindow
         _accessReader = _entity.System<AccessReaderSystem>();
 
         ServerButton.OnPressed += _ => OnServerButtonPressed?.Invoke();
-        // L5 - purchase crystals with extra points
-        PurchaseCrystalButton.OnPressed += _ => OnPurchaseCrystalButtonPressed?.Invoke();
+        // L5 - generate crystals with extra points
+        GenerateCrystalButton.OnPressed += _ => OnGenerateCrystalButtonPressed?.Invoke();
     }
 
     public void SetEntity(EntityUid entity)
@@ -101,12 +104,12 @@ public sealed partial class ResearchConsoleMenu : FancyWindow
             disciplineColor = discipline.Color;
         }
 
-        // L5 - bluespace crystal purchasing: disable if there aren't enough points or the user doesn't have access
+        // L5 - bluespace crystal generation: disable if there aren't enough points or the user doesn't have access
         var hasAccess = _player.LocalEntity is not { } local ||
                         !_entity.TryGetComponent<AccessReaderComponent>(Entity, out var access) ||
                         _accessReader.IsAllowed(local, Entity, access);
-        PurchaseCrystalButton.Disabled = state.Points < 10_000 || !hasAccess;
-        // end L5 - bluespace crystal purchasing
+        GenerateCrystalButton.Disabled = state.Points < _configurationManager.GetCVar(L5CCVars.BluespaceCrystalPointCost) || !hasAccess;
+        // end L5 - bluespace crystal generation
 
         var msg = new FormattedMessage();
         msg.AddMarkupOrThrow(Loc.GetString("research-console-menu-main-discipline",

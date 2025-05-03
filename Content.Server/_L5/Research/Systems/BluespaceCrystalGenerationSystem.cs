@@ -7,7 +7,7 @@ using Content.Shared.Access.Systems;
 
 namespace Content.Server._L5.Research.Systems;
 
-public sealed class BluespaceCrystalPurchaseSystem : EntitySystem
+public sealed class BluespaceCrystalGenerationSystem : EntitySystem
 {
     [Dependency] private readonly AccessReaderSystem _accessReader = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
@@ -17,7 +17,7 @@ public sealed class BluespaceCrystalPurchaseSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<ResearchConsoleComponent, PurchaseCrystalMessage>(OnPurchaseCrystal);
+        SubscribeLocalEvent<ResearchConsoleComponent, GenerateCrystalMessage>(OnGenerateCrystal);
     }
 
     /// <summary>
@@ -26,9 +26,9 @@ public sealed class BluespaceCrystalPurchaseSystem : EntitySystem
     /// <param name="uid"></param>
     /// <param name="component"></param>
     /// <param name="args"></param>
-    private void OnPurchaseCrystal(EntityUid uid,
+    private void OnGenerateCrystal(EntityUid uid,
         ResearchConsoleComponent component,
-        PurchaseCrystalMessage args)
+        GenerateCrystalMessage args)
     {
         var act = args.Actor;
 
@@ -38,6 +38,6 @@ public sealed class BluespaceCrystalPurchaseSystem : EntitySystem
             return;
         }
 
-        _research.PurchaseCrystal(uid, args.Actor);
+        _research.GenerateCrystal(uid, args.Actor);
     }
 }
