@@ -690,9 +690,9 @@
     snap:
     - Wall
   components:
-  #- type: Tag
-  #  tags:
-  #  - Diagonal
+  - type: Tag
+    tags:
+    - Diagonal
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/reinforced_diagonal.rsi
