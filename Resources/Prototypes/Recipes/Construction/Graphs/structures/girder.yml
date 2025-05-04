@@ -47,11 +47,8 @@
           conditions:
             - !type:EntityAnchored {}
           steps:
-            - material: Steel
-              amount: 1
-              doAfter: 1
             - tool: Welding
-              doAfter: 2
+              doAfter: 3
 
 
         - to: reinforcedGirder
@@ -198,7 +195,7 @@
             - !type:SnapToGrid {}
           steps:
             - tool: Welding
-              doAfter: 5
+              doAfter: 4
 
     - node: uraniumWall
       entity: WallUranium
@@ -332,11 +329,8 @@
           conditions:
             - !type:EntityAnchored {}
           steps:
-            - material: Plasteel
-              amount: 1
-              doAfter: 1
             - tool: Welding
-              doAfter: 2
+              doAfter: 3
 
         - to: shuttleWall
           completed:
