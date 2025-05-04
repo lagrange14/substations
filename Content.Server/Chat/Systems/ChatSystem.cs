@@ -944,8 +944,8 @@ public sealed partial class ChatSystem : SharedChatSystem
                 continue; // Floofstation: some things dont go through walls (but they go through windows!)
             EntityUid listener = session.AttachedEntity.Value;
 
-            // If the channel does not support languages, or the entity can understand the message, send the original message, otherwise send the obfuscated version
-            if (channel == ChatChannel.LOOC || channel == ChatChannel.Emotes)
+            // If the entity is in range or the channel is guaranteed to be in range, send the original message, otherwise send the obfuscated version
+            if (channel == ChatChannel.LOOC || channel == ChatChannel.Emotes || entRange != MessageRangeCheckResult.Full)
             {
                 _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
             }
