@@ -704,7 +704,7 @@
   - type: Icon
     sprite: Structures/Walls/reinforced_diagonal.rsi
     state: state0
-  - type: Construction
+  - type: Construction # L5 made diagonal walls buildable yay
     graph: Girder
     node: diagonalReinforcedWall
 

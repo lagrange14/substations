@@ -40,8 +40,7 @@
               amount: 2
               doAfter: 2
 
-        - to: diagonalWall # L5 diagonal walls for half the price of a full wall
-          completed:
+        - to: diagonalWall # L5 Buildable diagonal walls
             - !type:SnapToGrid
               southRotation: false
           conditions:
@@ -54,7 +53,7 @@
         - to: reinforcedGirder
           completed:
             - !type:SnapToGrid {}
-              #southRotation: true
+              #southRotation: true # L5 this makes it respect your rotation choice for the diagonal walls later down the line
           conditions:
             - !type:EntityAnchored {}
           steps:
