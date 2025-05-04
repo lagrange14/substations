@@ -314,7 +314,6 @@
         - to: reinforcedWall
           completed:
             - !type:SnapToGrid {}
-              southRotation: true
           conditions:
             - !type:EntityAnchored { }
           steps:
