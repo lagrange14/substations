@@ -693,6 +693,7 @@
   - type: Tag
     tags:
     - Diagonal
+    - Wall
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/reinforced_diagonal.rsi
