@@ -684,7 +684,7 @@
   parent: WallShuttleDiagonal
   id: WallReinforcedDiagonal
   name: diagonal reinforced wall
-  suffix: Diagonal
+  suffix: diagonal
   placement:
     mode: SnapgridCenter
     snap:
