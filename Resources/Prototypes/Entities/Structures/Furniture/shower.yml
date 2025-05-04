@@ -9,7 +9,7 @@
   components:
     - type: Sprite
       sprite: Structures/Furniture/shower.rsi
-      drawdepth: WallMountedItems
+      drawdepth: OverMobs
       layers:
       - state: shower
         map: ["enabled", "enum.ShowerVisualState.Off" ]
