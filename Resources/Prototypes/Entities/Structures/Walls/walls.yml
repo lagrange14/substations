@@ -683,8 +683,8 @@
 - type: entity
   parent: WallShuttleDiagonal
   id: WallReinforcedDiagonal
-  name: reinforced wall
-  suffix: diagonal
+  name: diagonal reinforced wall
+  suffix: Diagonal
   placement:
     mode: SnapgridCenter
     snap:
@@ -1058,7 +1058,7 @@
 - type: entity
   parent: WallShuttleDiagonal
   id: WallSolidDiagonal
-  name: solid wall
+  name: Diagonal solid wall
   suffix: diagonal
   placement:
     mode: SnapgridCenter
