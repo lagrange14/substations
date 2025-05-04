@@ -6,8 +6,8 @@
       edges:
         - to: girder
           completed:
-            - !type:SnapToGrid
-              southRotation: true
+            - !type:SnapToGrid {}
+              #southRotation: true
           steps:
             - material: Steel
               amount: 2
@@ -192,6 +192,7 @@
             - !type:GivePrototype
               prototype: SheetSteel1
               amount: 1
+            - !type:SnapToGrid {}
           steps:
             - tool: Welding
               doAfter: 5
@@ -323,8 +324,8 @@
 
         - to: diagonalReinforcedWall # L5 buildable diagonal reinforced wall baby!!!
           completed:
-            - !type:SnapToGrid:
-              southRotation: false
+            - !type:SnapToGrid {}
+              #southRotation: false
           conditions:
             - !type:EntityAnchored {}
           steps:
