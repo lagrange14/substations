@@ -324,8 +324,7 @@
 
         - to: diagonalReinforcedWall # L5 buildable diagonal reinforced wall baby!!!
           completed:
-            - !type:SnapToGrid:
-              southRotation: false
+            - !type:SnapToGrid {}
           conditions:
             - !type:EntityAnchored {}
           steps:
