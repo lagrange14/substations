@@ -7,7 +7,7 @@
         - to: girder
           completed:
             - !type:SnapToGrid {}
-              #southRotation: true
+              #southRotation: true # L5 frontier did this and it fixed the issue with the diagonal walls??
           steps:
             - material: Steel
               amount: 2
@@ -50,6 +50,9 @@
             - material: Steel
               amount: 1
               doAfter: 1
+            - tool: Welding
+              doAfter: 2
+
 
         - to: reinforcedGirder
           completed:
@@ -332,6 +335,8 @@
             - material: Plasteel
               amount: 1
               doAfter: 1
+            - tool: Welding
+              doAfter: 2
 
         - to: shuttleWall
           completed:
