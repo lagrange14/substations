@@ -71,7 +71,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: diagonalWall
+  name: diagonal wall
   id: WallSolidDiagonal
   graph: Girder
   startNode: start
@@ -107,7 +107,7 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: diagonalReinforcedWall
+  name: diagonal reinforced wall
   id: WallReinforcedDiagonal
   graph: Girder
   startNode: start
