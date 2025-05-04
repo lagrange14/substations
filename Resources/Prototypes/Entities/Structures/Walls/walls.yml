@@ -705,7 +705,7 @@
     sprite: Structures/Walls/reinforced_diagonal.rsi
     state: state0
   - type: Construction
-    graph: girder
+    graph: Girder
     node: diagonalReinforcedWall
 
 # Riveting
@@ -1077,7 +1077,7 @@
     sprite: Structures/Walls/solid_diagonal.rsi
     state: state0
   - type: Construction # L5 making it buildable
-    graph: girder
+    graph: Girder
     node: diagonalWall
 
 - type: entity
