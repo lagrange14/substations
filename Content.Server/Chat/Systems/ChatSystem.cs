@@ -945,7 +945,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             EntityUid listener = session.AttachedEntity.Value;
 
             // If the entity is in range or the channel is guaranteed to be in range, send the original message, otherwise send the obfuscated version
-            if (channel == ChatChannel.LOOC || channel == ChatChannel.Emotes || entRange != MessageRangeCheckResult.Full)
+            if (channel == ChatChannel.LOOC || channel == ChatChannel.Emotes || entRange == MessageRangeCheckResult.Full)
             {
                 _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
             }
