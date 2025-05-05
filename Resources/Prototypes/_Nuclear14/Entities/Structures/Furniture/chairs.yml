@@ -23,12 +23,13 @@
     rotateWhileAnchored: true
 
 - type: entity
-  parent: N14ChairBarRetro
+  parent: Chair
   id: N14ChairDinerBench
   name: diner chair
   description: A cozy diner chair.
   components:
   - type: Sprite
+    sprite: _Nuclear14/Structures/Furniture/chairs.rsi
     state: diner_chair
 
 - type: entity
