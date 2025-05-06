@@ -5,7 +5,7 @@
     - Towels
   completetime: 4
   materials:
-    Cloth: 4
+    Cloth: 400
 
 # L5 all the dang towels(except the NT, syndie, and CC towels)
 - type: latheRecipe
