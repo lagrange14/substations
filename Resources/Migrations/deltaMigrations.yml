@@ -152,3 +152,18 @@ SmartFridge: DVSmartFridgeMedical
 
 # 2025-03-23
 DrinkDaiquiriGlass: DrinkDaiquiri
+
+# 2025-03-25
+# L5 - revert
+#Autolathe: MachineFrameDestroyed
+#AutolatheHyperConvection: MachineFrameDestroyed
+#Protolathe: MachineFrameDestroyed
+#ProtolatheHyperConvection: MachineFrameDestroyed
+#AutolatheMachineCircuitboard: null
+#AutolatheHyperConvectionMachineCircuitboard: null
+#ProtolatheMachineCircuitboard: null
+#ProtolatheHyperConvectionMachineCircuitboard: null
+
+# 2025-05-03
+SignCansScience: SignCans
+BorgModuleGrapplingGun: BorgModuleTraversal

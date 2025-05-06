@@ -8,10 +8,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
     - scream
@@ -40,10 +38,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
     - laugh
@@ -68,12 +64,11 @@
   category: Vocal
   icon: Interface/Emotes/honk.png
   whitelist:
+    requireAll: true
     components:
-    - BorgChassis
-    - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
-    - Synth # L5 - synths can do this, too
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    - Vocal
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-honk"]
   chatTriggers:
     - honk
@@ -90,10 +85,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-sigh"]
   chatTriggers:
     - sigh
@@ -109,10 +102,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-whistle"]
   chatTriggers:
     - whistle
@@ -128,10 +119,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-crying"]
   chatTriggers:
     - cry
@@ -151,10 +140,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-squish"]
   chatTriggers:
     - squish
@@ -171,10 +158,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-chitter"]
   chatTriggers:
    - chitter
@@ -191,10 +176,8 @@
     components:
       - Vocal
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-squeak"]
   chatTriggers:
    - squeak
@@ -211,10 +194,8 @@
     components:
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-click"]
   chatTriggers:
    - click
@@ -230,10 +211,8 @@
     components:
     - Hands
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-clap"]
   chatTriggers:
     - claps
@@ -249,10 +228,8 @@
     components:
     - Hands
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: [ "chat-emote-msg-clap-single" ]
   chatTriggers:
     - clap
@@ -270,10 +247,8 @@
     components:
     - Hands
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-snap"]
   chatTriggers:
     - snap
@@ -299,10 +274,8 @@
     components:
     - Hands
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-thump"]
   chatTriggers:
     - thump
@@ -325,10 +298,8 @@
     components:
     - Hands
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-salute"]
   chatTriggers:
     - salute
@@ -369,12 +340,12 @@
   category: Vocal
   icon: Interface/Emotes/buzz.png
   whitelist:
+    requireAll: true
     components:
-    - BorgChassis
-    - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
-    - Synth # L5 - synths can do this, too
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    - Vocal
+    tags:
+    - SiliconEmotes
+    # L5 - TODO: ensure synths
   chatMessages: ["chat-emote-msg-buzz"]
   chatTriggers:
     - buzzing
@@ -407,10 +378,8 @@
     - Nymph
     - Vocal
   blacklist:
-    components:
-    - BorgChassis
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    tags:
+    - SiliconEmotes
   chatMessages: ["chat-emote-msg-chirp"]
   chatTriggers:
     - chirp
@@ -425,12 +394,12 @@
   category: Vocal
   icon: Interface/Emotes/beep.png
   whitelist:
+    requireAll: true
     components:
-    - BorgChassis
-    - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
-    - Synth # L5 - synths can do this, too
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    - Vocal
+    tags:
+    - SiliconEmotes
+    # L5 - TODO: ensure synths
   chatMessages: ["chat-emote-msg-beep"]
   chatTriggers:
     - beep
@@ -444,12 +413,12 @@
   category: Vocal
   icon: Interface/Emotes/chime.png
   whitelist:
+    requireAll: true
     components:
-    - BorgChassis
-    - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
-    - Synth # L5 - synths can do this, too
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    - Vocal
+    tags:
+    - SiliconEmotes
+    # L5 - TODO: ensure synths
   chatMessages: ["chat-emote-msg-chime"]
   chatTriggers:
     - chime
@@ -463,12 +432,12 @@
   category: Vocal
   icon: Interface/Emotes/buzztwo.png
   whitelist:
+    requireAll: true
     components:
-    - BorgChassis
-    - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
-    - Synth # L5 - synths can do this, too
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    - Vocal
+    tags:
+    - SiliconEmotes
+    # L5 - TODO: ensure synths
   chatMessages: ["chat-emote-msg-buzzestwo"]
   chatTriggers:
     - buzztwice
@@ -488,12 +457,12 @@
   category: Vocal
   icon: Interface/Emotes/ping.png
   whitelist:
+    requireAll: true
     components:
-    - BorgChassis
-    - Silicon # DeltaV - Removes 'requireAll' component and adds IPCs to whitelist
-    - Synth # L5 - synths can do this, too
-    tags: # DeltaV - Allow bots to emote
-    - Bot
+    - Vocal
+    tags:
+    - SiliconEmotes
+    # L5 - TODO: ensure synths
   chatMessages: ["chat-emote-msg-ping"]
   chatTriggers:
     - ping

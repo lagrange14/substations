@@ -26,7 +26,6 @@
   - AnomalyScanner
   - AnomalyLocator
   - AnomalyLocatorWide
-  - BorgModuleAnomaly
   - APECircuitboard
   - AnomalyVesselCircuitboard
 
@@ -41,7 +40,6 @@
   cost: 5000
   recipeUnlocks:
   - NodeScanner
-  - BorgModuleArtifact
   - AnalysisComputerCircuitboard
   - ArtifactAnalyzerMachineCircuitboard
 
@@ -142,6 +140,8 @@
     - WeaponForceGun
     - WeaponTetherGun
 
+# Tier 3
+
 - type: technology
   id: QuantumLeaping
   name: research-technology-quantum-leaping
@@ -153,3 +153,15 @@
   cost: 10000
   recipeUnlocks:
   - DeviceQuantumSpinInverter
+
+- type: technology
+  id: BluespaceTimeManipulation
+  name: research-technology-bluespace-time-manipulation
+  icon:
+    sprite: Objects/Devices/desynchronizer.rsi
+    state: icon
+  discipline: Experimental
+  tier: 3
+  cost: 10000
+  recipeUnlocks:
+  - DeviceDesynchronizer

@@ -2685,6 +2685,9 @@
     - CottonBoll
     - ClothMade
     - Vegan # L5
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: CottonBol
 
 - type: entity
   name: pyrotton boll
@@ -2719,6 +2722,9 @@
     - Vegan
   - type: Extractable
     grindableSolutionName: food
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: PyrottonBol
 
 - type: entity
   name: cherry

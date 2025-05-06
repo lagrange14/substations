@@ -10,8 +10,6 @@
   tier: 1
   cost: 7500 # Delta Price. 5000 is pre-adjustment.
   recipeUnlocks:
-  - BorgModuleGardening
-  - BorgModuleHarvesting
   - PlantBagOfHolding # DeltaV
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
@@ -84,18 +82,6 @@
     - JukeboxCircuitBoard
 
 - type: technology
-  id: RoboticCleanliness
-  name: research-technology-robotic-cleanliness
-  icon:
-    sprite: Mobs/Silicon/chassis.rsi
-    state: janitor
-  discipline: CivilianServices
-  tier: 1
-  cost: 5000
-  recipeUnlocks:
-  - BorgModuleAdvancedCleaning
-
-- type: technology
   id: MeatManipulation
   name: research-technology-meat-manipulation
   icon:
@@ -145,7 +131,7 @@
   - CryostasisBeaker
   - SyringeCryostasis
 
-- type: technology
+- type: technology # Merge with other T2 medical research if possible!
   id: MechanizedTreatment
   name: research-technology-mechanized-treatment
   icon:
@@ -155,8 +141,7 @@
   tier: 1 # DeltaV - was 2
   cost: 5000
   recipeUnlocks:
-  - BorgModuleAdvancedTreatment
-  #- BorgModuleDefibrillator # DeltaV - made roundstart
+  - BorgModuleAdvancedChemical
 
 - type: technology
   id: AdvancedCleaning
@@ -170,6 +155,7 @@
   recipeUnlocks:
   - AdvMopItem
   - MegaSprayBottle
+  - BorgModuleAdvancedCleaning
 
 # Begin DeltaV Removals - waste of points nobody makes, moved into civilian mechs
 #- type: technology
