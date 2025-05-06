@@ -544,6 +544,7 @@
     - Bedsheets
     - BeltsDeltaV # DeltaV
     - ClothingJustice # DeltaV
+    - ClothingTowels # L5
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ClothingCentComm
