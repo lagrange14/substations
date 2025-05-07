@@ -1,14 +1,14 @@
 # L5 recipes for the inflatables
 - type: latheRecipe
   id: InflatableWall
-  result: InflatableWallStack
+  result: InflatableWallStack # it makes a stack of 10
   completetime: 3
   materials:
-    Plastic: 100
+    Plastic: 500
 
 - type: latheRecipe
   id: InflatableDoor
-  result: InflatableDoorStack
+  result: InflatableDoorStack # and this makes a stack of four? stupid ass
   completetime: 3
   materials:
-    Plastic: 100
+    Plastic: 200
