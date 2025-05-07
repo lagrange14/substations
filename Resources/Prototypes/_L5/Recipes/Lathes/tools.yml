@@ -1,14 +1,14 @@
 # L5 recipes for the inflatables
 - type: latheRecipe
   id: InflatableWall
-  result: InflatableWallStack5
+  result: InflatableWallStack
   completetime: 3
   materials:
-    Plastic: 400
+    Plastic: 100
 
 - type: latheRecipe
   id: InflatableDoor
-  result: InflatableDoorStack5
+  result: InflatableDoorStack
   completetime: 3
   materials:
-    Plastic: 400
+    Plastic: 100
