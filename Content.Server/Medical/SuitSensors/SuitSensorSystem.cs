@@ -430,13 +430,14 @@ public sealed class SuitSensorSystem : EntitySystem
                 EntityCoordinates coordinates;
                 var xformQuery = GetEntityQuery<TransformComponent>();
 
-                if (transform.GridUid != null)
-                {
-                    coordinates = new EntityCoordinates(transform.GridUid.Value,
-                        Vector2.Transform(_transform.GetWorldPosition(transform, xformQuery),
-                            _transform.GetInvWorldMatrix(xformQuery.GetComponent(transform.GridUid.Value), xformQuery)));
-                }
-                else if (transform.MapUid != null)
+                // L5 - map-global suit sensors; always report in the map frame of reference
+                // if (transform.GridUid != null)
+                // {
+                //     coordinates = new EntityCoordinates(transform.GridUid.Value,
+                //         Vector2.Transform(_transform.GetWorldPosition(transform, xformQuery),
+                //             _transform.GetInvWorldMatrix(xformQuery.GetComponent(transform.GridUid.Value), xformQuery)));
+                // } else
+                if (transform.MapUid != null)
                 {
                     coordinates = new EntityCoordinates(transform.MapUid.Value,
                         _transform.GetWorldPosition(transform, xformQuery));

@@ -28,6 +28,12 @@ public sealed partial class CrewMonitoringWindow : FancyWindow
     private readonly SharedTransformSystem _transformSystem;
     private readonly SpriteSystem _spriteSystem;
 
+    // L5 - map-global suit sensors. For some reason "mapUid" actually means
+    // gridUid in NavMap stuff, but we want to reference both map and grid ID's
+    // for displaying, e.g., the grid map if the console is on grid. At the same
+    // time, we want to display stuff in the reference frame of the real map.
+    private EntityUid? _coordMapUid;
+
     private NetEntity? _trackedEntity;
     private bool _tryToScrollToListFocus;
     private Texture? _blipTexture;
@@ -47,11 +53,12 @@ public sealed partial class CrewMonitoringWindow : FancyWindow
     {
         _blipTexture = _spriteSystem.Frame0(new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/NavMap/beveled_circle.png")));
 
+        // L5 - map-global suit sensors
         if (_entManager.TryGetComponent<TransformComponent>(mapUid, out var xform))
-            NavMap.MapUid = xform.GridUid;
-
-        else
-            NavMap.Visible = false;
+        {
+            NavMap.MapUid = xform.GridUid ?? xform.MapUid;
+            _coordMapUid = xform.MapUid;
+        }
 
         StationName.AddStyleClass("LabelBig");
         StationName.Text = stationName;
@@ -148,7 +155,9 @@ public sealed partial class CrewMonitoringWindow : FancyWindow
         // Show monitor on nav map
         if (monitorCoords != null && _blipTexture != null)
         {
-            NavMap.TrackedEntities[_entManager.GetNetEntity(monitor)] = new NavMapBlip(monitorCoords.Value, _blipTexture, Color.Cyan, true, false);
+            // L5 - map-global sensors; move monitor blip to be in the map's reference frame
+            NavMap.TrackedEntities[_entManager.GetNetEntity(monitor)] =
+                new NavMapBlip(CoordinatesToLocal(monitorCoords.Value), _blipTexture, Color.Cyan, true, false);
         }
     }
 
@@ -311,7 +320,8 @@ public sealed partial class CrewMonitoringWindow : FancyWindow
                     else
                     {
                         _trackedEntity = sensor.SuitSensorUid;
-                        NavMap.CenterToCoordinates(CoordinatesToLocal(coordinates.Value)); // L5 - map-global suit sensors
+                        NavMap.CenterToCoordinates(CoordinatesToLocal(coordinates.Value,
+                            useGridCoords: true)); // L5 - map-global suit sensors
                     }
 
                     NavMap.Focus = _trackedEntity;
@@ -410,17 +420,18 @@ public sealed partial class CrewMonitoringWindow : FancyWindow
     /// but if the blip is attached to another grid which is moving, that
     /// blip will move smoothly, unlike the others. By converting the
     /// coordinates, we are back in control of the blip movement.
+    ///
+    /// L5 - map-global suit sensors: this function is rewritten to reframe the
+    /// given coordinates relative to coordsMapUid, if it exists, otherwise it
+    /// returns the given reference coords. Setting useGridCoords to true will
+    /// return coordinates in reference to the monitor's grid, if able.
     /// </summary>
-    private EntityCoordinates CoordinatesToLocal(EntityCoordinates refCoords)
+    private EntityCoordinates CoordinatesToLocal(EntityCoordinates refCoords, bool useGridCoords = false)
     {
-        if (NavMap.MapUid != null)
-        {
-            return _transformSystem.WithEntityId(refCoords, (EntityUid)NavMap.MapUid);
-        }
-        else
-        {
-            return refCoords;
-        }
+        var uid = useGridCoords ? NavMap.MapUid : _coordMapUid;
+        return uid != null
+            ? _transformSystem.WithEntityId(refCoords, uid.Value)
+            : refCoords;
     }
 
     private void ClearOutDatedData()
