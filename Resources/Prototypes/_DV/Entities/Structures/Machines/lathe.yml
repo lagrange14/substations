@@ -13,7 +13,7 @@
     board: SyndieExosuitFabricatorMachineCircuitboard
 
 - type: entity
-  parent: [BaseLatheLube, BaseMaterialSiloUtilizer] # L5 - material silo
+  parent: [BaseLatheLube]
   id: BaseTechFabDepartamental
   abstract: true
   components:

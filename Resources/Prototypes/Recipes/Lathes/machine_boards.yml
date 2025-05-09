@@ -352,7 +352,7 @@
 
 # Lathes
 - type: latheRecipe
-  abstract: true # DeltaV
+  abstract: false # DeltaV # L5 - revert
   parent: [ BaseCircuitboardRecipe, BaseResearchMachineRecipeCategory ]
   id: ProtolatheMachineCircuitboard
   result: ProtolatheMachineCircuitboard
@@ -400,7 +400,7 @@
   result: OreProcessorIndustrialMachineCircuitboard
 
 - type: latheRecipe
-  abstract: true # DeltaV
+  abstract: false # DeltaV # L5 - revert
   parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
   id: AutolatheMachineCircuitboard
   result: AutolatheMachineCircuitboard
