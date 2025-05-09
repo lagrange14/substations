@@ -185,44 +185,6 @@
   result: ElectrolysisUnitMachineCircuitboard
 
 - type: latheRecipe
-  parent: BaseCircuitboardRecipe
-  id: AutolatheMachineCircuitboard
-  result: AutolatheMachineCircuitboard
-
-- type: latheRecipe
-  parent: BaseCircuitboardRecipe
-  id: ProtolatheMachineCircuitboard
-  result: ProtolatheMachineCircuitboard
-
-- type: latheRecipe
-  abstract: true # DeltaV
-  parent: BaseGoldCircuitboardRecipe
-  id: AutolatheHyperConvectionMachineCircuitboard
-  result: AutolatheHyperConvectionMachineCircuitboard
-
-- type: latheRecipe
-  abstract: true # DeltaV
-  parent: BaseGoldCircuitboardRecipe
-  id: ProtolatheHyperConvectionMachineCircuitboard
-  result: ProtolatheHyperConvectionMachineCircuitboard
-
-- type: latheRecipe
-  parent: BaseCircuitboardRecipe
-  id: CircuitImprinterMachineCircuitboard
-  result: CircuitImprinterMachineCircuitboard
-
-- type: latheRecipe
-  abstract: true # DeltaV
-  parent: BaseGoldCircuitboardRecipe
-  id: CircuitImprinterHyperConvectionMachineCircuitboard
-  result: CircuitImprinterHyperConvectionMachineCircuitboard
-
-- type: latheRecipe
-  parent: BaseCircuitboardRecipe
-  id: ExosuitFabricatorMachineCircuitboard
-  result: ExosuitFabricatorMachineCircuitboard
-
-- type: latheRecipe
   parent: [ BaseCircuitboardRecipe, BaseMedicalMachineRecipeCategory ]
   id: CentrifugeMachineCircuitboard
   result: CentrifugeMachineCircuitboard

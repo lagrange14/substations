@@ -1,5 +1,4 @@
 using System.Linq;
-using Content.Shared._EE.Materials;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Components;
 using Content.Shared.Stacks;
@@ -22,7 +21,6 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
-    [Dependency] private readonly SharedMaterialSiloSystem _materialSilo = default!;
 
     /// <summary>
     /// Default volume for a sheet if the material's entity prototype has no material composition.
@@ -161,9 +159,7 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
     /// <returns>If the amount can be changed</returns>
     public bool CanChangeMaterialAmount(EntityUid uid, string materialId, int volume, MaterialStorageComponent? component = null, bool localOnly = false)
     {
-        if (!Resolve(uid, ref component)
-            || !CanTakeVolume(uid, volume, component, utilizer)
-            || (!component.MaterialWhiteList?.Contains(materialId) ?? false))
+        if (!Resolve(uid, ref component))
             return false;
 
         if (!CanTakeVolume(uid, volume, component))
@@ -181,7 +177,6 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
     /// </summary>
     /// <param name="entity"></param>
     /// <param name="materials"></param>
-    /// <param name="utilizer"></param>
     /// <returns>If the amount can be changed</returns>
     /// <param name="localOnly"></param>
     public bool CanChangeMaterialAmount(Entity<MaterialStorageComponent?> entity, Dictionary<string,int> materials, bool localOnly = false)
@@ -215,7 +210,6 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
     /// <param name="materialId"></param>
     /// <param name="volume"></param>
     /// <param name="component"></param>
-    /// <param name="utilizer"></param>
     /// <param name="dirty"></param>
     /// <param name="localOnly"></param>
     /// <returns>If it was successful</returns>
@@ -240,15 +234,15 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
         existing += localChange;
 
         if (existing == 0)
-            storage.Storage.Remove(materialId);
+            component.Storage.Remove(materialId);
         else
-            storage.Storage[materialId] = existing;
+            component.Storage[materialId] = existing;
 
         var ev = new MaterialAmountChangedEvent();
-        RaiseLocalEvent(storageUid, ref ev);
+        RaiseLocalEvent(uid, ref ev);
 
         if (dirty)
-            Dirty(storageUid, storage);
+            Dirty(uid, component);
         return true;
     }
 
@@ -316,22 +310,20 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
     /// <param name="materialId">The ID of the material to change.</param>
     /// <param name="volume">The stored material volume to set the storage to.</param>
     /// <param name="component">The storage component on <paramref name="uid"/>. Resolved automatically if not given.</param>
-    /// <param name="utilizer">The material silo utilizer component on <paramref name="uid"/>.</param>
     /// <returns>True if it was successful (enough space etc).</returns>
     [PublicAPI]
     public bool TrySetMaterialAmount(
         EntityUid uid,
         string materialId,
         int volume,
-        MaterialStorageComponent? component = null,
-        MaterialSiloUtilizerComponent? utilizer = null)
+        MaterialStorageComponent? component = null)
     {
         if (!Resolve(uid, ref component))
             return false;
 
-        var curAmount = GetMaterialAmount(uid, materialId, component, utilizer);
+        var curAmount = GetMaterialAmount(uid, materialId, component);
         var delta = volume - curAmount;
-        return TryChangeMaterialAmount(uid, materialId, delta, component, utilizer);
+        return TryChangeMaterialAmount(uid, materialId, delta, component);
     }
 
     /// <summary>
@@ -341,7 +333,6 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
         EntityUid toInsert,
         EntityUid receiver,
         MaterialStorageComponent? storage = null,
-        MaterialSiloUtilizerComponent? utilizer = null,
         MaterialComponent? material = null,
         PhysicalCompositionComponent? composition = null)
     {
@@ -363,7 +354,7 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
         var totalVolume = 0;
         foreach (var (mat, vol) in composition.MaterialComposition)
         {
-            if (!CanChangeMaterialAmount(receiver, mat, vol * multiplier, storage, utilizer))
+            if (!CanChangeMaterialAmount(receiver, mat, vol * multiplier, storage))
                 return false;
             totalVolume += vol * multiplier;
         }
@@ -373,7 +364,7 @@ public abstract class SharedMaterialStorageSystem : EntitySystem
 
         foreach (var (mat, vol) in composition.MaterialComposition)
         {
-            TryChangeMaterialAmount(receiver, mat, vol * multiplier, storage, utilizer);
+            TryChangeMaterialAmount(receiver, mat, vol * multiplier, storage);
         }
 
         var insertingComp = EnsureComp<InsertingMaterialStorageComponent>(receiver);
