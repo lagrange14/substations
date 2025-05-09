@@ -1,9 +1,0 @@
-- type: latheRecipe
-  parent: BaseGoldCircuitboardRecipe
-  id: MaterialSiloCircuitboard
-  result: MaterialSiloCircuitboard
-  completetime: 5
-  materials:
-    Steel: 100
-    Glass: 500
-    Gold: 100

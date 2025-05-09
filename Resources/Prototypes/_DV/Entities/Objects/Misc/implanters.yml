@@ -22,14 +22,6 @@
   - type: Implanter
     implant: RadioImplant
 
-- type: entity
-  parent: BaseImplantOnlyImplanter
-  id: WatchdogImplanter
-  name: watchdog implanter
-  components:
-  - type: Implanter
-    implant: WatchdogImplant
-
 # Nukie implants
 
 - type: entity

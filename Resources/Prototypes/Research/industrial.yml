@@ -27,7 +27,7 @@
   recipeUnlocks:
   - RadarConsoleCircuitboard
   - HandHeldMassScanner
-  
+
 - type: technology
   id: AdvancedPowercells
   name: research-technology-advanced-powercells
@@ -208,7 +208,7 @@
   - ClothingBackpackHolding
   - ClothingBackpackSatchelHolding
   - ClothingBackpackDuffelHolding
-  - MaterialSiloCircuitboard # EE - material silo
+  - MaterialSiloMachineCircuitboard # L5 - material silo
 
 - type: technology
   id: PortableFission

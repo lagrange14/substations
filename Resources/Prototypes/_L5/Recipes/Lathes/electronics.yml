@@ -112,3 +112,8 @@
   parent: BaseGoldCircuitboardRecipe
   id: CargoRequestServiceComputerCircuitboard
   result: CargoRequestServiceComputerCircuitboard
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: MaterialSiloMachineCircuitboard
+  result: MaterialSiloMachineCircuitboard
