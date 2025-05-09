@@ -272,7 +272,7 @@
     Plastic: 500
 
 - type: latheRecipe
-  abstract: true # DeltaV - removed svalinn
+  abstract: false # DeltaV - removed svalinn # L5 - revert
   parent: BaseWeaponRecipeSidearm
   id: WeaponLaserSvalinn
   result: WeaponLaserSvalinn
