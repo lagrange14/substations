@@ -28,6 +28,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Vegan # L5
 
 - type: entity
   name: pears belle helene

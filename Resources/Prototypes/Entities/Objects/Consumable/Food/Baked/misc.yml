@@ -776,7 +776,6 @@
           Quantity: 0.4
   - type: Tag
     tags:
-    - Dairy # L5
     - Wheat # L5
 
 - type: entity
@@ -799,7 +798,6 @@
   - type: Tag
     tags:
     - ClothMade
-    - Dairy # L5
     - Wheat # L5
   - type: SolutionContainerManager
     solutions:
