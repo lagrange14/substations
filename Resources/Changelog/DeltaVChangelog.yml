@@ -1,64 +1,4 @@
 ﻿Entries:
-- author: beck-thompson
-  changes:
-  - message: Removed keep fellow traitor alive traitor objective.
-    type: Remove
-  id: 873
-  time: '2025-01-07T17:04:34.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/2598
-- author: Field Command
-  changes:
-  - message: Byoin Maintenance Expansions and other tweaks
-    type: Tweak
-  id: 874
-  time: '2025-01-07T17:22:29.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/2637
-- author: deltanedas
-  changes:
-  - message: It is next week. Surgery is here.
-    type: Add
-  id: 875
-  time: '2025-01-07T17:15:23.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/2542
-- author: Velcroboy
-  changes:
-  - message: Additional aggressive mobs can now be purchased for Arena Station. Caution
-      is advised.
-    type: Add
-  id: 876
-  time: '2025-01-07T19:37:10.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/2563
-- author: Radezolid
-  changes:
-  - message: Added the paperwork belt, it allows you to carry anything document related
-      + some drinks ask your local HOP to print one in the uniform printer.
-    type: Add
-  id: 877
-  time: '2025-01-08T03:52:42.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/2592
-- author: deltanedas
-  changes:
-  - message: Severed harpy limbs are no longer invisible. Wings are still weird sadly.
-    type: Tweak
-  id: 878
-  time: '2025-01-08T06:11:31.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/2649
-- author: Unkn0wnGh0st333
-  changes:
-  - message: Shoukou maint and normal lights have been adjusted. Clippy has arrived!
-    type: Tweak
-  id: 879
-  time: '2025-01-08T07:20:14.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/2613
-- author: TGRCDev
-  changes:
-  - message: Crew manifest now shows pronouns
-    type: Add
-  - message: Crew manifest should no longer overlap long names and titles
-    type: Fix
-  id: 880
-  time: '2025-01-08T11:39:09.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/2647
 - author: Radezolid, noctyrn
   changes:
   - message: Added the Cargo Assistant and Administrative Assistant to support logistics
@@ -4086,3 +4026,75 @@
   id: 1372
   time: '2025-05-09T15:58:49.0000000+00:00'
   url: https://github.com/DeltaV-Station/Delta-v/pull/3689
+- author: sowelipililimute
+  changes:
+  - message: Departmental cargo request computers now print slips that can be given
+      to Logistics for final approval, rather than directly approving the orders themselves
+    type: Tweak
+  id: 1373
+  time: '2025-05-09T22:16:18.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/3658
+- author: Colin_Tel, lyndomen, Kazne
+  changes:
+  - message: Updated metashield with Cultist information.
+    type: Tweak
+  id: 1374
+  time: '2025-05-09T22:21:08.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/3643
+- author: SubspaceEmber
+  changes:
+  - message: Combat RCD has new sprite to match ERT suits
+    type: Tweak
+  - message: Experimental RCD has new animated sprite
+    type: Tweak
+  - message: All RCDs have new in-hand sprites
+    type: Tweak
+  - message: Experimental RCD can now make reinforced walls, plasma windows, reinforced
+      plasma windows, and external airlocks
+    type: Tweak
+  - message: RCD can now make windoors and post lights
+    type: Tweak
+  id: 1375
+  time: '2025-05-09T22:40:03.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/3637
+- author: sowelipililimute
+  changes:
+  - message: Extremities such as hands and feet are now easier to hack off in combat,
+      whilst core things such as arms, legs, and heads are more difficult to hack
+      off
+    type: Tweak
+  id: 1376
+  time: '2025-05-10T01:16:56.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/3585
+- author: Lyndomen
+  changes:
+  - message: Passengers have been renamed to Assistants.
+    type: Tweak
+  - message: Assistants are full crew of the station, and are employed by NanoTrasen
+      to assist wherever the crew might need.
+    type: Tweak
+  id: 1377
+  time: '2025-05-10T01:38:20.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/3650
+- author: deltanedas
+  changes:
+  - message: Added bluespace ore which can only be smelted at an industrial ore processor.
+      Mine it on lavaland, red roid or expeditions.
+    type: Add
+  id: 1378
+  time: '2025-05-10T14:46:05.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/3651
+- author: deltanedas
+  changes:
+  - message: Fixed most techfabs not supporting material silos.
+    type: Fix
+  id: 1379
+  time: '2025-05-10T17:23:26.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/3701
+- author: sowelipililimute
+  changes:
+  - message: Automatic ACO announcements work again
+    type: Fix
+  id: 1380
+  time: '2025-05-10T17:55:30.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/3691
