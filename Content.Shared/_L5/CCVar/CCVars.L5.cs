@@ -9,5 +9,5 @@ public sealed partial class L5CCVars
     /// The cost in research points for generating a bluespace crystal
     /// </summary>
     public static readonly CVarDef<int> BluespaceCrystalPointCost =
-        CVarDef.Create("l5.research.bluespace_crystal_cost", 10_000, CVar.REPLICATED);
+        CVarDef.Create("l5.research.bluespace_crystal_cost", 20_000, CVar.REPLICATED);
 }
