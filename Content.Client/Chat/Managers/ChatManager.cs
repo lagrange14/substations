@@ -58,14 +58,6 @@ internal sealed class ChatManager : IChatManager
                 _consoleHost.ExecuteCommand($"me \"{CommandParsing.Escape(str)}\"");
                 break;
 
-            case ChatSelectChannel.Subtle: // Floofstation
-                _consoleHost.ExecuteCommand($"subtle \"{CommandParsing.Escape(str)}\"");
-                break;
-
-            case ChatSelectChannel.SubtleOOC: // Den
-                _consoleHost.ExecuteCommand($"subtleooc \"{CommandParsing.Escape(str)}\"");
-                break;
-
             case ChatSelectChannel.Dead:
                 if (_systems.GetEntitySystemOrNull<GhostSystem>() is {IsGhost: true})
                     goto case ChatSelectChannel.Local;
@@ -96,7 +88,7 @@ internal sealed class ChatManager : IChatManager
         }
     }
 
-    //Nyano - Summary: fires off the update permissions script.
+    //Nyano - Summary: fires off the update permissions script. 
     public void UpdatePermissions()
     {
         PermissionsUpdated?.Invoke();
