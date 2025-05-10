@@ -1236,7 +1236,7 @@
     accentVColor: "#447987"
 
 - type: entity
-  parent: BasePDA
+  parent: BaseMedicalPDA # L5 - psychologists have medical training
   id: PsychologistPDA
   name: psychologist PDA
   description: Looks immaculately cleaned.
