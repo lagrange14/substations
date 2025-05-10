@@ -728,11 +728,11 @@
           Quantity: 20 # imp
         - ReagentId: Water
           Quantity: 10 # imp
-        - ReagentId: Bicaridine
-          Quantity: 5
-        - ReagentId: Kelotane
-          Quantity: 5
-        #- ReagentId: Desoxyephedrine # imp #L5 commenting this out bc desoxy fucks you up here
+        #- ReagentId: Bicaridine  # L5 Commenting out the other meds on the reasoning that baking the ambrosia idk cooks out the chems idk???
+          #Quantity: 5
+        #- ReagentId: Kelotane
+          #Quantity: 5
+        #- ReagentId: Desoxyephedrine # imp # L5 commenting this out bc desoxy fucks you up here
           #Quantity: 10
   - type: Tag
     tags:
