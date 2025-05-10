@@ -64,6 +64,7 @@
   - Reporter
   - Zookeeper
   # End DeltaV Additions
+  - Orders # L5 - orders consoles
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

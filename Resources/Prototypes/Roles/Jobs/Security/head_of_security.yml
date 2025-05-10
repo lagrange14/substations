@@ -35,6 +35,7 @@
   - Detective
   - Corpsman # DeltaV - added Corpsman access
   - Cryogenics
+  - Orders # L5 - orders consoles
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

@@ -30,6 +30,7 @@
   - Robotics
   - External # Needed to access the AI satellite
   # end DeltaV Additions
+  - Orders # L5 - orders consoles
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
