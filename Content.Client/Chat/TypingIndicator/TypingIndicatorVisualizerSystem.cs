@@ -48,16 +48,14 @@ public sealed class TypingIndicatorVisualizerSystem : VisualizerSystem<TypingInd
         if (!layerExists)
             layer = args.Sprite.LayerMapReserveBlank(TypingIndicatorLayers.Base);
 
-        if (component.UseSyntheticVariant) // DeltaV: Synthetic talk sprites
+        args.Sprite.LayerSetRSI(layer, proto.SpritePath);
+        args.Sprite.LayerSetState(layer, proto.TypingState);
+
+        if (component.UseSyntheticVariant  && currentTypingIndicator != new ProtoId<TypingIndicatorPrototype>("paper")) // L5: Synthetic talk sprites
         {
             args.Sprite.LayerSetRSI(layer, proto.SynthSpritePath);
             // hardcoded string bad, but i have no idea how else to refer to this sprite state or ensure it exists
             args.Sprite.LayerSetState(layer, proto.HasSynthVariant ? proto.TypingState : "default0");
-        }
-        else
-        {
-            args.Sprite.LayerSetRSI(layer, proto.SpritePath);
-            args.Sprite.LayerSetState(layer, proto.TypingState);
         }
 
 
