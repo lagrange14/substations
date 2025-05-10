@@ -26,6 +26,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy
 #Tastes like cheesecake and honey
 
 - type: entity
@@ -57,6 +58,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Vegan
 #Tastes like vanilla and clouds.
 
 - type: entity
@@ -85,6 +87,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Vegan
 #Tastes like vanilla and clouds.
 
 - type: entity
