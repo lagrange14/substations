@@ -140,12 +140,14 @@
   id: WeaponShotgunEnforcer
   description: A premium semi-automatic shotgun, and the pride of all security forces. Uses .50 shotgun shells.
   components: # intend for Enforcer to have wider choke for semi-auto function
+  # Begin L5 Changes - use old enforcer sprites
   - type: Sprite
-    sprite: _DV/Objects/Weapons/Guns/Shotguns/enforcer.rsi # Delta-V
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
   - type: Clothing
-    sprite: _DV/Objects/Weapons/Guns/Shotguns/enforcer.rsi # Delta-V
-#  - type: Item
-#    sprite: Objects/Weapons/Guns/Shotguns/enforcer_inhands_64x.rsi
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
+  - type: Item
+    sprite: Objects/Weapons/Guns/Shotguns/enforcer_inhands_64x.rsi
+  # End L5
   - type: BallisticAmmoProvider
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
 
