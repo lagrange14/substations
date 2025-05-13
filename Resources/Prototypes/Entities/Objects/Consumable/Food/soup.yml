@@ -1334,18 +1334,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 35 # imp
+        maxVol: 40 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 12 # imp
+          Quantity: 14 # imp
         - ReagentId: Vitamin
-          Quantity: 3 # imp
-        #- ReagentId: Protein # imp
-        #  Quantity: 6
+          Quantity: 8 # imp
+        - ReagentId: Protein # imp
+          Quantity: 6
         - ReagentId: Water
           Quantity: 10 # imp
-        - ReagentId: CarpoToxin # imp
-          Quantity: 5
+        #- ReagentId: CarpoToxin # imp # L5
+          #Quantity: 5
   - type: Tag
     tags:
     - Fish # L5

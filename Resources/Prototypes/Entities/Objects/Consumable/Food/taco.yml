@@ -127,13 +127,13 @@
         maxVol: 50 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 28 # imp
+          Quantity: 30 # imp
         - ReagentId: Vitamin
-          Quantity: 9 # imp
-        - ReagentId: CarpoToxin # imp
-          Quantity: 5
+          Quantity: 12 # imp
+        #- ReagentId: CarpoToxin # imp # L5 food being toxic is ass actually
+          #Quantity: 5
         - ReagentId: Allicin # imp
-          Quantity: 2
+          Quantity: 6
   - type: Tag
     tags:
     - Fish # L5
