@@ -1,10 +1,9 @@
 using Content.Server.Chat.Systems;
 using Content.Shared.Administration;
-using Content.Shared.Chat;
 using Robust.Shared.Console;
 using Robust.Shared.Enums;
 
-namespace Content.Server.Chat.Commands
+namespace Content.Server._Den.Chat.Commands
 {
     [AnyCommand]
     internal sealed class SubtleOOCCommand : IConsoleCommand
