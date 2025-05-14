@@ -29,6 +29,8 @@
   - OreBagOfHolding
 
 - type: latheRecipePack
+  parent:
+  - LogisticsBoards # DeltaV
   id: CargoBoards
   recipes:
   - OreProcessorIndustrialMachineCircuitboard
