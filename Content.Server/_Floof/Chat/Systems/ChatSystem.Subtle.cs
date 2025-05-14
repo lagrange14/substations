@@ -8,6 +8,8 @@ namespace Content.Server.Chat.Systems;
 
 public sealed partial class ChatSystem
 {
+    public readonly Color DefaultSpeakColor = Color.White;
+
     private void SendEntitySubtle(
         EntityUid source,
         string action,
@@ -15,7 +17,8 @@ public sealed partial class ChatSystem
         string? nameOverride,
         bool hideLog = false,
         bool ignoreActionBlocker = false,
-        NetUserId? author = null
+        NetUserId? author = null,
+        string? color = null
     )
     {
         if (!_actionBlocker.CanEmote(source) && !ignoreActionBlocker)
@@ -29,7 +32,8 @@ public sealed partial class ChatSystem
         var wrappedMessage = Loc.GetString("chat-manager-entity-subtle-wrap-message",
             ("entityName", name),
             ("entity", ent),
-            ("message", FormattedMessage.RemoveMarkup(action)));
+            ("color", color ?? DefaultSpeakColor.ToHex()),
+            ("message", FormattedMessage.RemoveMarkupPermissive(action)));
 
         foreach (var (session, data) in GetRecipients(source, WhisperClearRange))
         {
