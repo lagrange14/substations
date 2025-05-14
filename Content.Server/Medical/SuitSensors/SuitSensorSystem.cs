@@ -1,7 +1,5 @@
 using System.Numerics;
 using Content.Server.Access.Systems;
-using Content.Server.DeviceNetwork;
-using Content.Server.DeviceNetwork.Components;
 using Content.Server.DeviceNetwork.Systems;
 using Content.Server.Emp;
 using Content.Server.Medical.CrewMonitoring;
@@ -26,6 +24,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Content.Shared.DeviceNetwork.Components;
 
 namespace Content.Server.Medical.SuitSensors;
 
@@ -79,8 +78,9 @@ public sealed class SuitSensorSystem : EntitySystem
             if (curTime < sensor.NextUpdate)
                 continue;
 
-            if (!CheckSensorAssignedStation(uid, sensor))
-                continue;
+            // L5 - map-global suit sensors
+            // if (!CheckSensorAssignedStation(uid, sensor))
+            //     continue;
 
             // TODO: This would cause imprecision at different tick rates.
             sensor.NextUpdate = curTime + sensor.UpdateRate;
@@ -93,7 +93,8 @@ public sealed class SuitSensorSystem : EntitySystem
             //Retrieve active server address if the sensor isn't connected to a server
             if (sensor.ConnectedServer == null)
             {
-                if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(sensor.StationId!.Value, out var address))
+                // L5 - map-global suit sensors
+                if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(Transform(uid).MapID, out var address))
                     continue;
 
                 sensor.ConnectedServer = address;
@@ -113,6 +114,8 @@ public sealed class SuitSensorSystem : EntitySystem
         }
     }
 
+    /*
+    L5 - map-global suit sensors
     /// <summary>
     /// Checks whether the sensor is assigned to a station or not
     /// and tries to assign an unassigned sensor to a station if it's currently on a grid
@@ -126,6 +129,7 @@ public sealed class SuitSensorSystem : EntitySystem
         sensor.StationId = _stationSystem.GetOwningStation(uid);
         return sensor.StationId.HasValue;
     }
+    */
 
     private void OnPlayerSpawn(PlayerSpawnCompleteEvent ev)
     {
@@ -369,7 +373,8 @@ public sealed class SuitSensorSystem : EntitySystem
             return null;
 
         // check if sensor is enabled and worn by user
-        if (sensor.Mode == SuitSensorMode.SensorOff || sensor.User == null || !HasComp<MobStateComponent>(sensor.User) || transform.GridUid == null)
+        // L5 - map-global suit sensors:
+        if (sensor.Mode == SuitSensorMode.SensorOff || sensor.User == null || !HasComp<MobStateComponent>(sensor.User))
             return null;
 
         // try to get mobs id from ID slot
@@ -406,7 +411,7 @@ public sealed class SuitSensorSystem : EntitySystem
             totalDamageThreshold = critThreshold.Value.Int();
 
         // finally, form suit sensor status
-        var status = new SuitSensorStatus(GetNetEntity(uid), userName, userJob, userJobIcon, userJobDepartments);
+        var status = new SuitSensorStatus(GetNetEntity(sensor.User.Value), GetNetEntity(uid), userName, userJob, userJobIcon, userJobDepartments);
         switch (sensor.Mode)
         {
             case SuitSensorMode.SensorBinary:
@@ -424,13 +429,14 @@ public sealed class SuitSensorSystem : EntitySystem
                 EntityCoordinates coordinates;
                 var xformQuery = GetEntityQuery<TransformComponent>();
 
-                if (transform.GridUid != null)
-                {
-                    coordinates = new EntityCoordinates(transform.GridUid.Value,
-                        Vector2.Transform(_transform.GetWorldPosition(transform, xformQuery),
-                            _transform.GetInvWorldMatrix(xformQuery.GetComponent(transform.GridUid.Value), xformQuery)));
-                }
-                else if (transform.MapUid != null)
+                // L5 - map-global suit sensors; always report in the map frame of reference
+                // if (transform.GridUid != null)
+                // {
+                //     coordinates = new EntityCoordinates(transform.GridUid.Value,
+                //         Vector2.Transform(_transform.GetWorldPosition(transform, xformQuery),
+                //             _transform.GetInvWorldMatrix(xformQuery.GetComponent(transform.GridUid.Value), xformQuery)));
+                // } else
+                if (transform.MapUid != null)
                 {
                     coordinates = new EntityCoordinates(transform.MapUid.Value,
                         _transform.GetWorldPosition(transform, xformQuery));
@@ -461,6 +467,7 @@ public sealed class SuitSensorSystem : EntitySystem
             [SuitSensorConstants.NET_JOB_DEPARTMENTS] = status.JobDepartments,
             [SuitSensorConstants.NET_IS_ALIVE] = status.IsAlive,
             [SuitSensorConstants.NET_SUIT_SENSOR_UID] = status.SuitSensorUid,
+            [SuitSensorConstants.NET_OWNER_UID] = status.OwnerUid,
         };
 
         if (status.TotalDamage != null)
@@ -491,13 +498,14 @@ public sealed class SuitSensorSystem : EntitySystem
         if (!payload.TryGetValue(SuitSensorConstants.NET_JOB_DEPARTMENTS, out List<string>? jobDepartments)) return null;
         if (!payload.TryGetValue(SuitSensorConstants.NET_IS_ALIVE, out bool? isAlive)) return null;
         if (!payload.TryGetValue(SuitSensorConstants.NET_SUIT_SENSOR_UID, out NetEntity suitSensorUid)) return null;
+        if (!payload.TryGetValue(SuitSensorConstants.NET_OWNER_UID, out NetEntity ownerUid)) return null;
 
         // try get total damage and cords (optionals)
         payload.TryGetValue(SuitSensorConstants.NET_TOTAL_DAMAGE, out int? totalDamage);
         payload.TryGetValue(SuitSensorConstants.NET_TOTAL_DAMAGE_THRESHOLD, out int? totalDamageThreshold);
         payload.TryGetValue(SuitSensorConstants.NET_COORDINATES, out NetCoordinates? coords);
 
-        var status = new SuitSensorStatus(suitSensorUid, name, job, jobIcon, jobDepartments)
+        var status = new SuitSensorStatus(ownerUid, suitSensorUid, name, job, jobIcon, jobDepartments)
         {
             IsAlive = isAlive.Value,
             TotalDamage = totalDamage,

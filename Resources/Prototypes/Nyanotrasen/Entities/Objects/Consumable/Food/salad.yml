@@ -26,6 +26,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Dairy # L5
 #Tastes like mozzarella, tomato and balsamic
 
 - type: entity
@@ -56,6 +57,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy # L5
 #Tastes like cheese, salad and bread
 
 - type: entity
@@ -116,4 +118,5 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Vegan # L5
 #Tastes like onion, tomato, corn, chili and cilantro

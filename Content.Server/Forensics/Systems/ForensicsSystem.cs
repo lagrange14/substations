@@ -154,6 +154,11 @@ namespace Content.Server.Forensics
             {
                 dest.Fingerprints.Add(print);
             }
+
+            foreach (var residue in src.Residues)
+            {
+                dest.Residues.Add(residue);
+            }
         }
 
         public List<string> GetSolutionsDNA(EntityUid uid)
@@ -328,7 +333,7 @@ namespace Content.Server.Forensics
                 // End of DeltaV code
             }
 
-            if (TryComp<FingerprintComponent>(user, out var fingerprint) && CanAccessFingerprint(user, out var _))
+            if (TryComp<FingerprintComponent>(user, out var fingerprint) && CanAccessFingerprint(user, out _))
                 component.Fingerprints.Add(fingerprint.Fingerprint ?? "");
         }
 
@@ -390,7 +395,7 @@ namespace Content.Server.Forensics
         }
 
         /// <summary>
-        /// Checks if there's an access to the fingerprint of the target entity.
+        /// Checks if there's a way to access the fingerprint of the target entity.
         /// </summary>
         /// <param name="target">The entity with the fingerprint</param>
         /// <param name="blocker">The entity that blocked accessing the fingerprint</param>

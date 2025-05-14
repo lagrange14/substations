@@ -17,6 +17,7 @@
   - Syringe
   - PillCanister
   - HandLabeler
+  - BaseChemistryEmptyVial
 
 - type: latheRecipePack
   parent:
@@ -50,7 +51,8 @@
   - DiseaseSwab
   - BodyBag
   - WhiteCane
-  - Cane
+  - Cane # L5
+  - MedTek # L5
 
 - type: latheRecipePack
   id: RollerBedsStatic

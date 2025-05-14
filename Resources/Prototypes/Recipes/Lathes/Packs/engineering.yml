@@ -16,9 +16,11 @@
   - HandheldGPSBasic
   - TRayScanner
   - UtilityBelt
+  - ClothingOuterVestTank
   - HandheldStationMap
   - ClothingHeadHatWelding
   - ClothingHeadHatCone
+  - NetProbe # L5
 
 - type: latheRecipePack
   id: AtmosStatic
@@ -93,5 +95,6 @@
   - TelecomServerCircuitboard
   - SMESAdvancedMachineCircuitboard
   - HolopadMachineCircuitboard
-  - PowerComputerCircuitBoard
-  - AtmosMonitoringComputerCircuitBoard
+  - PowerComputerCircuitBoard # L5
+  - AtmosMonitoringComputerCircuitBoard # L5
+#  - WallmountGeneratorElectronics # L5 (j/k too easymode

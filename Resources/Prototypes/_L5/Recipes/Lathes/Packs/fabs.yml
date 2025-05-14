@@ -1,0 +1,15 @@
+- type: latheRecipePack
+  id: TechFabBoards
+  recipes:
+  - MedicalTechFabCircuitboard
+  - EngineeringTechFabCircuitboard
+  - LogisticsTechFabCircuitboard
+  - ServiceTechFabCircuitboard
+  - EpistemicsTechFabCircuitboard
+  - SecurityTechFabCircuitboard
+  - AmmoTechFabCircuitboard
+
+- type: latheRecipePack
+  id: MedicalBiofabMachineboard
+  recipes:
+  - MedicalBiofabMachineBoard

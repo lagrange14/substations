@@ -128,7 +128,7 @@ namespace Content.Server.Administration.Systems
                 string.Empty,
                 string.Empty,
                 true,
-                _gameTicker.RoundDuration().ToString("hh\\:mm\\:ss"),
+                _gameTicker.RoundDuration().ToString(@"d\.hh\:mm\:ss"),
                 _gameTicker.RunLevel,
                 playedSound: false
             );
@@ -163,7 +163,7 @@ namespace Content.Server.Administration.Systems
                 string.Empty,
                 string.Empty,
                 true,
-                _gameTicker.RoundDuration().ToString("hh\\:mm\\:ss"),
+                _gameTicker.RoundDuration().ToString(@"d\.hh\:mm\:ss"),
                 _gameTicker.RunLevel,
                 playedSound: false
             );
@@ -282,8 +282,8 @@ namespace Content.Server.Administration.Systems
             }
 
             // Get the current timestamp
-            var timestamp = DateTime.Now.ToString("HH:mm:ss");
-            var roundTime = _gameTicker.RoundDuration().ToString("hh\\:mm\\:ss");
+            var timestamp = DateTime.Now.ToString(@"d\.hh\:mm\:ss");
+            var roundTime = _gameTicker.RoundDuration().ToString(@"d\.hh\:mm\:ss");
 
             // Determine the icon based on the status type
             string icon = statusType switch
@@ -903,7 +903,7 @@ namespace Content.Server.Administration.Systems
                     senderName,
                     str,
                     senderId != message.UserId,
-                    _gameTicker.RoundDuration().ToString("hh\\:mm\\:ss"),
+                    _gameTicker.RoundDuration().ToString(@"d\.hh\:mm\:ss"),
                     _gameTicker.RunLevel,
                     playedSound: playSound,
                     isDiscord: fromWebhook, // DeltaV

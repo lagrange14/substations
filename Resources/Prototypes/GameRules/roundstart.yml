@@ -97,7 +97,9 @@
     nameSegments:
     - NamesOperationPrefix
     - NamesOperationSuffix
+    nameFormat: name-format-nuclear-operation
   - type: NukeopsRule
+  - type: TeleportDiskRule # DeltaV - syndie fulton disk interaction
   - type: RuleGrids
   - type: AntagSelection
   - type: AntagLoadProfileRule
@@ -132,8 +134,8 @@
       - type: TargetObjectiveImmune # DeltaV - Makes sleepers unable to get nukie kill objectives
       - type: RandomMetadata
         nameSegments:
-        - NamesNukieFirstCommander
         - NamesSyndicateElite
+        nameFormat: name-format-nukie-commander
       - type: NpcFactionMember
         factions:
         - Syndicate
@@ -150,8 +152,8 @@
       - type: TargetObjectiveImmune # DeltaV - Makes sleepers unable to get nukie kill objectives
       - type: RandomMetadata
         nameSegments:
-        - NamesNukieFirstAgent
         - NamesSyndicateNormal
+        nameFormat: name-format-nukie-agent
       - type: NpcFactionMember
         factions:
         - Syndicate
@@ -170,8 +172,8 @@
       - type: TargetObjectiveImmune # DeltaV - Makes sleepers unable to get nukie kill objectives
       - type: RandomMetadata
         nameSegments:
-        - NamesNukieFirstOperator
         - NamesSyndicateNormal
+        nameFormat: name-format-nukie-operator
       - type: NpcFactionMember
         factions:
         - Syndicate
@@ -186,10 +188,10 @@
   - type: TraitorRule
   # TODO: codewords in yml
   # TODO: uplink in yml
-  - type: AntagRandomObjectives
-    sets:
-    - groups: TraitorObjectiveGroups
-    maxDifficulty: 5
+  #- type: AntagRandomObjectives # DeltaV - replaced by contracts system
+  #  sets:
+  #  - groups: TraitorObjectiveGroups
+  #  maxDifficulty: 5
   - type: AntagSelection
     agentName: traitor-round-end-agent-name
 
@@ -202,6 +204,8 @@
     delay:
       min: 240
       max: 420
+  - type: TraitorRule # DeltaV - roundstart traitors have less TC as they have time to complete more contracts
+    startingBalance: 10
   - type: AntagSelection
     selectionTime: IntraPlayerSpawn
     definitions:
@@ -312,6 +316,7 @@
         nameSegments:
         - NamesWizardFirst
         - NamesWizardLast
+        nameFormat: name-format-wizard
       mindRoles:
       - MindRoleWizard
 
@@ -473,3 +478,7 @@
     - id: BloodbathPuddleMessVariationPass
       prob: 0.01
       orGroup: puddleMess
+    - id: SmugglerStashVariationPass
+      prob: 0.90
+    #- id: SolarPanelDamageVariationPass # DeltaV - we have random solar panel spawner
+    #- id: SolarPanelEmptyVariationPass # DeltaV

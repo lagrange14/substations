@@ -24,6 +24,7 @@
   - type: Tag
     tags:
     - Pizza
+    - Dairy #L5
 
 - type: entity
   name: slice of corncob crust pizza
@@ -49,6 +50,7 @@
   - type: Tag
     tags:
     - Pizza
+    - Dairy
 
 - type: entity
   name: firecracker pizza
@@ -84,6 +86,7 @@
     tags:
     - Pizza
     - ClothMade # Mothic Food
+    - Dairy # L5
 
 - type: entity
   name: slice of firecracker pizza
@@ -117,6 +120,7 @@
     tags:
     - Pizza
     - ClothMade # Mothic Food
+    - Dairy # L5
 # Tastes like crust, chili, corn, cheese
 
 - type: entity
@@ -139,6 +143,7 @@
     tags:
     - Pizza
     - ClothMade # Mothic Food
+    - Dairy # L5
 
 - type: entity
   name: slice of quattro formaggi pizza
@@ -158,6 +163,7 @@
     tags:
     - Pizza
     - ClothMade # Mothic Food
+    - Dairy # L5
 # Tastes like crust, cheese, more cheese, excessive amount of cheese
 
 - type: entity
@@ -191,6 +197,7 @@
   - type: Tag
     tags:
     - Pizza
+    - Dairy # L5
 
 - type: entity
   name: slice of pesto pizza
@@ -222,6 +229,7 @@
     tags:
     - Pizza
     - Fruit
+    - Dairy # L5
 # Tastes like crust, pesto, cheese
 
 - type: entity
@@ -255,6 +263,7 @@
     tags:
     - Pizza
     - ClothMade
+    - Dairy # L5
 
 - type: entity
   name: slice of cotton pizza
@@ -285,4 +294,5 @@
     tags:
     - Pizza
     - ClothMade
+    - Dairy # L5
 # Tastes like crust, cotton, cheese

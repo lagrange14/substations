@@ -1,0 +1,78 @@
+- type: constructionGraph
+  id: MagicCandle
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: candle
+          steps:
+            - material: Bluespace
+              amount: 1
+            - tag: Candle # Technically this means you can use any candle to make this but technically I don't care.
+              name: candle
+              icon:
+                sprite: Objects/Misc/candles.rsi
+                state: candle-big
+              doAfter: 5
+        - to: candleBlack
+          steps:
+          - material: Bluespace
+            amount: 1
+          - tag: CandleBlack
+            name: Black candle
+            icon:
+              sprite: Objects/Misc/candles.rsi
+              state: candle-big
+            doAfter: 5
+        - to: candleBlue
+          steps:
+          - material: Bluespace
+            amount: 1
+          - tag: CandleBlue
+            name: Blue candle
+            icon:
+              sprite: Objects/Misc/candles.rsi
+              state: candle-big
+            doAfter: 5
+        - to: candleGreen
+          steps:
+          - material: Bluespace
+            amount: 1
+          - tag: CandleGreen
+            name: Green candle
+            icon:
+              sprite: Objects/Misc/candles.rsi
+              state: candle-big
+            doAfter: 5
+        - to: candlePurple
+          steps:
+          - material: Bluespace
+            amount: 1
+          - tag: CandlePurple
+            name: Purple candle
+            icon:
+              sprite: Objects/Misc/candles.rsi
+              state: candle-big
+            doAfter: 5
+        - to: candleRed
+          steps:
+          - material: Bluespace
+            amount: 1
+          - tag: CandleRed
+            name: Red candle
+            icon:
+              sprite: Objects/Misc/candles.rsi
+              state: candle-big
+            doAfter: 5
+    - node: candle
+      entity: CandleInfinite
+    - node: candleBlack
+      entity: CandleBlackInfinite
+    - node: candleBlue
+      entity: CandleBlueInfinite
+    - node: candleGreen
+      entity: CandleGreenInfinite
+    - node: candlePurple
+      entity: CandlePurpleInfinite
+    - node: candleRed
+      entity: CandleRedInfinite

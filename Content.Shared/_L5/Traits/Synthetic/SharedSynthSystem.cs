@@ -158,7 +158,7 @@ public abstract class SharedSynthSystem : EntitySystem
         // identity blocking system.
         if (!_inventory.TryGetContainerSlotEnumerator(uid, out var inventory))
         {
-            _sawmill.Error($"Couldn't get container slot enumerator for {uid}");
+            _sawmill.Warning($"Couldn't get container slot enumerator for {uid}");
             return;
         }
 
@@ -229,7 +229,7 @@ public abstract class SharedSynthSystem : EntitySystem
     {
         if (!_humanoidAppearanceQuery.HasComp(uid))
         {
-            _sawmill.Error($"Can't turn {uid} into a synth because they are not humanoid!");
+            _sawmill.Warning($"Can't turn {uid} into a synth because they are not humanoid!");
             return;
         }
 

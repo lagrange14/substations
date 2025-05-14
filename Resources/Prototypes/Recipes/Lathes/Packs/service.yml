@@ -24,7 +24,12 @@
   - MopItem
   - Holoprojector
   - WetFloorSign
-  - DiseaseSwab # botanists can make swabs at their fab now
+  - DiseaseSwab # L5 botanists can make swabs at their fab now
+  - CrewManifest # L5 craftable PDA carts
+  - NanoChat # ditto
+  - NanoTask # ditto 2x
+  - Notekeeper # ditto 3x
+  - NewsReader # ditto 4x combo
 
 - type: latheRecipePack
   parent:

@@ -10,6 +10,7 @@
       - PsionicInvisibility
       - Ghost
       - Normal
+      - CosmicCultMonument # DeltaV - Cosmic Cult
   - type: ContentEye
     maxZoom: 8.916104, 8.916104
   - type: Tag
@@ -19,6 +20,9 @@
     - BypassInteractionRangeChecks
     - BypassDropChecks
     - NoConsoleSound
+    - SilentStorageUser
+    - PreventAccessLogging
+    - AllowBiomeLoading
   - type: Input
     context: "aghost"
   - type: Ghost
@@ -27,6 +31,7 @@
   - type: Hands
   - type: ComplexInteraction
   - type: Puller
+    needsHands: false
   - type: CombatMode
   - type: Physics
     ignorePaused: true
@@ -103,7 +108,7 @@
     transmitFrequencyId: ShuttleTimer
   - type: WirelessNetworkConnection
     range: 500
-  - type: StationLimitedNetwork
+  # - type: StationLimitedNetwork # L5 - map-global suit sensors
   - type: Thieving
     stripTimeReduction: 9999
     stealthy: true
@@ -111,6 +116,7 @@
   - type: SolutionScanner
   - type: IgnoreUIRange
   - type: ShowAntagIcons
+  - type: ShowContrabandDetails
   - type: Inventory
     templateId: aghost
   - type: Loadout

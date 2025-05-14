@@ -1,7 +1,7 @@
 # When adding new food also add to random spawner located in Resources\Prototypes\Entities\Markers\Spawners\Random\Food_Drinks\food_meal.yml
 
 - type: entity
-  parent: FoodBase
+  parent: FoodInjectableBase
   id: FoodBowlBase
   abstract: true
   components:
@@ -14,7 +14,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 25 # imp
         reagents:
         - ReagentId: Nutriment
           Quantity: 20
@@ -72,8 +72,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - creamy
-      - peas
+    - creamy
+    - peas
   - type: Sprite
     sprite: Objects/Consumable/Food/bowl.rsi
     layers:
@@ -83,12 +83,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 25 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 6 # imp
         - ReagentId: Vitamin
-          Quantity: 5
+          Quantity: 4 # imp
+        - ReagentId: Water # imp
+          Quantity: 10
 
 # Salad
 
@@ -100,7 +102,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - leafy
+    - leafy
   - type: Sprite
     layers:
     - state: bowl
@@ -130,8 +132,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - leafy
-      - apple
+    - leafy
+    - apple
   - type: Sprite
     layers:
     - state: bowl
@@ -139,12 +141,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 90 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 8
+          Quantity: 15 # imp
+        - ReagentId: Kelotane # imp
+          Quantity: 15
+        - ReagentId: Bicaridine # imp
+          Quantity: 15
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 6 # imp
+        - ReagentId: Desoxyephedrine # imp
+          Quantity: 30
   - type: Tag
     tags:
     - Fruit
@@ -160,10 +168,10 @@
   components:
   - type: FlavorProfile
     flavors:
-      - leafy
-      - meaty
-      - potatoes
-      - validhunting
+    - leafy
+    - meaty
+    - potatoes
+    - validhunting
   - type: Sprite
     layers:
     - state: bowl
@@ -171,13 +179,23 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 115 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 8
+          Quantity: 27 # imp
         - ReagentId: Vitamin
+          Quantity: 10 # imp
+        #- ReagentId: DoctorsDelight # imp
+        #  Quantity: 5
+        - ReagentId: Bicaridine # imp
+          Quantity: 15
+        - ReagentId: Kelotane # imp
+          Quantity: 15
+        - ReagentId: Desoxyephedrine # imp
+          Quantity: 30
+        - ReagentId: Vitamin # imp
           Quantity: 2
-        - ReagentId: DoctorsDelight
+        - ReagentId: Protein # imp
           Quantity: 5
   - type: Tag
     tags:
@@ -195,9 +213,9 @@
   components:
   - type: FlavorProfile
     flavors:
-      - onion
-      - cabbage
-      - sour
+    - onion
+    - cabbage
+    - sour
   - type: Sprite
     layers:
     - state: bowl
@@ -205,14 +223,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 40 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 8
+          Quantity: 20 # imp
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 10 # imp
         - ReagentId: Allicin
-          Quantity: 3
+          Quantity: 4 # imp
   - type: Tag
     tags:
     - Vegan # L5
@@ -225,10 +243,10 @@
   components:
   - type: FlavorProfile
     flavors:
-      - onion
-      - cabbage
-      - bread
-      - cheesy
+    - onion
+    - cabbage
+    - bread
+    - cheesy
   - type: Sprite
     layers:
     - state: bowl
@@ -236,12 +254,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 35 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 8
+          Quantity: 24 # imp
         - ReagentId: Vitamin
-          Quantity: 6
+          Quantity: 5 # imp
+        - ReagentId: Allicin # imp
+          Quantity: 1 # imp
   - type: Tag
     tags:
     - Dairy # L5
@@ -254,9 +274,9 @@
   components:
   - type: FlavorProfile
     flavors:
-      - spicy
-      - cabbage
-      - carrot
+    - spicy
+    - cabbage
+    - carrot
   - type: Sprite
     layers:
     - state: bowl
@@ -264,14 +284,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 60 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 8
+          Quantity: 28 # imp
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 12 # imp
         - ReagentId: Allicin
-          Quantity: 2
+          Quantity: 4 # imp
+        - ReagentId: Vinegar # imp
+          Quantity: 5
+        - ReagentId: JuiceCarrot # imp
+          Quantity: 5
   - type: Tag
     tags:
     - LatexInteraction # L5 - carrot
@@ -285,7 +309,10 @@
   components:
   - type: FlavorProfile
     flavors:
-      - fruity
+    - fruity
+    - apple # imp
+    - juice # imp
+    - orange # imp
   - type: Sprite
     layers:
     - state: bowl
@@ -293,12 +320,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 45 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 2
+          Quantity: 24 # imp
         - ReagentId: Vitamin
-          Quantity: 4
+          Quantity: 16 # imp
   - type: Tag
     tags:
     - Fruit
@@ -314,8 +341,12 @@
   components:
   - type: FlavorProfile
     flavors:
-      - fruity
-      - jungle
+    - fruity
+    - jungle
+    - apple # imp
+    - juice # imp
+    - watermelon # imp
+    - banana # imp
   - type: Sprite
     layers:
     - state: bowl
@@ -323,12 +354,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 45 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 7
+          Quantity: 25 # imp
         - ReagentId: Vitamin
-          Quantity: 4
+          Quantity: 13 # imp
+        - ReagentId: Water # imp
+          Quantity: 2
   - type: Tag
     tags:
     - Fruit
@@ -343,8 +376,9 @@
   components:
   - type: FlavorProfile
     flavors:
-      - leafy
-      - sour
+    - leafy
+    - sour
+    - orange
   - type: Sprite
     layers:
     - state: bowl
@@ -352,12 +386,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 38
+        maxVol: 30 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 18
+          Quantity: 15 # imp
         - ReagentId: Vitamin
-          Quantity: 15
+          Quantity: 12 # imp
   - type: Tag
     tags:
     - Fruit
@@ -372,8 +406,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - bitter
-      - hope
+    - bitter
+    - hope
   - type: Sprite
     layers:
     - state: bowl
@@ -381,7 +415,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 20 # imp
         reagents:
         - ReagentId: Nutriment
           Quantity: 8
@@ -403,11 +437,20 @@
   components:
   - type: FlavorProfile
     flavors:
-      - rice
+    - rice
   - type: Sprite
     layers:
     - state: bowl
     - state: rice
+  - type: SolutionContainerManager # imp
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 6
+        - ReagentId: Nutriment
+          Quantity: 2
   - type: Tag
     tags:
     - Vegan # L5
@@ -420,8 +463,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - rice
-      - egg
+    - rice
+    - egg
   - type: Sprite
     layers:
     - state: bowl
@@ -429,12 +472,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 30 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 4
+          Quantity: 2 # imp
         - ReagentId: Vitamin
           Quantity: 4
+        - ReagentId: EggCooked # imp
+          Quantity: 6
+        - ReagentId: Sugar # imp
+          Quantity: 6
+        - ReagentId: JuiceCarrot # imp
+          Quantity: 5
   - type: Tag
     tags:
     #- Meat # L5 - doesn't contain meat ?.?
@@ -449,8 +498,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - rice
-      - meaty
+    - rice
+    - meaty
   - type: Sprite
     layers:
     - state: bowl
@@ -458,16 +507,20 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 40.5
+        maxVol: 30 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 18
-        - ReagentId: Vitamin
-          Quantity: 7
-        - ReagentId: Dexalin ##This is probably a reference to something but I don't get it
-          Quantity: 6.5
-        - ReagentId: Epinephrine
-          Quantity: 2
+          Quantity: 11
+        #- ReagentId: Vitamin # imp
+        #  Quantity: 7
+        #- ReagentId: Dexalin ##This is probably a reference to something but I don't get it
+        #  Quantity: 6.5
+        #- ReagentId: Epinephrine
+        #  Quantity: 2
+        - ReagentId: Sugar # imp
+          Quantity: 6
+        - ReagentId: Protein # imp
+          Quantity: 9
   - type: Tag
     tags:
     - Meat
@@ -481,8 +534,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - rice
-      - sweet
+    - rice
+    - sweet
   - type: Sprite
     layers:
     - state: bowl
@@ -490,16 +543,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 35 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 9
-        - ReagentId: Vitamin
-          Quantity: 3
-        - ReagentId: Milk ##This is probably a reference to something but I don't get it
-          Quantity: 5
+          Quantity: 8 # imp
+        #- ReagentId: Vitamin # imp
+        #  Quantity: 3
+        - ReagentId: Milk
+          Quantity: 10 # imp
         - ReagentId: Sugar
-          Quantity: 5
+          Quantity: 11 # imp
   - type: Tag
     tags:
     - Dairy # L5
@@ -508,14 +561,14 @@
   name: black-eyed gumbo
   parent: FoodBowlBase
   id: FoodRiceGumbo
-  description: A spicy and savory meat and rice dish.
+  description: WHERE IS GUMBO # imp
   components:
   - type: FlavorProfile
     flavors:
-      - rice
-      - spicy
-      - meaty
-      - savory
+    - rice
+    - spicy
+    - meaty
+    - savory
   - type: Sprite
     layers:
     - state: bowl
@@ -523,14 +576,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 70 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 19 # imp
         - ReagentId: Vitamin
-          Quantity: 3
+          Quantity: 8 # imp
         - ReagentId: CapsaicinOil
-          Quantity: 2
+          Quantity: 20 # imp
+        - ReagentId: Sugar # imp
+          Quantity: 6
+        - ReagentId: Protein # imp
+          Quantity: 9
   - type: Tag
     tags:
     - Meat
@@ -547,8 +604,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - oats
-      - milk
+    - oats
+    - milk
   - type: Sprite
     layers:
     - state: bowl
@@ -556,14 +613,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 10 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 7
-        - ReagentId: Vitamin
-          Quantity: 2
-        - ReagentId: Milk
-          Quantity: 10
+          Quantity: 5 # imp
+        #- ReagentId: Vitamin
+        #  Quantity: 2
+        - ReagentId: Sugar # imp
+          Quantity: 3
+        #- ReagentId: Milk # imp
+        #  Quantity: 10
 
 - type: entity
   name: space liberty duff
@@ -573,8 +632,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - jelly
-      - mushrooms
+    - jelly
+    - mushrooms
   - type: Sprite
     layers:
     - state: bowl
@@ -588,20 +647,20 @@
   components:
   - type: FlavorProfile
     flavors:
-      - mushroom
-      - jelly
+    - mushroom
+    - jelly
   - type: Sprite
     sprite: Objects/Consumable/Food/meals.rsi
     state: amanita-jelly
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 45 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6
+          Quantity: 15 # imp
         - ReagentId: Amatoxin
-          Quantity: 6
+          Quantity: 25 # imp - this shit killing you
 
 # Soup
 
@@ -613,7 +672,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - meatballs
+    - meatballs
   - type: Sprite
     layers:
     - state: bowl
@@ -621,14 +680,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 55 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 7
+          Quantity: 21 # imp
         - ReagentId: Vitamin
           Quantity: 8
         - ReagentId: Water
           Quantity: 10
+        - ReagentId: Protein # imp
+          Quantity: 5
+        - ReagentId: JuiceCarrot # imp
+          Quantity: 5
   - type: Tag
     tags:
     - LatexInteraction # L5 - potato
@@ -644,7 +707,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - slimy
+    - slimy
   - type: Sprite
     layers:
     - state: bowl
@@ -652,7 +715,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 20 # imp
         reagents:
         - ReagentId: Nutriment
           Quantity: 1
@@ -669,8 +732,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - metallic
-      - tomato
+    - metallic
+    - tomato
   - type: Sprite
     layers:
     - state: bowl
@@ -678,14 +741,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 45 # imp
         reagents:
-        - ReagentId: Nutriment
-          Quantity: 3
-        - ReagentId: Iron
-          Quantity: 10
+        #- ReagentId: Nutriment # imp
+        #  Quantity: 3
+        #- ReagentId: Iron
+        #  Quantity: 10
         - ReagentId: Blood
-          Quantity: 5
+          Quantity: 30 # imp
+        - ReagentId: Vitamin # imp
+          Quantity: 8
   - type: Tag
     tags:
     - Fruit
@@ -701,8 +766,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - meaty
-      - salty
+    - meaty
+    - salty
   - type: Sprite
     layers:
     - state: bowl
@@ -710,14 +775,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 25 # imp
         reagents:
         - ReagentId: Protein
-          Quantity: 9
+          Quantity: 2 # imp
         - ReagentId: Soysauce
-          Quantity: 10
+          Quantity: 5 # imp
         - ReagentId: Vitamin
-          Quantity: 7
+          Quantity: 10 # imp
+        - ReagentId: Nutriment # imp
+          Quantity: 2
   - type: Tag
     tags:
     - Haram # L5
@@ -732,7 +799,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - bad-joke
+    - bad-joke
   - type: Sprite
     layers:
     - state: bowl
@@ -740,14 +807,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 30 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 2
+          Quantity: 8 # imp
         - ReagentId: Vitamin
-          Quantity: 9
+          Quantity: 4 # imp
         - ReagentId: Water
           Quantity: 10
+        - ReagentId: Honk # imp
+          Quantity: 5
   - type: Tag
     tags:
     - LatexInteraction # L5 - banana
@@ -761,9 +830,10 @@
   components:
   - type: FlavorProfile
     flavors:
-      - vegetables
-      - savory # L5: let vegans enjoy a thing
-      #- sadness # L5: let vegans enjoy a thing
+    - vegetables
+    - savory # L5: let vegans enjoy a thing
+    #- sadness # L5: let vegans enjoy a thing
+    - potatoes # imp
   - type: Sprite
     layers:
     - state: bowl
@@ -771,16 +841,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 70 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 40 # imp
         - ReagentId: Vitamin
-          Quantity: 7
+          Quantity: 8 # imp
         - ReagentId: Water
           Quantity: 10
-        - ReagentId: Oculine
-          Quantity: 1
+        #- ReagentId: Oculine
+        #  Quantity: 4 # imp
+        - ReagentId: JuiceCarrot # imp
+          Quantity: 5
   - type: Tag
     tags:
     - LatexInteraction # L5
@@ -795,7 +867,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - nettles
+    - nettles
+    - potatoes # imp
   - type: Sprite
     layers:
     - state: bowl
@@ -803,18 +876,20 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30.5
+        maxVol: 40 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 10 # imp
         - ReagentId: Vitamin
-          Quantity: 8
+          Quantity: 4 # imp
         - ReagentId: Water
           Quantity: 10
-        - ReagentId: Omnizine
-          Quantity: 5
+        #- ReagentId: Omnizine # imp
+        #  Quantity: 5
         - ReagentId: Histamine
-          Quantity: 0.5
+          Quantity: 3 # imp
+        - ReagentId: EggCooked # imp
+          Quantity: 6
   - type: Tag
     tags:
     - LatexInteraction # L5 - potato
@@ -828,7 +903,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - chaos
+    - chaos
   - type: Sprite
     layers:
     - state: bowl
@@ -842,7 +917,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - spicy
+    - spicy
   - type: Sprite
     layers:
     - state: bowl
@@ -850,16 +925,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 50 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 8
-          - ReagentId: CapsaicinOil
-            Quantity: 5
-          - ReagentId: Vitamin
-            Quantity: 4
-          - ReagentId: Allicin
-            Quantity: 3
+        - ReagentId: Nutriment
+          Quantity: 16 # imp
+        - ReagentId: CapsaicinOil
+          Quantity: 10 # imp
+        - ReagentId: Vitamin
+          Quantity: 12 # imp
+        - ReagentId: Allicin
+          Quantity: 1 # imp
+        - ReagentId: Water # imp
+          Quantity: 4
   - type: Tag
     tags:
     - ChiliBowl
@@ -875,8 +952,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - minty
-      - tomato
+    - minty
+    - tomato
   - type: Sprite
     layers:
     - state: bowl
@@ -884,12 +961,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 50 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 8
-          - ReagentId: Vitamin
-            Quantity: 4
+        - ReagentId: Nutriment
+          Quantity: 26 # imp
+        - ReagentId: Vitamin
+          Quantity: 12 # imp
+        - ReagentId: Allicin
+          Quantity: 1 # imp
+        - ReagentId: Water # imp
+          Quantity: 4
   - type: Tag
     tags:
     - ChiliBowl
@@ -904,10 +985,10 @@
   components:
   - type: FlavorProfile
     flavors:
-      - spicy
-      - tomato
-      - bad-joke
-      - parents
+    - spicy
+    - tomato
+    - bad-joke
+    - parents
   - type: Sprite
     layers:
     - state: bowl
@@ -915,16 +996,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 50 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 6
-          - ReagentId: CapsaicinOil
-            Quantity: 5
-          - ReagentId: Vitamin
-            Quantity: 4
-          - ReagentId: Allicin
-            Quantity: 3
+        - ReagentId: Nutriment
+          Quantity: 16 # imp
+        - ReagentId: CapsaicinOil
+          Quantity: 10 # imp
+        - ReagentId: Vitamin
+          Quantity: 8 # imp
+        - ReagentId: Allicin
+          Quantity: 4 # imp
+        - ReagentId: Protein # imp
+          Quantity: 3
   - type: Tag
     tags:
     - ChiliBowl
@@ -939,8 +1022,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - jungle
-      - banana
+    - jungle
+    - banana
   - type: Sprite
     layers:
     - state: bowl
@@ -948,16 +1031,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 35 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 10
-          - ReagentId: Vitamin
-            Quantity: 5
-          - ReagentId: TableSalt
-            Quantity: 1
-          - ReagentId: Blackpepper
-            Quantity: 1
+        - ReagentId: Nutriment
+          Quantity: 20 # imp
+        - ReagentId: Vitamin
+          Quantity: 7 # imp
+        - ReagentId: TableSalt
+          Quantity: 1
+        - ReagentId: Blackpepper
+          Quantity: 1
   - type: Tag
     tags:
     - LatexInteraction # L5
@@ -972,7 +1055,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - tomato
+    - tomato
   - type: Sprite
     layers:
     - state: bowl
@@ -980,14 +1063,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 22
+        maxVol: 30 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 3
-          - ReagentId: Vitamin
-            Quantity: 5
-          - ReagentId: Water
-            Quantity: 10
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: Vitamin
+          Quantity: 3 # imp
+        - ReagentId: Water
+          Quantity: 10
   - type: Tag
     tags:
     - Fruit
@@ -1002,8 +1085,9 @@
   components:
   - type: FlavorProfile
     flavors:
-      - tomato
-      - squirming
+    - tomato
+    - squirming
+    - potatoes
   - type: Sprite
     layers:
     - state: bowl
@@ -1011,12 +1095,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 65 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 5
-          - ReagentId: Vitamin
-            Quantity: 3
+        - ReagentId: Nutriment
+          Quantity: 20 # imp - Eyes are yummy
+        - ReagentId: Vitamin
+          Quantity: 19 # imp
+        - ReagentId: Water # imp
+          Quantity: 10
+        - ReagentId: JuiceCarrot # imp
+          Quantity: 10
   - type: Tag
     tags:
     - Meat
@@ -1030,7 +1118,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - miso
+    - miso
   - type: Food
     trash:
     - FoodBowlFancy
@@ -1038,18 +1126,20 @@
     layers:
     - state: bowl2
     - state: miso
-        #rip milo
+      #rip milo
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 30 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 9
-          - ReagentId: Vitamin
-            Quantity: 3
-          - ReagentId: Water
-            Quantity: 10
+        - ReagentId: Nutriment
+          Quantity: 9
+        - ReagentId: Vitamin
+          Quantity: 3
+        - ReagentId: Water
+          Quantity: 10
+        - ReagentId: TableSalt # imp
+          Quantity: 5
   - type: Tag
     tags:
     - Meat
@@ -1063,7 +1153,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - mushroom
+    - mushroom
   - type: Sprite
     layers:
     - state: bowl
@@ -1071,16 +1161,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 25 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 2
-          - ReagentId: Vitamin
-            Quantity: 6
-          - ReagentId: Water
-            Quantity: 5
-          - ReagentId: Milk
-            Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 10 # imp
+        #- ReagentId: Vitamin
+        #  Quantity: 6 # imp
+        - ReagentId: Water
+          Quantity: 5
+        - ReagentId: Milk
+          Quantity: 5
   - type: Tag
     tags:
     - Dairy
@@ -1099,14 +1189,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 40 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 3
-          - ReagentId: Vitamin
-            Quantity: 7
-          - ReagentId: Water
-            Quantity: 10
+        - ReagentId: Nutriment
+          Quantity: 15 # imp
+        - ReagentId: Vitamin
+          Quantity: 7
+        - ReagentId: Water
+          Quantity: 10
 # Tastes like borsch, bortsch, borstch, borsh, borshch, borscht.
 
 - type: entity
@@ -1122,12 +1212,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 35 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 4
-          - ReagentId: Vitamin
-            Quantity: 6
+        - ReagentId: Nutriment
+          Quantity: 15 # imp
+        - ReagentId: Vitamin
+          Quantity: 15 # imp
 # Tastes like beet.
 
 - type: entity
@@ -1138,9 +1228,9 @@
   components:
   - type: FlavorProfile
     flavors:
-      - meaty
-      - tomato
-      - carrot
+    - meaty
+    - tomato
+    - carrot
   - type: Sprite
     layers:
     - state: bowl
@@ -1148,14 +1238,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 75 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 15
-          - ReagentId: Protein
-            Quantity: 5
-          - ReagentId: Vitamin
-            Quantity: 2
+        - ReagentId: Nutriment
+          Quantity: 31 # imp
+        - ReagentId: Protein
+          Quantity: 9 # imp
+        - ReagentId: Vitamin
+          Quantity: 7 # imp
+        - ReagentId: Water # imp
+          Quantity: 10
+        - ReagentId: JuiceCarrot # imp
+          Quantity: 10
   - type: Tag
     tags:
     - Meat
@@ -1172,7 +1266,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - sweet
+    - sweet
   - type: Sprite
     layers:
     - state: bowl
@@ -1180,12 +1274,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 35 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 4
-          - ReagentId: Vitamin
-            Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 15 # imp
+        - ReagentId: Vitamin
+          Quantity: 15 # imp
   - type: Tag
     tags:
     - Nightshade # L5
@@ -1200,7 +1294,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - onion
+    - onion
   - type: Sprite
     layers:
     - state: bowl
@@ -1208,14 +1302,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 40 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 1
-          - ReagentId: Vitamin
-            Quantity: 5
-          - ReagentId: Allicin
-            Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 14 # imp
+        - ReagentId: Vitamin
+          Quantity: 5
+        - ReagentId: Allicin
+          Quantity: 5
+        - ReagentId: Water # imp
+          Quantity: 10
   - type: Tag
     tags:
     - Dairy # L5
@@ -1229,7 +1325,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - creamy
+    - creamy
+    - tomato # imp
   - type: Sprite
     layers:
     - state: bowl
@@ -1237,16 +1334,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 40 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 6
-          - ReagentId: Vitamin
-            Quantity: 6
-          - ReagentId: Protein
-            Quantity: 6
-          - ReagentId: Water
-            Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 14 # imp
+        - ReagentId: Vitamin
+          Quantity: 8 # imp
+        - ReagentId: Protein # imp
+          Quantity: 6
+        - ReagentId: Water
+          Quantity: 10 # imp
+        #- ReagentId: CarpoToxin # imp # L5
+          #Quantity: 5
   - type: Tag
     tags:
     - Fish # L5
@@ -1263,8 +1362,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - mushrooms
-      - electrons
+    - mushrooms
+    - electrons
   - type: Sprite
     layers:
     - state: bowl
@@ -1272,12 +1371,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 25 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 3
-          - ReagentId: Licoxide
-            Quantity: 6
+        - ReagentId: Nutriment
+          Quantity: 15 # imp
+        - ReagentId: Licoxide
+          Quantity: 6
 
 - type: entity
   name: bungo curry
@@ -1287,7 +1386,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - jungle
+    - jungle
+    - bungo # imp
   - type: Sprite
     layers:
     - state: bowl
@@ -1295,14 +1395,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 50 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 6
-          - ReagentId: Vitamin
-            Quantity: 5
-          - ReagentId: CapsaicinOil
-            Quantity: 5
+        - ReagentId: Nutriment
+          Quantity: 14 # imp
+        - ReagentId: Vitamin
+          Quantity: 4 # imp
+        - ReagentId: CapsaicinOil
+          Quantity: 10 # imp
+        - ReagentId: Water # imp
+          Quantity: 5
+        - ReagentId: Enzyme # imp
+          Quantity: 10
   - type: Tag
     tags:
     - Fruit
@@ -1318,8 +1422,8 @@
   components:
   - type: FlavorProfile
     flavors:
-      - creamy
-      - slimy
+    - creamy
+    - slimy
   - type: Sprite
     layers:
     - state: bowl
@@ -1327,14 +1431,20 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 35 # imp
         reagents:
-          - ReagentId: Nutriment
-            Quantity: 6
-          - ReagentId: Vitamin
-            Quantity: 6
-          - ReagentId: Allicin
-            Quantity: 3
+        - ReagentId: Nutriment
+          Quantity: 5 # imp
+        - ReagentId: Vitamin
+          Quantity: 1 # imp
+        - ReagentId: Allicin
+          Quantity: 1 # imp
+        - ReagentId: Butter # imp
+          Quantity: 15
+        - ReagentId: Protein # imp
+          Quantity: 3
+        - ReagentId: Water # imp
+          Quantity: 4
   - type: Tag
     tags:
     - Haram # L5

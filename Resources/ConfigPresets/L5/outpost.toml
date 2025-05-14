@@ -1,0 +1,12 @@
+[game]
+hostname      = "[EN][HRP][18+] Lagrange Outpost"
+desc          = "An HRP Space Station 14 server centered around the System, a machine that dreams. You will be building a new station to house a shard of the System."
+defaultpreset = "Outpost"
+map           = "Nucleus"
+
+[vote]
+preset_enabled = false
+map_enabled    = false
+
+[server]
+id = "lagrange14_outpost"

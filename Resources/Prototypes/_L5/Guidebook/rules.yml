@@ -1,0 +1,6 @@
+- type: guideEntry
+  id: L5Ruleset
+  name: guide-entry-L5-Rules
+  text: "/ServerInfo/Guidebook/_L5/Rules/L5Ruleset.xml"
+  priority: -2
+  ruleEntry: true

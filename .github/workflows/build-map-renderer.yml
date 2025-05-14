@@ -1,16 +1,16 @@
-﻿name: Build & Test Map Renderer
+name: Build & Test Map Renderer
 
 on:
   push:
-    branches: [ master, staging, trying ]
+    branches: [ main, staging, trying ]
   merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'DeltaV-Bot'
+    if: github.event.pull_request.draft == false && github.actor != 'L5-bot'
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -18,7 +18,7 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Checkout Master
+      - name: Checkout main
         uses: actions/checkout@v4.2.2
 
       - name: Setup Submodule

@@ -54,8 +54,8 @@
     transmitFrequencyId: SuitSensor
     savableAddress: false
   - type: WirelessNetworkConnection
-    range: 1200
-  - type: StationLimitedNetwork
+    range: 10000 # L5 - map-global (ish) suit sensors
+  # - type: StationLimitedNetwork # L5
 
 - type: entity
   abstract: true

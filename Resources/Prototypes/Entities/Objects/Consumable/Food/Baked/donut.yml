@@ -24,6 +24,16 @@
   - type: Item
     sprite: Objects/Consumable/Food/Baked/donut.rsi
     size: Tiny
+
+- type: entity
+  abstract: true
+  parent: FoodDonutBase
+  id: FoodDonutFruitBase
+  components:
+  - type: Tag
+    tags:
+    - Donut
+    - Fruit
 # Tastes like donut.
 
 # The sprinkles are now an overlay, so you can put them on any donut! If we really
@@ -299,7 +309,7 @@
 
 - type: entity
   name: apple jelly-donut
-  parent: FoodDonutBase
+  parent: FoodDonutFruitBase
   id: FoodDonutJellyApple
   description: Goes great with a shot of cinnamon schnapps.
   components:
@@ -353,7 +363,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 5
+        maxVol: 10 # imp
         reagents:
         - ReagentId: Nutriment
           Quantity: 3
@@ -365,7 +375,7 @@
 
 - type: entity
   name: blue pumpkin jelly-donut
-  parent: FoodDonutBase
+  parent: FoodDonutFruitBase
   id: FoodDonutJellyBluePumpkin
   description: Goes great with a mug of soothing drunken blue pumpkin.
   components:
@@ -395,7 +405,7 @@
 
 - type: entity
   name: bungo jelly-donut
-  parent: FoodDonutBase
+  parent: FoodDonutFruitBase
   id: FoodDonutJellyBungo
   description: Goes great with a mason jar of hippie's delight.
   components:
@@ -484,7 +494,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 15 # imp
         reagents:
         - ReagentId: Amatoxin
           Quantity: 10

@@ -9,7 +9,6 @@
   - ExosuitFabricatorMachineCircuitboard
   - CutterMachineCircuitboard
   - BorgChargerCircuitboard
-  - MaterialSiloCircuitboard
 
 - type: latheRecipePack
   id: CircuitFloorsStatic
@@ -32,6 +31,7 @@
   - HoloprojectorField
   - SignallerAdvanced
   - DeviceQuantumSpinInverter
+  - DeviceDesynchronizer
 
 - type: latheRecipePack
   id: ScienceClothing
@@ -55,10 +55,15 @@
   id: ScienceWeapons
   recipes:
   - WeaponPistolCHIMP
-  #- WeaponForceGun # DeltaV
-  #- WeaponLaserSvalinn # DeltaV
-  - WeaponProtoKineticAccelerator
-  #- WeaponTetherGun # DeltaV
+  - WeaponForceGun # DeltaV # L5 - revert
+  - WeaponLaserSvalinn # DeltaV # L5 - revert
+  - WeaponTetherGun # DeltaV # L5 - revert
+  # Begin DeltaV Removals - lrp/moved to logi techfab
+  #- WeaponProtoKineticAccelerator
+  #- PKAUpgradeDamage
+  #- PKAUpgradeRange
+  #- PKAUpgradeFireRate
+  # End DeltaV Removals
   - WeaponGauntletGorilla
 
 - type: latheRecipePack

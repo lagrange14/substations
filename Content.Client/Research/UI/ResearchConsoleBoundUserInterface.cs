@@ -1,3 +1,4 @@
+using Content.Shared._L5.Research;
 using Content.Shared.Research.Components;
 using Content.Shared.Research.Prototypes;
 using JetBrains.Annotations;
@@ -33,6 +34,12 @@ public sealed class ResearchConsoleBoundUserInterface : BoundUserInterface
         _consoleMenu.OnServerButtonPressed += () =>
         {
             SendMessage(new ConsoleServerSelectionMessage());
+        };
+
+        // L5 - bluespace crystal purchasing
+        _consoleMenu.OnGenerateCrystalButtonPressed += () =>
+        {
+            SendMessage(new GenerateCrystalMessage());
         };
     }
 

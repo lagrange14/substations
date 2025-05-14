@@ -1,0 +1,6 @@
+[game]
+hostname = "[EN][HRP][18+] Lagrange Substations"
+desc     = "An HRP Space Station 14 server centered around the System, a machine that dreams. You will be stationed on one of the stations supporting a shard of the System."
+
+[server]
+id = "lagrange14_outpost"

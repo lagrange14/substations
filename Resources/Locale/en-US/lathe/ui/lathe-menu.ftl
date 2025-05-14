@@ -25,6 +25,8 @@ lathe-menu-material-amount-missing = { $amount ->
     *[other] {NATURALFIXED($amount, 2)} {MAKEPLURAL($unit)} of {$material} ([color=red]{NATURALFIXED($missingAmount, 2)} {MAKEPLURAL($unit)} missing[/color])
 }
 lathe-menu-no-materials-message = No materials loaded.
+lathe-menu-silo-linked-message = Silo Linked
+# L5 - TODO: switch silos
 lathe-menu-connected-to-silo-message = Connected to material silo.
 lathe-menu-fabricating-message = Fabricating...
 lathe-menu-materials-title = Materials

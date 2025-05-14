@@ -74,9 +74,7 @@ public partial class ChatBox : UIWidget
     {
         Logger.DebugS("chat", $"{msg.Channel}: {msg.Message}");
         if (!ChatInput.FilterButton.Popup.IsActive(msg.Channel))
-        {
             return;
-        }
 
         if (msg is { Read: false, AudioPath: { } })
             _entManager.System<AudioSystem>().PlayGlobal(msg.AudioPath, Filter.Local(), false, AudioParams.Default.WithVolume(msg.AudioVolume));

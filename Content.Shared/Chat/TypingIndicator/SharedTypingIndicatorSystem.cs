@@ -2,6 +2,7 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.Clothing;
 using Content.Shared.Inventory;
 using Robust.Shared.Player;
+using Robust.Shared.Prototypes; // DeltaV: TypingIndicator overrides
 using Robust.Shared.Timing;
 
 namespace Content.Shared.Chat.TypingIndicator;
@@ -80,6 +81,7 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
             return;
         }
 
+        SetTypingOverride(uid.Value, ev.OverrideIndicator); // DeltaV
         SetTypingIndicatorEnabled(uid.Value, ev.IsTyping);
     }
 
@@ -92,7 +94,7 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
     }
 
     /// <summary>
-    /// Delta-V: Sets whether the typing indicator should use overrides for synths.
+    /// L5: Sets whether the typing indicator should use overrides for synths.
     /// </summary>
     public void SetUseSyntheticVariant(EntityUid uid, bool enabled)
     {
@@ -101,5 +103,16 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
         EnsureComp<TypingIndicatorComponent>(uid, out var component);
         component.UseSyntheticVariant = enabled;
         Dirty(uid, component);
+    }
+
+    /// <summary>
+    /// DeltaV: Adds an override to the TypingIndicator visuals
+    /// </summary>
+    /// <param name="protoId">The TypingIndicator to use in place of default or clothing indicators. Clears overrides when null.</param>
+    private void SetTypingOverride(EntityUid uid, ProtoId<TypingIndicatorPrototype>? protoId)
+    {
+        var comp = EnsureComp<TypingIndicatorComponent>(uid);
+        comp.TypingIndicatorOverridePrototype = protoId;
+        Dirty(uid, comp);
     }
 }

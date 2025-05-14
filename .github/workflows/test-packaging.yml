@@ -1,8 +1,8 @@
-﻿name: Test Packaging
+name: Test Packaging
 
 on:
   push:
-    branches: [ master, staging, trying ]
+    branches: [ main, staging, trying ]
     paths:
       - '**.cs'
       - '**.csproj'
@@ -16,7 +16,7 @@ on:
   merge_group:
   pull_request:
     types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master ]
+    branches: [ main ]
     paths:
       - '**.cs'
       - '**.csproj'
@@ -29,11 +29,11 @@ on:
 jobs:
   build:
     name: Test Packaging
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'DeltaV-Bot'
+    if: github.event.pull_request.draft == false && github.actor != 'L5-bot'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Master
+      - name: Checkout main
         uses: actions/checkout@v4.2.2
 
       - name: Setup Submodule

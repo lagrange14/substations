@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     # Hey there fork dev! If you like to include your own contributors in this then you can probably just change this to your own repo
     # Do this in dump_github_contributors.ps1 too into your own repo
-    if: github.repository == 'DeltaV-Station/Delta-v'
+    if: github.repository == 'lagrange14/substations'
 
     steps:
       - uses: actions/checkout@v4.2.2
         with:
-          ref: master
+          ref: main
 
       - name: Get this week's Contributors
         shell: pwsh
@@ -50,5 +50,5 @@ jobs:
           commit-message: Update Credits
           title: Update Credits
           body: This is an automated Pull Request. This PR updates the github contributors in the credits section.
-          author: DeltaV-Bot <github@deltav.gay>
+          author: L5-bot <lagrange-github@makyo.io>
           branch: automated/credits-${{env.NOW}}

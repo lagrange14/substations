@@ -34,7 +34,7 @@ public sealed partial class BountyHistoryEntry : BoxContainer
         RewardLabel.SetMarkup(Loc.GetString("bounty-console-reward-label", ("reward", bountyPrototype.Reward)));
         IdLabel.SetMarkup(Loc.GetString("bounty-console-id-label", ("id", bounty.Id)));
 
-        TimestampLabel.SetMarkup(bounty.Timestamp.ToString(@"hh\:mm\:ss"));
+        TimestampLabel.SetMarkup(bounty.Timestamp.ToString(@"d\.hh\:mm\:ss"));
 
         if (bounty.Result == CargoBountyHistoryData.BountyResult.Completed)
         {
