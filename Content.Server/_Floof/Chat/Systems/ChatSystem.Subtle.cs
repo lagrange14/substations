@@ -39,7 +39,7 @@ public sealed partial class ChatSystem
             if (MessageRangeCheck(session, data, range) == MessageRangeCheckResult.Disallowed)
                 continue;
 
-            _chatManager.ChatMessageToOne(ChatChannel.Emotes, action, wrappedMessage, source, false, session.Channel);
+            _chatManager.ChatMessageToOne(ChatChannel.Subtle, action, wrappedMessage, source, false, session.Channel);
         }
 
         if (!hideLog)
@@ -48,6 +48,4 @@ public sealed partial class ChatSystem
             else
                 _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Subtle from {ToPrettyString(source):user}: {action}");
     }
-
-
 }
