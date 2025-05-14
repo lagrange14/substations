@@ -1,6 +1,8 @@
+using Content.Shared._L5.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.IdentityManagement;
+using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Utility;
 
@@ -42,6 +44,9 @@ public sealed partial class ChatSystem
 
             if (MessageRangeCheck(session, data, range) == MessageRangeCheckResult.Disallowed)
                 continue;
+
+            if (_configurationManager.GetCVar(L5CCVars.SubtleOOCRespectsLOS) && !data.InLOS)
+                continue; // Floofstation: some things dont go through walls (but they go through windows!)
 
             _chatManager.ChatMessageToOne(ChatChannel.Subtle, action, wrappedMessage, source, false, session.Channel);
         }

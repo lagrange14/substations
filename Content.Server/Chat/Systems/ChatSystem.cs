@@ -3,6 +3,7 @@ using System.Linq;
 using System.Text;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
+using Content.Server.Atmos.EntitySystems;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
 using Content.Server.Players.RateLimiting;
@@ -44,6 +45,8 @@ using Robust.Shared.Map;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Dynamics.Joints;
 using Content.Server.Effects;
+using Content.Shared._L5.CCVar;
+using Content.Shared.Coordinates;
 
 namespace Content.Server.Chat.Systems;
 
@@ -64,13 +67,14 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
+    [Dependency] private readonly AtmosphereSystem _atmosphere = default!;
     [Dependency] private readonly StationSystem _stationSystem = default!;
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly ReplacementAccentSystem _wordreplacement = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
-    [Dependency] private readonly IMapManager _mapManager = default!; // Floof
+    [Dependency] private readonly SharedMapSystem _mapSystem = default!;
 
     //Nyano - Summary: pulls in the nyano chat system for psionics.
     [Dependency] private readonly NyanoChatSystem _nyanoChatSystem = default!;
@@ -79,17 +83,6 @@ public sealed partial class ChatSystem : SharedChatSystem
     public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
     public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
     public const string DefaultAnnouncementSound = "/Audio/Announcements/announce.ogg";
-
-    // Floofstation START - vars for whether or not certain chat types respect line of sight (LOS) when sending messages
-    public const bool SpeakRespectsLOS = false; // do speak says go through walls?
-    // todo: merge whisper's cool LOS muffling system thing into the generic speak system
-    public const bool WhisperRespectsLOS = false; // do whispers go through walls? sorta! (they use their own system)
-    public const bool EmoteRespectsLOS = true; // do emotes go through walls? nope!
-    public const bool SubtleRespectsLOS = true; // do subtles go through walls? nope!
-    public const bool SubtleOOCRespectsLOS = true; // do subtles go through walls? nope!
-    public const bool TelepathicRespectsLOS = false; // do telepathic messages go through walls? yes!
-    public const bool LocalOOCRespectsLOS = false; // do LOOC messages go through walls? yes!
-    // Floofstation END
 
     private bool _loocEnabled = true;
     private bool _deadLoocEnabled;
@@ -391,7 +384,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                 SendDeadChat(source, player, message, hideChat);
                 break;
             case InGameOOCChatType.Looc:
-                SendLOOC(source, player, message, hideChat, checkLOS: LocalOOCRespectsLOS);
+                SendLOOC(source, player, message, hideChat, checkLOS: _configurationManager.GetCVar(L5CCVars.LOOCRespectsLOS));
                 break;
         }
     }
@@ -518,6 +511,10 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         var speech = GetSpeechVerb(source, message);
 
+        var obfuscatedMessage = ObfuscateMessageReadability(message, 0.2f);
+
+        // get the entity's name by visual identity (if no override provided).
+        string nameIdentity = FormattedMessage.EscapeText(nameOverride ?? Identity.Name(source, EntityManager));
         // get the entity's apparent name (if no override provided).
         string name;
         if (nameOverride != null)
@@ -543,16 +540,19 @@ public sealed partial class ChatSystem : SharedChatSystem
             ("fontSize", speech.FontSize),
             ("message", FormattedMessage.EscapeText(message)));
 
+        var wrappedObfuscatedMessage = Loc.GetString("chat-manager-entity-whisper-wrap-message",
+            ("entityName", nameIdentity), ("message", FormattedMessage.EscapeText(obfuscatedMessage)));
+
         SendInVoiceRange(
             ChatChannel.Local,
             name,
             message,
             wrappedMessage,
-            obfuscated,
-            wrappedObfuscated,
+            obfuscatedMessage,
+            wrappedObfuscatedMessage,
             source,
             range,
-            checkLOS: SpeakRespectsLOS
+            checkLOS: _configurationManager.GetCVar(L5CCVars.SpeechRespectsLOS)
             );
 
         var ev = new EntitySpokeEvent(source, message, null, null);
@@ -706,7 +706,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             source,
             range,
             author,
-            checkLOS: EmoteRespectsLOS // Floofstation: some things don't go through walls (but they go through windows!)
+            checkLOS: _configurationManager.GetCVar(L5CCVars.EmoteRespectsLOS) // Floofstation: some things don't go through walls (but they go through windows!)
             );
         if (!hideLog)
             if (name != Name(source))
@@ -835,25 +835,29 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool checkLOS = false
         )
     {
+        // Get the current pressure at the point of the voice source.
+        var currentSourcePressure = 0f;
+        var sourceTileMixture = _atmosphere.GetContainingMixture(source, true);
+        if (sourceTileMixture != null)
+            currentSourcePressure = sourceTileMixture.Pressure;
+
+        var minPresure = _configurationManager.GetCVar(L5CCVars.MinSoundTransmitPressure);
+        var inSpaceRange = _configurationManager.GetCVar(L5CCVars.InSpaceRange);
+
         foreach (var (session, data) in GetRecipients(source, VoiceRange))
         {
-            if (channel != ChatChannel.LOOC && channel != ChatChannel.Emotes )
+            if (channel != ChatChannel.LOOC && channel != ChatChannel.Emotes && session.AttachedEntity != null)
             {
-                var sourceGrid = Transform(source).GridUid;
+                // Get the current pressure at the point of the recipient
+                var currentRecipientPressure = 0f;
+                var recipientTileMixture = _atmosphere.GetContainingMixture(session.AttachedEntity.Value, true);
+                if (recipientTileMixture != null)
+                    currentRecipientPressure = recipientTileMixture.Pressure;
+
+                // If the pressure at the source or recipient is too low, set the transmit range to ~touch distance.
                 float transmitRange = VoiceRange;
-                if (sourceGrid == null && !isSoundTransmittable(Transform(source).MapID))
-                    transmitRange = InSpaceRange;
-
-                if (session.AttachedEntity != null
-                    && Transform(session.AttachedEntity.Value).GridUid == null
-                    && !isSoundTransmittable(Transform(session.AttachedEntity.Value).MapID))
-                    transmitRange = InSpaceRange;
-
-                if (session.AttachedEntity != null
-                    && Transform(session.AttachedEntity.Value).GridUid != sourceGrid
-                    && !isSoundTransmittable(Transform(session.AttachedEntity.Value).MapID)
-                    && !CheckAttachedGrids(source, session.AttachedEntity.Value))
-                    transmitRange = InSpaceRange;
+                if (currentSourcePressure < minPresure || currentRecipientPressure < minPresure)
+                    transmitRange = inSpaceRange;
 
                 if (session.AttachedEntity != null && Transform(source).Coordinates.TryDistance(EntityManager, Transform(session.AttachedEntity.Value).Coordinates, out var distance) && distance > transmitRange)
                     continue;
@@ -868,15 +872,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                 continue; // Floofstation: some things dont go through walls (but they go through windows!)
             EntityUid listener = session.AttachedEntity.Value;
 
-            // If the channel does not support languages, or the entity can understand the message, send the original message, otherwise send the obfuscated version
-            if (channel == ChatChannel.LOOC || channel == ChatChannel.Emotes))
-            {
-                _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
-            }
-            else
-            {
-                _chatManager.ChatMessageToOne(channel, obfuscated, obfuscatedWrappedMessage, source, entHideChat, session.Channel, author: author);
-            }
+            _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
         }
 
         _replay.RecordServerMessage(new ChatMessage(channel, message, wrappedMessage, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
@@ -1021,7 +1017,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             // which doesn't really work for modes that are supposed to go through walls, like Speak
             var inRange = distance <= voiceGetRange;
 
-            var isVisible = observer || (inRange && _examine.InRangeUnOccluded(source, playerEntity, voiceGetRange));
+            var isVisible = observer || (inRange && _examineSystem.InRangeUnOccluded(source, playerEntity, voiceGetRange));
 
             // even if they are a ghost hearer, in some situations we still need the range
             if (inRange)

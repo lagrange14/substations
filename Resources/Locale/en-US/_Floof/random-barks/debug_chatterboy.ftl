@@ -52,4 +52,3 @@ bark-chatterboyWhisper-6 = shhhhhh
 bark-chatterboyWhisper-7 = hfhfhfhfhfh
 bark-chatterboyWhisper-8 = hi mom
 bark-chatterboyWhisper-count = 8
-
