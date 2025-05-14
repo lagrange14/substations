@@ -3,7 +3,7 @@ using Content.Shared.Administration;
 using Robust.Shared.Console;
 using Robust.Shared.Enums;
 
-namespace Content.Server.Chat.Commands
+namespace Content.Server._Floof.Chat.Commands
 {
     [AnyCommand]
     internal sealed class SubtleCommand : IConsoleCommand
