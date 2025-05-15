@@ -6,7 +6,7 @@ namespace Content.Shared.Atmos
     /// <summary>
     ///     Class to store atmos constants.
     /// </summary>
-    public static class Atmospherics
+    public static partial class Atmospherics // L5 - made partial
     {
         #region ATMOS
         /// <summary>

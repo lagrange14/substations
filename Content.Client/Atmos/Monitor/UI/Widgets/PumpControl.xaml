@@ -29,6 +29,12 @@
                         <Label Text="{Loc 'air-alarm-ui-vent-internal-bound-label'}" Margin="0 0 0 1" />
                         <FloatSpinBox Name="CInternalBound" HorizontalExpand="True" />
                     </BoxContainer>
+                    <!-- Begin L5 - flowmos -->
+                    <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+                        <Label Text="Flowmos Mode" Margin="0 0 0 1" />
+                        <OptionButton Name="CFlowmosMode" HorizontalExpand="True" />
+                    </BoxContainer>
+                    <!-- End L5 -->
                 </BoxContainer>
                 <BoxContainer Orientation="Horizontal" Margin ="0 0 0 2">
                     <Button Name="CCopySettings" Text="{Loc 'air-alarm-ui-widget-copy'}" ToolTip="{Loc 'air-alarm-ui-widget-copy-tooltip'}" />

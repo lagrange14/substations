@@ -3,6 +3,7 @@ using Content.Shared.Atmos.Piping.Unary.Components;
 using Content.Shared.DeviceLinking;
 using Content.Shared.Guidebook;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+using static Content.Shared.Atmos.Piping.Unary.Components.GasVentPumpData;
 
 namespace Content.Server.Atmos.Piping.Unary.Components
 {
@@ -155,6 +156,10 @@ namespace Content.Server.Atmos.Piping.Unary.Components
         public bool PressureLockoutOverride = false;
         #endregion
 
+        // L5 - flowmos
+        [DataField]
+        public VentPumpFlowmos Flowmos { get; set; } = VentPumpFlowmos.Default;
+
         public GasVentPumpData ToAirAlarmData()
         {
             return new GasVentPumpData
@@ -165,7 +170,8 @@ namespace Content.Server.Atmos.Piping.Unary.Components
                 PressureChecks = PressureChecks,
                 ExternalPressureBound = ExternalPressureBound,
                 InternalPressureBound = InternalPressureBound,
-                PressureLockoutOverride = PressureLockoutOverride
+                PressureLockoutOverride = PressureLockoutOverride,
+                VentFlowmosMode = Flowmos, // L5 - flowmos
             };
         }
 
@@ -178,6 +184,7 @@ namespace Content.Server.Atmos.Piping.Unary.Components
             ExternalPressureBound = data.ExternalPressureBound;
             InternalPressureBound = data.InternalPressureBound;
             PressureLockoutOverride = data.PressureLockoutOverride;
+            Flowmos = data.VentFlowmosMode; // L5 - flowmos
         }
 
         #region GuidebookData

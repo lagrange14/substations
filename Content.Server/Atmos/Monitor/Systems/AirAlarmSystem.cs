@@ -357,8 +357,12 @@ public sealed class AirAlarmSystem : EntitySystem
         switch (args.Data)
         {
             case GasVentPumpData ventData:
-                foreach (string addr in component.VentData.Keys)
+                // Begin L5 - flowmos
+                foreach (var (addr, targetVentData) in component.VentData)
                 {
+                    if (ventData.VentFlowmosMode != targetVentData.VentFlowmosMode)
+                        continue;
+                    // End L5
                     _adminLogger.Add(LogType.AtmosDeviceSetting, LogImpact.Medium, $"{ToPrettyString(args.Actor)} copied settings to vent {addr}");
                     SetData(uid, addr, args.Data);
                 }

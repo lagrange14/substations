@@ -28,6 +28,7 @@ using Content.Shared.Verbs;
 using JetBrains.Annotations;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using static Content.Shared.Atmos.Piping.Unary.Components.GasVentPumpData;
 
 namespace Content.Server.Atmos.Piping.Unary.EntitySystems
 {
@@ -101,7 +102,8 @@ namespace Content.Server.Atmos.Piping.Unary.EntitySystems
             var timeDelta = args.dt;
             var pressureDelta = timeDelta * vent.TargetPressureChange;
 
-            var lockout = (environment.Pressure < vent.UnderPressureLockoutThreshold) && !vent.IsPressureLockoutManuallyDisabled;
+            var lockout = (environment.Pressure < vent.UnderPressureLockoutThreshold) && !vent.IsPressureLockoutManuallyDisabled
+                          && vent.Flowmos != VentPumpFlowmos.Outlet; // L5 - outlets shouldn't underpressure lockout
             if (vent.UnderPressureLockout != lockout) // update visuals only if this changes
             {
                 vent.UnderPressureLockout = lockout;
@@ -286,6 +288,21 @@ namespace Content.Server.Atmos.Piping.Unary.EntitySystems
         {
             if (component.CanLink)
                 _signalSystem.EnsureSinkPorts(uid, component.PressurizePort, component.DepressurizePort);
+
+            // Begin L5 - flowmos
+            // If a vent just got init'd from e.g., a prototype, we want to preconfigure its pressure bounds
+            switch (component.Flowmos)
+            {
+                case VentPumpFlowmos.Default:
+                    return;
+                case VentPumpFlowmos.Inlet:
+                    component.FromAirAlarmData(FilterInletPreset);
+                    break;
+                case VentPumpFlowmos.Outlet:
+                    component.FromAirAlarmData(FilterOutletPreset);
+                    break;
+            }
+            // End L5
         }
 
         private void OnSignalReceived(EntityUid uid, GasVentPumpComponent component, ref SignalReceivedEvent args)
