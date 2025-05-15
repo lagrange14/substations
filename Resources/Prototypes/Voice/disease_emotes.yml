@@ -3,12 +3,19 @@
   name: chat-emote-name-sneeze
   category: Vocal
   chatMessages: ["chat-emote-msg-sneeze"]
-  # L5
+  # Begin L5
+  whitelist:
+    components:
+      - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
   chatTriggers:
     - sneeze
     - sneezes
     - sneeze.
     - sneezes.
+  # End L5
 
 - type: emote
   id: Cough

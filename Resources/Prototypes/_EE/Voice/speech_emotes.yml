@@ -13,17 +13,18 @@
     tags: # DeltaV - let bots use it too
     #- SiliconEmotes
     - Synth # L5
-  chatMessages: [ boops ]
+  chatMessages: [ boops. ] # L5 - punctuation
   chatTriggers:
     - boops
 
 - type: emote
   id: Whirr # uncategorized as it is generic
+  category: Vocal # L5 - it's not generic, it's Vocal.
   whitelist:
     tags: # DeltaV - let bots use it too
     #- SiliconEmotes
     - Synth # L5
   name: chat-emote-name-whirr
-  chatMessages: [ whirrs ]
+  chatMessages: [ whirrs. ] # L5 - punctuation
   chatTriggers:
     - whirrs

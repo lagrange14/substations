@@ -148,7 +148,7 @@
     Sigh:
       collection: FemaleSigh
     Yawn:
-      collection: FemaleYawn 
+      collection: FemaleYawn
     # End DeltaV Additions
     Gasp:
       collection: FemaleGasp
@@ -257,7 +257,7 @@
     Hew:
       collection: Hew
     # Begin DeltaV Additions
-    Gasp: 
+    Gasp:
       collection: VoxGasp
     DefaultDeathgasp:
       path: /Audio/_DV/Effects/Gasp/vox_deathgasp_1.ogg
@@ -443,6 +443,14 @@
       path: /Audio/Items/bikehorn.ogg
     Ping:
       path: /Audio/Effects/Cargo/ping.ogg
+    # Begin L5 - more borg emotes
+    Whirr:
+      collection: IPCWhirrs
+      params:
+        variation: 0
+    Boop:
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg
+    # End L5
 
 - type: emoteSounds
   id: UnisexSiliconSyndicate
