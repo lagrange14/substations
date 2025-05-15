@@ -64,6 +64,7 @@
   roles:
   - Captain
   - ChiefEngineer
+  - PrincipalArchitect # L5 - see Resources/Prototypes/_L5/Roles/outpost.yml
   - ChiefMedicalOfficer
   - HeadOfPersonnel
   - HeadOfSecurity
@@ -92,6 +93,7 @@
   roles:
   - AtmosphericTechnician
   - ChiefEngineer
+  - PrincipalArchitect # L5 - see Resources/Prototypes/_L5/Roles/outpost.yml
   - StationEngineer
   - TechnicalAssistant
 

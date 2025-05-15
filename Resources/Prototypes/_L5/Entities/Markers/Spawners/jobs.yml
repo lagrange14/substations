@@ -1,0 +1,11 @@
+- type: entity
+  id: SpawnPointPrincipalArchitect
+  parent: SpawnPointJobBase
+  name: principal architect
+  components:
+  - type: SpawnPoint
+    job_id: PrincipalArchitect
+  - type: Sprite
+    layers:
+    - state: green
+    - state: ce

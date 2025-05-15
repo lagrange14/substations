@@ -1,0 +1,70 @@
+# PA is essentially a CE, but there can be only one on the station, and only on Outpost rounds.
+- type: job
+  id: PrincipalArchitect
+  name: job-name-principal-architect
+  description: job-desc-principal-architect
+  playTimeTracker: JobPrincipalArchitect
+  requirements:
+  - !type:RoleTimeRequirement
+    role: JobAtmosphericTechnician
+    time: 9000 #2.5 hrs
+  - !type:RoleTimeRequirement
+    role: JobStationEngineer
+    time: 18000 #5 hrs
+  - !type:DepartmentTimeRequirement
+    department: Engineering
+    time: 36000 #10 hrs
+  weight: 10
+  startingGear: PrincipalArchitectGear
+  icon: "JobIconCaptain"
+  ransomModifier: 3 # DeltaV
+  requireAdminNotify: true # DeltaV
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Maintenance
+  - Engineering
+  - Command
+  - External
+  - ChiefEngineer
+  - Atmospherics
+  #- Brig # DeltaV - Removed brig access
+  - Cryogenics
+  - Orders # L5 - orders consoles
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+    - type: CommandStaff
+    - type: PsionicBonusChance # DeltaV - makes it more likely to become psionic.
+      flatBonus: 0.025
+
+- type: startingGear
+  id: PrincipalArchitectGear
+  equipment:
+    id: PAPDA
+    eyes: ClothingEyesGlassesMeson
+    ears: ClothingHeadsetCE
+    belt: ClothingBeltUtilityEngineering
+  storage:
+    back:
+    - Flash
+
+# Engineering
+- type: roleLoadout
+  id: JobPrincipalArchitect
+  groups:
+  - GroupTankHarness
+  - ChiefEngineerHead
+  - ChiefEngineerJumpsuit
+  - StationEngineerBackpack
+  - ChiefEngineerNeck
+  - ChiefEngineerOuterClothing
+  - ChiefEngineerShoes
+  - SurvivalExtended
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: playTimeTracker
+  id: JobPrincipalArchitect

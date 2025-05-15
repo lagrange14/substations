@@ -4,8 +4,8 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 05/15/2025 07:45:32
-  entityCount: 437
+  time: 05/15/2025 09:24:21
+  entityCount: 440
 maps:
 - 1
 grids:
@@ -210,7 +210,7 @@ entities:
       pos: 1.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -29736.395
+      secondsUntilStateChange: -30084.406
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -224,7 +224,7 @@ entities:
       pos: 0.5,-3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -29735.645
+      secondsUntilStateChange: -30083.656
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1098,7 +1098,7 @@ entities:
       pos: -1.5,-0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -27844.785
+      secondsUntilStateChange: -28192.797
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -1805,6 +1805,7 @@ entities:
           occludes: True
           ents:
           - 135
+          - 438
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -1826,6 +1827,15 @@ entities:
     components:
     - type: Transform
       pos: 4.5,-5.5
+      parent: 2
+    - type: Lock
+      locked: False
+  - uid: 440
+    components:
+    - type: MetaData
+      name: principal architect's locker
+    - type: Transform
+      pos: -0.26299948,4.5
       parent: 2
     - type: Lock
       locked: False
@@ -2621,6 +2631,13 @@ entities:
     - type: Transform
       pos: -0.5,-1.5
       parent: 2
+- proto: SpawnPointPrincipalArchitect
+  entities:
+  - uid: 439
+    components:
+    - type: Transform
+      pos: 1.5,5.5
+      parent: 2
 - proto: SpawnPointProsecutor
   entities:
   - uid: 421
@@ -3260,6 +3277,15 @@ entities:
       parent: 2
     - type: WarpPoint
       location: Outpost Nucleus
+- proto: WeaponAntiqueLaser
+  entities:
+  - uid: 438
+    components:
+    - type: Transform
+      parent: 227
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: WeaponCapacitorRecharger
   entities:
   - uid: 250
@@ -3290,7 +3316,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -275.8107
+      secondsUntilStateChange: -623.8217
       state: Opening
     - type: Airlock
       autoClose: False

@@ -1,0 +1,5 @@
+- type: entity
+  parent: CEPDA
+  id: PAPDA
+  name: principal architect PDA # Why these aren't localized is beyond me...
+  description: Looks like it's covered in scratched-out notes.

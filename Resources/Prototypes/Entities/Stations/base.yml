@@ -125,6 +125,7 @@
   abstract: true
   components:
     - type: SalvageMagnetData
+      offerCooldown: 30
 
 - type: entity
   id: BaseStationSiliconLawCrewsimov
