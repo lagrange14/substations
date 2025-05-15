@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 250.0.0
+  engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 04/30/2025 06:57:21
-  entityCount: 435
+  time: 05/15/2025 07:45:32
+  entityCount: 437
 maps:
 - 1
 grids:
@@ -96,7 +96,8 @@ entities:
             1: 64
             2: 32768
           -1,1:
-            0: 3822
+            0: 3814
+            1: 8
             2: 4096
           1,0:
             0: 275
@@ -112,7 +113,8 @@ entities:
           -1,-3:
             0: 61440
           -1,-2:
-            0: 65535
+            0: 61439
+            1: 4096
           -1,-1:
             0: 65526
           1,-3:
@@ -208,7 +210,7 @@ entities:
       pos: 1.5,3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -29175.271
+      secondsUntilStateChange: -29736.395
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -222,7 +224,7 @@ entities:
       pos: 0.5,-3.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -29174.521
+      secondsUntilStateChange: -29735.645
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -253,6 +255,15 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 5.5,-1.5
       parent: 2
+- proto: AnalysisComputerCircuitboard
+  entities:
+  - uid: 436
+    components:
+    - type: Transform
+      parent: 229
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: APCBasic
   entities:
   - uid: 13
@@ -261,6 +272,15 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -5.5,-5.5
       parent: 2
+- proto: ArtifactAnalyzerMachineCircuitboard
+  entities:
+  - uid: 243
+    components:
+    - type: Transform
+      parent: 229
+    - type: Physics
+      canCollide: False
+    - type: InsideEntityStorage
 - proto: AstroNavCartridge
   entities:
   - uid: 378
@@ -365,11 +385,6 @@ entities:
       parent: 2
 - proto: BedsheetMedical
   entities:
-  - uid: 32
-    components:
-    - type: Transform
-      pos: -2.5,0.5
-      parent: 2
   - uid: 33
     components:
     - type: Transform
@@ -976,13 +991,6 @@ entities:
     - type: Transform
       pos: 3.5,2.5
       parent: 2
-- proto: DefaultStationBeaconMedical
-  entities:
-  - uid: 134
-    components:
-    - type: Transform
-      pos: -1.5,1.5
-      parent: 2
 - proto: DefibrillatorCompact
   entities:
   - uid: 231
@@ -1090,7 +1098,7 @@ entities:
       pos: -1.5,-0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -27283.662
+      secondsUntilStateChange: -27844.785
       state: Closing
     - type: DeviceNetwork
       deviceLists:
@@ -1814,10 +1822,10 @@ entities:
       locked: False
 - proto: LockerChiefEngineerFilledHardsuit
   entities:
-  - uid: 229
+  - uid: 437
     components:
     - type: Transform
-      pos: -3.2541153,-4.5
+      pos: 4.5,-5.5
       parent: 2
     - type: Lock
       locked: False
@@ -1926,13 +1934,77 @@ entities:
           showEnts: False
           occludes: True
           ent: null
+- proto: LockerResearchDirectorFilledHardsuit
+  entities:
+  - uid: 229
+    components:
+    - type: Transform
+      pos: -0.76243323,4.5
+      parent: 2
+    - type: Lock
+      locked: False
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - type: ContainerContainer
+      containers:
+        entity_storage: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 243
+          - 436
+        paper_label: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
 - proto: LockerSalvageSpecialistFilledHardsuit
   entities:
+  - uid: 32
+    components:
+    - type: Transform
+      pos: -3.2656639,-4.5
+      parent: 2
+    - type: Lock
+      locked: False
   - uid: 239
     components:
     - type: Transform
       pos: -3.7688866,-4.5
       parent: 2
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
     - type: Lock
       locked: False
 - proto: LunchboxGenericFilledHealthy
@@ -1953,11 +2025,6 @@ entities:
     components:
     - type: Transform
       pos: -0.5,0.5
-      parent: 2
-  - uid: 243
-    components:
-    - type: Transform
-      pos: -2.5,0.5
       parent: 2
 - proto: MedkitAdvancedFilled
   entities:
@@ -2296,8 +2363,10 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         265:
-        - On: Forward
-        - Off: Off
+        - - On
+          - Forward
+        - - Off
+          - Off
 - proto: SinkWide
   entities:
   - uid: 288
@@ -2663,6 +2732,13 @@ entities:
     components:
     - type: Transform
       pos: 1.5,0.5
+      parent: 2
+- proto: StasisBed
+  entities:
+  - uid: 134
+    components:
+    - type: Transform
+      pos: -2.5,0.5
       parent: 2
 - proto: SubstationWallBasic
   entities:
@@ -3210,6 +3286,14 @@ entities:
     - type: Transform
       pos: -2.5,-3.5
       parent: 2
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
+    - type: Door
+      secondsUntilStateChange: -275.8107
+      state: Opening
+    - type: Airlock
+      autoClose: False
   - uid: 382
     components:
     - type: Transform
