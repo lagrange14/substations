@@ -10,7 +10,6 @@
     sprite: _DEN/Clothing/Neck/Misc/vet-cone.rsi
     equipDelay: 0.5
     unequipDelay: 1
-    renderLayer: mask
   - type: Butcherable
     butcheringType: Knife
     spawned:
