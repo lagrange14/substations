@@ -41,6 +41,7 @@
               doAfter: 2
 
         - to: diagonalWall # L5 Buildable diagonal walls
+          completed:
             - !type:SnapToGrid
               southRotation: false
           conditions:
@@ -330,6 +331,9 @@
           conditions:
             - !type:EntityAnchored {}
           steps:
+            - material: Plasteel
+              amount: 2
+              doAfter: 2
             - tool: Welding
               doAfter: 3
 
