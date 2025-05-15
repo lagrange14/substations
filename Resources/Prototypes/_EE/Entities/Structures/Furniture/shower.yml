@@ -27,8 +27,6 @@
     - type: Construction
       graph: Shower
       node: shower
-      damageContainer: Inorganic
-      damageModifierSet: Metallic
     - type: Destructible
       thresholds:
       - trigger:
