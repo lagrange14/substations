@@ -596,6 +596,7 @@
     - !type:TileNotBlocked
 
 #bathroom
+# EE - shower
 - type: construction
   name: shower
   id: Shower
@@ -605,7 +606,7 @@
   category: construction-category-furniture
   description: A shower, complete with bluespace water.
   icon:
-    sprite: Structures/Furniture/shower.rsi
+    sprite: _EE/Structures/Furniture/shower.rsi
     state: shower
     objectType: Structure
   placementMode: SnapgridCenter

@@ -5,13 +5,14 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
-namespace Content.Shared.Showers
+namespace Content.Shared._EE.Showers
 {
     public abstract class SharedShowerSystem : EntitySystem
     {
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
+
         public override void Initialize()
         {
             base.Initialize();
@@ -19,12 +20,14 @@ namespace Content.Shared.Showers
             SubscribeLocalEvent<ShowerComponent, GetVerbsEvent<AlternativeVerb>>(OnToggleShowerVerb);
             SubscribeLocalEvent<ShowerComponent, ActivateInWorldEvent>(OnActivateInWorld);
         }
+
         private void OnMapInit(EntityUid uid, ShowerComponent component, MapInitEvent args)
         {
             if (_random.Prob(0.5f))
                 component.ToggleShower = true;
             UpdateAppearance(uid);
         }
+
         private void OnToggleShowerVerb(EntityUid uid, ShowerComponent component, GetVerbsEvent<AlternativeVerb> args)
         {
             if (!args.CanInteract || !args.CanAccess || args.Hands == null)
@@ -49,6 +52,7 @@ namespace Content.Shared.Showers
             }
             args.Verbs.Add(toggleVerb);
         }
+
         private void OnActivateInWorld(EntityUid uid, ShowerComponent comp, ActivateInWorldEvent args)
         {
             if (args.Handled)
@@ -59,6 +63,7 @@ namespace Content.Shared.Showers
 
             _audio.PlayPvs(comp.EnableShowerSound, uid);
         }
+
         public void ToggleShowerHead(EntityUid uid, EntityUid? user = null, ShowerComponent? component = null, MetaDataComponent? meta = null)
         {
             if (!Resolve(uid, ref component))
@@ -68,6 +73,7 @@ namespace Content.Shared.Showers
 
             UpdateAppearance(uid, component);
         }
+
         private void UpdateAppearance(EntityUid uid, ShowerComponent? component = null)
         {
             if (!Resolve(uid, ref component))

@@ -2,7 +2,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.Showers
+namespace Content.Shared._EE.Showers
 {
     /// <summary>
     /// showers that can be enabled
@@ -17,12 +17,12 @@ namespace Content.Shared.Showers
         public bool ToggleShower;
 
         [DataField("enableShowerSound")]
-        public SoundSpecifier EnableShowerSound = new SoundPathSpecifier("/Audio/Ambience/Objects/shower_enable.ogg");
+        public SoundSpecifier EnableShowerSound = new SoundPathSpecifier("/Audio/_EE/Ambience/Objects/shower_enable.ogg");
 
         public EntityUid? PlayingStream;
 
         [DataField("loopingSound")]
-        public SoundSpecifier LoopingSound = new SoundPathSpecifier("/Audio/Ambience/Objects/shower_running.ogg");
+        public SoundSpecifier LoopingSound = new SoundPathSpecifier("/Audio/_EE/Ambience/Objects/shower_running.ogg");
 
     }
 
