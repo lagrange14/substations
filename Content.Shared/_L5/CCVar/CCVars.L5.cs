@@ -36,15 +36,6 @@ public sealed partial class L5CCVars
             "Whether speech travels through walls or is obfuscated.");
 
     /// <summary>
-    /// Whether whispers go through walls
-    /// </summary>
-    public static readonly CVarDef<bool> WhisperRespectsLOS =
-        CVarDef.Create("chat.whisper_respects_los",
-            false,
-            CVar.ARCHIVE,
-            "Whether whispers travel through walls or are silenced.");
-
-    /// <summary>
     /// Whether emotes go through walls
     /// </summary>
     public static readonly CVarDef<bool> EmoteRespectsLOS =
@@ -52,15 +43,6 @@ public sealed partial class L5CCVars
             true,
             CVar.ARCHIVE,
             "Whether emotes travel through walls or are silenced.");
-
-    /// <summary>
-    /// Whether subtle emotes go through walls
-    /// </summary>
-    public static readonly CVarDef<bool> SubtleRespectsLOS =
-        CVarDef.Create("chat.subtle_respects_los",
-            true,
-            CVar.ARCHIVE,
-            "Whether subtle emotes travel through walls or are silenced.");
 
     /// <summary>
     /// Whether subtle OOC goes through walls
@@ -79,13 +61,4 @@ public sealed partial class L5CCVars
             false,
             CVar.ARCHIVE,
             "Whether LOOC travels through walls or is silenced.");
-
-    /// <summary>
-    /// Whether telepathy goes  through walls
-    /// </summary>
-    public static readonly CVarDef<bool> TelepathyRespectsLOS =
-        CVarDef.Create("chat.telepathy_respects_los",
-            false,
-            CVar.ARCHIVE,
-            "Whether telepathy travels through walls or is silenced.");
 }
