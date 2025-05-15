@@ -4,10 +4,11 @@
   mapName: shuttle-destination-lavaland
   mapLight: "#A34931"
   addedComponents:
-  - type: FTLDestination
-    whitelist:
-      components:
-      - MiningShuttle
+# L5 - allow other shuttles to FTL to Lavaland for e.g: outpost
+#  - type: FTLDestination
+#    whitelist:
+#      components:
+#      - MiningShuttle
   - type: WeatherScheduler # Regular ash storms
     stages:
     - duration: # 5-10 minutes of calm
@@ -51,11 +52,12 @@
   biome: Snow
   mapName: shuttle-destination-glacier-surface
   mapLight: "#2B3153"
-  addedComponents:
-  - type: FTLDestination
-    whitelist:
-      components:
-      - MiningShuttle
+  # L5 - allow other shuttles to FTL to Glacier surface for e.g: outpost
+#  addedComponents:
+#  - type: FTLDestination
+#    whitelist:
+#      components:
+#      - MiningShuttle
   atmosphere:
     volume: 2500
     temperature: 180 # -93, extreme cold
