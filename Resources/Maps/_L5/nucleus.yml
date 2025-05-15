@@ -3312,14 +3312,6 @@ entities:
     - type: Transform
       pos: -2.5,-3.5
       parent: 2
-    - type: DeviceLinkSource
-      lastSignals:
-        DoorStatus: True
-    - type: Door
-      secondsUntilStateChange: -623.8217
-      state: Opening
-    - type: Airlock
-      autoClose: False
   - uid: 382
     components:
     - type: Transform
