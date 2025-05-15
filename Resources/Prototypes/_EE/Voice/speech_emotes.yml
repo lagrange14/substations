@@ -11,7 +11,8 @@
   category: Vocal
   whitelist:
     tags: # DeltaV - let bots use it too
-    - SiliconEmotes
+    #- SiliconEmotes
+    - Synth # L5
   chatMessages: [ boops ]
   chatTriggers:
     - boops
@@ -20,7 +21,8 @@
   id: Whirr # uncategorized as it is generic
   whitelist:
     tags: # DeltaV - let bots use it too
-    - SiliconEmotes
+    #- SiliconEmotes
+    - Synth # L5
   name: chat-emote-name-whirr
   chatMessages: [ whirrs ]
   chatTriggers:

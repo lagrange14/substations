@@ -50,6 +50,7 @@
     tags:
     - DoorBumpOpener
     - SiliconEmotes
+    - Synth # L5
     - Bot
     - Unimplantable
   - type: MobState
@@ -458,6 +459,7 @@
     - DoorBumpOpener
     - FootstepSound
     - SiliconEmotes
+    - Synth # L5
     - Bot
     - Unimplantable
   - type: ActiveRadio

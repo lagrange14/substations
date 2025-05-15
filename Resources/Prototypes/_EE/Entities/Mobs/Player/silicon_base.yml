@@ -195,6 +195,7 @@
         - FootstepSound
         - DoorBumpOpener
         - SiliconEmotes # DeltaV
+        - Synth # L5 - for controlling emotes
     - type: Hands
     - type: Inventory
       templateId: human

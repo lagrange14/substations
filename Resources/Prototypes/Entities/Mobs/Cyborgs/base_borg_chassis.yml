@@ -253,6 +253,7 @@
     - FootstepSound
     - CanPilot
     - SiliconEmotes
+    - Synth # L5
     - Unimplantable
   - type: Emoting
   - type: GuideHelp

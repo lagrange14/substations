@@ -32,6 +32,9 @@
   id: Nightshade
 
 - type: Tag
+  id: Synth
+
+- type: Tag
   id: Tank
 
 - type: Tag

@@ -14,6 +14,7 @@ using Content.Shared.Inventory.Events;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Rejuvenate;
+using Content.Shared.Tag;
 using Content.Shared.Traits;
 using Content.Shared.Zombies;
 using JetBrains.Annotations;
@@ -33,6 +34,7 @@ public abstract class SharedSynthSystem : EntitySystem
     [Dependency] private readonly SharedHumanoidAppearanceSystem _humanoidAppearance = default!;
     [Dependency] protected readonly SharedPointLightSystem _light = default!;
     [Dependency] protected readonly SharedTransformSystem _transform = default!;
+    [Dependency] protected readonly TagSystem _tag = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
 
     [Dependency] private readonly ILogManager _log = default!;
@@ -237,6 +239,10 @@ public abstract class SharedSynthSystem : EntitySystem
 
         _humanoidAppearance.SetSynthetic(uid, true);
         _typingIndicator.SetUseSyntheticVariant(uid, true);
+
+        // Add the Synth tag to ensure synths can be filtered.
+        EnsureComp<TagComponent>(uid);
+        _tag.TryAddTag(uid, "Synth");
 
         RaiseLocalEvent(uid, new TurnedSyntheticEvent());
     }
