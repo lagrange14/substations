@@ -859,18 +859,15 @@ public sealed partial class ChatSystem : SharedChatSystem
                 if (currentSourcePressure < minPresure || currentRecipientPressure < minPresure)
                     transmitRange = inSpaceRange;
 
-                if (session.AttachedEntity != null && Transform(source).Coordinates.TryDistance(EntityManager, Transform(session.AttachedEntity.Value).Coordinates, out var distance) && distance > transmitRange)
+                if (!data.Observer && Transform(source).Coordinates.TryDistance(EntityManager, Transform(session.AttachedEntity.Value).Coordinates, out var distance) && distance > transmitRange)
                     continue;
             }
             var entRange = MessageRangeCheck(session, data, range);
             if (entRange == MessageRangeCheckResult.Disallowed)
                 continue;
             var entHideChat = entRange == MessageRangeCheckResult.HideChat;
-            if (session.AttachedEntity is not { Valid: true } playerEntity)
-                continue;
             if (checkLOS && !data.Observer && !data.InLOS)
                 continue; // Floofstation: some things dont go through walls (but they go through windows!)
-            EntityUid listener = session.AttachedEntity.Value;
 
             _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
         }
