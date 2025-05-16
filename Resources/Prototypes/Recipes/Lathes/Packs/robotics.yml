@@ -18,6 +18,26 @@
   recipes:
   - BorgModuleTool
   - BorgModuleFireExtinguisher
+  # Begin L5 Additions - more printable borg modules
+  - BorgModuleAnomaly
+  - BorgModuleAppraisal
+  - BorgModuleArtifact
+  - BorgModuleCable
+  - BorgModuleChemical
+  - BorgModuleCleaning
+  - BorgModuleClowning
+  - BorgModuleConstruction
+  - BorgModuleCustodial
+  - BorgModuleGardening
+  - BorgModuleHarvesting
+  - BorgModuleMining
+  - BorgModuleMusique
+  - BorgModuleRCD
+  - BorgModuleRescue
+  - BorgModuleService
+  - BorgModuleTopicals
+  - BorgModuleTraversal
+  # End L5
 
 - type: latheRecipePack
   id: BorgLimbsStatic

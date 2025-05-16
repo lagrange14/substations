@@ -130,7 +130,8 @@ public abstract partial class SharedBorgSystem : EntitySystem
     /// </summary>
     public void SetBorgModuleDefault(Entity<BorgModuleComponent> ent, bool newDefault)
     {
-        ent.Comp.DefaultModule = newDefault;
-        Dirty(ent);
+        // L5 - allow removing all modules
+        // ent.Comp.DefaultModule = newDefault;
+        // Dirty(ent);
     }
 }
