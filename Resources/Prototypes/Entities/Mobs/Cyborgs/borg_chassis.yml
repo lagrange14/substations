@@ -16,7 +16,7 @@
       visible: false
   - type: BorgChassis
     # Default borg can take no modules until selected type.
-    maxModules: 0
+    maxModules: 20 # L5 - increase borg module capacity; doesn't matter if not type picked.
     hasMindState: robot_e
     noMindState: robot_e_r
   - type: BorgTransponder
@@ -206,7 +206,7 @@
       map: ["light"]
       visible: false
   - type: BorgChassis
-    maxModules: 5 # the sixth one broke lol
+    maxModules: 19 # the sixth one broke lol # L5 - the 20th one broke lol
     moduleWhitelist:
       tags:
       - BorgModuleGeneric
