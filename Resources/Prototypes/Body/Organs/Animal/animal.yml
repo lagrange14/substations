@@ -22,6 +22,7 @@
   - type: Tag
     tags:
       - Meat
+      - Recyclable # L5 - recyclable organs
 
 - type: entity
   id: BaseAnimalOrgan
@@ -131,6 +132,7 @@
     - Meat
     - Organ
     - Liver
+    - Recyclable # L5 - recyclable organs
   - type: Item
     size: Small
     heldPrefix: liver

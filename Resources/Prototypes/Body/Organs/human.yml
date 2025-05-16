@@ -26,6 +26,7 @@
   - type: Tag
     tags:
       - Meat
+      - Recyclable # L5 - recyclable organs
 
 - type: entity
   id: BaseHumanOrgan

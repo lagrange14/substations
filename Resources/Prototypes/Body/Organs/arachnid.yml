@@ -24,6 +24,7 @@
   - type: Tag
     tags:
       - Meat
+      - Recyclable # L5 - recyclable organs
 
 - type: entity
   id: OrganArachnidStomach
@@ -117,6 +118,7 @@
     - Meat
     - Organ
     - Heart
+    - Recyclable # L5 - recyclable organs
 
 - type: entity
   id: OrganArachnidLiver
@@ -145,6 +147,7 @@
     - Meat
     - Organ
     - Liver
+    - Recyclable # L5 - recyclable organs
 
 - type: entity
   id: OrganArachnidKidneys
@@ -187,6 +190,7 @@
     - Meat
     - Organ
     - Eyes
+    - Recyclable # L5 - recyclable organs
   - type: Item
     size: Small
     heldPrefix: eyeballs
