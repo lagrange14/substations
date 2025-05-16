@@ -10,6 +10,8 @@
     flowmos: Inlet
     # Atmospherics.OneAtmosphere + Atmospherics.AirVentPressureDelta:
     externalPressureBound: 106.325
+  - type: DeviceNetwork
+    prefix: VTI-
   - type: Construction
     graph: GasUnaryFlowmos
     node: ventpumpin
@@ -25,6 +27,8 @@
     # Atmospherics.OneAtmosphere + Atmospherics.AirVentPressureDelta:
     pumpDirection: Siphoning
     externalPressureBound: 96.325
+  - type: DeviceNetwork
+    prefix: VTO-
   - type: Construction
     graph: GasUnaryFlowmos
     node: ventpumpout
