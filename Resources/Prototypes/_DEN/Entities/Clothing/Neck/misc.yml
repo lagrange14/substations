@@ -6,6 +6,7 @@
   components:
   - type: Sprite
     sprite: _DEN/Clothing/Neck/Misc/vet-cone.rsi
+    scale: 0.5, 0.5
   - type: Clothing
     sprite: _DEN/Clothing/Neck/Misc/vet-cone.rsi
     equipDelay: 0.5

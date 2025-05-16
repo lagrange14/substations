@@ -10,6 +10,7 @@
   components:
   - type: Sprite
     sprite: _L5/Mobs/Species/Synth/synth_brain.rsi
+    scale: 0.5, 0.5
     layers:
       - state: brain
       - state: brain-lights
