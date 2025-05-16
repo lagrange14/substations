@@ -28,7 +28,6 @@ using Content.Shared.Verbs;
 using JetBrains.Annotations;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using static Content.Shared.Atmos.Piping.Unary.Components.GasVentPumpData;
 
 namespace Content.Server.Atmos.Piping.Unary.EntitySystems
 {
@@ -103,7 +102,7 @@ namespace Content.Server.Atmos.Piping.Unary.EntitySystems
             var pressureDelta = timeDelta * vent.TargetPressureChange;
 
             var lockout = (environment.Pressure < vent.UnderPressureLockoutThreshold) && !vent.IsPressureLockoutManuallyDisabled
-                          && vent.Flowmos != VentPumpFlowmos.Outlet; // L5 - outlets shouldn't underpressure lockout
+                          && vent.Flowmos != GasVentPumpData.VentPumpFlowmos.Outlet; // L5 - outlets shouldn't underpressure lockout
             if (vent.UnderPressureLockout != lockout) // update visuals only if this changes
             {
                 vent.UnderPressureLockout = lockout;
