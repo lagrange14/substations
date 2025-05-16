@@ -109,7 +109,7 @@
   #  doAfterDelay: 10
   #  allowSelfRepair: false
   - type: WeldingHealable
-    allowSelfHeal: false
+    allowSelfHeal: true # L5 - allow borg self healing
   # End DeltaV Changes
   - type: BorgChassis
   - type: SurgerySelfDirty # DeltaV: borgs get dirty from doing surgery
