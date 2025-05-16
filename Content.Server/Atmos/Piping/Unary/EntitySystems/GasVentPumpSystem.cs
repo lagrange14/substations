@@ -288,21 +288,6 @@ namespace Content.Server.Atmos.Piping.Unary.EntitySystems
         {
             if (component.CanLink)
                 _signalSystem.EnsureSinkPorts(uid, component.PressurizePort, component.DepressurizePort);
-
-            // Begin L5 - flowmos
-            // If a vent just got init'd from e.g., a prototype, we want to preconfigure its pressure bounds
-            switch (component.Flowmos)
-            {
-                case VentPumpFlowmos.Default:
-                    return;
-                case VentPumpFlowmos.Inlet:
-                    component.FromAirAlarmData(FilterInletPreset);
-                    break;
-                case VentPumpFlowmos.Outlet:
-                    component.FromAirAlarmData(FilterOutletPreset);
-                    break;
-            }
-            // End L5
         }
 
         private void OnSignalReceived(EntityUid uid, GasVentPumpComponent component, ref SignalReceivedEvent args)

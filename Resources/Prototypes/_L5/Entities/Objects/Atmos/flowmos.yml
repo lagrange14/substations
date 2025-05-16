@@ -6,7 +6,10 @@
   components:
   - type: GasVentPump
     underPressureLockoutThreshold: 30
+    # This all needs hardcoded because UninitializedSaveTest exists :(
     flowmos: Inlet
+    # Atmospherics.OneAtmosphere + Atmospherics.AirVentPressureDelta:
+    externalPressureBound: 106.325
   - type: Construction
     graph: GasUnaryFlowmos
     node: ventpumpin
@@ -19,6 +22,9 @@
   components:
   - type: GasVentPump # Lockout is disabled in code
     flowmos: Outlet
+    # Atmospherics.OneAtmosphere + Atmospherics.AirVentPressureDelta:
+    pumpDirection: Siphoning
+    externalPressureBound: 96.325
   - type: Construction
     graph: GasUnaryFlowmos
     node: ventpumpout
