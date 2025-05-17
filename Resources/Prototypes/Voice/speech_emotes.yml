@@ -8,8 +8,10 @@
     components:
     - Vocal
   blacklist:
-    tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
     - scream
@@ -38,8 +40,10 @@
     components:
     - Vocal
   blacklist:
-    tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
     - laugh
@@ -86,8 +90,10 @@
     components:
     - Vocal
   blacklist:
-    tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: ["chat-emote-msg-sigh"]
   chatTriggers:
     - sigh
@@ -103,8 +109,10 @@
     components:
     - Vocal
   blacklist:
-    tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: ["chat-emote-msg-whistle"]
   chatTriggers:
     - whistle
@@ -120,8 +128,10 @@
     components:
     - Vocal
   blacklist:
-    tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: ["chat-emote-msg-crying"]
   chatTriggers:
     - cry
@@ -160,7 +170,10 @@
     - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: ["chat-emote-msg-chitter"]
   chatTriggers:
    - chitter
@@ -177,8 +190,10 @@
     components:
       - Vocal
   blacklist:
-    tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: ["chat-emote-msg-squeak"]
   chatTriggers:
    - squeak
@@ -212,8 +227,10 @@
     components:
     - Hands
   blacklist:
-    tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: ["chat-emote-msg-clap"]
   chatTriggers:
     - claps
@@ -229,8 +246,10 @@
     components:
     - Hands
   blacklist:
-    tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: [ "chat-emote-msg-clap-single" ]
   chatTriggers:
     - clap
@@ -248,8 +267,10 @@
     components:
     - Hands
   blacklist:
-    tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: ["chat-emote-msg-snap"]
   chatTriggers:
     - snap
@@ -299,8 +320,10 @@
     components:
     - Hands
   blacklist:
-    tags:
-    - SiliconEmotes
+    # tags:
+    # - SiliconEmotes # L5 - allow IPCs
+    components:
+    - BorgChassis # L5 - but not borgs
   chatMessages: ["chat-emote-msg-salute"]
   chatTriggers:
     - salute
