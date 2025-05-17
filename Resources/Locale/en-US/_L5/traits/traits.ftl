@@ -6,17 +6,17 @@ trait-synth-name = Synthetic
 trait-synth-desc = You are a biomechanical construct, whether a cladist or not. You are susceptible to ion storms and EMPs, bleed coolant, and have a unique brain.
 
 trait-sign-language-name = Sign language
-trait-sign-language-desc = You can speak the most common dialect of sign language, allowing you to interact with hard of hearing or deaf crew, as well as in the vacuum of space.
+trait-sign-language-desc = You can speak the most common signed language, allowing you to interact with others who know it.
 
 # Disability traits
 trait-lowmobility-name = Low Mobility
 trait-lowmobility-desc = You aren't able to get around very fast. Not for the faint of heart.
 
 trait-hard-of-hearing-name = Hard of hearing
-trait-hard-of-hearing-desc = You aren't able to hear well. Voices far away may appear muffled or unintelligible. Comes with knowledge of sign language.
+trait-hard-of-hearing-desc = You aren't able to hear well. Voices far away may appear muffled or unintelligible.
 
 trait-profoundly-deaf-name = Profoundly deaf
-trait-profoundly-deaf-desc = You're unable to hear at all, and must communicate through sign language. Comes with knowledge of sign language.
+trait-profoundly-deaf-desc = You're unable to hear at all, and must communicate through writing and sign language.
 
 # Dietary restrictions traits
 trait-category-diet = Dietary Restrictions
