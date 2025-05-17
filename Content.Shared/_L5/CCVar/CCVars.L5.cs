@@ -61,4 +61,22 @@ public sealed partial class L5CCVars
             false,
             CVar.ARCHIVE,
             "Whether LOOC travels through walls or is silenced.");
+
+    /// <summary>
+    /// Whether sign language goes through walls
+    /// </summary>
+    public static readonly CVarDef<bool> SignLanguageRespectsLOS =
+        CVarDef.Create("chat.sign_respects_los",
+            false,
+            CVar.ARCHIVE,
+            "Whether sign language can be seen through walls or not.");
+
+    /// <summary>
+    /// Whether or not everyone knows sign language by default, or has to take the skill trait.
+    /// </summary>
+    public static readonly CVarDef<bool> AllCanSign =
+        CVarDef.Create("chat.all_can_sign",
+            true,
+            CVar.ARCHIVE,
+            "Whether or not everyone can use and understand sign language by default");
 }

@@ -20,6 +20,7 @@ public static class ChatChannelExtensions
             ChatChannel.Whisper => Color.DarkGray,
             ChatChannel.Subtle => _subtleColor,
             ChatChannel.SubtleOOC => _subtleOOCColor,
+            ChatChannel.Sign => Color.LightSkyBlue,
             _ => Color.LightGray
         };
     }

@@ -55,6 +55,9 @@ public sealed class RandomBarkSystem : EntitySystem
                 case "SubtleOOC":
                     chatMode = InGameICChatType.SubtleOOC;
                     break;
+                case "Sign": // L5
+                    chatMode = InGameICChatType.Sign;
+                    break;
                 case "Whisper":
                     chatMode = InGameICChatType.Whisper;
                     break;

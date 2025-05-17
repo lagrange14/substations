@@ -1,0 +1,7 @@
+- type: trait
+  id: SignLanguage
+  name: trait-sign-language-name
+  description: trait-sign-language-name
+  category: SpeechTraits
+  components:
+  - type: SignLanguage

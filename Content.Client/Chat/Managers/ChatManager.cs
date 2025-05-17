@@ -66,6 +66,10 @@ internal sealed class ChatManager : IChatManager
                 _consoleHost.ExecuteCommand($"subtleooc \"{CommandParsing.Escape(str)}\"");
                 break;
 
+            case ChatSelectChannel.Sign: // L5
+                _consoleHost.ExecuteCommand($"sign \"{CommandParsing.Escape(str)}\"");
+                break;
+
             case ChatSelectChannel.Dead:
                 if (_systems.GetEntitySystemOrNull<GhostSystem>() is {IsGhost: true})
                     goto case ChatSelectChannel.Local;

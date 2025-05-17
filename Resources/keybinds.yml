@@ -119,6 +119,10 @@ binds:
   type: State
   mod1: Shift
   key: LBracket
+- function: FocusSign # L5
+  type: State
+  mod1: Shift
+  key: Tilde
 - function: FocusWhisperChatWindow
   type: State
   key: Comma

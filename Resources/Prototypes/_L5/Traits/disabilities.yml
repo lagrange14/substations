@@ -4,4 +4,23 @@
   description: trait-lowmobility-desc
   category: Disabilities
   components:
-    - type: LowMobility
+  - type: LowMobility
+
+- type: trait
+  id: HardOfHearing
+  name: trait-hard-of-hearing-name
+  description: trait-hard-of-hearing-name
+  category: Disabilities
+  components:
+  - type: HardOfHearing
+  - type: SignLanguage
+
+- type: trait
+  id: ProfoundlyDeaf
+  name: trait-profoundly-deaf-name
+  description: trait-profoundly-deaf-name
+  category: Disabilities
+  components:
+  - type: HardOfHearing
+    profoundlyDeaf: true
+  - type: SignLanguage

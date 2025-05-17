@@ -1,0 +1,12 @@
+- type: entity
+  name: debug Signboy
+  parent: DebugChatterboy
+  id: DebugChatterSignboy
+  description: This boy loves to sign.
+  components:
+  - type: RandomBark
+    barkType: chatterboyWhisper
+    barkChatKind: "Sign"
+    minTime: 1
+    maxTime: 1
+    chatLog: true

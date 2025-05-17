@@ -46,6 +46,7 @@ using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Dynamics.Joints;
 using Content.Server.Effects;
 using Content.Shared._L5.CCVar;
+using Content.Shared._L5.Traits.HardOfHearing;
 using Content.Shared.Coordinates;
 
 namespace Content.Server.Chat.Systems;
@@ -330,6 +331,16 @@ public sealed partial class ChatSystem : SharedChatSystem
                     ignoreActionBlocker: ignoreActionBlocker,
                     color: color
                     );
+                break;
+            case InGameICChatType.Sign:
+                SendEntitySign(
+                    source,
+                    message,
+                    range,
+                    nameOverride,
+                    hideLog: hideLog,
+                    ignoreActionBlocker: ignoreActionBlocker
+                );
                 break;
             //Nyano - Summary: case adds the telepathic chat sending ability.
             case InGameICChatType.Telepathic:
@@ -637,10 +648,25 @@ public sealed partial class ChatSystem : SharedChatSystem
             if (MessageRangeCheck(session, data, range) != MessageRangeCheckResult.Full)
                 continue; // Won't get logged to chat, and ghosts are too far away to see the pop-up, so we just won't send it to them.
 
-            if (data.Range <= WhisperClearRange)
+            // Begin L5 - hard of hearing trait
+            var clearRange = WhisperClearRange;
+            var muffledRange = WhisperMuffledRange;
+            if (TryComp<HardOfHearingComponent>(listener, out var hardOfHearing))
+            {
+                // Continue if the listener is profoundly deaf.
+                if (hardOfHearing.ProfoundlyDeaf)
+                    continue;
+
+                // Cut the range in half if the listener is hard of hearing.
+                clearRange /= 2;
+                muffledRange /= 2;
+            }
+            // End L5 - hard of hearing trait
+
+            if (data.Range <= clearRange)
                 _chatManager.ChatMessageToOne(ChatChannel.Whisper, message, wrappedMessage, source, false, session.Channel);
             //If listener is too far, they only hear fragments of the message
-            else if (_examineSystem.InRangeUnOccluded(source, listener, WhisperMuffledRange))
+            else if (_examineSystem.InRangeUnOccluded(source, listener, muffledRange))
                 _chatManager.ChatMessageToOne(ChatChannel.Whisper, obfuscatedMessage, wrappedobfuscatedMessage, source, false, session.Channel);
             //If listener is too far and has no line of sight, they can't identify the whisperer's identity
             else
@@ -835,19 +861,35 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool checkLOS = false
         )
     {
-        // Get the current pressure at the point of the voice source.
+        // L5 - Get the current pressure at the point of the voice source.
         var currentSourcePressure = 0f;
         var sourceTileMixture = _atmosphere.GetContainingMixture(source, true);
         if (sourceTileMixture != null)
             currentSourcePressure = sourceTileMixture.Pressure;
 
+        // L5 - Minimum pressure requried for sound to travel and the distance sound travels below that threshold (representing touch)
         var minPresure = _configurationManager.GetCVar(L5CCVars.MinSoundTransmitPressure);
         var inSpaceRange = _configurationManager.GetCVar(L5CCVars.InSpaceRange);
 
         foreach (var (session, data) in GetRecipients(source, VoiceRange))
         {
-            if (channel != ChatChannel.LOOC && channel != ChatChannel.Emotes && session.AttachedEntity != null)
+            EntityUid listener;
+
+            if (session.AttachedEntity is not { Valid: true } playerEntity)
+                continue;
+            listener = session.AttachedEntity.Value;
+
+            Transform(source)
+                .Coordinates.TryDistance(EntityManager,
+                    Transform(session.AttachedEntity.Value).Coordinates,
+                    out var distance);
+
+            var audible = false;
+
+            if (channel != ChatChannel.LOOC && channel != ChatChannel.Emotes && channel != ChatChannel.Sign && session.AttachedEntity != null)
             {
+                audible = true;
+                // L5 - Pressure affects sound transmission
                 // Get the current pressure at the point of the recipient
                 var currentRecipientPressure = 0f;
                 var recipientTileMixture = _atmosphere.GetContainingMixture(session.AttachedEntity.Value, true);
@@ -858,8 +900,9 @@ public sealed partial class ChatSystem : SharedChatSystem
                 float transmitRange = VoiceRange;
                 if (currentSourcePressure < minPresure || currentRecipientPressure < minPresure)
                     transmitRange = inSpaceRange;
+                // end L5 - Pressure affects sound transmission
 
-                if (!data.Observer && Transform(source).Coordinates.TryDistance(EntityManager, Transform(session.AttachedEntity.Value).Coordinates, out var distance) && distance > transmitRange)
+                if (!data.Observer && distance > transmitRange)
                     continue;
             }
             var entRange = MessageRangeCheck(session, data, range);
@@ -869,7 +912,77 @@ public sealed partial class ChatSystem : SharedChatSystem
             if (checkLOS && !data.Observer && !data.InLOS)
                 continue; // Floofstation: some things dont go through walls (but they go through windows!)
 
-            _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
+            // Begin L5 - Hard of hearing
+            // Check if the message to send is audible (say, whisper, radio)
+            if (audible)
+            {
+                // If the listener is hard of hearing, obfuscate the message if they're too far away.
+                if (TryComp<HardOfHearingComponent>(listener, out var comp))
+                {
+                    // If they're profoundly deaf, they can't hear the words at all.
+                    if (comp.ProfoundlyDeaf)
+                        continue;
+
+                    if (distance <= WhisperClearRange)
+                        _chatManager.ChatMessageToOne(channel,
+                            obfuscated,
+                            obfuscatedWrappedMessage,
+                            source,
+                            entHideChat,
+                            session.Channel,
+                            author: author);
+                    else
+                        _chatManager.ChatMessageToOne(channel,
+                            message,
+                            wrappedMessage,
+                            source,
+                            entHideChat,
+                            session.Channel,
+                            author: author);
+                }
+                else
+                    _chatManager.ChatMessageToOne(channel,
+                        message,
+                        wrappedMessage,
+                        source,
+                        entHideChat,
+                        session.Channel,
+                        author: author);
+            }
+            else
+            {
+                // If the message is in sign language, check if the user knows it first. If not (emotes, subtle, LOOC), just send it.
+                if (channel == ChatChannel.Sign)
+                {
+                    if (HasComp<SignLanguageComponent>(listener))
+                        _chatManager.ChatMessageToOne(channel,
+                            message,
+                            wrappedMessage,
+                            source,
+                            entHideChat,
+                            session.Channel,
+                            author: author);
+                    else
+                        _chatManager.ChatMessageToOne(channel,
+                            obfuscated,
+                            obfuscatedWrappedMessage,
+                            source,
+                            entHideChat,
+                            session.Channel,
+                            author: author);
+                }
+                else
+                {
+                    _chatManager.ChatMessageToOne(channel,
+                        message,
+                        wrappedMessage,
+                        source,
+                        entHideChat,
+                        session.Channel,
+                        author: author);
+                }
+            }
+            // End L5 - hard of hearing
         }
 
         _replay.RecordServerMessage(new ChatMessage(channel, message, wrappedMessage, GetNetEntity(source), null, MessageRangeHideChatForReplay(range)));
@@ -1143,6 +1256,7 @@ public enum InGameICChatType : byte
     Whisper,
     Subtle, // FloofStation
     SubtleOOC, // Den
+    Sign, // L5
     Telepathic //Nyano - Summary: adds telepathic as a type of message users can receive.
 }
 
