@@ -46,6 +46,8 @@
     slots:
     - HEAD
     - neck
+    preferredSlots: # L5 - preferred quickequip slots
+    - HEAD
   - type: Construction
     graph: flowerwreath
     node: flowerwreath
