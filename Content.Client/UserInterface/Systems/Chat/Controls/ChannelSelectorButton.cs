@@ -60,11 +60,12 @@ public sealed class ChannelSelectorButton : ChatPopupButton<ChannelSelectorPopup
         return channel switch
         {
             ChatSelectChannel.Radio => Color.LimeGreen,
+            ChatSelectChannel.Sign => Color.LightSlateGray,
             ChatSelectChannel.LOOC => Color.MediumTurquoise,
             ChatSelectChannel.OOC => Color.LightSkyBlue,
             ChatSelectChannel.Dead => Color.MediumPurple,
             ChatSelectChannel.Admin => Color.HotPink,
-            ChatSelectChannel.Telepathic => Color.PaleVioletRed, //Nyano - Summary: determines the color for the chat. 
+            ChatSelectChannel.Telepathic => Color.PaleVioletRed, //Nyano - Summary: determines the color for the chat.
             _ => Color.DarkGray
         };
     }

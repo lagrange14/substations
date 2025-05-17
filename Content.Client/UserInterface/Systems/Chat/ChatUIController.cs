@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
+using Content.Client._L5.Traits.HardOfHearing;
 using Content.Client.Administration.Managers;
 using Content.Client.Chat;
 using Content.Client.Chat.Managers;
@@ -41,7 +42,6 @@ using Robust.Shared.Replays;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Client.Nyanotrasen.Chat;
-using Content.Shared._L5.Traits.HardOfHearing; //Nyano - Summary: chat namespace.
 
 namespace Content.Client.UserInterface.Systems.Chat;
 
@@ -66,7 +66,7 @@ public sealed partial class ChatUIController : UIController
     [UISystemDependency] private readonly TypingIndicatorSystem? _typingIndicator = default;
     [UISystemDependency] private readonly ChatSystem? _chatSys = default;
     [UISystemDependency] private readonly PsionicChatUpdateSystem? _psionic = default!; //Nyano - Summary: makes the psionic chat available.
-    [UISystemDependency] private readonly SharedSignLanguageSystem? _signLanguage = default!; // L5 - lets the UI know if the character can sign.
+    [UISystemDependency] private readonly SignLanguageSystem _signLanguage = default!; // L5 - lets the UI know if the character can sign.
     [UISystemDependency] private readonly TransformSystem? _transform = default;
     [UISystemDependency] private readonly MindSystem? _mindSystem = default!;
     [UISystemDependency] private readonly RoleCodewordSystem? _roleCodewordSystem = default!;

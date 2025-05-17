@@ -14,14 +14,14 @@ public sealed partial class ChannelFilterPopup : Popup
     {
         ChatChannel.Local,
         ChatChannel.Whisper,
-        ChatChannel.Subtle, // floof
-        ChatChannel.SubtleOOC, // den
         ChatChannel.Sign, // L5
         ChatChannel.Emotes,
+        ChatChannel.Subtle, // floof
         ChatChannel.Radio,
         ChatChannel.Telepathic, //Nyano - Summary: adds telepathic chat to where it belongs in order in the chat.
         ChatChannel.Notifications,
         ChatChannel.LOOC,
+        ChatChannel.SubtleOOC, // den
         ChatChannel.OOC,
         ChatChannel.Dead,
         ChatChannel.Admin,
