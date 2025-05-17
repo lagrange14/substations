@@ -27,7 +27,7 @@ public sealed partial class ChatSystem
         if (!_actionBlocker.CanEmote(source) && !ignoreActionBlocker)
             return;
 
-        // Check if both hands are free.
+        // Check if at least one hand is free.
         if (!TryComp<HandsComponent>(source, out var hands))
             return;
         if (hands.CountFreeHands() == 0)

@@ -1,3 +1,4 @@
+# Sign language
 chat-manager-entity-sign-wrap-message = { PROPER($entity) ->
 *[false] the {$entityName} signs, [color={$color}][italic]{$message}[/italic][/color]
 [true] {$entityName} signs, [color={$color}][italic]{$message}[/italic][/color]
