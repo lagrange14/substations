@@ -45,14 +45,14 @@ public sealed partial class ChatSystem
 
         // Signing uses Identity.Name, since it doesn't actually involve your voice at all.
         var wrappedMessage = Loc.GetString("chat-manager-entity-sign-wrap-message",
-            ("color", Color.LightSlateGray.ToHex()),
+            ("color", Color.LightSteelBlue.ToHex()),
             ("entityName", name),
             ("entity", ent),
             ("message", FormattedMessage.RemoveMarkupOrThrow(action)));
 
         // Those who don't understand sign language see only that something was signed.
         var wrappedObfuscatedMessage = Loc.GetString("chat-manager-entity-unknown-sign-wrap-message",
-            ("color", Color.LightSlateGray.ToHex()),
+            ("color", Color.LightSteelBlue.ToHex()),
             ("entityName", name),
             ("entity", ent));
 
