@@ -1,11 +1,13 @@
 - type: entity
   name: debug Signboy
-  parent: DebugChatterboy
+  parent: MobRodentia
   id: DebugChatterSignboy
   description: This boy loves to sign.
   components:
+  - type: Hands
+  - type: ComplexInteraction
   - type: RandomBark
-    barkType: chatterboyWhisper
+    barkType: chatterboySpeak
     barkChatKind: "Sign"
     minTime: 1
     maxTime: 1

@@ -942,6 +942,11 @@ public sealed partial class ChatUIController : UIController
                 if (_config.GetCVar(CCVars.LoocAboveHeadShow))
                     AddSpeechBubble(msg, SpeechBubble.SpeechType.Looc);
                 break;
+
+            // L5 - Sign language
+            case ChatChannel.Sign:
+                AddSpeechBubble(msg, SpeechBubble.SpeechType.Emote);
+                break;
         }
     }
 
