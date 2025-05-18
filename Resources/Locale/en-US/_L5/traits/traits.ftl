@@ -16,7 +16,7 @@ trait-hard-of-hearing-name = Hard of hearing
 trait-hard-of-hearing-desc = You aren't able to hear well. Voices far away may appear muffled or unintelligible.
 
 trait-profoundly-deaf-name = Profoundly deaf
-trait-profoundly-deaf-desc = You're unable to hear at all, and must communicate through writing and sign language.
+trait-profoundly-deaf-desc = You're unable to hear at all, and must communicate through sign language and other non-verbal means.
 
 # Dietary restrictions traits
 trait-category-diet = Dietary Restrictions
