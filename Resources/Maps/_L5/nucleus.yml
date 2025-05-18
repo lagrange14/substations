@@ -4,7 +4,7 @@ meta:
   engineVersion: 256.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/18/2025 16:11:45
+  time: 05/18/2025 16:14:33
   entityCount: 437
 maps:
 - 1
@@ -30,7 +30,7 @@ entities:
       name: Map Entity
     - type: Transform
     - type: Map
-      mapPaused: True
+      mapPaused: true
     - type: PhysicsMap
     - type: GridTree
     - type: MovedGrids
@@ -66,10 +66,8 @@ entities:
       bodyStatus: InAir
       angularDamping: 0.05
       linearDamping: 0.05
-      fixedRotation: False
+      fixedRotation: false
       bodyType: Dynamic
-    - type: Fixtures
-      fixtures: {}
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
@@ -164,7 +162,7 @@ entities:
           - 0
           - 0
         - volume: 2500
-          immutable: True
+          immutable: true
           moles:
           - 0
           - 0
@@ -209,12 +207,9 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 1.5,3.5
       parent: 2
-    - type: Door
-      secondsUntilStateChange: -30084.406
-      state: Opening
     - type: DeviceLinkSource
       lastSignals:
-        DoorStatus: True
+        DoorStatus: true
 - proto: AirlockEngineering
   entities:
   - uid: 8
@@ -223,12 +218,9 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 0.5,-3.5
       parent: 2
-    - type: Door
-      secondsUntilStateChange: -30083.656
-      state: Opening
     - type: DeviceLinkSource
       lastSignals:
-        DoorStatus: True
+        DoorStatus: true
 - proto: AirlockGlassShuttle
   entities:
   - uid: 9
@@ -261,8 +253,6 @@ entities:
     components:
     - type: Transform
       parent: 229
-    - type: Physics
-      canCollide: False
     - type: InsideEntityStorage
 - proto: APCBasic
   entities:
@@ -278,8 +268,6 @@ entities:
     components:
     - type: Transform
       parent: 229
-    - type: Physics
-      canCollide: False
     - type: InsideEntityStorage
 - proto: AstroNavCartridge
   entities:
@@ -404,8 +392,6 @@ entities:
     components:
     - type: Transform
       parent: 230
-    - type: Physics
-      canCollide: False
     - type: InsideEntityStorage
 - proto: Bucket
   entities:
@@ -413,8 +399,6 @@ entities:
     components:
     - type: Transform
       parent: 36
-    - type: Physics
-      canCollide: False
 - proto: ButchCleaver
   entities:
   - uid: 38
@@ -927,7 +911,7 @@ entities:
     - type: EntityStorage
       air:
         volume: 200
-        immutable: False
+        immutable: false
         temperature: 293.14673
         moles:
         - 1.7459903
@@ -963,15 +947,13 @@ entities:
     - type: Transform
       parent: 230
     - type: PowerCellDraw
-      canUse: True
-      canDraw: True
-    - type: Physics
-      canCollide: False
+      canUse: true
+      canDraw: true
     - type: ContainerContainer
       containers:
         cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
+          showEnts: false
+          occludes: true
           ent: 232
     - type: InsideEntityStorage
 - proto: EncryptionKeyStationMaster
@@ -980,8 +962,6 @@ entities:
     components:
     - type: Transform
       parent: 227
-    - type: Physics
-      canCollide: False
     - type: InsideEntityStorage
 - proto: FireAxeCabinetFilled
   entities:
@@ -1034,9 +1014,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.5,-0.5
       parent: 2
-    - type: Door
-      secondsUntilStateChange: -28192.797
-      state: Closing
   - uid: 148
     components:
     - type: Transform
@@ -1077,7 +1054,7 @@ entities:
       parent: 2
     - type: GasFilter
       filteredGas: Nitrogen
-      enabled: True
+      enabled: true
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 94
@@ -1088,7 +1065,7 @@ entities:
       parent: 2
     - type: GasFilter
       filteredGas: Oxygen
-      enabled: True
+      enabled: true
     - type: AtmosPipeColor
       color: '#990000FF'
 - proto: GasMixer
@@ -1103,7 +1080,7 @@ entities:
       inletTwoConcentration: 0.75
       inletOneConcentration: 0.25
       targetPressure: 200
-      enabled: True
+      enabled: true
     - type: AtmosPipeColor
       color: '#0055CCFF'
 - proto: GasPassiveVent
@@ -1471,8 +1448,6 @@ entities:
       pos: 3.5,2.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 4
     - type: AtmosPipeColor
@@ -1484,8 +1459,6 @@ entities:
       pos: -0.5,2.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 4
     - type: AtmosPipeColor
@@ -1497,8 +1470,6 @@ entities:
       pos: 2.5,6.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 4
     - type: AtmosPipeColor
@@ -1510,8 +1481,6 @@ entities:
       pos: 2.5,-8.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 4
     - type: AtmosPipeColor
@@ -1525,8 +1494,6 @@ entities:
       pos: -4.5,0.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 4
     - type: AtmosPipeColor
@@ -1537,8 +1504,6 @@ entities:
       pos: -2.5,4.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 4
     - type: AtmosPipeColor
@@ -1550,8 +1515,6 @@ entities:
       pos: -4.5,-4.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 4
     - type: AtmosPipeColor
@@ -1563,8 +1526,6 @@ entities:
       pos: -4.5,-2.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 4
     - type: AtmosPipeColor
@@ -1720,49 +1681,49 @@ entities:
     - type: ContainerContainer
       containers:
         storagebase: !type:Container
-          showEnts: False
-          occludes: True
+          showEnts: false
+          occludes: true
           ents: []
         mop_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
         trashbag_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
         bucket_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
+          showEnts: false
+          occludes: true
           ent: 37
         plunger_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
         wetfloorsign_slot4: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
         wetfloorsign_slot3: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
         wetfloorsign_slot2: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
         wetfloorsign_slot1: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
         lightreplacer_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
         spraybottle_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
 - proto: KitchenMicrowave
   entities:
   - uid: 225
@@ -1794,7 +1755,7 @@ entities:
     - type: EntityStorage
       air:
         volume: 200
-        immutable: False
+        immutable: false
         temperature: 293.14673
         moles:
         - 1.7459903
@@ -1812,17 +1773,17 @@ entities:
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
-          showEnts: False
-          occludes: True
+          showEnts: false
+          occludes: true
           ents:
           - 135
           - 438
         paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
     - type: Lock
-      locked: False
+      locked: false
 - proto: LockerChemistryFilled
   entities:
   - uid: 228
@@ -1831,7 +1792,7 @@ entities:
       pos: -0.766819,2.5
       parent: 2
     - type: Lock
-      locked: False
+      locked: false
 - proto: LockerChiefEngineerFilledHardsuit
   entities:
   - uid: 437
@@ -1840,7 +1801,7 @@ entities:
       pos: 4.5,-5.5
       parent: 2
     - type: Lock
-      locked: False
+      locked: false
   - uid: 440
     components:
     - type: MetaData
@@ -1849,7 +1810,7 @@ entities:
       pos: -0.26299948,4.5
       parent: 2
     - type: Lock
-      locked: False
+      locked: false
 - proto: LockerChiefMedicalOfficerFilledHardsuit
   entities:
   - uid: 230
@@ -1858,11 +1819,11 @@ entities:
       pos: -0.26126534,1.5
       parent: 2
     - type: Lock
-      locked: False
+      locked: false
     - type: EntityStorage
       air:
         volume: 200
-        immutable: False
+        immutable: false
         temperature: 293.14673
         moles:
         - 1.7459903
@@ -1880,15 +1841,15 @@ entities:
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
-          showEnts: False
-          occludes: True
+          showEnts: false
+          occludes: true
           ents:
           - 231
           - 233
         paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
 - proto: LockerFreezerBase
   entities:
   - uid: 234
@@ -1897,7 +1858,7 @@ entities:
       pos: 4.753525,-2.5
       parent: 2
     - type: Lock
-      locked: False
+      locked: false
 - proto: LockerHeadOfPersonnelFilled
   entities:
   - uid: 35
@@ -1906,7 +1867,7 @@ entities:
       pos: 1.2308049,-2.5
       parent: 2
     - type: Lock
-      locked: False
+      locked: false
 - proto: LockerHeadOfSecurityFilledHardsuit
   entities:
   - uid: 235
@@ -1915,7 +1876,7 @@ entities:
       pos: 2.234375,5.5
       parent: 2
     - type: Lock
-      locked: False
+      locked: false
 - proto: LockerMedicineFilled
   entities:
   - uid: 236
@@ -1924,11 +1885,11 @@ entities:
       pos: -0.266819,2.5
       parent: 2
     - type: Lock
-      locked: False
+      locked: false
     - type: EntityStorage
       air:
         volume: 200
-        immutable: False
+        immutable: false
         temperature: 293.14673
         moles:
         - 1.7459903
@@ -1946,15 +1907,15 @@ entities:
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
-          showEnts: False
-          occludes: True
+          showEnts: false
+          occludes: true
           ents:
           - 237
           - 238
         paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
 - proto: LockerResearchDirectorFilledHardsuit
   entities:
   - uid: 229
@@ -1963,11 +1924,11 @@ entities:
       pos: -0.76243323,4.5
       parent: 2
     - type: Lock
-      locked: False
+      locked: false
     - type: EntityStorage
       air:
         volume: 200
-        immutable: False
+        immutable: false
         temperature: 293.14673
         moles:
         - 1.7459903
@@ -1985,15 +1946,15 @@ entities:
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
-          showEnts: False
-          occludes: True
+          showEnts: false
+          occludes: true
           ents:
           - 243
           - 436
         paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+          showEnts: false
+          occludes: true
+          ent:
 - proto: LockerSalvageSpecialistFilledHardsuit
   entities:
   - uid: 32
@@ -2002,7 +1963,7 @@ entities:
       pos: -3.2656639,-4.5
       parent: 2
     - type: Lock
-      locked: False
+      locked: false
   - uid: 239
     components:
     - type: Transform
@@ -2011,7 +1972,7 @@ entities:
     - type: EntityStorage
       air:
         volume: 200
-        immutable: False
+        immutable: false
         temperature: 293.14673
         moles:
         - 1.7459903
@@ -2027,7 +1988,7 @@ entities:
         - 0
         - 0
     - type: Lock
-      locked: False
+      locked: false
 - proto: LunchboxGenericFilledHealthy
   entities:
   - uid: 240
@@ -2053,8 +2014,6 @@ entities:
     components:
     - type: Transform
       parent: 236
-    - type: Physics
-      canCollide: False
     - type: InsideEntityStorage
 - proto: MedkitFilled
   entities:
@@ -2062,8 +2021,6 @@ entities:
     components:
     - type: Transform
       parent: 236
-    - type: Physics
-      canCollide: False
     - type: InsideEntityStorage
 - proto: MedTekCartridge
   entities:
@@ -2084,7 +2041,7 @@ entities:
   - uid: 175
     components:
     - type: Transform
-      anchored: True
+      anchored: true
       pos: 4.5,-6.5
       parent: 2
     - type: Physics
@@ -2101,7 +2058,7 @@ entities:
   - uid: 174
     components:
     - type: Transform
-      anchored: True
+      anchored: true
       pos: 3.5,-6.5
       parent: 2
     - type: Physics
@@ -2127,8 +2084,6 @@ entities:
     components:
     - type: Transform
       parent: 231
-    - type: Physics
-      canCollide: False
 - proto: PoweredlightCyan
   entities:
   - uid: 251
@@ -2787,7 +2742,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Aft Starboard
   - uid: 300
     components:
@@ -2798,7 +2753,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Engineroom Port
   - uid: 301
     components:
@@ -2809,7 +2764,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Engineroom Starboard
   - uid: 302
     components:
@@ -2819,7 +2774,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Central Compartment
   - uid: 303
     components:
@@ -2837,7 +2792,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Medbay
   - uid: 305
     components:
@@ -2848,7 +2803,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Aft Port
   - uid: 306
     components:
@@ -2859,7 +2814,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Port Fore
   - uid: 307
     components:
@@ -2870,7 +2825,7 @@ entities:
     - type: SurveillanceCamera
       setupAvailableNetworks:
       - SurveillanceCameraGeneral
-      nameSet: True
+      nameSet: true
       id: Starboard Fore
 - proto: SurveillanceCameraRouterGeneral
   entities:
@@ -3283,7 +3238,7 @@ entities:
     - type: MetaData
       name: Outpost Nucleus
     - type: Transform
-      anchored: False
+      anchored: false
       pos: 0.5,-0.5
       parent: 2
     - type: WarpPoint
@@ -3294,8 +3249,6 @@ entities:
     components:
     - type: Transform
       parent: 227
-    - type: Physics
-      canCollide: False
     - type: InsideEntityStorage
 - proto: WeaponCapacitorRecharger
   entities:
