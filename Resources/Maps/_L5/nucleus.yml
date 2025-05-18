@@ -4,8 +4,8 @@ meta:
   engineVersion: 256.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/18/2025 16:14:33
-  entityCount: 437
+  time: 05/18/2025 17:01:57
+  entityCount: 441
 maps:
 - 1
 grids:
@@ -963,6 +963,53 @@ entities:
     - type: Transform
       parent: 227
     - type: InsideEntityStorage
+- proto: FireAlarm
+  entities:
+  - uid: 203
+    components:
+    - type: Transform
+      pos: -0.5,3.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 173
+      - 147
+  - uid: 298
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 5.5,1.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 150
+      - 147
+      - 148
+      - 149
+      - 143
+      - 151
+      - 145
+      - 146
+  - uid: 391
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 3.5,4.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 151
+  - uid: 441
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 5.5,-4.5
+      parent: 2
+    - type: DeviceList
+      devices:
+      - 150
+      - 145
+      - 146
 - proto: FireAxeCabinetFilled
   entities:
   - uid: 140
@@ -990,6 +1037,9 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -4.5,-1.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 298
   - uid: 144
     components:
     - type: Transform
@@ -1002,41 +1052,67 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.5,-3.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 441
+      - 298
   - uid: 146
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -2.5,-3.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 441
+      - 298
   - uid: 147
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -1.5,-0.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 298
+      - 203
   - uid: 148
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 4.5,-1.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 298
   - uid: 149
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 4.5,0.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 298
   - uid: 150
     components:
     - type: Transform
       pos: 0.5,-2.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 441
+      - 298
   - uid: 151
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 1.5,2.5
       parent: 2
+    - type: DeviceNetwork
+      deviceLists:
+      - 298
+      - 391
 - proto: FoodBoxPizzaFilled
   entities:
   - uid: 152
@@ -1054,7 +1130,6 @@ entities:
       parent: 2
     - type: GasFilter
       filteredGas: Nitrogen
-      enabled: true
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 94
@@ -1065,7 +1140,6 @@ entities:
       parent: 2
     - type: GasFilter
       filteredGas: Oxygen
-      enabled: true
     - type: AtmosPipeColor
       color: '#990000FF'
 - proto: GasMixer
@@ -1080,7 +1154,6 @@ entities:
       inletTwoConcentration: 0.75
       inletOneConcentration: 0.25
       targetPressure: 200
-      enabled: true
     - type: AtmosPipeColor
       color: '#0055CCFF'
 - proto: GasPassiveVent
@@ -1496,6 +1569,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 4
+      - 203
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 176
