@@ -923,7 +923,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                     if (comp.ProfoundlyDeaf)
                         continue;
 
-                    if (distance <= WhisperClearRange)
+                    if (distance >= WhisperClearRange)
                         _chatManager.ChatMessageToOne(channel,
                             obfuscated,
                             obfuscatedWrappedMessage,
