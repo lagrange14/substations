@@ -1,5 +1,6 @@
 using Content.Shared.Damage;
 using Robust.Shared.Audio;
+// ReSharper disable InconsistentNaming
 
 namespace Content.Server._EE.Medical.CPR;
 

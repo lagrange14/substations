@@ -16,7 +16,7 @@ public sealed class CPRCCVars
 
         /// <summary>
         ///     By default, CPR reduces rot timers by an amount of seconds equal to the time spent performing CPR as an abstraction of delaying brain death. This is an optional multiplier that can increase or decrease the amount
-        ///     of rot reduction. Set it to 2 for if you want 3 seconds of CPR to reduce 6 seconds of rot.
+        ///     of rot reduction. Set it to 2 for if you want 3 seconds of CPR to reduce 6 seconds of rot. Currently, it pauses rot where it is.
         /// </summary>
         /// <remarks>
         ///     If you're wondering why there isn't a CVar for setting the duration of the doafter, that's because it's not actually possible to have a timespan in cvar form

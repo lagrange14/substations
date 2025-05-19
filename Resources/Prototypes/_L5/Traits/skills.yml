@@ -3,7 +3,6 @@
   name: trait-cpr-training-name
   description: trait-cpr-training-desc
   category: Skills # L5 - moved to Skills
-  cost: 2
   components:
     - type: CPRTraining
 
@@ -12,7 +11,6 @@
   name: trait-surgery-training-name
   description: trait-surgery-training-desc
   category: Skills # L5 - moved to Skills
-  cost: 2
   components:
   - type: SurgerySpeedModifier
     speedModifier: 1.6
@@ -22,7 +20,14 @@
   name: trait-experienced-surgeon-name
   description: trait-experienced-surgeon-desc
   category: Skills # L5 - moved to Skills
-  cost: 4
   components:
   - type: SurgerySpeedModifier
     speedModifier: 2.5
+
+- type: trait
+  id: SignLanguage
+  name: trait-sign-language-name
+  description: trait-sign-language-name
+  category: Skills
+  components:
+  - type: SignLanguage
