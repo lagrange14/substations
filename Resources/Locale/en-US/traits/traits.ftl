@@ -36,10 +36,6 @@ trait-frontal-lisp-desc = You thpeak with a lithp.
 trait-socialanxiety-name = Stutter
 trait-socialanxiety-desc = You speak with a stutter.
 
-trait-name-CPRTraining = CPR Training
-trait-description-CPRTraining = At some point in your life, you have received training in how to perform CPR.
-                                This trait is automatically given for free to medical doctors, and is intended for non-medical characters
-
 trait-southern-name = Southern drawl
 trait-southern-desc = You have a different way of speakin'.
 
@@ -57,15 +53,3 @@ trait-italian-desc = Mamma mia! You seem to have lived in space Italy!
 
 trait-painnumbness-name = Numb
 trait-painnumbness-desc = You lack any sense of feeling pain, being unaware of how hurt you may be.
-
-trait-name-SurgeryTraining = Surgery Training
-trait-description-SurgeryTraining =
-    At some point in your life you acquired the knowledge and experience necessary for performing surgery effectively.
-    This trait boosts your surgery speed to 1.6, and is intended for non-medical characters, as medical jobs already have faster surgery.
-    (This is slightly faster than a medical intern (1.5) but slower than a normal doctor (1.75))
-
-trait-name-ExperiencedSurgeon = Experienced Surgeon
-trait-description-ExperiencedSurgeon =
-    Surgery is your specialty. You are faster than most at your craft.
-    This trait boosts your surgery speed to 2.5, which is the same as the innate boost CMO gets.
-    (This is either a boost from 1.75 or 2 depending on your job)
