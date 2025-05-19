@@ -26,8 +26,7 @@ public sealed class CPRCCVars
             CVarDef.Create("cpr.rot_reduction_multiplier", 1f, CVar.REPLICATED | CVar.SERVER);
 
         /// <summary>
-        ///     By default, CPR heals airloss by 1 point for every second spent performing CPR, meaning that airloss damage stays steady as opposed to accumulting. Just like above, this directly multiplies the healing amount, meaning that this would *heal* airloss damage.
-        ///     Set it to -2 to get 6 points of airloss healing for every 3 seconds of CPR.
+        ///     By default, CPR heals airloss by 0.5 point for every second spent performing CPR, meaning that airloss damage accumulates very slowly as opposed to rapidly. Just like above, this directly multiplies the healing amount, meaning increasing this would *heal* airloss damage.
         /// </summary>
         public static readonly CVarDef<float> CPRAirlossReductionMultiplier =
             CVarDef.Create("cpr.airloss_reduction_multiplier", -0.5f, CVar.REPLICATED | CVar.SERVER);
