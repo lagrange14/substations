@@ -12,19 +12,7 @@ public sealed partial class CPRTrainingComponent : Component
     [DataField]
     public TimeSpan DoAfterDuration = TimeSpan.FromSeconds(3);
 
-    [DataField] public DamageSpecifier CPRHealing = new()
-    {
-        DamageDict =
-        {
-            ["Asphyxiation"] = -6
-        }
-    };
-
     [DataField] public float CrackRibsModifier = 1f;
-
-    [DataField] public float ResuscitationChance = 0.1f;
-
-    [DataField] public float RotReductionMultiplier;
 
     public EntityUid? CPRPlayingStream;
 }

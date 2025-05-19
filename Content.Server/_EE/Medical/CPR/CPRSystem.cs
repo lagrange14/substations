@@ -2,6 +2,7 @@ using Content.Server.Atmos.Rotting;
 using Content.Server.DoAfter;
 using Content.Server.Nutrition.EntitySystems;
 using Content.Server.Popups;
+using Content.Shared._EE.CCVars;
 using Content.Shared.Atmos.Rotting;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
@@ -12,8 +13,9 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Verbs;
 using Robust.Server.Audio;
 using Robust.Shared.Audio;
-using Robust.Shared.Random;
+using Robust.Shared.Configuration;
 using Robust.Shared.Utility;
+// ReSharper disable InconsistentNaming
 
 namespace Content.Server._EE.Medical.CPR;
 
@@ -24,11 +26,10 @@ public sealed class CPRSystem : EntitySystem
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
     [Dependency] private readonly FoodSystem _foodSystem = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly MobThresholdSystem _mobThreshold = default!;
-    [Dependency] private readonly IRobustRandom _robustRandom = default!;
     [Dependency] private readonly RottingSystem _rottingSystem = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
+    [Dependency] private readonly IConfigurationManager _configuration = default!;
 
     public override void Initialize()
     {
@@ -39,6 +40,10 @@ public sealed class CPRSystem : EntitySystem
 
     private void AddCPRVerb(Entity<CPRTrainingComponent> performer, ref GetVerbsEvent<InnateVerb> args)
     {
+        // L5 - respect CVar
+        if (!_configuration.GetCVar(CPRCCVars.EnableCPR))
+            return;
+
         if (!args.CanInteract || !args.CanAccess || !TryComp<MobStateComponent>(args.Target, out var targetState)
             || targetState.CurrentState == MobState.Alive)
             return;
@@ -101,19 +106,25 @@ public sealed class CPRSystem : EntitySystem
             return;
         }
 
-        if (!performer.Comp.CPRHealing.Empty)
-            _damageable.TryChangeDamage(args.Target, performer.Comp.CPRHealing, true, origin: performer);
+        // L5 changes:
+        // - Respect CVars
+        // - No resuscitation chance
+        _damageable.TryChangeDamage(args.Target,
+            new DamageSpecifier
+            {
+                DamageDict =
+                {
+                    ["Asphyxiation"] = performer.Comp.DoAfterDuration.Seconds * _configuration.GetCVar(CPRCCVars.CPRAirlossReductionMultiplier),
+                },
+            },
+            true,
+            origin: performer);
 
-        if (performer.Comp.RotReductionMultiplier > 0)
-            _rottingSystem.ReduceAccumulator(
-                (EntityUid)args.Target, performer.Comp.DoAfterDuration * performer.Comp.RotReductionMultiplier);
 
-        if (_robustRandom.Prob(performer.Comp.ResuscitationChance)
-            && _mobThreshold.TryGetThresholdForState((EntityUid)args.Target, MobState.Dead, out var threshold)
-            && TryComp<DamageableComponent>(args.Target, out var damageableComponent)
-            && TryComp<MobStateComponent>(args.Target, out var state)
-            && damageableComponent.TotalDamage < threshold)
-            _mobStateSystem.ChangeMobState(args.Target.Value, MobState.Critical, state, performer);
+        _rottingSystem.ReduceAccumulator(
+            (EntityUid)args.Target,
+            performer.Comp.DoAfterDuration * _configuration.GetCVar(CPRCCVars.CPRRotReductionMultiplier));
+
 
         var isAlive = _mobStateSystem.IsAlive(args.Target.Value);
         args.Repeat = !isAlive;
