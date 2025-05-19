@@ -13,7 +13,5 @@ public sealed partial class CPRTrainingComponent : Component
     [DataField]
     public TimeSpan DoAfterDuration = TimeSpan.FromSeconds(3);
 
-    [DataField] public float CrackRibsModifier = 1f;
-
     public EntityUid? CPRPlayingStream;
 }
