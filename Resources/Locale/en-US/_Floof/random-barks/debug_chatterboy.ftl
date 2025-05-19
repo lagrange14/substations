@@ -53,4 +53,5 @@ bark-chatterboyWhisper-7 = hfhfhfhfhfh
 bark-chatterboyWhisper-8 = hi mom
 bark-chatterboyWhisper-count = 8
 
-bark-default-count = 0
+bark-default-1 = Bark
+bark-default-count = 1

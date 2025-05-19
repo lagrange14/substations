@@ -19,14 +19,17 @@
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/chairs.rsi
     state: retro_chair
+  - type: Rotatable
+    rotateWhileAnchored: true
 
 - type: entity
-  parent: N14ChairBarRetro
+  parent: Chair
   id: N14ChairDinerBench
   name: diner chair
   description: A cozy diner chair.
   components:
   - type: Sprite
+    sprite: _Nuclear14/Structures/Furniture/chairs.rsi
     state: diner_chair
 
 - type: entity
@@ -36,6 +39,8 @@
   components:
   - type: Sprite
     state: ergo_chair
+  - type: Rotatable # L5 they look like they've got swivel bases so
+    rotateWhileAnchored: true
 
 - type: entity
   parent: N14ChairBarRetro
@@ -45,3 +50,5 @@
   components:
   - type: Sprite
     state: captain_chair
+  - type: Rotatable # L5 im letting them swivel!
+    rotateWhileAnchored: true

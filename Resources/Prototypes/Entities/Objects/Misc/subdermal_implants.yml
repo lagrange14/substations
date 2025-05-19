@@ -169,10 +169,13 @@
   - type: Store
     balance:
       Telecrystal: 0
+  - type: Contracts # DeltaV - Forced 0 reputation to prevent buying bloodreds etc on it
   - type: UserInterface
     interfaces:
       enum.StoreUiKey.Key:
         type: StoreBoundUserInterface
+      enum.ContractsUiKey.Key: # DeltaV
+        type: ContractsBUI
 
 - type: entity
   parent: BaseSubdermalImplant
@@ -344,14 +347,7 @@
   categories: [ HideSpawnMenu ]
   components:
    - type: SubdermalImplant
-     addedComponents: # DeltaV - replaces mindshield tag logic
-     - type: MindShield
-   # Begin DeltaV Removals - bad implementation replaced with comp reg
-   #- type: MindShieldImplant
-   #- type: Tag
-   #  tags:
-   #    - MindShield
-   # End DeltaV Removals
+   - type: MindShieldImplant
 
 - type: entity
   parent: DeathRattleImplant

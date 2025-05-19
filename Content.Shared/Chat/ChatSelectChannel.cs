@@ -52,6 +52,11 @@
         SubtleOOC = ChatChannel.SubtleOOC,
 
         /// <summary>
+        ///     Sign language - L5
+        /// </summary>
+        Sign = ChatChannel.Sign,
+
+        /// <summary>
         ///     Deadchat
         /// </summary>
         Dead = ChatChannel.Dead,

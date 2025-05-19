@@ -808,9 +808,9 @@
     flavors:
       - nutty
       - creamy
-  - type: Tag
-    tags:
-    - Dairy # L5
+  #- type: Tag
+    #tags:
+    #- Dairy # L5  # Goat's milk is not dairy for the purposes of allergies
   - type: Sprite
     state: chevrelog
   - type: SliceableFood
@@ -849,7 +849,7 @@
           Quantity: 0.2
   - type: Tag
     tags:
-    - Dairy # L5
+    #- Dairy # L5  # Not dairy for the purposes of allergies
     - Slice
 
 - type: entity

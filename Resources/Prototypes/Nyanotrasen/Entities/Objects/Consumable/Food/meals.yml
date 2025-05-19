@@ -29,6 +29,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Vegan # L5
 
 - type: entity
   name: lil baked rice
@@ -58,6 +59,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Vegan # L5
 
 - type: entity
   name: green lasagne
@@ -92,6 +94,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy
 #Tastes like cheese, pesto and pasta
 
 - type: entity
@@ -122,6 +125,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy
 #Tastes like cheese, pesto and pasta
 
 - type: entity
@@ -148,6 +152,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Vegan
 #Tastes like corn and char
 
 - type: entity
@@ -175,6 +180,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy
 #Tastes like corn, butter and char
 
 - type: entity
@@ -203,6 +209,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy
 #Tastes like creamy cheese, breading and oil
 
 # Mac Balls should use macncheese donks
@@ -236,6 +243,8 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy
+      - Wheat
 #Tastes like pasta, cornbread and cheese
 
 - type: entity

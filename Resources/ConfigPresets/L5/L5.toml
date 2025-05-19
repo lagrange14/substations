@@ -11,6 +11,9 @@ role_timers             = false # no time requirements for roles
 cryo_sleep_rejoining    = true
 hostname_in_titlebar    = true
 
+[nf14.respawn]
+time = 0
+
 [vote]
 preset_enabled = true
 map_enabled    = true
@@ -35,7 +38,7 @@ space_wind   = true
 #grid_impulse = true # this just sends some salvage wrecks flying.
 
 [shuttle]
-arrivals                       = false # doesn't work very well :c
+arrivals                       = false # doesn't work very well in general, and not at all with Outpost
 emergency_dock_time            = 360 # an extra 2 minutes over the default
 emergency_transit_time_min     = 90
 auto_call_time                 = 0 # don't automatically call the shuttle
@@ -69,9 +72,10 @@ tickrate        = 30
 limit = 10.0
 
 [admin]
-see_own_notes           = true
-deadmin_on_join         = true
-allow_multi_server_play = true
+see_own_notes               = true
+deadmin_on_join             = true
+allow_multi_server_play     = true
+admins_count_in_playercount = true
 [admin.alert]
 min_players_sharing_connection = 2
 
@@ -89,5 +93,6 @@ mentor_help_sound = "/Audio/_DV/Effects/Admin/chord2.ogg" # we get our own sound
 [control]
 storage_limit = 2
 
-[discord]
-rich_main_icon_id = "deltav"
+# L5 - we'll get our own icon in soon.
+#[discord]
+#rich_main_icon_id = "deltav"

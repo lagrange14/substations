@@ -83,6 +83,8 @@
   - type: IconSmooth
     key: walls
     base: brick
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -115,6 +117,8 @@
   - type: IconSmooth
     key: walls
     base: clock
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -151,6 +155,8 @@
   - type: IconSmooth
     key: walls
     base: clown
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -278,6 +284,8 @@
   - type: IconSmooth
     key: walls
     base: diamond
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -323,6 +331,8 @@
   - type: IconSmooth
     key: walls
     base: gold
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -352,6 +362,8 @@
   - type: IconSmooth
     key: walls
     base: ice
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -399,6 +411,8 @@
     base: plasma
   - type: RadiationBlocker
     resistance: 5
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -444,6 +458,8 @@
   - type: IconSmooth
     key: walls
     base: plastic
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -639,6 +655,8 @@
     price: 250
   - type: RadiationBlocker
     resistance: 5
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: WallReinforced
@@ -678,12 +696,13 @@
         node: girder
       - !type:DoActsBehavior
         acts: ["Destruction"]
-
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: WallShuttleDiagonal
   id: WallReinforcedDiagonal
-  name: reinforced wall
+  name: diagonal reinforced wall
   suffix: diagonal
   placement:
     mode: SnapgridCenter
@@ -704,6 +723,9 @@
   - type: Icon
     sprite: Structures/Walls/reinforced_diagonal.rsi
     state: state0
+  - type: Construction # L5 made diagonal walls buildable yay
+    graph: Girder
+    node: diagonalReinforcedWall
 
 # Riveting
 - type: entity
@@ -817,6 +839,8 @@
   - type: IconSmooth
     key: walls
     base: silver
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   id: WallShuttleDiagonal
@@ -905,6 +929,7 @@
   parent: BaseWall
   id: WallShuttle
   name: shuttle wall
+  suffix: Reinforced, Exterior # DeltaV - distinguish it from interior
   components:
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -960,51 +985,8 @@
           5: { state: shuttle_construct-5, visible: true}
   - type: Reflect
     reflectProb: 1
-
-- type: entity
-  parent: BaseWall
-  id: WallShuttleInterior
-  name: shuttle wall
-  suffix: Interior
-  components:
-  - type: RCDDeconstructable
-    cost: 6
-    delay: 8
-    fx: EffectRCDDeconstruct8
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 400
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalSlam
-    - trigger:
-        !type:DamageTrigger
-        damage: 200
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalSlam
-      - !type:ChangeConstructionNodeBehavior
-        node: girder
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Sprite
-    sprite: Structures/Walls/shuttleinterior.rsi
-  - type: Icon
-    sprite: Structures/Walls/shuttleinterior.rsi
-  - type: Construction
-    graph: Girder
-    node: shuttleInteriorWall
-  - type: IconSmooth
-    key: walls
-    base: state
-  - type: Reflect
-    reflectProb: 1
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -1051,11 +1033,13 @@
   - type: IconSmooth
     key: walls
     base: solid
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: WallShuttleDiagonal
   id: WallSolidDiagonal
-  name: solid wall
+  name: Diagonal solid wall
   suffix: diagonal
   placement:
     mode: SnapgridCenter
@@ -1073,6 +1057,9 @@
   - type: Icon
     sprite: Structures/Walls/solid_diagonal.rsi
     state: state0
+  - type: Construction # L5 making it buildable
+    graph: Girder
+    node: diagonalWall
 
 - type: entity
   parent: WallSolid
@@ -1112,6 +1099,8 @@
         node: girder
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -1152,6 +1141,8 @@
     base: uranium
   - type: RadiationBlocker
     resistance: 6
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -1191,6 +1182,8 @@
   - type: IconSmooth
     key: woods
     base: wood
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -1262,6 +1255,8 @@
   - type: IconSmooth
     key: walls
     base: necropolis
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: BaseWall
@@ -1291,6 +1286,8 @@
     - mining
     - miningB
   - type: Appearance
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: WallShuttleDiagonal
@@ -1337,6 +1334,8 @@
       behaviors:
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: WallVaultAlien
@@ -1446,6 +1445,8 @@
   - type: IconSmooth
     key: cobblebricks
     base: cobblebrick
+  - type: CosmicCorruptible # DeltaV - Cosmic Cult
+    convertTo: WallCosmicCult
 
 - type: entity
   parent: WallCobblebrick

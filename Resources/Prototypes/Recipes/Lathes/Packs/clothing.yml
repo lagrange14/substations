@@ -39,6 +39,11 @@
   - ClothingHeadHatHopcap
   - ClothingUniformJumpsuitHoP
   - ClothingUniformJumpskirtHoP
+  # Generic
+  - ClothingHeadHatBeretCommand
+  - ClothingHeadHatCommandSoft
+  - ClothingUniformJumpskirtCommandGeneric
+  - ClothingUniformJumpsuitCommandGeneric
 
 - type: latheRecipePack
   parent:
@@ -247,3 +252,26 @@
   - ClothingOuterWinterSyndie
   - ClothingOuterWinterSyndieCap
   - BedsheetSyndie
+
+- type: latheRecipePack # L5 lathable towels, not including the NT, CC and syndie towels
+  id: ClothingTowels
+  recipes:
+    - TowelColorWhite
+    - TowelColorPurple
+    - TowelColorBlue
+    - TowelColorDarkBlue
+    - TowelColorLightBlue
+    - TowelColorTeal
+    - TowelColorBrown
+    - TowelColorLightBrown
+    - TowelColorGray
+    - TowelColorGreen
+    - TowelColorDarkGreen
+    - TowelColorGold
+    - TowelColorOrange
+    - TowelColorBlack
+    - TowelColorPink
+    - TowelColorYellow
+    - TowelColorMaroon
+    - TowelColorSilver
+    - TowelColorMime

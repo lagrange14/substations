@@ -58,6 +58,21 @@
     whitelist:
       tags:
       - Ore
+      - ArtifactFragment # L5 - parity with ore bag
+  # Begin L5 - magnetizable and dumpable ore box
+  - type: MagnetPickup
+    range: 2
+  - type: Dumpable
+  - type: ItemToggle
+    soundActivate: &soundActivate
+      collection: sparks
+      params:
+        variation: 0.25
+    soundDeactivate: *soundActivate
+  - type: ItemToggleExamine
+    on: magnet-pickup-component-magnet-on
+    off: magnet-pickup-component-magnet-off
+  # End L5
   - type: UserInterface
     interfaces:
       enum.StorageUiKey.Key:

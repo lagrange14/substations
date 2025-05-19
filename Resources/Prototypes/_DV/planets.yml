@@ -4,10 +4,11 @@
   mapName: shuttle-destination-lavaland
   mapLight: "#A34931"
   addedComponents:
-  - type: FTLDestination
-    whitelist:
-      components:
-      - MiningShuttle
+# L5 - allow other shuttles to FTL to Lavaland for e.g: outpost
+#  - type: FTLDestination
+#    whitelist:
+#      components:
+#      - MiningShuttle
   - type: WeatherScheduler # Regular ash storms
     stages:
     - duration: # 5-10 minutes of calm
@@ -31,9 +32,9 @@
   atmosphere:
     volume: 2500
     temperature: 353.15 # 80C
-    moles: # 120kPa, 14% O2 (unbreathable)
-    - 14.38346
-    - 88.35554
+    moles: # 43kPa, 31% O2 (unbreathable)
+    - 11.6214
+    - 24.903
   biomeMarkerLayers:
   - OreIron
   - OreQuartz
@@ -43,6 +44,7 @@
   - OrePlasma3
   - OreUranium
   - OreDiamond2
+  - OreBluespace
   - OreArtifactFragment
 
 - type: planet
@@ -50,11 +52,12 @@
   biome: Snow
   mapName: shuttle-destination-glacier-surface
   mapLight: "#2B3153"
-  addedComponents:
-  - type: FTLDestination
-    whitelist:
-      components:
-      - MiningShuttle
+  # L5 - allow other shuttles to FTL to Glacier surface for e.g: outpost
+#  addedComponents:
+#  - type: FTLDestination
+#    whitelist:
+#      components:
+#      - MiningShuttle
   atmosphere:
     volume: 2500
     temperature: 180 # -93, extreme cold
@@ -70,4 +73,5 @@
   - OrePlasma3
   - OreUranium2
   - OreDiamond
+  - OreBluespace
   - OreArtifactFragment

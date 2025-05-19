@@ -16,6 +16,7 @@
   - HandheldGPSBasic
   - TRayScanner
   - UtilityBelt
+  - ClothingOuterVestTank
   - HandheldStationMap
   - ClothingHeadHatWelding
   - ClothingHeadHatCone
@@ -26,6 +27,8 @@
   recipes:
   - AirTank
   - GasAnalyzer
+  - InflatableWall # L5 make the inflatables craftable
+  - InflatableDoor # L5
 
 - type: latheRecipePack
   id: ElectronicsStatic

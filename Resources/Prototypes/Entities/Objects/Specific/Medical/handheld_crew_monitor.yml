@@ -22,8 +22,8 @@
     deviceNetId: Wireless
     receiveFrequencyId: CrewMonitor
   - type: WirelessNetworkConnection
-    range: 500
-  - type: StationLimitedNetwork
+    range: 1000 # L5 - map-global suit sensors
+  # - type: StationLimitedNetwork # L5 - map-global suit sensors
   - type: ReverseEngineering # Nyano
     difficulty: 2
     recipes:

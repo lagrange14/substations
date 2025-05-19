@@ -125,7 +125,20 @@ public sealed class AirAlarmFilterMode : AirAlarmModeExecutor
 
         foreach (var (addr, device) in alarm.VentData)
         {
-            AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FilterModePreset);
+            // Begin L5 - flowmos
+            switch (device.VentFlowmosMode)
+            {
+                case GasVentPumpData.VentPumpFlowmos.Inlet:
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FilterInletPreset);
+                    break;
+                case GasVentPumpData.VentPumpFlowmos.Outlet:
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FilterOutletPreset);
+                    break;
+                default:
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FilterModePreset);
+                    break;
+            }
+            // End L5
         }
 
         foreach (var (addr, device) in alarm.ScrubberData)
@@ -144,7 +157,20 @@ public sealed class AirAlarmWideFilterMode : AirAlarmModeExecutor
 
         foreach (var (addr, device) in alarm.VentData)
         {
-            AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FilterModePreset);
+            // Begin L5 - flowmos
+            switch (device.VentFlowmosMode)
+            {
+                case GasVentPumpData.VentPumpFlowmos.Inlet:
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FilterWideInletPreset);
+                    break;
+                case GasVentPumpData.VentPumpFlowmos.Outlet:
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FilterWideOutletPreset);
+                    break;
+                default:
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FilterModePreset);
+                    break;
+            }
+            // End L5
         }
 
         foreach (var (addr, device) in alarm.ScrubberData)
@@ -163,7 +189,26 @@ public sealed class AirAlarmPanicMode : AirAlarmModeExecutor
 
         foreach (var (addr, device) in alarm.VentData)
         {
-            AirAlarmSystem.SetData(uid, addr, GasVentPumpData.PanicModePreset);
+            // Begin L5 - flowmos
+            switch (device.VentFlowmosMode)
+            {
+                case GasVentPumpData.VentPumpFlowmos.Inlet:
+                    var inletPreset = GasVentPumpData.FilterInletPreset;
+                    inletPreset.Enabled = false;
+
+                    AirAlarmSystem.SetData(uid, addr, inletPreset);
+                    break;
+                case GasVentPumpData.VentPumpFlowmos.Outlet:
+                    var outletPreset = GasVentPumpData.FilterOutletPreset;
+                    outletPreset.ExternalPressureBound = 0;
+
+                    AirAlarmSystem.SetData(uid, addr, outletPreset);
+                    break;
+                default:
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FillModePreset);
+                    break;
+            }
+            // End L5
         }
 
         foreach (var (addr, device) in alarm.ScrubberData)
@@ -182,7 +227,26 @@ public sealed class AirAlarmFillMode : AirAlarmModeExecutor
 
         foreach (var (addr, device) in alarm.VentData)
         {
-            AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FillModePreset);
+            // Begin L5 - flowmos
+            switch (device.VentFlowmosMode)
+            {
+                case GasVentPumpData.VentPumpFlowmos.Inlet:
+                    var inletPreset = GasVentPumpData.FilterInletPreset;
+                    inletPreset.PressureLockoutOverride = true;
+                    inletPreset.ExternalPressureBound = GasVentPumpData.FillModePreset.ExternalPressureBound;
+
+                    AirAlarmSystem.SetData(uid, addr, inletPreset);
+                    break;
+                case GasVentPumpData.VentPumpFlowmos.Outlet:
+                    var outletPreset = GasVentPumpData.FilterOutletPreset;
+                    outletPreset.Enabled = false;
+                    AirAlarmSystem.SetData(uid, addr, outletPreset);
+                    break;
+                default:
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FillModePreset);
+                    break;
+            }
+            // End L5
         }
 
         foreach (var (addr, device) in alarm.ScrubberData)

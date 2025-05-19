@@ -622,9 +622,9 @@
         maxVol: 20
         reagents:
         - ReagentId: Nutriment
-          Quantity: 11
-        - ReagentId: CarpoToxin # WHY WASNT THIS POISONOUS!!!!!!!!!!!
-          Quantity: 5
+          Quantity: 18
+        #- ReagentId: CarpoToxin # WHY WASNT THIS POISONOUS!!!!!!!!!!! # L5 BECAUSE FOOD KILLING YOU SUCKS
+          #Quantity: 5
 # Tastes like bun, fish.
 
 - type: entity

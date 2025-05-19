@@ -6,8 +6,8 @@
       edges:
         - to: girder
           completed:
-            - !type:SnapToGrid
-              southRotation: true
+            - !type:SnapToGrid {}
+              #southRotation: true # L5 frontier did this and it fixed the issue with the diagonal walls??
           steps:
             - material: Steel
               amount: 2
@@ -40,10 +40,21 @@
               amount: 2
               doAfter: 2
 
-        - to: reinforcedGirder
+        - to: diagonalWall # L5 Buildable diagonal walls
           completed:
             - !type:SnapToGrid
-              southRotation: true
+              southRotation: false
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - tool: Welding
+              doAfter: 3
+
+
+        - to: reinforcedGirder
+          completed:
+            - !type:SnapToGrid {}
+              #southRotation: true # L5 this makes it respect your rotation choice for the diagonal walls later down the line
           conditions:
             - !type:EntityAnchored {}
           steps:
@@ -145,21 +156,23 @@
               amount: 2
               doAfter: 2
 
+        # Begin DeltaV Additions
         - to: shuttleInteriorWall
           completed:
-            - !type:SnapToGrid
-              southRotation: true
+          - !type:SnapToGrid
+            southRotation: true
           conditions:
-            - !type:EntityAnchored { }
+          - !type:EntityAnchored
           steps:
-            - material: MetalRod
-              amount: 2
-              doAfter: 1
-            - tool: Screwing
-              doAfter: 1
-            - material: Steel
-              amount: 2
-              doAfter: 1
+          - material: MetalRod
+            amount: 2
+            doAfter: 1
+          - tool: Screwing
+            doAfter: 1
+          - material: Steel
+            amount: 2
+            doAfter: 1
+        # End DeltaV Additions
 
     - node: wall
       entity: WallSolid
@@ -172,6 +185,19 @@
           steps:
             - tool: Welding
               doAfter: 10
+
+    - node: diagonalWall # L5 buildable diagonal solid walls baby!!!
+      entity: WallSolidDiagonal
+      edges:
+        - to: girder
+          completed:
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 1
+            - !type:SnapToGrid {}
+          steps:
+            - tool: Welding
+              doAfter: 4
 
     - node: uraniumWall
       entity: WallUranium
@@ -267,36 +293,49 @@
             - tool: Prying
               doAfter: 5
 
+    # Begin DeltaV Additions
     - node: shuttleInteriorWall
       entity: WallShuttleInterior
       edges:
-        - to: girder
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 2
-            - !type:SpawnPrototype
-              prototype: PartRodMetal1
-              amount: 2
-          steps:
-            - tool: Welding
-              doAfter: 10
-            - tool: Screwing
-              doAfter: 1
+      - to: girder
+        completed:
+        - !type:SpawnPrototype
+          prototype: SheetSteel1
+          amount: 2
+        - !type:SpawnPrototype
+          prototype: PartRodMetal1
+          amount: 2
+        steps:
+        - tool: Welding
+          doAfter: 10
+        - tool: Screwing
+          doAfter: 1
+    # End DeltaV Additions
 
     - node: reinforcedGirder
       entity: ReinforcedGirder
       edges:
         - to: reinforcedWall
           completed:
-            - !type:SnapToGrid
-              southRotation: true
+            - !type:SnapToGrid {}
           conditions:
             - !type:EntityAnchored { }
           steps:
             - material: Plasteel
               amount: 2
               doAfter: 1
+
+        - to: diagonalReinforcedWall # L5 buildable diagonal reinforced wall baby!!!
+          completed:
+            - !type:SnapToGrid {}
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Plasteel
+              amount: 2
+              doAfter: 2
+            - tool: Welding
+              doAfter: 3
 
         - to: shuttleWall
           completed:
@@ -315,9 +354,6 @@
               doAfter: 1
 
         - to: diagonalshuttleWall
-          completed:
-            - !type:SnapToGrid
-              southRotation: false
           conditions:
             - !type:EntityAnchored { }
           steps:
@@ -394,6 +430,59 @@
                   data: 0
             - tool: Cutting
               doAfter: 1
+
+    - node: diagonalReinforcedWall # L5 diagonal reinforced walls buildable, costs and takes roughly half the time/materials
+      entity: WallReinforcedDiagonal
+      edges:
+        - to: reinforcedGirder
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPlasteel1
+              amount: 2
+          steps:
+            - tool: Cutting
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 5
+            - tool: Screwing
+              doAfter: 1
+            - tool: Welding
+              doAfter: 2
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 4
+            - tool: Prying
+              doAfter: 1
+            - tool: Anchoring
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 3
+            - tool: Welding
+              doAfter: 5
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 2
+            - tool: Prying
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 1
+            - tool: Screwing
+              doAfter: 1
+              completed:
+                - !type:VisualizerDataInt
+                  key: "enum.ReinforcedWallVisuals.DeconstructionStage"
+                  data: 0
+            - tool: Cutting
+              doAfter: 1
+
 
     - node: shuttleWall
       entity: WallShuttle

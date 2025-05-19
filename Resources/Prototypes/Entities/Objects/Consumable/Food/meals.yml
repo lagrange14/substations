@@ -325,11 +325,11 @@
         maxVol: 60 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 27 # imp
-        - ReagentId: CarpoToxin
-          Quantity: 10 # imp
+          Quantity: 32 # imp
+        #- ReagentId: CarpoToxin # L5 this change was ass I apologize
+          #Quantity: 10 # imp
         - ReagentId: Vitamin # imp
-          Quantity: 4
+          Quantity: 9
         - ReagentId: CapsaicinOil # imp
           Quantity: 10
   - type: Tag
@@ -660,12 +660,12 @@
       food:
         maxVol: 15 # imp
         reagents:
-        #- ReagentId: Nutriment # imp
-        #  Quantity: 6
-        - ReagentId: CarpoToxin
-          Quantity: 10 # imp
+        - ReagentId: Nutriment # imp
+          Quantity: 12
+        #- ReagentId: CarpoToxin # L5 impstation insane that's almost lethal
+          #Quantity: 10 # imp
         - ReagentId: TableSalt # imp
-          Quantity: 1
+          Quantity: 2
   - type: Tag
     tags:
     - Meat
@@ -728,12 +728,12 @@
           Quantity: 20 # imp
         - ReagentId: Water
           Quantity: 10 # imp
-        - ReagentId: Bicaridine
-          Quantity: 5
-        - ReagentId: Kelotane
-          Quantity: 5
-        - ReagentId: Desoxyephedrine # imp
-          Quantity: 10
+        #- ReagentId: Bicaridine  # L5 Commenting out the other meds on the reasoning that baking the ambrosia idk cooks out the chems idk???
+          #Quantity: 5
+        #- ReagentId: Kelotane
+          #Quantity: 5
+        #- ReagentId: Desoxyephedrine # imp # L5 commenting this out bc desoxy fucks you up here
+          #Quantity: 10
   - type: Tag
     tags:
     - Fruit

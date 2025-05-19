@@ -1,6 +1,7 @@
 using System.IO;
 using System.Linq;
 using System.Numerics;
+using Content.Shared._DV.Humanoid; // DeltaV
 using Content.Shared.CCVar;
 using Content.Shared.Decals;
 using Content.Shared.Examine;
@@ -40,6 +41,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly ISerializationManager _serManager = default!;
     [Dependency] private readonly MarkingManager _markingManager = default!;
+    [Dependency] private readonly GrammarSystem _grammarSystem = default!;
     [Dependency] protected readonly SharedSynthSystem _synthSystem = default!; // L5: Proper appearance and cloning of synths
 
     [ValidatePrototypeId<SpeciesPrototype>]
@@ -162,8 +164,12 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         targetHumanoid.Height = sourceHumanoid.Height; // CD - Character Records
 
         targetHumanoid.Gender = sourceHumanoid.Gender;
+
         if (TryComp<GrammarComponent>(target, out var grammar))
-            grammar.Gender = sourceHumanoid.Gender;
+            _grammarSystem.SetGender((target, grammar), sourceHumanoid.Gender);
+
+        var appearanceEv = new AppearanceLoadedEvent(); // DeltaV
+        RaiseLocalEvent(target, ref appearanceEv);
 
         Dirty(target, targetHumanoid);
     }
@@ -445,7 +451,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         humanoid.Gender = profile.Gender;
         if (TryComp<GrammarComponent>(uid, out var grammar))
         {
-            grammar.Gender = profile.Gender;
+            _grammarSystem.SetGender((uid, grammar), profile.Gender);
         }
 
         humanoid.Age = profile.Age;
@@ -455,6 +461,9 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             humanoid.Synthetic = true;
             _synthSystem.EnsureSynthetic(uid);
         }
+
+        var appearanceEv = new AppearanceLoadedEvent(); // DeltaV
+        RaiseLocalEvent(uid, ref appearanceEv);
 
         RaiseLocalEvent(uid, new ProfileLoadFinishedEvent()); // Shitmed Change
         Dirty(uid, humanoid);

@@ -54,3 +54,14 @@
   typingState: slime0
   offset: 0, 0.125
   hasSynthVariant: true # Delta-V
+
+- type: typingIndicator
+  id: gingerbread
+  typingState: gingerbread0
+  offset: 0, 0.125
+
+- type: typingIndicator
+  id: diona
+  typingState: diona0
+  offset: 0, 0.125
+  # L5 - TODO: ensure synth variant

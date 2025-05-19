@@ -101,9 +101,14 @@ namespace Content.Shared.Chat
         SubtleOOC = 1 << 17,
 
         /// <summary>
+        ///     Sign language - L5
+        /// </summary>
+        Sign = 1 << 18,
+
+        /// <summary>
         ///     Channels considered to be IC.
         /// </summary>
-        IC = Local | Whisper | Radio | Dead | Emotes | Subtle | Damage | Visual | Telepathic | Notifications, //Nyano - Summary: Adds telepathic as an 'IC' labelled chat..
+        IC = Local | Whisper | Radio | Dead | Emotes | Subtle | Sign | Damage | Visual | Telepathic | Notifications,
 
         AdminRelated = Admin | AdminAlert | AdminChat,
     }

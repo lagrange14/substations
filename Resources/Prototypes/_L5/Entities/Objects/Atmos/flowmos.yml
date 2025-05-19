@@ -1,0 +1,132 @@
+- type: entity
+  parent: GasVentPump
+  id: GasVentPumpInlet
+  name: air vent
+  suffix: Inlet
+  components:
+  - type: GasVentPump
+    underPressureLockoutThreshold: 30
+    # This all needs hardcoded because UninitializedSaveTest exists :(
+    flowmos: Inlet
+    # Atmospherics.OneAtmosphere + Atmospherics.AirVentPressureDelta:
+    externalPressureBound: 106.325
+  - type: DeviceNetwork
+    prefix: VTI-
+  - type: Construction
+    graph: GasUnaryFlowmos
+    node: ventpumpin
+
+- type: entity
+  parent: GasVentPump
+  id: GasVentPumpOutlet
+  name: air vent
+  suffix: Outlet
+  components:
+  - type: GasVentPump # Lockout is disabled in code
+    flowmos: Outlet
+    # Atmospherics.OneAtmosphere + Atmospherics.AirVentPressureDelta:
+    pumpDirection: Siphoning
+    externalPressureBound: 96.325
+  - type: DeviceNetwork
+    prefix: VTO-
+  - type: Construction
+    graph: GasUnaryFlowmos
+    node: ventpumpout
+
+
+- type: construction
+  name: air vent inlet
+  description: Pumps gas into the room.
+  id: GasVentPumpInlet
+  graph: GasUnaryFlowmos
+  startNode: start
+  targetNode: ventpumpin
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _DV/Structures/Piping/Atmospherics/vent.rsi
+    state: vent_off
+  layers:
+  - sprite: Structures/Piping/Atmospherics/pipe.rsi
+    state: pipeHalf
+  - sprite: _DV/Structures/Piping/Atmospherics/vent.rsi
+    state: vent_off
+  conditions:
+  - !type:NoUnstackableInTile
+
+- type: construction
+  name: air vent outlet
+  description: Pumps gas out of the room.
+  id: GasVentPumpOutlet
+  graph: GasUnaryFlowmos
+  startNode: start
+  targetNode: ventpumpout
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _DV/Structures/Piping/Atmospherics/vent.rsi
+    state: vent_off
+  layers:
+  - sprite: Structures/Piping/Atmospherics/pipe.rsi
+    state: pipeHalf
+  - sprite: _DV/Structures/Piping/Atmospherics/vent.rsi
+    state: vent_off
+  conditions:
+  - !type:NoUnstackableInTile
+
+
+- type: constructionGraph
+  id: GasUnaryFlowmos
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: ventpumpin
+      steps:
+      - material: Steel
+        amount: 2
+        doAfter: 1
+
+    - to: ventpumpout
+      steps:
+      - material: Steel
+        amount: 2
+        doAfter: 1
+
+  - node: ventpumpin
+    entity: GasVentPumpInlet
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 2
+      - !type:DeleteEntity
+      steps:
+      - tool: Screwing
+        doAfter: 1
+      - tool: Welding
+        doAfter: 1
+
+  - node: ventpumpout
+    entity: GasVentPumpOutlet
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 2
+      - !type:DeleteEntity
+      steps:
+      - tool: Screwing
+        doAfter: 1
+      - tool: Welding
+        doAfter: 1

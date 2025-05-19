@@ -76,7 +76,6 @@
             - material: FloorCarpetWhite
               amount: 1
               doAfter: 1
-
     - node: Curtains
       entity: HospitalCurtains
       edges:

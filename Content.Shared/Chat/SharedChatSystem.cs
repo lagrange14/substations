@@ -20,8 +20,9 @@ public abstract class SharedChatSystem : EntitySystem
     public const char OOCPrefix = '[';
     public const char EmotesPrefix = '@';
     public const char EmotesAltPrefix = '*';
-    public const char SubtlePrefix = '-';
-    public const char SubtleOOCPrefix = '{'; // Floof - changed to "{"
+    public const char SubtlePrefix = '-'; // Floof
+    public const char SubtleOOCPrefix = '<'; // Den
+    public const char SignPrefix = '~'; // L5
     public const char AdminPrefix = ']';
     public const char WhisperPrefix = ',';
     public const char TelepathicPrefix = '='; //Nyano - Summary: Adds the telepathic channel's prefix.
@@ -146,7 +147,7 @@ public abstract class SharedChatSystem : EntitySystem
             return true;
         }
 
-        if (!(input.StartsWith(RadioChannelPrefix)))
+        if (!(input.StartsWith(RadioChannelPrefix) || input.StartsWith(RadioChannelAltPrefix)))
             return false;
 
         if (input.Length < 2 || char.IsWhiteSpace(input[1]))

@@ -44,11 +44,13 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
         if (TryComp(ent, out BorgChassisComponent? chassis))
         {
             var chassisEnt = (ent.Owner, chassis);
-            _borgSystem.SetMaxModules(
-                chassisEnt,
-                prototype.ExtraModuleCount + prototype.DefaultModules.Length);
+            // L5 - increase borg module capacity; just use the prototype module limit
+            // _borgSystem.SetMaxModules(
+            //     chassisEnt,
+            //     prototype.ExtraModuleCount + prototype.DefaultModules.Length);
 
-            _borgSystem.SetModuleWhitelist(chassisEnt, prototype.ModuleWhitelist);
+            // L5 - disable borg module whitelist
+            // _borgSystem.SetModuleWhitelist(chassisEnt, prototype.ModuleWhitelist);
 
             foreach (var module in prototype.DefaultModules)
             {

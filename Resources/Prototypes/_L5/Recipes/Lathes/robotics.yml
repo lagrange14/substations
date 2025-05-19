@@ -1,0 +1,91 @@
+# Add back in module recipes
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleAnomaly
+  result: BorgModuleAnomaly
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleAppraisal
+  result: BorgModuleAppraisal
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleArtifact
+  result: BorgModuleArtifact
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleCable
+  result: BorgModuleCable
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleChemical
+  result: BorgModuleChemical
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleCleaning
+  result: BorgModuleCleaning
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleClowning
+  result: BorgModuleClowning
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleConstruction
+  result: BorgModuleConstruction
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleCustodial
+  result: BorgModuleCustodial
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleGardening
+  result: BorgModuleGardening
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleHarvesting
+  result: BorgModuleHarvesting
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleMining
+  result: BorgModuleMining
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleMusique
+  result: BorgModuleMusique
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleRCD
+  result: BorgModuleRCD
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleRescue
+  result: BorgModuleRescue
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleService
+  result: BorgModuleService
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleTopicals
+  result: BorgModuleTopicals
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleTraversal
+  result: BorgModuleTraversal

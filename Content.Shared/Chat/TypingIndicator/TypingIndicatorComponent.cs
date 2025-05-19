@@ -19,9 +19,15 @@ public sealed partial class TypingIndicatorComponent : Component
     public ProtoId<TypingIndicatorPrototype> TypingIndicatorPrototype = "default";
 
     /// <summary>
-    /// Delta-V: use typing indicator overrides for synths if available, and default to default synth talk sprite
+    /// L5: use typing indicator overrides for synths if available, and default to default synth talk sprite
     /// if not.
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool UseSyntheticVariant;
+
+    /// <summary>
+    ///  DeltaV - Allow the indicator to be temporarily overriden
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public ProtoId<TypingIndicatorPrototype>? TypingIndicatorOverridePrototype;
 }

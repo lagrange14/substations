@@ -1,3 +1,4 @@
+using Content.Server._Floof.Speech.Components;
 using Content.Server.Chat.Systems;
 using Content.Shared.Mind.Components;
 using Robust.Shared.Random;
@@ -7,8 +8,7 @@ namespace Content.Server._Floof.Speech.Systems;
 public sealed class RandomBarkSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-
+    [Dependency] private readonly ChatSystem _chat  = default!;
     private static readonly string[] AddedPunctuation = [".", "...", "!", "..!", "!!"];
 
 
@@ -16,11 +16,11 @@ public sealed class RandomBarkSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<_Floof.Speech.Components.RandomBarkComponent, MapInitEvent>(OnInit);
+        SubscribeLocalEvent<RandomBarkComponent, MapInitEvent>(OnInit);
     }
 
 
-    private void OnInit(Entity<_Floof.Speech.Components.RandomBarkComponent> ent, ref MapInitEvent args)
+    private void OnInit(Entity<RandomBarkComponent> ent, ref MapInitEvent args)
     {
         ent.Comp.BarkAccumulator = _random.NextFloat(ent.Comp.MinTime, ent.Comp.MaxTime) * ent.Comp.BarkMultiplier;
         ent.Comp.BarkLocaleCount ??= GetBarkLocaleCount(ent);
@@ -30,7 +30,7 @@ public sealed class RandomBarkSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<_Floof.Speech.Components.RandomBarkComponent>();
+        var query = EntityQueryEnumerator<RandomBarkComponent>();
         while (query.MoveNext(out var uid, out var barker))
         {
             barker.BarkAccumulator -= frameTime;
@@ -55,6 +55,9 @@ public sealed class RandomBarkSystem : EntitySystem
                 case "SubtleOOC":
                     chatMode = InGameICChatType.SubtleOOC;
                     break;
+                case "Sign": // L5
+                    chatMode = InGameICChatType.Sign;
+                    break;
                 case "Whisper":
                     chatMode = InGameICChatType.Whisper;
                     break;
@@ -70,7 +73,7 @@ public sealed class RandomBarkSystem : EntitySystem
     /// <summary>
     ///     Tries to get the next bark for the given entity. Returns null if it fails.
     /// </summary>
-    public string? GetNextBark(Entity<_Floof.Speech.Components.RandomBarkComponent> ent)
+    public string? GetNextBark(Entity<RandomBarkComponent> ent)
     {
         var count = GetBarkLocaleCount(ent);
         if (count <= 0)
@@ -90,7 +93,7 @@ public sealed class RandomBarkSystem : EntitySystem
         return bark;
     }
 
-    private int GetBarkLocaleCount(Entity<_Floof.Speech.Components.RandomBarkComponent> ent)
+    private int GetBarkLocaleCount(Entity<RandomBarkComponent> ent)
     {
         if (ent.Comp.BarkLocaleCount is { } localeCount)
             return localeCount;

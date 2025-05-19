@@ -11,12 +11,13 @@ public sealed class ChannelSelectorPopup : Popup
     {
         ChatSelectChannel.Local,
         ChatSelectChannel.Whisper,
+        ChatSelectChannel.Sign, // L5
         ChatSelectChannel.Emotes,
         ChatSelectChannel.Subtle, // Floofstation
-        ChatSelectChannel.SubtleOOC,
         ChatSelectChannel.Radio,
         ChatSelectChannel.Telepathic, //Nyano - Summary: determines the order in which telepathic shows.
         ChatSelectChannel.LOOC,
+        ChatSelectChannel.SubtleOOC, // Den
         ChatSelectChannel.OOC,
         ChatSelectChannel.Dead,
         ChatSelectChannel.Admin

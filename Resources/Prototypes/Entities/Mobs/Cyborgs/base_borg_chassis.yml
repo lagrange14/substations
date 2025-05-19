@@ -109,7 +109,7 @@
   #  doAfterDelay: 10
   #  allowSelfRepair: false
   - type: WeldingHealable
-    allowSelfHeal: false
+    allowSelfHeal: true # L5 - allow borg self healing
   # End DeltaV Changes
   - type: BorgChassis
   - type: SurgerySelfDirty # DeltaV: borgs get dirty from doing surgery
@@ -121,6 +121,7 @@
       - BorgChassis
       - RoboticsConsole
   - type: WiresPanel
+    openingTool: Prying
   - type: ActivatableUIRequiresPanel
   - type: NameIdentifier
     group: Silicon
@@ -251,6 +252,8 @@
     - DoorBumpOpener
     - FootstepSound
     - CanPilot
+    - SiliconEmotes
+    - Synth # L5
     - Unimplantable
   - type: Emoting
   - type: GuideHelp

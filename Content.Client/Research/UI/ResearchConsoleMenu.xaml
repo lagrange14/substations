@@ -14,7 +14,11 @@
                       MinHeight="85"
                       Margin="10">
             <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
-                <RichTextLabel Name="ResearchAmountLabel"/>
+                <BoxContainer Orientation="Horizontal" VerticalExpand="True" HorizontalExpand="True">
+                    <RichTextLabel Name="ResearchAmountLabel"/>
+                    <!-- L5 - bluespace crystal purchasing -->
+                    <Button Name="GenerateCrystalButton" Text="{Loc 'research-console-menu-generate-crystal-button'}" Margin="10 0 0 0"/>
+                </BoxContainer>
                 <RichTextLabel Name="MainDisciplineLabel"/>
                 <Control VerticalExpand="True"/>
                 <BoxContainer Name="TierDisplayContainer" Orientation="Horizontal" HorizontalExpand="True" VerticalAlignment="Bottom"/>

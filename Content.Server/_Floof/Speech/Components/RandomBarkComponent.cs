@@ -56,6 +56,7 @@ public sealed partial class RandomBarkComponent : Component
     ///     "Emote",
     ///     "Subtle", // Floofstation
     ///     "SubtleOOC", // Den
+    ///     "Sign", // L5
     ///     "Whisper",
     ///     "Telepathic"
     ///   Floof Addition
