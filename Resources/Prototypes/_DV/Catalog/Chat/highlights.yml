@@ -326,7 +326,7 @@
   id: ChatHighlightWarden
   values:
     prefix: highlight-warden-
-    count: 5
+    count: 7
 - type: localizedDataset
   id: ChatHighlightZookeeper
   values:
