@@ -15,7 +15,7 @@
   name: prisoner PDA box
   parent: BoxPDA
   id: BoxPDAPrisoner
-  description: A box of spare PDA microcomputers for the warden to use for prisoners.
+  description: A box of spare PDA microcomputers for the armorer to use for prisoners. # L5 - warden to armorer
   components:
   - type: StorageFill
     contents:

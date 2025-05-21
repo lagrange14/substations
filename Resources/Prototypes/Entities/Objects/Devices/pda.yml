@@ -916,7 +916,7 @@
 - type: entity
   parent: BaseSecurityPDA
   id: WardenPDA
-  name: warden PDA
+  name: armorer PDA # L5 - warden to armorer
   description: The OS appears to have been jailbroken.
   components:
   - type: Pda

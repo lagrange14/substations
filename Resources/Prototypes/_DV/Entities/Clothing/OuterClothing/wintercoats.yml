@@ -50,7 +50,7 @@
   parent: ClothingOuterArmoredWinterCoat
   id: ClothingOuterWinterCCWarden
   name: Central Adminstration's armored winter coat
-  description: A tough, utilitarian coat designed for the wardens of Central Administration. Reinforced kevlar plating and high quality faux fur allow the user to look stylish while staying protected.
+  description: A tough, utilitarian coat designed for the armorers of Central Administration. Reinforced kevlar plating and high quality faux fur allow the user to look stylish while staying protected.
   components:
   - type: Sprite
     sprite: _DV/Clothing/OuterClothing/WinterCoats/cc_warden_winter_coat.rsi
@@ -120,10 +120,11 @@
   - type: Clothing
     sprite: _DV/Clothing/OuterClothing/WinterCoats/hoscoat.rsi
 
+# L5 - warden to armorer
 - type: entity
   parent: ClothingOuterArmoredWinterCoat
   id: ClothingOuterCoatStasecWarden
-  name: warden's coat
+  name: armorer's coat
   description: A warm and comfortable winter coat, reinforced with durathread and compliant with Station Security uniform standards. This version features ice-white trim.
   components:
   - type: Sprite

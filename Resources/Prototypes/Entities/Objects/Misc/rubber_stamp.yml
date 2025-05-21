@@ -228,7 +228,7 @@
     state: stamp-syndicate
 
 - type: entity
-  name: warden's rubber stamp
+  name: armorer's rubber stamp # L5 - warden to armorer
   parent: [RubberStampBase, BaseSecurityContraband]
   id: RubberStampWarden
   categories: [ DoNotMap ]

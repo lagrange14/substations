@@ -631,8 +631,8 @@
 - type: entity
   parent: [ClothingUniformRollableBase, BaseSecurityContraband] # DeltaV - add rollable jumpsuits
   id: ClothingUniformJumpsuitWarden
-  name: warden's jumpsuit # DeltaV - renamed to mirror other security uniforms
-  description: Red shirt on charcoal trousers, with white markings and epaulettes that denote a warden's rank. # DeltaV - improved description
+  name: armorer's jumpsuit # DeltaV - renamed to mirror other security uniforms # L5 - warden to armorer
+  description: Red shirt on charcoal trousers, with white markings and epaulettes that denote a armorer's rank. # DeltaV - improved description # L5 - warden to armorer
   components:
   - type: Sprite
     sprite: _DV/Clothing/Uniforms/Jumpsuit/armourer.rsi # DeltaV - resprite

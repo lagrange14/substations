@@ -3,7 +3,7 @@ job-description-atmostech = Optimize the station's atmospherics setup, and synth
 job-description-bartender = Manage the bar and keep it lively, give out drinks, and listen to the crew's stories.
 job-description-botanist = Grow food for the chef, drugs for medbay, and other plants to keep yourself entertained.
 # L5
-job-description-borg = Cladist-controlled machine. Follow your chassis' laws, serve the crew, and hound the research team for upgrades.
+job-description-borg = An intelligence in a robotic chassis. Follow your chassis' directives if you choose to do so, serve the crew, and hound the research team for upgrades.
 job-description-boxer = Fight your way to the top! Challenge the head of personnel and get brigged when you win. Currently available on Core and Cog.
 job-description-brigmedic = Fight in the rear of the security service, for the lives of your comrades! You are the first and last hope of your squad. Hippocrates bless you.
 job-description-cadet = Learn the basics of arresting criminals and managing the brig. Listen to your supervisors and feel free to ask them for any help.

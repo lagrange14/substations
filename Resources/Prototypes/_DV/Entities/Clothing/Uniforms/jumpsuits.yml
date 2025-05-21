@@ -282,12 +282,13 @@
     sprite: _DV/Clothing/Uniforms/Jumpsuit/security_alt.rsi
 
 # Warden alt uniforms
+# L5 - warden to armorer
 
 - type: entity
   parent: ClothingUniformRollableBase
   id: ClothingUniformJumpsuitWardenBlue
-  name: blue warden's jumpsuit
-  description: A cool blue shirt with ice-white markings and warden's epaulettes.
+  name: blue armorer's jumpsuit
+  description: A cool blue shirt with ice-white markings and armorer's epaulettes.
   components:
   - type: Sprite
     sprite: _DV/Clothing/Uniforms/Jumpsuit/armourer_blue.rsi
@@ -297,8 +298,8 @@
 - type: entity
   parent: ClothingUniformRollableBase
   id: ClothingUniformJumpsuitWardenGrey
-  name: grey warden's jumpsuit
-  description: Charcoal pants, a grey shirt, and white warden's markings and epaulettes.
+  name: grey armorer's jumpsuit
+  description: Charcoal pants, a grey shirt, and white armorer's markings and epaulettes.
   components:
   - type: Sprite
     sprite: _DV/Clothing/Uniforms/Jumpsuit/armourer_grey.rsi
@@ -308,8 +309,8 @@
 - type: entity
   parent: ClothingUniformRollableBase
   id: ClothingUniformJumpsuitWardenTurtle
-  name: warden's turtleneck
-  description: A comfortable and tight-fitting turtleneck for those with the patience to reach the position of Warden.
+  name: armorer's turtleneck
+  description: A comfortable and tight-fitting turtleneck for those with the patience to reach the position of Armorer.
   components:
   - type: Sprite
     sprite: _DV/Clothing/Uniforms/Jumpsuit/armourer_alt.rsi

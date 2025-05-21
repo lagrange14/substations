@@ -122,11 +122,15 @@ highlight-security-officer-3 = Officer
 highlight-security-officer-4 = Security
 highlight-security-officer-5 = "Sec"
 
+# L5 - leaving "warden" in during the transition to armorer
 highlight-warden-1 = Warden
 highlight-warden-2 = "Ward"
 highlight-warden-3 = Security
 highlight-warden-4 = "Sec"
 highlight-warden-5 = Brig
+# L5
+highlight-warden-6 = Armorer
+highlight-warden-7 = Perma
 
 highlight-prison-guard-1 = Prison Guard
 highlight-prison-guard-2 = Prison

@@ -18,10 +18,11 @@ command-description-jobs-set =
     Sets the number of slots for the given job.
 command-description-jobs-amount =
     Returns the number of slots for the given job.
+# L5 - laws to directives
 command-description-laws-list =
-    Returns a list of all law bound entities.
+    Returns a list of all directive-bound entities.
 command-description-laws-get =
-    Returns all of the laws for a given entity.
+    Returns all of the directives for a given entity.
 command-description-stations-list =
     Returns a list of all stations.
 command-description-stations-get =

@@ -141,7 +141,7 @@
         message: "Which one of you gave the HOP a disabler?"
       - timestamp: 54
         name: Phil Dervin
-        message: "The Warden did, turned out to be a good idea eh?"
+        message: "The Armorer did, turned out to be a good idea eh?" # L5 - warden to armorer
       - timestamp: 58
         name: Officer Belview
         message: "I would say so."

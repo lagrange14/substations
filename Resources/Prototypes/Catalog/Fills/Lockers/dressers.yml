@@ -113,7 +113,7 @@
 - type: entity
   id: DresserWardenFilled
   parent: Dresser
-  suffix: Filled, Warden
+  suffix: Filled, Armorer
   components:
   - type: StorageFill
     contents:

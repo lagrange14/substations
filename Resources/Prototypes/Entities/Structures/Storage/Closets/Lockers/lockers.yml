@@ -318,7 +318,7 @@
 - type: entity
   id: LockerWarden
   parent: LockerBaseSecureDeltaV # DeltaV - resprite security lockers
-  name: warden's locker
+  name: armorer's locker # L5 - warden to armorer
   components:
   - type: Appearance
   - type: EntityStorageVisuals

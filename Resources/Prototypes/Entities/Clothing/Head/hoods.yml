@@ -519,7 +519,7 @@
   parent: ClothingHeadHatHoodWinterBase
   id: ClothingHeadHatHoodWinterWarden
   categories: [ HideSpawnMenu ]
-  name: warden's coat hood
+  name: armorer's coat hood # L5 - warden to armorer
   components:
   - type: Sprite
     sprite: Clothing/Head/Hoods/Coat/hoodsec.rsi

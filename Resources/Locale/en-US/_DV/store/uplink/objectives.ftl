@@ -13,7 +13,8 @@ uplink-syndicate-stun-bundle-desc = Includes a stun baton and a disabler.
 uplink-syndicate-hostage-implanter-bundle-name = Hostage implant bundle
 uplink-syndicate-hostage-implanter-bundle-desc = These implants pacify when injected and also allow the hostages to enter your shuttle without being shot by turrets!
 
-uplink-objective-syndicate-board-name = Syndicate law board
+# L5 - laws to directives
+uplink-objective-syndicate-board-name = Syndicate directive board
 uplink-objective-syndicate-board-desc = Its expensive, don't lose it!
 
 uplink-syndie-fulton-name = Syndicate Fultons

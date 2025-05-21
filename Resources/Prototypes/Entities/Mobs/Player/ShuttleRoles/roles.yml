@@ -138,7 +138,7 @@
 
 - type: entity
   id: RandomHumanoidVisitorWarden
-  name: visiting warden ghost role
+  name: visiting armorer ghost role # L5 - warden to armorer
   components:
     - type: Sprite
       sprite: Markers/jobs.rsi

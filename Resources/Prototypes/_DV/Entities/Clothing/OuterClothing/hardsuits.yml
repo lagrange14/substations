@@ -123,11 +123,12 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCombatRiot
 
+# L5 - warden to armorer
 - type: entity
   parent: ClothingOuterHardsuitCombatRiot
   id: ClothingOuterHardsuitCombatWarden
-  name: warden's riot combat hardsuit
-  description: A purpose-built combat suit designed for crowd control against armed combatants in low pressure environments. This one has station security and warden's rank markings.
+  name: armorer's riot combat hardsuit
+  description: A purpose-built combat suit designed for crowd control against armed combatants in low pressure environments. This one has station security and armorer's rank markings.
   components:
   - type: Sprite
     sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/warden.rsi

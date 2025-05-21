@@ -1,4 +1,5 @@
-job-name-warden = Warden
+# L5 - Warden to armorer
+job-name-warden = Armorer
 job-name-security = Security Officer
 job-name-cadet = Security Cadet
 job-name-hos = Head of Security

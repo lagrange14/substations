@@ -64,7 +64,8 @@ tips-dataset-62 = As the Chef, your knife can act as a weapon in an emergency.
 tips-dataset-63 = As the Chef, you can sneak liquids into your foods. As a traitor, putting a little bit of amatoxin or other poison can greatly annoy the crew!
 # DeltaV
 tips-dataset-64 = As the Mime, your vow to not speak is your source of power. Breaking it robs you of your powers and of your honor.
-tips-dataset-65 = As the Lawyer, try to negotiate with the Warden if sentences seem too high for the crime.
+# L5 - warden to sec
+tips-dataset-65 = As the Lawyer, try to negotiate with security if sentences seem too high for the crime.
 tips-dataset-66 = As a Security Officer, communicate and coordinate with your fellow officers using the security radio channel to avoid confusion.
 tips-dataset-67 = As a Security Officer, remember that correlation does not equal causation. Someone may have just been at the wrong place at the wrong time!
 tips-dataset-68 = As a Detective, you can chase criminals more effectively by using fingerprint fiber data and DNA obtained from forensic scans of objects the perpetrator likely interacted with.

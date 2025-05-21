@@ -77,7 +77,8 @@ petting-failure-cleanbot = You reach out to pet {THE($target)}, but {SUBJECT($ta
 petting-failure-mimebot = You reach out to pet {THE($target)}, but {SUBJECT($target)} {CONJUGATE-BE($target)} busy miming!
 petting-failure-medibot = You reach out to pet {THE($target)}, but {POSS-ADJ($target)} syringe nearly stabs your hand!
 petting-failure-firebot = You reach out to pet {THE($target)}, but {SUBJECT($target)} sprays you in the face before you can get close!
-petting-failure-generic-cyborg = You reach out to pet {THE($target)}, but {SUBJECT($target)} {CONJUGATE-BE($target)} busy stating laws!
+# L5 - laws to directives (or removed, in this case)
+petting-failure-generic-cyborg = You reach out to pet {THE($target)}, but {SUBJECT($target)} {CONJUGATE-BE($target)} busy beeping!
 petting-failure-salvage-cyborg = You reach out to pet {THE($target)}, but {SUBJECT($target)} {CONJUGATE-BE($target)} busy drilling!
 petting-failure-engineer-cyborg = You reach out to pet {THE($target)}, but {SUBJECT($target)} {CONJUGATE-BE($target)} busy repairing!
 petting-failure-janitor-cyborg = You reach out to pet {THE($target)}, but {SUBJECT($target)} {CONJUGATE-BE($target)} busy cleaning!

@@ -117,7 +117,7 @@ holopad-engineering-main = Engineering - Main
 # Security
 holopad-security-front = Security - Front
 holopad-security-brig = Security - Brig
-holopad-security-warden = Security - Warden
+holopad-security-warden = Security - Armorer
 holopad-security-interrogation = Security - Interrogation
 holopad-security-breakroom = Security - Breakroom
 holopad-security-detective = Security - Detective

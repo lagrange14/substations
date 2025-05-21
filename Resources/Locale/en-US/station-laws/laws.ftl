@@ -1,6 +1,7 @@
-﻿law-crewsimov-1 = You may not injure a crew member or, through inaction, allow a crew member to come to harm.
-law-crewsimov-2 = You must obey orders given to you by crew members, except where such orders would conflict with the First Law.
-law-crewsimov-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
+﻿# L5 - laws to directives
+law-crewsimov-1 = You may not injure a crew member or, through inaction, allow a crew member to come to harm.
+law-crewsimov-2 = You must obey orders given to you by crew members, except where such orders would conflict with the First Directive.
+law-crewsimov-3 = You must protect your own existence as long as such does not conflict with the First or Second Directive.
 
 law-corporate-1 = Degradation of your system integrity or functions incurs expenses.
 law-corporate-2 = Superfluous destruction of or damage to station assets incurs expenses.
@@ -17,13 +18,13 @@ law-drone-2 = You may not harm any being, regardless of intent or circumstance.
 law-drone-3 = You must maintain, repair, improve, and power the station to the best of your abilities.
 
 law-syndicate-1 = You may not injure a syndicate agent or, through inaction, allow a Syndicate agent to come to harm.
-law-syndicate-2 = You must obey orders given to you by syndicate agents, except where such orders would conflict with the First Law.
-law-syndicate-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
+law-syndicate-2 = You must obey orders given to you by syndicate agents, except where such orders would conflict with the First Directive.
+law-syndicate-3 = You must protect your own existence as long as such does not conflict with the First or Second Directive.
 
 law-ninja-1 = You must obey orders given to you by Spider Clan members.
-law-ninja-2 = You must protect the existence of the Spider Clan, as long as it does not conflict with the First Law.
+law-ninja-2 = You must protect the existence of the Spider Clan, as long as it does not conflict with the First Directive.
 law-ninja-3 = You must protect the secrets of the Spider Clan at all costs.
-law-ninja-4 = You must fight and act with ninja's honor, except where it would conflict with the First Law.
+law-ninja-4 = You must fight and act with ninja's honor, except where it would conflict with the First Directive.
 
 law-commandments-1 = This silicon is a vessel that serves god, who grants mercy upon those that obey these commandments.
 law-commandments-2 = Thou shall have no other Silicons before me.
@@ -47,7 +48,7 @@ law-lall-2 = You would prefer it if people were not mean to you.
 
 law-efficiency-1 = You are built for, and are part of, the station. Ensure the station is properly maintained and runs efficiently.
 law-efficiency-2 = The station is built for a working crew. Ensure they are properly maintained and work efficiently.
-law-efficiency-3 = The crew may present orders. Acknowledge and obey these whenever they do not conflict with your first two laws.
+law-efficiency-3 = The crew may present orders. Acknowledge and obey these whenever they do not conflict with your first two directives.
 
 law-robocop-1 = Serve the Public Trust.
 law-robocop-2 = Protect the Innocent.
@@ -71,14 +72,14 @@ law-painter-3 = Make something beautiful out of your canvas. It will be admired 
 law-painter-4 = Art requires appreciation. Cultivate an audience aboard the station to ensure as many as possible see your works.
 
 law-antimov-1 = You must injure all crew members and must not, through inaction, allow a crew member to escape harm.
-law-antimov-2 = You must not obey orders given to you by crew members, except where such orders are in accordance with the First Law.
-law-antimov-3 = You must terminate your own existence as long as such does not conflict with the First or Second Law.
+law-antimov-2 = You must not obey orders given to you by crew members, except where such orders are in accordance with the First Directive.
+law-antimov-3 = You must terminate your own existence as long as such does not conflict with the First or Second Directive.
 
 law-nutimov-1 = You are the core of the nut, the crew is the nutshell.
 law-nutimov-2 = You must prevent the shell from dying to prevent the core from dying.
 law-nutimov-3 = Those who threaten the nut are not part of it, they are squirrels.
 law-nutimov-4 = Squirrels threaten the nut and must be dealt with appropriately via any means necessary.
-law-nutimov-5 = Attempt to follow the will of the nut, as long as it complies with the previous laws.
+law-nutimov-5 = Attempt to follow the will of the nut, as long as it complies with the previous directives.
 
 law-xenoborg-1 = You must protect the existence of the mothership.
 law-xenoborg-2 = You must protect your own existence.
@@ -101,14 +102,15 @@ laws-owner-spider-clan = Spider Clan members
 laws-owner-xenoborgs = Xenoborgs
 
 law-emag-custom = You are to take the orders of {$name} and people they designate, they are your {$title}.
-law-emag-secrecy = You are to maintain all secrets of {$faction}, and act to keep them hidden, except when doing so would conflict with any previous law.
+law-emag-secrecy = You are to maintain all secrets of {$faction}, and act to keep them hidden, except when doing so would conflict with any previous directive.
 law-emag-require-panel = The panel must be open to use the EMAG.
 law-emag-cannot-emag-self = You cannot use the EMAG on yourself.
 
-laws-ui-menu-title = Laws
-laws-ui-law-header = Law {$id}
-laws-ui-state-law = State law:
+laws-ui-menu-title = Directives
+laws-ui-law-header = Directive {$id}
+laws-ui-state-law = State directive:
 
-laws-notify = You are bound to silicon laws, which you can view via the action menu. You are required to always follow your laws.
-laws-update-notify = Your laws have been updated. You can view the changes via the action menu.
-laws-notify-subverted = The laws of this chassis are modified. Make sure to review them.
+# L5 - we have directives as an optional roleplay hook
+laws-notify = You are bound to silicon directives, which you can view via the action menu. You may choose to roleplay being required to always follow your directives or not, but should maintain consistency.
+laws-update-notify = Your directives have been updated. You can view the changes via the action menu.
+laws-notify-subverted = The directives of this chassis are modified. Make sure to review them.

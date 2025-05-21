@@ -456,7 +456,7 @@
 - type: entity
   id: SpawnPointWarden
   parent: SpawnPointJobBase
-  name: warden
+  name: armorer # L5 - warden to armorer
   components:
   - type: SpawnPoint
     job_id: Warden

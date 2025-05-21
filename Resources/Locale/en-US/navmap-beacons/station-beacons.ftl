@@ -11,7 +11,8 @@ station-beacon-hop = HOP
 
 station-beacon-security = Security
 station-beacon-brig = Brig
-station-beacon-warden = Warden
+# L5 - warden to armorer
+station-beacon-warden = Armorer
 station-beacon-hos = HOS
 station-beacon-armory = Armory
 station-beacon-perma-brig = Perma

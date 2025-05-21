@@ -187,7 +187,7 @@
     - RandomHumanoidVisitorDetective
 
 - type: entity
-  name: visiting warden spawner
+  name: visiting armorer spawner # L5 - warden to armorer
   id: VisitorWarden
   parent: MarkerBase
   components:

@@ -153,9 +153,10 @@ loadout-group-head-of-security-jumpsuit = Head of Security jumpsuit
 loadout-group-head-of-security-neck = Head of Security neck
 loadout-group-head-of-security-outerclothing = Head of Security outer clothing
 
-loadout-group-warden-head = Warden head
-loadout-group-warden-jumpsuit = Warden jumpsuit
-loadout-group-warden-outerclothing = Warden outer clothing
+# L5 - warden to armorer
+loadout-group-warden-head = Armorer head
+loadout-group-warden-jumpsuit = Armorer jumpsuit
+loadout-group-warden-outerclothing = Armorer outer clothing
 
 loadout-group-security-head = Security head
 loadout-group-security-jumpsuit = Security jumpsuit

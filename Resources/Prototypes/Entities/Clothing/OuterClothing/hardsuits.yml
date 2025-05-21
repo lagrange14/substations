@@ -294,11 +294,11 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitBrigmedic
 
-#Warden's Hardsuit
+#Armorer's Hardsuit
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseSecurityContraband]
   id: ClothingOuterHardsuitWarden
-  name: warden's hardsuit
+  name: armorer's hardsuit # L5 - warden to armorer
   description: A specialized riot suit geared to combat low pressure environments.
   components:
   - type: Sprite

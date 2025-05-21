@@ -326,11 +326,12 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/pirate.rsi
 
+# L5 - warden to armorer
 - type: entity
   parent: [ClothingOuterArmorWarden, ClothingOuterStorageBase, BaseSecurityContraband]
   id: ClothingOuterCoatWarden
-  name: warden's armored jacket
-  description: A sturdy, utilitarian jacket designed to protect a warden from any brig-bound threats.
+  name: armorer's armored jacket
+  description: A sturdy, utilitarian jacket designed to protect an armorer from any brig-bound threats.
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Coats/warden.rsi

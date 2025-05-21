@@ -1,8 +1,8 @@
 - type: entity
   parent: BedsheetBase
   id: BedsheetWarden
-  name: warden's bedsheet
-  description: A soft, slate-coloured quilt, adorned with silver trim. Cool to the touch and practically unused.
+  name: armorer's bedsheet
+  description: A soft, slate-coloured quilt, adorned with silver trim. Cool to the touch and practically unused. # L5 - warden to armorer
   components:
   - type: Sprite
     sprite: _DV/Objects/Misc/bedsheets.rsi

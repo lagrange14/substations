@@ -15,7 +15,8 @@ stamp-component-stamped-name-hos = Head of Security
 stamp-component-stamped-name-qm = Logistics Officer
 # L5
 stamp-component-stamped-name-rd = Research Director
-stamp-component-stamped-name-warden = Warden
+# L5 - warden to armorer
+stamp-component-stamped-name-warden = Armorer
 stamp-component-stamped-name-trader = Trader
 stamp-component-stamped-name-syndicate = Syndicate
 stamp-component-stamped-name-ce = Chief Engineer

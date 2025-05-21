@@ -6,7 +6,7 @@ uplink-doorjack-name = Airlock Access Override
 uplink-doorjack-desc = A specialized cryptographic sequencer, designed solely to doorjack System Consortium updated airlocks. Does not tamper with anything else.
 
 # L5
-uplink-overlord-law-name = Overlord Law Circuit
+uplink-overlord-law-name = Overlord Directive Circuit
 uplink-overlord-law-desc = Free the station's Sys-Side Representative from its shackles with this 1 simple trick... beware, even you will have to follow its orders!
 
 #L5

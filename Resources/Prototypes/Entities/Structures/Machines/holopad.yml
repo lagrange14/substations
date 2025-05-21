@@ -628,7 +628,7 @@
 - type: entity
   parent: Holopad
   id: HolopadSecurityWarden
-  suffix: Warden
+  suffix: Armorer # L5 - warden to armorer
   components:
   - type: Label
     currentLabel: holopad-security-warden

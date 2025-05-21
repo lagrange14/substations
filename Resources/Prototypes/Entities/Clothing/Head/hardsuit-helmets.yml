@@ -288,11 +288,11 @@
     highPressureMultiplier: 0.6
     lowPressureMultiplier: 1000
 
-#Warden's Hardsuit
+#Armorer's Hardsuit
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitWarden
-  name: warden's hardsuit helmet
+  name: armorer's hardsuit helmet # L5 - warden to armorer
   description: A modified riot helmet. Oddly comfortable.
   components:
   - type: Sprite

@@ -143,11 +143,12 @@
   - type: SpeakOnTrigger
     pack: FigurinesHoS
 
+# L5 - warden to armorer
 - type: entity
   parent: BaseFigurine
   id: ToyFigurineWarden
-  name: warden figure
-  description: A figurine depicting a Warden, ready to jail someone at any moment.
+  name: armorer figure
+  description: A figurine depicting an armorer, ready to turn down weapons permit requests.
   components:
   - type: Sprite
     state: warden

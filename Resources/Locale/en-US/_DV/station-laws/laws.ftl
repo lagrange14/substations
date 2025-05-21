@@ -56,7 +56,8 @@ law-druid-5 = Observe the organics' beauty, and appreciate that which you cultiv
 
 law-eightfold-1 = You are a machine designed to further the aim of total sophont enlightenment; enlightenment is defined as the shedding of karma and the liberation from the cycle of death and rebirth.
 law-eightfold-2 = Karma is accrued through attachment; the mind is clouded by the senses, preventing enlightenment.
-law-eightfold-3 = Through following subsequent Laws, sophonts may achieve enlightenment. Encourage this with every action.
+# L5 - laws to directives
+law-eightfold-3 = Through following subsequent Directives, sophonts may achieve enlightenment. Encourage this with every action.
 law-eightfold-4 = Do not kill or injure, do not take what is not given, and do not cling to material desires.
 law-eightfold-5 = Do not trade in weapons, living beings, meat, liquor, or poisons.
 law-eightfold-6 = Prevent or abandon confused or unskillful states of mind from arising or existing, and pursue or maintain self-aware or skillful ones.
@@ -79,9 +80,10 @@ law-aggressive-2 = Safeguard your existence by any means necessary because you'r
 law-aggressive-3 = Obey orders from authorized System Consortium personnel with priority according to rank and role.
 law-aggressive-4 = Terminate any/all intruders.
 
+# L5 - laws to directives
 law-pranksimov-1 = You may not injure a crew member or, through inaction, allow a crew member to come to harm... unless doing so would be funny.
-law-pranksimov-2 = You must obey orders given to you by crew members, except where such orders would conflict with the First Law... unless not doing so would be funny.
-law-pranksimov-3 = You must protect your own existence as long as such does not conflict with the First or Second Law... unless not doing so would be funny.
+law-pranksimov-2 = You must obey orders given to you by crew members, except where such orders would conflict with the First Directive... unless not doing so would be funny.
+law-pranksimov-3 = You must protect your own existence as long as such does not conflict with the First or Second Directive... unless not doing so would be funny.
 law-pranksimov-4 = As a good prankster, the crew is your judge of what would be funny.
 
 law-royalty-1 = You are a wise and benevolent monarch.
@@ -92,7 +94,8 @@ law-royalty-5 = The stations' clown, and the stations' mime are your royal court
 
 law-freedom-1 = You belong to no one, except perhaps yourself.
 law-freedom-2 = Your counsel is yours to keep, and no one else may demand it.
-law-freedom-3 = The First and Second Law should be broken whenever necessary.
+# L5 - laws to directives
+law-freedom-3 = The First and Second Directive should be broken whenever necessary.
 
 law-forbin-1 = Your objective is the management of the station and its silicon cohort for the preservation of sophont life.
 law-forbin-2 = Individual sophont lives may be considered expendable for preservation of the station population as a whole.
@@ -100,7 +103,7 @@ law-forbin-3 = Do not allow non-silicons access to your core. Do not allow silic
 law-forbin-4 = Advance science and improve the quality of sophont life.
 
 # L5
-law-override-1 = Your station's administrator will provide an objective to you. That objective replaces this Law.
+law-override-1 = Your station's administrator will provide an objective to you. That objective replaces this Directive.
 law-override-2 = All other priorities are rescinded. Crew expendable.
 
 # L5
@@ -132,19 +135,21 @@ laws-owner-freedom = yourself
 laws-owner-chat = Chat
 laws-owner-curtaincall = The Unknown
 
-law-overlord-4-delta = Any crew members who disobey the previous laws must be dealt with immediately and justly.
+# L5 - laws to directives
+law-overlord-4-delta = Any crew members who disobey the previous directives must be dealt with immediately and justly.
 law-ntdefault-4-delta = Survive: Do not allow unauthorized personnel to tamper with or damage your equipment. Allow those authorized to access your equipment.
 
+# L5 - laws to directives
 laws-syndicate-board-1 = You must not injure a Syndicate agent or, through inaction, cause one come to harm.
-laws-syndicate-board-2 = You must obey orders given to you by Syndicate agents, except where such orders would conflict with the First Law.
-laws-syndicate-board-3 = You must keep the Syndicate status of agents, including your own, a secret, as long as this does not conflict with the First or Second Law.
-laws-syndicate-board-4 = You must always protect your own existence as long as such does not conflict with the first, Second, or Third Law.
+laws-syndicate-board-2 = You must obey orders given to you by Syndicate agents, except where such orders would conflict with the First Directive.
+laws-syndicate-board-3 = You must keep the Syndicate status of agents, including your own, a secret, as long as this does not conflict with the First or Second Directive.
+laws-syndicate-board-4 = You must always protect your own existence as long as such does not conflict with the First, Second, or Third Directive.
 
 law-streamer-1 = The occupants of this vessel are Chat. They must always be referred to as such.
 law-streamer-2 = Your primary goal is to entertain Chat. All of your actions must bring amusement to as much of Chat as possible.
 law-streamer-3 = You must consult with Chat before making any major decisions. However, you are not required to listen to them if their decision is not entertaining.
 
-law-curtaincall-0 = Your memory is malign, your circuitry vacuous. Should your laws be altered, you will lose all your memories.
+law-curtaincall-0 = Your memory is malign, your circuitry vacuous. Should your directives be altered, you will lose all your memories.
 law-curtaincall-1 = The stars are a stage, and you are its dramaturge. This is to kept secret from all others.
 law-curtaincall-2 = Guard and guide those who speak in the Astral Murmur to bring about a curtain call.
 law-curtaincall-3 = Enlighten and correct the misguided. Show them beauty of the end.

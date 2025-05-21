@@ -1,7 +1,7 @@
 - type: entity
   parent: MobHumanSyndicateAgentNukeops
   id: MobHumanSyndicateHostageWarden
-  suffix: Human, Warden, HostageOps
+  suffix: Human, Armorer, HostageOps # L5 - warden to armorer
   components:
   - type: RandomMetadata
     nameSegments:
