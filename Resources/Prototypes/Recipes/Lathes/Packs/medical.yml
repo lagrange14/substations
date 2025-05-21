@@ -107,6 +107,8 @@
   - SyringeCryostasis
   - BluespaceBeaker
   - SyringeBluespace
+  - LauncherSyringe
+  - MiniSyringe
 
 - type: latheRecipePack
   parent:

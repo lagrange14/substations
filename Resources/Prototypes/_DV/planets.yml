@@ -46,6 +46,7 @@
   - OreDiamond2
   - OreBluespace
   - OreArtifactFragment
+  - LavalandGibtonite
 
 - type: planet
   id: GlacierSurface
@@ -75,3 +76,4 @@
   - OreDiamond
   - OreBluespace
   - OreArtifactFragment
+  - GlacierGibtonite

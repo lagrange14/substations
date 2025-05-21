@@ -223,7 +223,6 @@
     - SecurityExplosives
     - SecurityEquipment
     - SecurityWeapons
-    - SyringeGuns # DeltaV
 
 - type: entity
   id: ProtolatheHyperConvection
@@ -761,3 +760,4 @@
         - Wooden
         - RawMaterial
         - Plastic
+  - type: OreSiloClient

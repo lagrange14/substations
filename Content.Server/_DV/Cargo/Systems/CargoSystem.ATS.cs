@@ -83,10 +83,6 @@ public sealed partial class CargoSystem
             EnsureComp<StationMemberComponent>(gridUid).Station = arg.Station;
         }
 
-        var shuttleComp = EnsureComp<ShuttleComponent>(gridUid);
-        shuttleComp.AngularDamping = 10000;
-        shuttleComp.LinearDamping = 10000;
-
         // L5 - allow other shuttles to FTL to ATS for e.g: outpost
         // var ftl = EnsureComp<FTLDestinationComponent>(mapUid);
         // ftl.Whitelist = new EntityWhitelist()

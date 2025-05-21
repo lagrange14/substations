@@ -577,7 +577,6 @@
     sound:
       path: /Audio/Effects/unwrap.ogg
 
-
 - type: entity
   id: FoodSnackMREBrownieOpen
   parent: FoodSnackBase
@@ -627,6 +626,15 @@
   - type: SpaceGarbage
   - type: StaticPrice
     price: 0
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: ToxinTrash
+          Quantity: 5
+  - type: Food
+    requiresSpecialDigestion: true
 
 - type: entity
   categories: [ HideSpawnMenu ]
