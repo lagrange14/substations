@@ -1,4 +1,5 @@
 using Content.Shared._L5.Movement.Components;
+using Content.Shared.Access.Components;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
@@ -13,6 +14,7 @@ namespace Content.Shared._L5.Movement.Systems
             // When strapping into an object, update entity associations.
             SubscribeLocalEvent<PilotOnBuckleComponent, StrappedEvent>(OnStrap);
             SubscribeLocalEvent<PilotOnBuckleComponent, UnstrappedEvent>(OnUnstrap);
+            SubscribeLocalEvent<PilotOnBuckleComponent, GetAdditionalAccessEvent>(OnGetAdditionalAccess);
         }
 
         /// <summary>
@@ -40,6 +42,18 @@ namespace Content.Shared._L5.Movement.Systems
             var movedEntity = args.Strap.Owner;
             RemCompDeferred<RelayInputMoverComponent>(moverEntity);
             RemCompDeferred<MovementRelayTargetComponent>(movedEntity);
+        }
+
+        /// <summary>
+        /// Handle extending the user's access
+        /// </summary>
+        private void OnGetAdditionalAccess(Entity<PilotOnBuckleComponent> ent,
+            ref GetAdditionalAccessEvent args)
+        {
+            if (!TryComp<MovementRelayTargetComponent>(ent.Owner, out var mover))
+                return;
+
+            args.Entities.Add(mover.Source);
         }
     }
 }
