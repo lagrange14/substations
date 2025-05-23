@@ -1,11 +1,11 @@
 - type: construction
-  name: sink
+  name: crafting-sink-small
   id: Sink
   graph: Sink
   startNode: start
   targetNode: sink
   category: construction-category-structures
-  description: A small sink with faucets for dispensing water
+  description: crafting-sink-small-desc
   icon:
     sprite: Structures/Furniture/sink.rsi
     state: sink_stem
@@ -15,13 +15,13 @@
   canRotate: true
 
 - type: construction
-  name: wide sink
+  name: crafting-sink-wide
   id: WideSink
   graph: Sink
   startNode: start
   targetNode: sinkWide
   category: construction-category-structures
-  description: A large sink with faucets for dispensing water
+  description: crafting-sink-wide-desc
   icon:
     sprite: Structures/Furniture/sink.rsi
     state: sink_wide
@@ -31,13 +31,13 @@
   canRotate: true
 
 - type: construction
-  name: drain
+  name: crafting-drain
   id: Drain
   graph: Drain
   startNode: start
   targetNode: drain
   category: construction-category-structures
-  description: A floor drain for capturing spilt fluids. Probably blood, if we're being honest
+  description: crafting-drain-desc
   icon:
     sprite: Objects/Specific/Janitorial/drain.rsi
     state: icon

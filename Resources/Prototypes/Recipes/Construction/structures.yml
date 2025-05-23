@@ -51,24 +51,6 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: diagonal wall
-  id: WallSolidDiagonal
-  graph: Girder
-  startNode: start
-  targetNode: diagonalWall
-  category: construction-category-structures
-  description: Keeps the air in and the greytide out, but angular!
-  icon:
-    sprite: Structures/Walls/solid_diagonal.rsi
-    state: state0
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: true
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
   id: ReinforcedWall
   graph: Girder
   startNode: start
@@ -77,24 +59,6 @@
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
-  name: diagonal reinforced wall
-  id: WallReinforcedDiagonal
-  graph: Girder
-  startNode: start
-  targetNode: diagonalReinforcedWall
-  category: construction-category-structures
-  description: Keeps the air in and the greytide out, but angular!
-  icon:
-    sprite: Structures/Walls/reinforced_diagonal.rsi
-    state: state0
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: true
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked

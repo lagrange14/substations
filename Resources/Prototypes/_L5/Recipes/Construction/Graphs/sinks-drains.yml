@@ -9,12 +9,12 @@
       - material: Steel
         amount: 10
       - tag: Pipe
-        name: pipe
+        name: crafting-pipe-any
         icon:
           sprite: Structures/Piping/Atmospherics/pipe.rsi
           state: pipeBend
       - tag: Tank
-        name: water tank
+        name: crafting-sink-water-tank
         icon:
           sprite: Structures/Storage/tanks.rsi
           state: watertank-2
@@ -24,16 +24,16 @@
       - material: Steel
         amount: 20
       - tag: Pipe
-        name: pipe
+        name: crafting-pipe-any
         icon:
           sprite: Structures/Piping/Atmospherics/pipe.rsi
           state: pipeBend
       - tag: TankBig
-        name: high-capacity water tank
+        name: crafting-sink-big-water-tank
         icon:
           sprite: Structures/Storage/tanks.rsi
           state: highwatertank-2
-        doAfter: 15
+        doAfter: 10
   - node: sink
     entity: Sink
   - node: sinkWide
@@ -50,10 +50,10 @@
       - material: Steel
         amount: 10
       - tag: Pipe
-        name: pipe
+        name: crafting-pipe-any
         icon:
           sprite: Structures/Piping/Atmospherics/pipe.rsi
           state: pipeBend
-        doAfter: 15
+        doAfter: 10
   - node: drain
     entity: FloorDrain

@@ -51,9 +51,9 @@ public sealed class TypingIndicatorVisualizerSystem : VisualizerSystem<TypingInd
 
         if (component.UseSyntheticVariant  && currentTypingIndicator != new ProtoId<TypingIndicatorPrototype>("paper")) // L5: Synthetic talk sprites
         {
-            args.Sprite.LayerSetRSI(layer, proto.SynthSpritePath);
+            _sprite.LayerSetRsi((uid, args.Sprite), layer, proto.SynthSpritePath);
             // hardcoded string bad, but i have no idea how else to refer to this sprite state or ensure it exists
-            args.Sprite.LayerSetState(layer, proto.HasSynthVariant ? proto.TypingState : "default0");
+            _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.HasSynthVariant ? proto.TypingState : "default0");
         }
 
 

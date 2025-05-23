@@ -126,8 +126,8 @@
 - type: entity
   parent: [ClothingOuterArmorBaseCarapace, BaseCommandContraband]
   id: ClothingOuterArmorCaptainCarapace
-  name: captain's carapace
-  description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest.
+  name: "station administrator's carapace" # L5
+  description: "An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest."
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
@@ -137,7 +137,7 @@
 - type: entity
   parent: [ClothingOuterArmorBaseCarapace, BaseCentcommContraband]
   id: ClothingOuterArmorCentcommCarapace
-  name: centcomm carapace
+  name: SysCon carapace # L5
   description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to SysCon officials and agents.
   components:
   - type: Sprite
@@ -411,34 +411,6 @@
     sprite: Clothing/OuterClothing/Armor/magusred.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/magusred.rsi
-
-- type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseCommandContraband]
-  id: ClothingOuterArmorCaptainCarapace
-  name: "station administrator's carapace" # L5
-  description: "An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest."
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.5
-        Slash: 0.5
-        Piercing: 0.6
-        Heat: 0.5
-        Caustic: 0.9
-  - type: StaminaResistance # DeltaV
-    damageCoefficient: 0.7 # Some protection against disablers, but you're better off with a vest
-  - type: ClothingSpeedModifier
-    walkModifier: 1.0
-    sprintModifier: 1.0
-  - type: HeldSpeedModifier
-  - type: ExplosionResistance
-    damageCoefficient: 0.65
-  - type: GroupExamine
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseMajorContraband, AllowSuitStorageClothing ]

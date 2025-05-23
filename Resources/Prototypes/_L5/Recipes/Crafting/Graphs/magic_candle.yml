@@ -6,20 +6,20 @@
       edges:
         - to: candle
           steps:
-            - material: Bluespace
-              amount: 1
-            - tag: Candle # Technically this means you can use any candle to make this but technically I don't care.
-              name: candle
-              icon:
-                sprite: Objects/Misc/candles.rsi
-                state: candle-big
-              doAfter: 5
+          - material: Bluespace
+            amount: 1
+          - tag: Candle # Technically this means you can use any candle to make this but technically I don't care.
+            name: crafting-magic-candle-candle-plain
+            icon:
+              sprite: Objects/Misc/candles.rsi
+              state: candle-big
+            doAfter: 5
         - to: candleBlack
           steps:
           - material: Bluespace
             amount: 1
           - tag: CandleBlack
-            name: Black candle
+            name: crafting-magic-candle-candle-black
             icon:
               sprite: Objects/Misc/candles.rsi
               state: candle-big
@@ -29,7 +29,7 @@
           - material: Bluespace
             amount: 1
           - tag: CandleBlue
-            name: Blue candle
+            name: crafting-magic-candle-candle-blue
             icon:
               sprite: Objects/Misc/candles.rsi
               state: candle-big
@@ -39,7 +39,7 @@
           - material: Bluespace
             amount: 1
           - tag: CandleGreen
-            name: Green candle
+            name: crafting-magic-candle-candle-green
             icon:
               sprite: Objects/Misc/candles.rsi
               state: candle-big
@@ -49,7 +49,7 @@
           - material: Bluespace
             amount: 1
           - tag: CandlePurple
-            name: Purple candle
+            name: crafting-magic-candle-candle-purple
             icon:
               sprite: Objects/Misc/candles.rsi
               state: candle-big
@@ -59,7 +59,7 @@
           - material: Bluespace
             amount: 1
           - tag: CandleRed
-            name: Red candle
+            name: crafting-magic-candle-candle-red
             icon:
               sprite: Objects/Misc/candles.rsi
               state: candle-big

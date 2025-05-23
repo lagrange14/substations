@@ -759,6 +759,8 @@
   - type: Construction # L5 made diagonal walls buildable yay
     graph: Girder
     node: diagonalReinforcedWall
+  - type: StaticPrice
+    price: 230
 
 # Riveting
 - type: entity

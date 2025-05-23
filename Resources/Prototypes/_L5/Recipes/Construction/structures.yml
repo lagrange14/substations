@@ -1,0 +1,36 @@
+- type: construction
+  name: crafting-diagonal-wall
+  id: WallSolidDiagonal
+  graph: Girder
+  startNode: start
+  targetNode: diagonalWall
+  category: construction-category-structures
+  description: crafting-diagonal-wall-desc
+  icon:
+    sprite: Structures/Walls/solid_diagonal.rsi
+    state: state0
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  name: crafting-diagonal-wall-reinforced
+  id: WallReinforcedDiagonal
+  graph: Girder
+  startNode: start
+  targetNode: diagonalReinforcedWall
+  category: construction-category-structures
+  description: crafting-diagonal-wall-desc
+  icon:
+    sprite: Structures/Walls/reinforced_diagonal.rsi
+    state: state0
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+

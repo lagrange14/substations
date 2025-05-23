@@ -1,0 +1,17 @@
+- type: construction
+  name: crafting-shower
+  id: Shower
+  graph: Shower
+  startNode: start
+  targetNode: shower
+  category: construction-category-furniture
+  description: crafting-shower-desc
+  icon:
+    sprite: _EE/Structures/Furniture/shower.rsi
+    state: shower
+    objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

@@ -421,24 +421,6 @@
     - !type:TileNotBlocked
 
 #bathroom
-# EE - shower
-- type: construction
-  name: shower
-  id: Shower
-  graph: Shower
-  startNode: start
-  targetNode: shower
-  category: construction-category-furniture
-  description: A shower, complete with bluespace water.
-  icon:
-    sprite: _EE/Structures/Furniture/shower.rsi
-    state: shower
-    objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: true
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
 
 - type: construction
   id: ToiletEmpty

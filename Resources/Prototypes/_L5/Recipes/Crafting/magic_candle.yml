@@ -1,76 +1,76 @@
 - type: construction
-  name: Magic Candle
+  name: crafting-magic-candle-plain
   id: MagicCandle
   graph: MagicCandle
   startNode: start
   targetNode: candle
   category: construction-category-misc
-  description: A candle that lasts forever! Pretty too
+  description: crafting-magic-candle-desc
   icon:
     sprite: Objects/Misc/candles.rsi
     state: candle-big
   objectType: Item
 
 - type: construction
-  name: Magic Candle (Black)
+  name: crafting-magic-candle-black
   id: MagicCandleBlack
   graph: MagicCandle
   startNode: start
   targetNode: candleBlack
   category: construction-category-misc
-  description: A candle that lasts forever! Pretty too
+  description: crafting-magic-candle-desc
   icon:
     sprite: Objects/Misc/candles.rsi
     state: candle-big
   objectType: Item
 
 - type: construction
-  name: Magic Candle (Blue)
+  name: crafting-magic-candle-blue
   id: MagicCandleBlue
   graph: MagicCandle
   startNode: start
   targetNode: candleBlue
   category: construction-category-misc
-  description: A candle that lasts forever! Pretty too
+  description: crafting-magic-candle-desc
   icon:
     sprite: Objects/Misc/candles.rsi
     state: candle-big
   objectType: Item
 
 - type: construction
-  name: Magic Candle (Green)
+  name: crafting-magic-candle-green
   id: MagicCandleGreen
   graph: MagicCandle
   startNode: start
   targetNode: candleGreen
   category: construction-category-misc
-  description: A candle that lasts forever! Pretty too
+  description: crafting-magic-candle-desc
   icon:
     sprite: Objects/Misc/candles.rsi
     state: candle-big
   objectType: Item
 
 - type: construction
-  name: Magic Candle (Purple)
+  name: crafting-magic-candle-purple
   id: MagicCandlePurple
   graph: MagicCandle
   startNode: start
   targetNode: candlePurple
   category: construction-category-misc
-  description: A candle that lasts forever! Pretty too
+  description: crafting-magic-candle-desc
   icon:
     sprite: Objects/Misc/candles.rsi
     state: candle-big
   objectType: Item
 
 - type: construction
-  name: Magic Candle (Red)
+  name: crafting-magic-candle-red
   id: MagicCandleRed
   graph: MagicCandle
   startNode: start
   targetNode: candleRed
   category: construction-category-misc
-  description: A candle that lasts forever! Pretty too
+  description: crafting-magic-candle-desc
   icon:
     sprite: Objects/Misc/candles.rsi
     state: candle-big
