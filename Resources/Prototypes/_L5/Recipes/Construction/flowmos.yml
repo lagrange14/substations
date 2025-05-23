@@ -8,14 +8,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: _DV/Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: _DV/Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
   conditions:
   - !type:NoUnstackableInTile
 
@@ -29,14 +21,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: _DV/Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: _DV/Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
   conditions:
   - !type:NoUnstackableInTile
 

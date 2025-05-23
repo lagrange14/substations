@@ -6,9 +6,6 @@
   targetNode: candle
   category: construction-category-misc
   description: crafting-magic-candle-desc
-  icon:
-    sprite: Objects/Misc/candles.rsi
-    state: candle-big
   objectType: Item
 
 - type: construction
@@ -19,9 +16,6 @@
   targetNode: candleBlack
   category: construction-category-misc
   description: crafting-magic-candle-desc
-  icon:
-    sprite: Objects/Misc/candles.rsi
-    state: candle-big
   objectType: Item
 
 - type: construction
@@ -32,9 +26,6 @@
   targetNode: candleBlue
   category: construction-category-misc
   description: crafting-magic-candle-desc
-  icon:
-    sprite: Objects/Misc/candles.rsi
-    state: candle-big
   objectType: Item
 
 - type: construction
@@ -45,9 +36,6 @@
   targetNode: candleGreen
   category: construction-category-misc
   description: crafting-magic-candle-desc
-  icon:
-    sprite: Objects/Misc/candles.rsi
-    state: candle-big
   objectType: Item
 
 - type: construction
@@ -58,9 +46,6 @@
   targetNode: candlePurple
   category: construction-category-misc
   description: crafting-magic-candle-desc
-  icon:
-    sprite: Objects/Misc/candles.rsi
-    state: candle-big
   objectType: Item
 
 - type: construction
@@ -71,7 +56,4 @@
   targetNode: candleRed
   category: construction-category-misc
   description: crafting-magic-candle-desc
-  icon:
-    sprite: Objects/Misc/candles.rsi
-    state: candle-big
   objectType: Item

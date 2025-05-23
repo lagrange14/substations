@@ -6,9 +6,6 @@
   targetNode: diagonalWall
   category: construction-category-structures
   description: crafting-diagonal-wall-desc
-  icon:
-    sprite: Structures/Walls/solid_diagonal.rsi
-    state: state0
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -24,9 +21,6 @@
   targetNode: diagonalReinforcedWall
   category: construction-category-structures
   description: crafting-diagonal-wall-desc
-  icon:
-    sprite: Structures/Walls/reinforced_diagonal.rsi
-    state: state0
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true

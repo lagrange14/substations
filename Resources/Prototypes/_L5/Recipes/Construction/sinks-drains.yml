@@ -6,9 +6,6 @@
   targetNode: sink
   category: construction-category-structures
   description: crafting-sink-small-desc
-  icon:
-    sprite: Structures/Furniture/sink.rsi
-    state: sink_stem
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true # because tables
@@ -22,9 +19,6 @@
   targetNode: sinkWide
   category: construction-category-structures
   description: crafting-sink-wide-desc
-  icon:
-    sprite: Structures/Furniture/sink.rsi
-    state: sink_wide
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true # because tables
@@ -38,9 +32,6 @@
   targetNode: drain
   category: construction-category-structures
   description: crafting-drain-desc
-  icon:
-    sprite: Objects/Specific/Janitorial/drain.rsi
-    state: icon
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true # because tables
