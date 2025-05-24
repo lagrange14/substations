@@ -34,9 +34,9 @@ namespace Content.Shared._L5.Movement.Systems
             EnsureComp<MovementSpeedModifierComponent>(movedEntity);
 
             // Physics 'bullshittery' necessary for object to behave properly (modified from AnimateSpellSystem)
-            // For collision layer, the Opaque CG is used rather MobLayer to ensure bullets don't collide with the wheelchair (otherwise this totally becomes a moving riot shield)
-            // Admins be warned - applying this to players will change their physics and *probably* makes them immune to bullets
-            if (TryComp<FixturesComponent>(movedEntity, out var fixtures) && TryComp<PhysicsComponent>(movedEntity, out var physics))
+            // For collision layer, the Opaque CG is used over MobLayer to ensure bullets don't collide with the wheelchair (otherwise this totally becomes a moving riot shield)
+            // We *probably* don't want to change the collision states of objects that can already be collided with, otherwise we can get into a state where we accidentally makes someone immune to bullets
+            if (TryComp<FixturesComponent>(movedEntity, out var fixtures) && TryComp<PhysicsComponent>(movedEntity, out var physics) && !physics.CanCollide)
             {
                 var xform = Transform(movedEntity);
                 var fixture = fixtures.Fixtures.First();
