@@ -10,7 +10,7 @@ trait-sign-language-desc = You can speak the most common signed language, allowi
 
 # Disability traits
 trait-lowmobility-name = Low Mobility
-trait-lowmobility-desc = You aren't able to get around very fast. Not for the faint of heart.
+trait-lowmobility-desc = You aren't able to get around very fast. Not without your trusty wheelchair, anyways! Careful not to bump into anything.
 
 trait-hard-of-hearing-name = Hard of hearing
 trait-hard-of-hearing-desc = You aren't able to hear well. Voices far away may appear muffled or unintelligible.
