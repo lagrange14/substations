@@ -58,8 +58,8 @@
   Tier: Tip Jar
 - Name: "FaintSpeaker"
   Tier: Fund our stations
-- Name: "Flayn"
-  Tier: Fund our stations
+#- Name: "Flayn"
+#  Tier: Fund our stations
 - Name: "Grotsnik"
   Tier: Previous Donors
 - Name: "Hybot"
