@@ -85,7 +85,6 @@ admin_prefix_webhook = false
 
 [server]
 rules_file             = "L5Ruleset"
-uptime_restart_minutes = 20160 # 2 weeks
 
 [rmc]
 mentor_help_sound = "/Audio/_DV/Effects/Admin/chord2.ogg" # we get our own sound
