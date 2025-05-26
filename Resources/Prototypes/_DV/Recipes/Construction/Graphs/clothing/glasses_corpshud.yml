@@ -18,6 +18,12 @@
           sprite: Clothing/Eyes/Hud/med.rsi
           state: icon
         doAfter: 5
+      - tag: HudSecurity
+        name: construction-graph-tag-security-hud
+        icon:
+          sprite: Clothing/Eyes/Hud/sec.rsi
+          state: icon
+        doAfter: 5
       - material: Cable
         amount: 5
         doAfter: 5
