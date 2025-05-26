@@ -107,16 +107,19 @@
   metabolisms: # imp
     Food:
       effects:
-      - !type:Emote
-        emote: Cough
-        probability: 0.7
-  reactiveEffects: # imp
-    Acidic:
-      methods: [ Touch ]
-      effects:
-      - !type:Emote
-        emote: Cough
-        force: true
+      - !type:AdjustReagent
+      reagent: Vitamin
+      amount: 0.1
+      #- !type:Emote     #L5 im removing the pepper making you cough thing sorryyy
+        #emote: Cough
+        #probability: 0.7
+  #reactiveEffects: # imp
+    #Acidic:
+      #methods: [ Touch ]
+      #effects:
+      #- !type:Emote
+        #emote: Cough
+        #force: true
 
 - type: reagent
   id: Vinegar
