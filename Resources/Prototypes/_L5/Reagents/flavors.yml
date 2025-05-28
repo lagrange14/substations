@@ -1,0 +1,4 @@
+- type: flavor
+  id: flyingdutchman
+  flavorType: Complex
+  description: flavor-complex-flying-dutchman
