@@ -144,15 +144,15 @@
         maxVol: 90 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 15 # imp
+          Quantity: 55 # imp
         - ReagentId: Kelotane # imp
-          Quantity: 15
+          Quantity: 5
         - ReagentId: Bicaridine # imp
-          Quantity: 15
+          Quantity: 5
         - ReagentId: Vitamin
-          Quantity: 6 # imp
-        - ReagentId: Desoxyephedrine # imp
-          Quantity: 30
+          Quantity: 31 # imp   # L5 what the fuck 30 units of desoxy
+        #- ReagentId: Desoxyephedrine # imp
+          #Quantity: 30
   - type: Tag
     tags:
     - Fruit
@@ -182,21 +182,21 @@
         maxVol: 115 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 27 # imp
+          Quantity: 57 # imp
         - ReagentId: Vitamin
-          Quantity: 10 # imp
+          Quantity: 25 # imp
         #- ReagentId: DoctorsDelight # imp
         #  Quantity: 5
         - ReagentId: Bicaridine # imp
-          Quantity: 15
-        - ReagentId: Kelotane # imp
-          Quantity: 15
-        - ReagentId: Desoxyephedrine # imp
-          Quantity: 30
-        - ReagentId: Vitamin # imp
-          Quantity: 2
-        - ReagentId: Protein # imp
           Quantity: 5
+        - ReagentId: Kelotane # imp
+          Quantity: 5
+        #- ReagentId: Desoxyephedrine # imp
+          #Quantity: 30
+        - ReagentId: Vitamin # imp
+          Quantity: 8
+        - ReagentId: Protein # imp
+          Quantity: 10
   - type: Tag
     tags:
     - Meat
