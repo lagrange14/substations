@@ -140,6 +140,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.25
     baseSprintSpeed: 3.6
+  - type: StaticPrice
+    price: 3000
 
 - type: entity
   id: MechRipleyBattery

@@ -30,7 +30,7 @@
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: no-action }
   - type: StaticPrice
-    price: 100
+    price: 350
   - type: Tag
     tags:
     - BorgModuleGeneric
@@ -1241,6 +1241,8 @@
         - PinpointerSyndicateNuclear
     - type: BorgModuleIcon
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }
+    - type: StaticPrice # L5 call it a reward for turning these in idk
+      price: 2200
 
 - type: entity
   id: BorgModuleMartyr

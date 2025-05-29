@@ -12,6 +12,8 @@
   - type: GuideHelp
     guides:
     - Robotics
+  - type: StaticPrice # L5 Seems a good amount for the clamps and such
+    price: 500
 
 - type: entity
   id: MechEquipmentGrabber
