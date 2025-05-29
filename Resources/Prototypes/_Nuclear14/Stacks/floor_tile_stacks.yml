@@ -3,135 +3,162 @@
   id: FloorTileMetalBlue
   name: stack-metal-floor-blue
   spawn: FloorTileItemMetalBlue
+  maxCount: 120 # L5 these never had a max count to begin with but I made all of them 120 just in case
 
 - type: stack
   id: FloorTileMetalBlueSolid
   name: stack-metal-floor-blue-solid
   spawn: FloorTileItemMetalBlueSolid
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalGreen
   name: stack-metal-floor-green
   spawn: FloorTileItemMetalGreen
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalGreenSolid
   name: stack-metal-floor-green-solid
   spawn: FloorTileItemMetalGreenSolid
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalGrey
   name: stack-metal-floor-grey
   spawn: FloorTileItemMetalGrey
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalGreySolid
   name: stack-metal-floor-grey-solid
   spawn: FloorTileItemMetalGreySolid
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalGreyDark
   name: stack-metal-floor-grey-dark
   spawn: FloorTileItemMetalGreyDark
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalGreyDarkSolid
   name: stack-metal-floor-grey-dark-solid
   spawn: FloorTileItemMetalGreyDarkSolid
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalPurple
   name: stack-metal-floor-purple
   spawn: FloorTileItemMetalPurple
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalPurpleSolid
   name: stack-metal-floor-purple-solid
   spawn: FloorTileItemMetalPurpleSolid
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalRed
   name: stack-metal-floor-red
   spawn: FloorTileItemMetalRed
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalRedSolid
   name: stack-metal-floor-red-solid
   spawn: FloorTileItemMetalRedSolid
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalTeal
   name: stack-metal-floor-teal
   spawn: FloorTileItemMetalTeal
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalTealSolid
   name: stack-metal-floor-teal-solid
   spawn: FloorTileItemMetalTealSolid
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalWhite
   name: stack-metal-floor-white
   spawn: FloorTileItemMetalWhite
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalWhiteSolid
   name: stack-metal-floor-white-solid
   spawn: FloorTileItemMetalWhiteSolid
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalYellow
   name: stack-metal-floor-yellow
   spawn: FloorTileItemMetalYellow
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalYellowSolid
   name: stack-metal-floor-yellow-solid
   spawn: FloorTileItemMetalYellowSolid
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalFreezer
   name: stack-metal-floor-freezer
   spawn: FloorTileItemMetalFreezer
+  maxCount: 120
 
 # Other
 - type: stack
   id: FloorTileWoodOak
   name: stack-wood-floor-oak
   spawn: FloorTileItemWoodOak
+  maxCount: 120
 
 - type: stack
   id: FloorTileWoodHouse
   name: stack-wood-floor-house
   spawn: FloorTileItemWoodHouse
+  maxCount: 120
 
 - type: stack
   id: FloorTileWoodMaple
   name: stack-wood-floor-maple
   spawn: FloorTileItemWoodMaple
+  maxCount: 120
 
 - type: stack
   id: FloorTileCarpetRed
   name: stack-carpet-floor
   spawn: FloorTileItemCarpetRed
+  maxCount: 120
 
 # MS13
 - type: stack
   id: FloorTileMetalIndustrial
   name: stack-industrial-floor
   spawn: FloorTileItemMetalIndustrial
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalMS13
   name: stack-metal-tile-floor
   spawn: FloorTileItemMetalMS13
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalGrate
   name: stack-metal-grate-floor
   spawn: FloorTileItemMetalGrate
+  maxCount: 120
 
 - type: stack
   id: FloorTileMetalSolid
   name: stack-metal-solid-floor
   spawn: FloorTileItemMetalSolid
+  maxCount: 120
