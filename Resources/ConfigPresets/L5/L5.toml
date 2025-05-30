@@ -10,6 +10,7 @@ secret_weight_prototype = "SecretDeltaV"
 role_timers             = false # no time requirements for roles
 cryo_sleep_rejoining    = true
 hostname_in_titlebar    = true
+tabletop_place          = true # Worth the risk.
 
 [nf14.respawn]
 time = 0

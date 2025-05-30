@@ -16,6 +16,3 @@ uplink-syndicate-hostage-implanter-bundle-desc = These implants pacify when inje
 # L5 - laws to directives
 uplink-objective-syndicate-board-name = Syndicate directive board
 uplink-objective-syndicate-board-desc = Its expensive, don't lose it!
-
-uplink-syndie-fulton-name = Syndicate Fultons
-uplink-syndie-fulton-desc = Proprietary Waffle Corp fultons that send high value items to the Syndicate Vault for processing, or send sophonts to the Syndicate Jail for ransom.

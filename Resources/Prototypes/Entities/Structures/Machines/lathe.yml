@@ -49,6 +49,12 @@
     price: 800
   - type: ResearchClient
   - type: TechnologyDatabase
+    supportedDisciplines: # DeltaV - don't add it to every map
+    - Industrial
+    - Biochemical
+    - Arsenal
+    - Experimental
+    - CivilianServices
 
 # a lathe that can be sped up with space lube / slowed down with glue
 - type: entity
@@ -578,6 +584,7 @@
     - BeltsDeltaV # DeltaV
     - ClothingJustice # DeltaV
     - ClothingTowels # L5
+    - ClothingAprons # L5
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ClothingCentComm
@@ -585,9 +592,9 @@
   - type: MaterialStorage
     whitelist:
       tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+      - Sheet
+      - RawMaterial
+      - Ingot
   - type: OreSiloClient
 
 - type: entity
@@ -601,7 +608,7 @@
     snapCardinals: true
     layers:
     - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
+      map: [ "enum.LatheVisualLayers.IsRunning" ]
     - state: unlit
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]

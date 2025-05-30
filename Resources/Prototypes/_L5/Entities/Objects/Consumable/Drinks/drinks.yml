@@ -237,3 +237,19 @@
   - type: Icon
     sprite: Objects/Consumable/Drinks/arnoldpalmer.rsi
     state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkFlyingDutchmanGlass
+  suffix: flying dutchman
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: FlyingDutchman
+          Quantity: 30
+  - type: Icon
+    sprite: Objects/Consumable/Drinks/tortuga.rsi
+    state: icon

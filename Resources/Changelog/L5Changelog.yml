@@ -523,3 +523,23 @@ Entries:
       message: admins in-round can no longer see dead chat
   id: 67
   time: '2025-05-25T22:41:52.0000000+00:00'
+- author: makyo
+  changes:
+    - type: Add
+      message: When canisters are full (more than 4250kPa), the green light flashes
+  id: 68
+  time: '2025-05-28T16:03:39.0000000+00:00'
+- author: makyo
+  changes:
+    - type: Add
+      message: Waist aprons ported from Den!
+    - type: Tweak
+      message: Aprons are printable at the textile fab
+  id: 69
+  time: '2025-05-28T20:35:30.0000000+00:00'
+- author: perryprog
+  changes:
+    - type: Add
+      message: You can now create the Flying Dutchman drink.
+  id: 70
+  time: '2025-05-28T20:35:52.0000000+00:00'

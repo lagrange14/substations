@@ -89,3 +89,17 @@
       amount: 1
   products:
     ArnoldPawmer: 2
+
+- type: reaction
+  id: FlyingDutchman
+  requiredMixerCategories:
+  - Shake
+  reactants:
+    Tortuga:
+      amount: 3
+    LemonLime:
+      amount: 2
+    Rum:
+      amount: 1
+  products:
+    FlyingDutchman: 6

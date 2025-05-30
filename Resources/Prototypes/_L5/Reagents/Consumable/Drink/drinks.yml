@@ -236,3 +236,26 @@
       - !type:AdjustReagent
         reagent: Neobromine
         amount: 0.05
+
+- type: reagent
+  id: FlyingDutchman
+  name: reagent-name-flying-dutchman
+  parent: BaseAlcohol
+  desc: reagent-desc-flying-dutchman
+  physicalDesc: reagent-physical-desc-sweet
+  flavor: flyingdutchman
+  color: "#20b2aa"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/tortuga.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.03

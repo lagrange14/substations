@@ -35,6 +35,9 @@
             1: { state: can-o1, shader: "unshaded" }
             2: { state: can-o2, shader: "unshaded" }
             3: { state: can-o3, shader: "unshaded" }
+            4: { state: can-o4, shader: "unshaded" }
+            5: { state: can-o4, shader: "unshaded" }
+            6: { state: can-o4, shader: "unshaded" }
     - type: ActivatableUI
       key: enum.GasCanisterUiKey.Key
     - type: ActivatableUIRequiresLock

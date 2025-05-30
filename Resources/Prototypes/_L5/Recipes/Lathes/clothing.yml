@@ -1,4 +1,4 @@
-- type: latheRecipe # L5 Base towel recipe
+- type: latheRecipe # Base towel recipe
   abstract: true
   id: BaseTowelRecipe
   categories:
@@ -7,7 +7,7 @@
   materials:
     Cloth: 400
 
-# L5 all the dang towels(except the NT, syndie, and CC towels)
+# all the dang towels(except the NT, syndie, and CC towels)
 - type: latheRecipe
   parent: BaseTowelRecipe
   id: TowelColorWhite
@@ -102,3 +102,37 @@
   parent: BaseTowelRecipe
   id: TowelColorMime
   result: TowelColorMime
+
+# Aprons ahoy
+- type: latheRecipe
+  id: BaseApronRecipe
+  abstract: true
+  categories:
+  - Aprons
+  completetime: 4
+  materials:
+    Cloth: 250
+
+- type: latheRecipe
+  parent: BaseApronRecipe
+  name: clothing-outer-apron-bar
+  id: ClothingOuterApronBar
+  result: ClothingOuterApronBar
+
+- type: latheRecipe
+  parent: BaseApronRecipe
+  name: clothing-outer-apron-botanist
+  id: ClothingOuterApronBotanist
+  result: ClothingOuterApronBotanist
+
+- type: latheRecipe
+  parent: BaseApronRecipe
+  name: clothing-outer-apron-chef
+  id: ClothingOuterApronChef
+  result: ClothingOuterApronChef
+
+- type: latheRecipe
+  parent: BaseApronRecipe
+  name: clothing-outer-apron-chemist
+  id: ClothingOuterApronChemist
+  result: ClothingOuterApronChemist

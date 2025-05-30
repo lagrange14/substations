@@ -1,0 +1,32 @@
+- type: latheRecipe
+  id: BaseWaistApronRecipe
+  abstract: true
+  categories:
+  - Aprons
+  completetime: 4
+  materials:
+    Cloth: 150
+
+- type: latheRecipe
+  id: ClothingWaistApron
+  result: ClothingWaistApron
+  parent: BaseWaistApronRecipe
+  name:   clothing-belt-waist-apron
+
+- type: latheRecipe
+  id: ClothingWaistApronCheckered
+  result: ClothingWaistApronCheckered
+  parent: BaseWaistApronRecipe
+  name:   clothing-belt-waist-apron-checkered
+
+- type: latheRecipe
+  id: ClothingWaistApronStripesHorizontal
+  result: ClothingWaistApronStripesHorizontal
+  parent: BaseWaistApronRecipe
+  name:   clothing-belt-waist-apron-striped-horizontal
+
+- type: latheRecipe
+  id: ClothingWaistApronStripesVertical
+  result: ClothingWaistApronStripesVertical
+  parent: BaseWaistApronRecipe
+  name:   clothing-belt-waist-apron-striped-vertical

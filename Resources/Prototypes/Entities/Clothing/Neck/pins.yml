@@ -11,6 +11,14 @@
     sprite: Clothing/Neck/Misc/pins.rsi
   - type: Clothing
     sprite: Clothing/Neck/Misc/pins.rsi
+  - type: DamageOtherOnHit # imp
+    damage:
+      types:
+        Blunt: 1
+  - type: WearerGetsExamineText # imp
+    thing: obvious-thing-pin
+    examineText: obvious-desc-default
+    pocketEvident: true
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -22,6 +30,8 @@
     state: lgbt
   - type: Clothing
     equippedPrefix: lgbt
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -33,6 +43,8 @@
     state: ally
   - type: Clothing
     equippedPrefix: ally
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-straightally
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -44,6 +56,8 @@
     state: aro
   - type: Clothing
     equippedPrefix: aro
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-aro
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -55,6 +69,8 @@
     state: aroace
   - type: Clothing
     equippedPrefix: aroace
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-aroace
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -66,6 +82,8 @@
     state: asex
   - type: Clothing
     equippedPrefix: asex
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-ace
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -77,6 +95,8 @@
     state: bi
   - type: Clothing
     equippedPrefix: bi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-bi
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -88,6 +108,8 @@
     state: gay
   - type: Clothing
     equippedPrefix: gay
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-gay
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -99,6 +121,8 @@
     state: inter
   - type: Clothing
     equippedPrefix: inter
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-intersex
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -110,6 +134,8 @@
     state: les
   - type: Clothing
     equippedPrefix: les
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-lesbian
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -121,6 +147,8 @@
     state: non
   - type: Clothing
     equippedPrefix: non
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-nonbinary
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -132,6 +160,8 @@
     state: pan
   - type: Clothing
     equippedPrefix: pan
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-pan
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -154,6 +184,8 @@
     state: omni
   - type: Clothing
     equippedPrefix: omni
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-omni
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -165,6 +197,8 @@
     state: gender
   - type: Clothing
     equippedPrefix: gender
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-gq
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -187,6 +221,8 @@
     state: trans
   - type: Clothing
     equippedPrefix: trans
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-trans
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -198,6 +234,8 @@
     state: autism
   - type: Clothing
     equippedPrefix: autism
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-aut
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -209,3 +247,5 @@
     state: goldautism
   - type: Clothing
     equippedPrefix: goldautism
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-aut

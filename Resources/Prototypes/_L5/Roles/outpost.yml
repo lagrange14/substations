@@ -17,7 +17,7 @@
   weight: 10
   startingGear: PrincipalArchitectGear
   icon: "JobIconCaptain"
-  ransomModifier: 3 # DeltaV
+  # ransomModifier: 3 # DeltaV - reverted traitor rep
   requireAdminNotify: true # DeltaV
   supervisors: job-supervisors-captain
   canBeAntag: false

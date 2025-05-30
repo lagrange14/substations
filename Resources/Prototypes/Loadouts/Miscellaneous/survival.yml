@@ -5,7 +5,7 @@
   - !type:SpeciesLoadoutEffect
     species:
     - SlimePerson
-    - Vox
+#    - Vox # L5 - Vox breathe oxygen now. (Slimes probably will too at some point.)
 
 - type: loadoutEffectGroup
   id: OxygenBreather
@@ -28,13 +28,14 @@
     - Thaven
     - Kitsune
     # End DeltaV additions
+    - Vox # L5
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox
   effects:
   - !type:SpeciesLoadoutEffect
-    species:
-    - Vox
+    species: []
+#    - Vox # L5 - box breathe oxygen, don't need special loadout.
 
 # Basic
 - type: loadout
