@@ -64,6 +64,11 @@ namespace Content.Shared._L5.Traits.HUD
             ent.Comp.Enabled = true;
             TryToggle(ent);
 
+            // If we somehow weren't able to load the action, try again using the cached ID
+            if (string.IsNullOrWhiteSpace(ent.Comp.ToggleSecHudAction))
+                ent.Comp.ToggleSecHudAction = ent.Comp.ToggleProto;
+
+            // Load the action if possible
             if (!string.IsNullOrWhiteSpace(ent.Comp.ToggleSecHudAction) && ent.Comp.Action == null)
                 _actionsSystem.AddAction(ent, ref ent.Comp.Action, ent.Comp.ToggleSecHudAction);
         }

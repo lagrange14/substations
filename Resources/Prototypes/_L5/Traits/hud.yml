@@ -5,7 +5,7 @@
   components:
     - type: InstantAction
       useDelay: 2
-      icon: Interface/Actions.scream.png
+      icon: _L5/Interface/Actions/sechud.png
       event: !type:ToggleSecHudEvent
       checkCanInteract: false
 
