@@ -7,10 +7,11 @@
   components:
   - type: Sprite
     sprite: Mobs/Species/Vox/organs.rsi
-  - type: Metabolizer
-    metabolizerTypes: [ Vox ]
-  - type: Lung
-    alert: LowNitrogen
+    # L5 - Vox breathe oxygen
+#  - type: Metabolizer
+#    metabolizerTypes: [ Vox ]
+#  - type: Lung
+#    alert: LowNitrogen
   - type: Item
     size: Small
     heldPrefix: lungs
