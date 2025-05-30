@@ -6,7 +6,7 @@
     - type: InstantAction
       useDelay: 2
       icon: _L5/Interface/Actions/sechud.png
-      event: !type:ToggleSecHudEvent
+      event: !type:ToggleEvent
       checkCanInteract: false
 
 - type: trait
