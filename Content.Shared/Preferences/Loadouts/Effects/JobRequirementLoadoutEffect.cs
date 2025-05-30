@@ -18,6 +18,9 @@ public sealed partial class JobRequirementLoadoutEffect : LoadoutEffect
 
     public override bool Validate(HumanoidCharacterProfile profile, RoleLoadout loadout, ICommonSession? session, IDependencyCollection collection, [NotNullWhen(false)] out FormattedMessage? reason)
     {
+        reason = FormattedMessage.Empty;
+        return true; // L5 - lol
+        /*
         if (session == null)
         {
             reason = FormattedMessage.Empty;
@@ -34,5 +37,6 @@ public sealed partial class JobRequirementLoadoutEffect : LoadoutEffect
             playtimes,
             out reason,
             isWhitelisted); // DeltaV
+        */
     }
 }

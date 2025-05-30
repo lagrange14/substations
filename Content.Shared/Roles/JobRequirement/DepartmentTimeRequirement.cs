@@ -32,6 +32,8 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
         bool isWhitelisted) // DeltaV
     {
         reason = new FormattedMessage();
+        return true; // L5 - lol. (Even though game.role_timers exists, loadout effects ignore it.)
+        /*
         var playtime = TimeSpan.Zero;
 
         // Check all jobs' departments
@@ -83,5 +85,6 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
         }
 
         return true;
+        */
     }
 }
