@@ -56,3 +56,19 @@ trait-dietary-restriction-LatexAllergy-fail = Oh no...that food interacts with a
 trait-dietary-restriction-NightshadeAllergy-name = Nightshade allergy
 trait-dietary-restriction-NightshadeAllergy-desc = You're allergic to glycoalkaloids, a natural pest deterrent found in plants such as potatoes and tomatoes
 trait-dietary-restriction-NightshadeAllergy-fail = Oh no...that has nightshades in it...you may get sick...
+
+# Skills
+trait-hud-security-name = Security HUD
+trait-hud-security-desc = A Security HUD is installed in your display. Doesn't actually increase how secure you feel, especially if Paul's around.
+
+trait-hud-medical-name = Medical HUD
+trait-hud-medical-desc = A Medical HUD is installed in your display. If you're not working in Medical, you only want this because you've played too many RPG games.
+
+trait-hud-administration-name = Administration HUD
+trait-hud-administration-desc = An Administration HUD is installed in your display. For when you want to spy on everyone, but don't want to do sec's job.
+
+trait-hud-beer-name = Beer HUD
+trait-hud-beer-desc = A Beer HUD is installed in your display. Still doesn't make it easier to keep your own BAC low, though.
+
+trait-hud-chemical-name = Chemical Analysis HUD
+trait-hud-chemical-desc = A Chemical Analysis HUD is installed in your display. For when you need your Double Ice Cream to have 99.1% Purity.

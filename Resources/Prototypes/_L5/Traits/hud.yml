@@ -1,0 +1,47 @@
+- type: entity
+  id: ActionToggleSecHud
+  name: Toggle Sec Hud
+  description: Toggles your security HUD.
+  components:
+    - type: InstantAction
+      useDelay: 2
+      icon: Interface/Actions.scream.png
+      event: !type:ToggleSecHudEvent
+      checkCanInteract: false
+
+- type: trait
+  category: Skills
+  id: SecurityHUD
+  name: trait-hud-security-name
+  description: trait-hud-security-desc
+  components:
+  - type: ToggleSecHud
+    toggleSecHudAction: ActionToggleSecHud
+
+- type: trait
+  category: Skills
+  id: MedicalHUD
+  name: trait-hud-medical-name
+  description: trait-hud-medical-desc
+  components:
+
+- type: trait
+  category: Skills
+  id: AdministrationHUD
+  name: trait-hud-administration-name
+  description: trait-hud-administration-desc
+  components:
+
+- type: trait
+  category: Skills
+  id: BeerHUD
+  name: trait-hud-beer-name
+  description: trait-hud-beer-desc
+  components:
+
+- type: trait
+  category: Skills
+  id: ChemicalHUD
+  name: trait-hud-chemical-name
+  description: trait-hud-chemical-desc
+  components:
