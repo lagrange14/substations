@@ -11,9 +11,6 @@ namespace Content.Shared._L5.Traits.HUD
         public virtual EntProtoId? ToggleProto { get; set; }
 
         [DataField, AutoNetworkedField]
-        public virtual EntProtoId? ToggleAction { get; set; }
-
-        [DataField, AutoNetworkedField]
         public EntityUid? Action;
 
         [DataField]
