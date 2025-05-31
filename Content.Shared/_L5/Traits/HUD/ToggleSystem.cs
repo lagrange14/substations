@@ -1,6 +1,4 @@
 using Content.Shared.Actions;
-using Content.Shared.Contraband;
-using Content.Shared.Overlays;
 using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared._L5.Traits.HUD
@@ -17,12 +15,12 @@ namespace Content.Shared._L5.Traits.HUD
         {
             SubscribeLocalEvent<TCOMP, ComponentStartup>(OnComponentAdded);
             SubscribeLocalEvent<TCOMP, ComponentShutdown>(OnComponentRemoved);
-            SubscribeLocalEvent<TCOMP, ToggleEvent>(OnSecHudEvent);
+            SubscribeLocalEvent<TCOMP, ToggleEvent>(OnToggleEvent);
         }
 
-        private void OnSecHudEvent(Entity<TCOMP> ent, ref ToggleEvent args)
+        private void OnToggleEvent(Entity<TCOMP> ent, ref ToggleEvent args)
         {
-            if (args.Handled) return;
+            if (args.Action != ent.Comp.Action || args.Handled) return;
             args.Handled = true;
 
             ent.Comp.Enabled ^= true; // Flip the enabled bit
@@ -40,12 +38,12 @@ namespace Content.Shared._L5.Traits.HUD
             TryUpdate(ent);
 
             // If we somehow weren't able to load the action, try again using the cached ID
-            if (string.IsNullOrWhiteSpace(ent.Comp.ToggleSecHudAction))
-                ent.Comp.ToggleSecHudAction = ent.Comp.ToggleProto;
+            if (string.IsNullOrWhiteSpace(ent.Comp.ToggleAction))
+                ent.Comp.ToggleAction = ent.Comp.ToggleProto;
 
             // Load the action if possible
-            if (!string.IsNullOrWhiteSpace(ent.Comp.ToggleSecHudAction) && ent.Comp.Action == null)
-                _actionsSystem.AddAction(ent, ref ent.Comp.Action, ent.Comp.ToggleSecHudAction);
+            if (!string.IsNullOrWhiteSpace(ent.Comp.ToggleAction) && ent.Comp.Action == null)
+                _actionsSystem.AddAction(ent, ref ent.Comp.Action, ent.Comp.ToggleAction);
         }
 
         private void OnComponentRemoved(Entity<TCOMP> ent, ref ComponentShutdown args)
@@ -57,15 +55,9 @@ namespace Content.Shared._L5.Traits.HUD
                 _actionsSystem.RemoveAction(ent.Comp.Action);
         }
 
-        private void TryUpdate(Entity<TCOMP> entity)
-        {
-            TryUpdateComp<ShowJobIconsComponent>(entity);
-            TryUpdateComp<ShowMindShieldIconsComponent>(entity);
-            TryUpdateComp<ShowCriminalRecordIconsComponent>(entity);
-            TryUpdateComp<ShowContrabandDetailsComponent>(entity);
-        }
+        protected abstract void TryUpdate(Entity<TCOMP> entity);
 
-        private void TryUpdateComp<T>(Entity<TCOMP> entity) where T : Component, new()
+        protected void TryUpdateComp<T>(Entity<TCOMP> entity) where T : Component, new()
         {
             if (entity.Comp.Enabled && !HasComp<T>(entity))
                 AddComp<T>(entity);

@@ -1,3 +1,12 @@
+- type: trait
+  category: Skills
+  id: SecurityHUD
+  name: trait-hud-security-name
+  description: trait-hud-security-desc
+  components:
+  - type: ToggleSecHud
+    ToggleAction: ActionToggleSecHud
+
 - type: entity
   id: ActionToggleSecHud
   name: Toggle Sec Hud
@@ -8,15 +17,6 @@
       icon: _L5/Interface/Actions/sechud.png
       event: !type:ToggleEvent
       checkCanInteract: false
-
-- type: trait
-  category: Skills
-  id: SecurityHUD
-  name: trait-hud-security-name
-  description: trait-hud-security-desc
-  components:
-  - type: ToggleSecHud
-    toggleSecHudAction: ActionToggleSecHud
 
 - type: trait
   category: Skills
@@ -38,6 +38,19 @@
   name: trait-hud-beer-name
   description: trait-hud-beer-desc
   components:
+    - type: ToggleBeerHud
+      ToggleAction: ActionToggleBeerHud
+
+- type: entity
+  id: ActionToggleBeerHud
+  name: Toggle Beer Hud
+  description: Toggles your beer HUD.
+  components:
+    - type: InstantAction
+      useDelay: 2
+      icon: _L5/Interface/Actions/sechud.png
+      event: !type:ToggleEvent
+      checkCanInteract: false
 
 - type: trait
   category: Skills

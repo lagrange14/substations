@@ -5,13 +5,13 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared._L5.Traits.HUD
 {
     [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-    public partial class ToggleComponent : Component
+    public abstract partial class ToggleComponent : Component
     {
         [DataField]
-        public EntProtoId ToggleProto = "ActionToggleSecHud";
+        public abstract EntProtoId ToggleProto { get; set; }
 
         [DataField, AutoNetworkedField]
-        public EntProtoId? ToggleSecHudAction;
+        public EntProtoId? ToggleAction;
 
         [DataField, AutoNetworkedField]
         public EntityUid? Action;

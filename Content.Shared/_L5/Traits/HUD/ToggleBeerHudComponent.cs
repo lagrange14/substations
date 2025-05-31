@@ -4,11 +4,10 @@ using Robust.Shared.Prototypes;
 namespace Content.Shared._L5.Traits.HUD
 {
     [RegisterComponent]
-    public sealed partial class ToggleSecHudComponent : ToggleComponent
+    public sealed partial class ToggleBeerHudComponent : ToggleComponent
     {
         [DataField]
-        public override EntProtoId ToggleProto { get; set; } = "ActionToggleSecHud";
-
+        public override EntProtoId ToggleProto { get; set; } = "ActionToggleBeerHud";
         [DataField]
         public override SoundSpecifier? ToggleOnSound { get; set; } = new SoundPathSpecifier("/Audio/Weapons/Guns/Empty/empty.ogg");
         [DataField]
