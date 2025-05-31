@@ -3,14 +3,12 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._L5.Traits.HUD
 {
-    [RegisterComponent, AutoGenerateComponentState]
+    [RegisterComponent]
     public sealed partial class ToggleBeerHudComponent : ToggleComponent
     {
         [DataField]
         public override EntProtoId? ToggleProto { get; set; } = "ActionToggleBeerHud";
 
-        [DataField, AutoNetworkedField]
-        public EntProtoId ToggleAction { get; set; }
 
         [DataField]
         public override SoundSpecifier? ToggleOnSound { get; set; } = new SoundPathSpecifier("/Audio/_L5/Effects/HUD/BeerHudEnable.ogg");

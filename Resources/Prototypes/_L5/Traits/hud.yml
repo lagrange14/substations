@@ -5,7 +5,7 @@
   description: trait-hud-security-desc
   components:
   - type: ToggleSecHud
-    ToggleAction: ActionToggleSecHud
+    toggleAction: ActionToggleSecHud
 
 - type: entity
   id: ActionToggleSecHud
@@ -25,7 +25,7 @@
   description: trait-hud-medical-desc
   components:
     - type: ToggleMedHud
-      ToggleAction: ActionToggleMedHud
+      toggleAction: ActionToggleMedHud
 
 - type: entity
   id: ActionToggleMedHud
@@ -45,7 +45,7 @@
   description: trait-hud-beer-desc
   components:
     - type: ToggleBeerHud
-      ToggleAction: ActionToggleBeerHud
+      toggleAction: ActionToggleBeerHud
 
 - type: entity
   id: ActionToggleBeerHud
