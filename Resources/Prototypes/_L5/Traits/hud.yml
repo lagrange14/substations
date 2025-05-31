@@ -24,6 +24,19 @@
   name: trait-hud-medical-name
   description: trait-hud-medical-desc
   components:
+    - type: ToggleMedHud
+      ToggleAction: ActionToggleMedHud
+
+- type: entity
+  id: ActionToggleMedHud
+  name: Toggle Med Hud
+  description: Toggles your medical HUD.
+  components:
+    - type: InstantAction
+      useDelay: 2
+      icon: _L5/Interface/Actions/sechud.png
+      event: !type:ToggleEvent
+      checkCanInteract: false
 
 - type: trait
   category: Skills
