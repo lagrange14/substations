@@ -4,11 +4,11 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Shared._L5.Traits.HUD
 {
-    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-    public abstract partial class ToggleComponent : Component
+    [RegisterComponent, Virtual, NetworkedComponent, AutoGenerateComponentState]
+    public partial class ToggleComponent : Component
     {
         [DataField]
-        public abstract EntProtoId ToggleProto { get; set; }
+        public virtual EntProtoId? ToggleProto { get; set; }
 
         [DataField, AutoNetworkedField]
         public EntProtoId? ToggleAction;
