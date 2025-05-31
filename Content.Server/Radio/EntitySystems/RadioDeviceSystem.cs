@@ -12,7 +12,9 @@ using Content.Shared.Interaction;
 using Content.Shared.Power;
 using Content.Shared.Radio;
 using Content.Shared.Chat;
+using Content.Shared.Hands;
 using Content.Shared.Radio.Components;
+using Content.Shared.Verbs;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Radio.EntitySystems;
@@ -20,7 +22,7 @@ namespace Content.Server.Radio.EntitySystems;
 /// <summary>
 ///     This system handles radio speakers and microphones (which together form a hand-held radio).
 /// </summary>
-public sealed class RadioDeviceSystem : EntitySystem
+public sealed partial class RadioDeviceSystem : EntitySystem // L5 - made partial
 {
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
@@ -41,10 +43,14 @@ public sealed class RadioDeviceSystem : EntitySystem
         SubscribeLocalEvent<RadioMicrophoneComponent, ListenEvent>(OnListen);
         SubscribeLocalEvent<RadioMicrophoneComponent, ListenAttemptEvent>(OnAttemptListen);
         SubscribeLocalEvent<RadioMicrophoneComponent, PowerChangedEvent>(OnPowerChanged);
+        SubscribeLocalEvent<RadioMicrophoneComponent, GetVerbsEvent<ActivationVerb>>(OnGetMicVerbs); // L5
+        SubscribeLocalEvent<RadioMicrophoneComponent, GotEquippedHandEvent>(OnGotMicEquipped); // L5
+        SubscribeLocalEvent<RadioMicrophoneComponent, GotUnequippedHandEvent>(OnGotMicUnequipped); // L5
 
         SubscribeLocalEvent<RadioSpeakerComponent, ComponentInit>(OnSpeakerInit);
         SubscribeLocalEvent<RadioSpeakerComponent, ActivateInWorldEvent>(OnActivateSpeaker);
         SubscribeLocalEvent<RadioSpeakerComponent, RadioReceiveEvent>(OnReceiveRadio);
+        SubscribeLocalEvent<RadioSpeakerComponent, GetVerbsEvent<AlternativeVerb>>(OnGetSpeakerVerbs); // L5
 
         SubscribeLocalEvent<IntercomComponent, EncryptionChannelsChangedEvent>(OnIntercomEncryptionChannelsChanged);
         SubscribeLocalEvent<IntercomComponent, ToggleIntercomMicMessage>(OnToggleIntercomMic);
@@ -82,6 +88,18 @@ public sealed class RadioDeviceSystem : EntitySystem
     {
         if (!args.Complex)
             return;
+
+        // Begin L5 - better handheld mics
+        if (component.ToggleOnVerb
+            && TryComp<RadioSpeakerComponent>(uid, out var speakerComp))
+        {
+            if (speakerComp.Enabled)
+                ToggleHandheldMic((uid, component, speakerComp), args.User);
+            else
+                ToggleHandheldSpeaker((uid, component, speakerComp), args.User);
+            return;
+        }
+        // End L5
 
         if (!component.ToggleOnInteract)
             return;

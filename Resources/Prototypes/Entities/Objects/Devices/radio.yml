@@ -4,10 +4,15 @@
   parent: BaseItem
   id: RadioHandheld
   components:
+  - type: StationAiWhitelist # L5 - why not
   - type: TelecomExempt
   - type: RadioMicrophone
+    toggleOnInteract: false # L5 - handled as verb
+    toggleOnVerb: true # L5
     broadcastChannel: Handheld
   - type: RadioSpeaker
+    toggleOnInteract: false # L5 - handled as verb
+    toggleOnVerb: true # L5
     channels:
     - Handheld
   - type: Speech
