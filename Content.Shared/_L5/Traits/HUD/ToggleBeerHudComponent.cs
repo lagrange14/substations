@@ -9,8 +9,8 @@ namespace Content.Shared._L5.Traits.HUD
         [DataField]
         public override EntProtoId ToggleProto { get; set; } = "ActionToggleBeerHud";
         [DataField]
-        public override SoundSpecifier? ToggleOnSound { get; set; } = new SoundPathSpecifier("/Audio/Weapons/Guns/Empty/empty.ogg");
+        public override SoundSpecifier? ToggleOnSound { get; set; } = new SoundPathSpecifier("/Audio/_L5/Effects/HUD/BeerHudEnable.ogg");
         [DataField]
-        public override SoundSpecifier? ToggleOffSound { get; set; } = new SoundPathSpecifier("/Audio/Weapons/Guns/Empty/empty.ogg");
+        public override SoundSpecifier? ToggleOffSound { get; set; } = new SoundPathSpecifier("/Audio/_L5/Effects/HUD/BeerHudDisable.ogg");
     }
 }

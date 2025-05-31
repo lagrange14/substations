@@ -34,16 +34,9 @@
   components:
     - type: InstantAction
       useDelay: 2
-      icon: _L5/Interface/Actions/sechud.png
+      icon: _L5/Interface/Actions/medhud.png
       event: !type:ToggleEvent
       checkCanInteract: false
-
-- type: trait
-  category: Skills
-  id: AdministrationHUD
-  name: trait-hud-administration-name
-  description: trait-hud-administration-desc
-  components:
 
 - type: trait
   category: Skills
@@ -61,13 +54,6 @@
   components:
     - type: InstantAction
       useDelay: 2
-      icon: _L5/Interface/Actions/sechud.png
+      icon: _L5/Interface/Actions/beerhud.png
       event: !type:ToggleEvent
       checkCanInteract: false
-
-- type: trait
-  category: Skills
-  id: ChemicalHUD
-  name: trait-hud-chemical-name
-  description: trait-hud-chemical-desc
-  components:
