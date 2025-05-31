@@ -8,7 +8,7 @@
     sprite: Objects/Misc/cd.rsi
     state: icon
   - type: StaticPrice
-    price: 100
+    price: 500 # L5 worth a bit more, coords to an abandoned facility sound like something people would buy
   - type: Tag
     tags:
     - CoordinatesDisk

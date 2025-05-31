@@ -28,6 +28,8 @@
     - bluespace_2
     - bluespace_3
     count: 5
+  - type: StaticPrice # L5 in the event you have excess, they should be worth selling
+    price: 1750
 
 - type: entity
   parent: MaterialBluespace
@@ -62,6 +64,8 @@
   - type: Tag
     tags:
     - NormalityCrystal
+  - type: StaticPrice # L5 harder to get than bluespace
+    price: 2250
 
 - type: entity
   parent: CrystalNormality
@@ -112,12 +116,12 @@
     - chitin
     - chitin_2
     - chitin_3
-  - type: StackPrice
-    price: 125
+  - type: StackPrice # L5 this makes a full stack worth ~8k which seems alright for what would be like 15 sharkminnow kills?
+    price: 275
   - type: Tag
     tags:
     - ChitinSharkminnow
-    
+
 - type: entity
   parent: MaterialChitinSharkminnow
   id: MaterialChitinSharkminnow1

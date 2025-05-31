@@ -16,8 +16,8 @@
     energy: 0.5
     castShadows: false
     color: "#0000ff"
-  - type: StaticPrice
-    price: 500
+  - type: StaticPrice # L5 don't find a ton of these but they're old ass floppy disks with who knows what stored on them
+    price: 1250 # L5 that's like prime "someone would shell out a bunch for this thing" shit
 
 - type: entity
   parent: BaseItem
@@ -39,7 +39,7 @@
         harddisk_mini: ""
         harddisk_micro: ""
   - type: StaticPrice
-    price: 275
+    price: 575 # L5 hope I'm not overtuning these prices but this *is* a 600ish year old hard drive
 
 - type: entity
   parent: BaseItem
@@ -54,7 +54,7 @@
   - type: Item
     storedRotation: -90
   - type: StaticPrice
-    price: 350
+    price: 525 # L5
 
 - type: entity
   parent: BaseItem
@@ -69,7 +69,7 @@
   - type: Item
     storedRotation: -90
   - type: StaticPrice
-    price: 300
+    price: 500 # L5
 
 - type: entity
   parent: BaseItem
@@ -84,7 +84,7 @@
   - type: Item
     size: Tiny
   - type: StaticPrice
-    price: 750
+    price: 1250 # L5
 
 - type: entity
   parent: BaseItem
@@ -107,7 +107,7 @@
         synchronizer: ""
         stabilizer: ""
   - type: StaticPrice
-    price: 120
+    price: 480 # L5 honestly I want these to work like bigger strange pills, break them open for a mystery chem
 
 - type: entityTable
   id: TreasureCoinPile
@@ -151,7 +151,7 @@
   - type: Item
     size: Tiny
   - type: StaticPrice
-    price: 75
+    price: 250 # L5 collectors pay stupid amounts for old coins tbh
 
 - type: entity
   parent: TreasureCoinIron
@@ -160,7 +160,7 @@
   - type: Sprite
     state: coin_silver
   - type: StaticPrice
-    price: 125
+    price: 300 # L5
 
 - type: entity
   parent: TreasureCoinIron
@@ -169,7 +169,7 @@
   - type: Sprite
     state: coin_gold
   - type: StaticPrice
-    price: 175
+    price: 375 # L5
 
 - type: entity
   parent: TreasureCoinIron
@@ -178,7 +178,7 @@
   - type: Sprite
     state: coin_adamantine
   - type: StaticPrice
-    price: 250
+    price: 475 # L5
 
 - type: entity
   parent: TreasureCoinIron
@@ -187,5 +187,5 @@
   - type: Sprite
     state: coin_diamond
   - type: StaticPrice
-    price: 500
+    price: 750 # L5
 
