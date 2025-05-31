@@ -8,19 +8,16 @@ namespace Content.Shared._L5.Traits.HUD
     public partial class ToggleComponent : Component
     {
         [DataField]
-        public virtual EntProtoId? ToggleProto { get; set; }
-
-        [DataField, AutoNetworkedField]
-        public virtual EntProtoId? ToggleAction { get; set; }
+        public EntProtoId ToggleAction { get; set; }
 
         [DataField, AutoNetworkedField]
         public EntityUid? Action;
 
         [DataField]
-        public virtual SoundSpecifier? ToggleOnSound { get; set; }
+        public SoundSpecifier? ToggleOnSound { get; set; }
 
         [DataField]
-        public virtual SoundSpecifier? ToggleOffSound { get; set; }
+        public SoundSpecifier? ToggleOffSound { get; set; }
 
         [DataField, AutoNetworkedField]
         public bool Enabled { get; set; } = true;

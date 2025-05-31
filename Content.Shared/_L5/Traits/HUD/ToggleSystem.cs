@@ -3,22 +3,19 @@ using Robust.Shared.Audio.Systems;
 
 namespace Content.Shared._L5.Traits.HUD
 {
-    // TODO : Behavior to actually, you know. call the below functions? Actions.
-    // When this system is added to an entity, we need to add an associated action that toggles the components.
-
-    public abstract class ToggleSystem<TCOMP> : EntitySystem where TCOMP : ToggleComponent
+    public abstract class ToggleSystem<TComp> : EntitySystem where TComp : ToggleComponent
     {
         [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
         [Dependency] private readonly SharedAudioSystem _audio = default!;
 
         public override void Initialize()
         {
-            SubscribeLocalEvent<TCOMP, ComponentStartup>(OnComponentAdded);
-            SubscribeLocalEvent<TCOMP, ComponentShutdown>(OnComponentRemoved);
-            SubscribeLocalEvent<TCOMP, ToggleEvent>(OnToggleEvent);
+            SubscribeLocalEvent<TComp, ComponentStartup>(OnComponentAdded);
+            SubscribeLocalEvent<TComp, ComponentShutdown>(OnComponentRemoved);
+            SubscribeLocalEvent<TComp, ToggleEvent>(OnToggleEvent);
         }
 
-        private void OnToggleEvent(Entity<TCOMP> ent, ref ToggleEvent args)
+        private void OnToggleEvent(Entity<TComp> ent, ref ToggleEvent args)
         {
             if (args.Action != ent.Comp.Action || args.Handled) return;
             args.Handled = true;
@@ -32,36 +29,29 @@ namespace Content.Shared._L5.Traits.HUD
             TryUpdate(ent);
         }
 
-        private void OnComponentAdded(Entity<TCOMP> ent, ref ComponentStartup args)
+        private void OnComponentAdded(Entity<TComp> ent, ref ComponentStartup args)
         {
-            ent.Comp.Enabled = true;
             TryUpdate(ent);
 
-            // If we somehow weren't able to load the action, try again using the cached ID
-            if (string.IsNullOrWhiteSpace(ent.Comp.ToggleAction))
-                ent.Comp.ToggleAction = ent.Comp.ToggleProto;
-
             // Load the action if possible
-            if (!string.IsNullOrWhiteSpace(ent.Comp.ToggleAction) && ent.Comp.Action == null)
-                _actionsSystem.AddAction(ent, ref ent.Comp.Action, ent.Comp.ToggleAction);
+            if (string.IsNullOrWhiteSpace(ent.Comp.ToggleAction)) return;
+            _actionsSystem.AddAction(ent, ref ent.Comp.Action, ent.Comp.ToggleAction);
         }
 
-        private void OnComponentRemoved(Entity<TCOMP> ent, ref ComponentShutdown args)
+        private void OnComponentRemoved(Entity<TComp> ent, ref ComponentShutdown args)
         {
             ent.Comp.Enabled = false;
             TryUpdate(ent);
-
-            if (ent.Comp.Action != null)
-                _actionsSystem.RemoveAction(ent.Comp.Action);
+            _actionsSystem.RemoveAction(ent.Comp.Action);
         }
 
-        protected abstract void TryUpdate(Entity<TCOMP> entity);
+        protected abstract void TryUpdate(Entity<TComp> entity);
 
-        protected void TryUpdateComp<T>(Entity<TCOMP> entity) where T : Component, new()
+        protected void TryUpdateComp<T>(Entity<TComp> entity) where T : Component, new()
         {
-            if (entity.Comp.Enabled && !HasComp<T>(entity))
-                AddComp<T>(entity);
-            else if (!entity.Comp.Enabled && HasComp<T>(entity))
+            if (entity.Comp.Enabled)
+                EnsureComp<T>(entity);
+            else
                 RemComp<T>(entity);
         }
     }

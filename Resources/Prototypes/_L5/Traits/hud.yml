@@ -6,6 +6,8 @@
   components:
   - type: ToggleSecHud
     toggleAction: ActionToggleSecHud
+    toggleOnSound: /Audio/_L5/Effects/HUD/SecHudEnable.ogg
+    toggleOffSound: /Audio/_L5/Effects/HUD/SecHudDisable.ogg
 
 - type: entity
   id: ActionToggleSecHud
@@ -26,6 +28,8 @@
   components:
     - type: ToggleMedHud
       toggleAction: ActionToggleMedHud
+      toggleOnSound: /Audio/_L5/Effects/HUD/MedHudEnable.ogg
+      toggleOffSound: /Audio/_L5/Effects/HUD/MedHudDisable.ogg
 
 - type: entity
   id: ActionToggleMedHud
@@ -46,6 +50,8 @@
   components:
     - type: ToggleBeerHud
       toggleAction: ActionToggleBeerHud
+      toggleOnSound: /Audio/_L5/Effects/HUD/BeerHudEnable.ogg
+      toggleOffSound: /Audio/_L5/Effects/HUD/BeerHudDisable.ogg
 
 - type: entity
   id: ActionToggleBeerHud
