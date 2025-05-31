@@ -7,7 +7,7 @@ namespace Content.Shared._L5.Traits.HUD
     public sealed partial class ToggleMedHudComponent : ToggleComponent
     {
         [DataField]
-        public override EntProtoId ToggleProto { get; set; } = "ActionToggleMedHud";
+        public override EntProtoId? ToggleProto { get; set; } = "ActionToggleMedHud";
 
         [DataField]
         public override SoundSpecifier? ToggleOnSound { get; set; } = new SoundPathSpecifier("/Audio/_L5/Effects/HUD/MedHudEnable.ogg");
