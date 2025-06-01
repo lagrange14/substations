@@ -7,7 +7,7 @@ namespace Content.Shared._L5.Traits.HUD
     [RegisterComponent, Virtual, NetworkedComponent, AutoGenerateComponentState]
     public partial class ToggleComponent : Component
     {
-        [DataField]
+        [DataField("toggleAction", required: true)]
         public EntProtoId ToggleAction { get; set; }
 
         [DataField, AutoNetworkedField]
