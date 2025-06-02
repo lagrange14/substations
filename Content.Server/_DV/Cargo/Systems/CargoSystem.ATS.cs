@@ -84,6 +84,7 @@ public sealed partial class CargoSystem
         }
 
         // L5 - allow other shuttles to FTL to ATS for e.g: outpost
+        EnsureComp<FTLDestinationComponent>(mapUid);
         // var ftl = EnsureComp<FTLDestinationComponent>(mapUid);
         // ftl.Whitelist = new EntityWhitelist()
         // {
