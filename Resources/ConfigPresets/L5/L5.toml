@@ -33,6 +33,7 @@ flavor_text      = true
 punctuation      = true
 name_case        = false
 restricted_names = false
+id_job_length    = 40
 
 [atmos]
 space_wind   = true
