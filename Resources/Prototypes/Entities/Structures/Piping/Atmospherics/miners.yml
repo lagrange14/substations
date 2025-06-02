@@ -22,8 +22,8 @@
     - type: Transform
       anchored: true
     - type: Anchorable
-      flags:
-      - Anchorable
+#      flags: # L5 - trust your players. (Make miners unanchorable)
+#      - Anchorable
     - type: Pullable
     - type: Sprite
       sprite: Structures/Piping/Atmospherics/miners.rsi
