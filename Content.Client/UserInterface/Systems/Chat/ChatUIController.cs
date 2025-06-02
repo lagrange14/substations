@@ -1,7 +1,6 @@
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
-using Content.Client._L5.Traits.HardOfHearing;
 using Content.Client.Administration.Managers;
 using Content.Client.Chat;
 using Content.Client.Chat.Managers;
@@ -11,11 +10,13 @@ using Content.Client.Examine;
 using Content.Client.Gameplay;
 using Content.Client.Ghost;
 using Content.Client.Mind;
+using Content.Client.Nyanotrasen.Chat;
 using Content.Client.Roles;
 using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Screens;
 using Content.Client.UserInterface.Systems.Chat.Widgets;
 using Content.Client.UserInterface.Systems.Gameplay;
+using Content.Shared._L5.Traits.HardOfHearing;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
@@ -41,7 +42,6 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Replays;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using Content.Client.Nyanotrasen.Chat;
 
 namespace Content.Client.UserInterface.Systems.Chat;
 
@@ -66,7 +66,7 @@ public sealed partial class ChatUIController : UIController
     [UISystemDependency] private readonly TypingIndicatorSystem? _typingIndicator = default;
     [UISystemDependency] private readonly ChatSystem? _chatSys = default;
     [UISystemDependency] private readonly PsionicChatUpdateSystem? _psionic = default!; //Nyano - Summary: makes the psionic chat available.
-    [UISystemDependency] private readonly SignLanguageSystem _signLanguage = default!; // L5 - lets the UI know if the character can sign.
+    [UISystemDependency] private readonly SignLanguageSystem? _signLanguage = default!; // L5 - lets the UI know if the character can sign.
     [UISystemDependency] private readonly TransformSystem? _transform = default;
     [UISystemDependency] private readonly MindSystem? _mindSystem = default!;
     [UISystemDependency] private readonly RoleCodewordSystem? _roleCodewordSystem = default!;
@@ -573,7 +573,7 @@ public sealed partial class ChatUIController : UIController
                 CanSendChannels |= ChatSelectChannel.SubtleOOC; // Den
 
                 // L5 - Can only send sign if you know it.
-                if (_signLanguage != null && _signLanguage.CanSign())
+                if (_player.LocalEntity is { } uid && _signLanguage?.CanSign(uid) == true)
                     CanSendChannels |= ChatSelectChannel.Sign; // L5
             }
         }

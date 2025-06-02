@@ -77,6 +77,6 @@ public sealed partial class L5CCVars
     public static readonly CVarDef<bool> AllCanSign =
         CVarDef.Create("chat.all_can_sign",
             true,
-            CVar.ARCHIVE,
+            CVar.SERVER & CVar.REPLICATED & CVar.ARCHIVE,
             "Whether or not everyone can use and understand sign language by default");
 }

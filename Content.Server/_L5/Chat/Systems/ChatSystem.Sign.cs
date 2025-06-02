@@ -1,5 +1,6 @@
 using Content.Server.Popups;
 using Content.Shared._L5.CCVar;
+using Content.Shared._L5.Traits.HardOfHearing;
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Hands.Components;
@@ -13,6 +14,7 @@ namespace Content.Server.Chat.Systems;
 public sealed partial class ChatSystem
 {
     [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly SignLanguageSystem _signLanguage = default!;
 
     private void SendEntitySign(
         EntityUid source,
@@ -24,6 +26,9 @@ public sealed partial class ChatSystem
         NetUserId? author = null
     )
     {
+        if (!_signLanguage.CanSign(source))
+            return; // Begone
+
         if (!_actionBlocker.CanEmote(source) && !ignoreActionBlocker)
             return;
 

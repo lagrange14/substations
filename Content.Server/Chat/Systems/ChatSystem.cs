@@ -954,7 +954,7 @@ public sealed partial class ChatSystem : SharedChatSystem
                 // If the message is in sign language, check if the user knows it first. If not (emotes, subtle, LOOC), just send it.
                 if (channel == ChatChannel.Sign)
                 {
-                    if (HasComp<SignLanguageComponent>(listener))
+                    if (_signLanguage.CanSign(listener))
                         _chatManager.ChatMessageToOne(channel,
                             message,
                             wrappedMessage,
