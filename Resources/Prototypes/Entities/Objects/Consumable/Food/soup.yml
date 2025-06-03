@@ -141,16 +141,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 90 # imp
+        maxVol: 70 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 55 # imp
+          Quantity: 35 # imp
         - ReagentId: Kelotane # imp
           Quantity: 5
         - ReagentId: Bicaridine # imp
           Quantity: 5
         - ReagentId: Vitamin
-          Quantity: 31 # imp   # L5 what the fuck 30 units of desoxy
+          Quantity: 21 # imp   # L5 what the fuck 30 units of desoxy
         #- ReagentId: Desoxyephedrine # imp
           #Quantity: 30
   - type: Tag
@@ -179,18 +179,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 115 # imp
+        maxVol: 70 # imp
         reagents:
         - ReagentId: Nutriment
-          Quantity: 57 # imp
+          Quantity: 27 # imp
         - ReagentId: Vitamin
-          Quantity: 25 # imp
-        #- ReagentId: DoctorsDelight # imp
-        #  Quantity: 5
-        - ReagentId: Bicaridine # imp
+          Quantity: 15 # imp
+        - ReagentId: DoctorsDelight # imp # L5 removed the bic/kelo in favor of this
           Quantity: 5
-        - ReagentId: Kelotane # imp
-          Quantity: 5
+        #- ReagentId: Bicaridine # imp
+          #Quantity: 5
+        #- ReagentId: Kelotane # imp
+          #Quantity: 5
         #- ReagentId: Desoxyephedrine # imp
           #Quantity: 30
         - ReagentId: Vitamin # imp
