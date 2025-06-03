@@ -18,7 +18,7 @@
   result: FoodCheeseCurds
   time: 5
   solids:
-    FoodCurdCheese: 1
+    FoodCurdCheese: 3 # L5 essentially splits it into 3 portions
 
 - type: microwaveMealRecipe
   id: RecipeMothHerbyCheese
