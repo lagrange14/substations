@@ -16,12 +16,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 20 # L5 Bumping some food values to better match their recipes
         reagents:
         - ReagentId: Nutriment
+          Quantity: 6
+        - ReagentId: EggCooked
+          Quantity: 12
+        - ReagentId: TableSalt
           Quantity: 5
-        - ReagentId: Protein
-          Quantity: 10
   - type: FoodSequenceElement
     entries:
       Burger: ScrambledEggs
@@ -53,18 +55,21 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 58 # L5 ok seriously blue tomatoes are 24u, 15u of lube where was all the lube going before
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 10
         - ReagentId: SpaceLube
-          Quantity: 6
+          Quantity: 28
+        - ReagentId: Vitamin
+          Quantity: 8
         - ReagentId: Water
-          Quantity: 3
+          Quantity: 8
   - type: Tag
     tags:
     - Fruit
     - Soup
+    - Vegan # L5 should have this tag, shouldn't it?
 
 - type: entity
   name: purple tomato soup
@@ -84,15 +89,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 44 # L5 another volume bump, I'm just sort of working on vibes with these numbers lol
         reagents:
         - ReagentId: Nutriment
-          Quantity: 3
+          Quantity: 12
         - ReagentId: SpaceLube
-          Quantity: 3
+          Quantity: 13
+        - ReagentId: Vitamin
+          Quantity: 7
         - ReagentId: Water
-          Quantity: 6
+          Quantity: 8
   - type: Tag
     tags:
     - Fruit
     - Soup
+    - Vegan # L5 surely this is vegan?
