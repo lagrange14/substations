@@ -16,16 +16,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 50 # L5 bigger heartier soup
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6
+          Quantity: 20
         - ReagentId: Vitamin
-          Quantity: 6
+          Quantity: 10
         - ReagentId: Water
-          Quantity: 3
+          Quantity: 6
         - ReagentId: Fiber
-          Quantity: 5
+          Quantity: 10
   - type: Tag
     tags:
       - ClothMade
@@ -49,20 +49,21 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 34 # L5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 15
         - ReagentId: Vitamin
-          Quantity: 5
+          Quantity: 4
         - ReagentId: Protein
-          Quantity: 1
+          Quantity: 5
         - ReagentId: Milk
-          Quantity: 3
+          Quantity: 5
   - type: Tag
     tags:
       - ClothMade # Mothic Food
       - Soup
+      - Dairy # L5
 
 - type: entity
   name: seed soup
@@ -81,18 +82,19 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 30 # L5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 7
+          Quantity: 12
         - ReagentId: Vitamin
-          Quantity: 3
+          Quantity: 10
         - ReagentId: Water
-          Quantity: 5
+          Quantity: 4
   - type: Tag
     tags:
       - ClothMade # Mothic Food
       - Soup
+      - Vegan # L5
 
 - type: entity
   name: moth eyeball soup
@@ -110,16 +112,19 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 12
+        maxVol: 26 # L5 weird ass soup
         reagents:
           - ReagentId: Nutriment
-            Quantity: 5
+            Quantity: 8
           - ReagentId: Vitamin
-            Quantity: 3
+            Quantity: 6
+          - ReagentId: Protein
+            Quantity: 8
   - type: Tag
     tags:
       - Soup
-      - Meat
+      - Meat # L5
+      - Nightshade # L5
 # Tastes like tomato, squirming.
 
 - type: entity
@@ -139,19 +144,20 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 55 # L5 heartier stew :)
         reagents:
         - ReagentId: Nutriment
-          Quantity: 12
+          Quantity: 24
         - ReagentId: Vitamin
-          Quantity: 8
+          Quantity: 12
         - ReagentId: Protein
-          Quantity: 3
+          Quantity: 10
         - ReagentId: Water
-          Quantity: 2
+          Quantity: 4
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Vegan # L5 This is probably vegan, unless there's something in the beans?
 #Tastes like beans, cabbage and spicy sauce
 
 - type: entity
@@ -171,10 +177,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 38 # L5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 18
         - ReagentId: Vitamin
           Quantity: 10
         - ReagentId: Water
@@ -182,6 +188,7 @@
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Vegan # L5 surely vegan
 #Tastes like oats, sweet potato, carrot and parsnip
 
 - type: entity
@@ -200,20 +207,21 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 36 # L5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6
+          Quantity: 8
         - ReagentId: Vitamin
           Quantity: 4
         - ReagentId: Protein
-          Quantity: 4
+          Quantity: 12
         - ReagentId: CapsaicinOil
-          Quantity: 1
+          Quantity: 8
   - type: Tag
     tags:
       - ClothMade # Mothic Food
       - Soup
+      - Vegetarian # L5
 #Tastes like oats, sweet potato, carrot and parsnip
 
 - type: entity
@@ -233,12 +241,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 42 # L5
         reagents:
         - ReagentId: Nutriment
           Quantity: 22
         - ReagentId: Protein
-          Quantity: 8
+          Quantity: 6
+        - ReagentId: EggCooked
+          Quantity: 10
   - type: Tag
     tags:
       - ClothMade # Mothic Food
@@ -258,15 +268,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 11
+        maxVol: 16 # L5 umm it's just cornmeal and water
         reagents:
         - ReagentId: Nutriment
-          Quantity: 9
+          Quantity: 8
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 5
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Vegan # L5
 #Tastes like cornmeal.
 
 - type: entity
@@ -285,17 +296,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 44 # L5 there's so much cheese in this
         reagents:
         - ReagentId: Nutriment
-          Quantity: 12
+          Quantity: 22
         - ReagentId: Vitamin
-          Quantity: 4
+          Quantity: 8
         - ReagentId: Protein
-          Quantity: 4
+          Quantity: 10
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy # L5
 #Tastes like cornmeal, cheese, more cheese, lots of cheese.
 
 - type: entity
@@ -316,17 +328,20 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 30
+        maxVol: 50 # L5 this builds on the cheesy porridge so I'm just making this one up so it doesn't go crazy
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 20
         - ReagentId: Vitamin
-          Quantity: 6
+          Quantity: 10
         - ReagentId: Protein
-          Quantity: 12
+          Quantity: 16
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy # L5
+      - Wheat # L5
+      - Nightshade # L5
 #Tastes like cornmeal, cheese, eggplant and tomato sauce
 
 - type: entity
@@ -348,17 +363,19 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 34 # L5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 6
+          Quantity: 10
         - ReagentId: CapsaicinOil
-          Quantity: 3
+          Quantity: 8
         - ReagentId: Vitamin
-          Quantity: 3
+          Quantity: 6
         - ReagentId: JuiceTomato
-          Quantity: 3
+          Quantity: 6
   - type: Tag
     tags:
       - ClothMade # Mothic Food
       - ChiliBowl
+      - Vegan # L5
+      - Nightshade # L5

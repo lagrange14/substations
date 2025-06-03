@@ -16,7 +16,7 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20 # L5 Bumping some food values to better match their recipes
+        maxVol: 28 # L5 Bumping some food values to better match their recipes
         reagents:
         - ReagentId: Nutriment
           Quantity: 6
