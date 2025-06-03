@@ -15,15 +15,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 20 # L5 the old version sucked you lost So much nutrition
         reagents:
         - ReagentId: Protein
-          Quantity: 3
+          Quantity: 12
         - ReagentId: Cream
-          Quantity: 1
+          Quantity: 4
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy # L5
 
 - type: entity
   name: cheese curds
@@ -43,10 +44,13 @@
         maxVol: 3
         reagents:
         - ReagentId: Protein
-          Quantity: 3
+          Quantity: 4
+        - ReagentId: Cream
+          Quantity: 1
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy # L5
 
 # Mozzarella
 - type: entity
@@ -64,12 +68,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 4
+        maxVol: 25 # L5 i'm trying to make these better but not excessive
         reagents:
         - ReagentId: Protein
-          Quantity: 3
+          Quantity: 13
         - ReagentId: Cream
-          Quantity: 1
+          Quantity: 8
   - type: Tag
     tags:
       - ClothMade # Mothic Food
@@ -90,17 +94,18 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 25 # L5 adjusted to match the curd cheese
         reagents:
         - ReagentId: Nutriment
           Quantity: 7
         - ReagentId: Protein
-          Quantity: 2
+          Quantity: 12
         - ReagentId: Cream
-          Quantity: 1
+          Quantity: 4
   - type: Tag
     tags:
       - ClothMade # Mothic Food
+      - Dairy
 #Tastes like cheese, herbs
 
 - type: entity
@@ -120,12 +125,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 7
+        maxVol: 30 # L5 more of that food nutrition maxing
         reagents:
         - ReagentId: Nutriment
-          Quantity: 4
+          Quantity: 18
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 8
         - ReagentId: Allicin
           Quantity: 0.5
   - type: Tag
