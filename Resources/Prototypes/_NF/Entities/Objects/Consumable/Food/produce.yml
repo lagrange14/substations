@@ -10,12 +10,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 13 # L5 might as well tune this down to match the value I was roughing things off of
         reagents:
         - ReagentId: Nutriment
-          Quantity: 10
+          Quantity: 8
         - ReagentId: Vitamin
-          Quantity: 5
+          Quantity: 3
   - type: Sprite
     sprite: _NF/Objects/Specific/Hydroponics/pear.rsi
   - type: Produce

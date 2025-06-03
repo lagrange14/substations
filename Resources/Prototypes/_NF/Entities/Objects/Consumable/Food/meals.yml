@@ -17,12 +17,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 25
+        maxVol: 60 # L5 bumped and fudged numbers to be closer to the recipe without being crazy
         reagents:
         - ReagentId: Nutriment
-          Quantity: 12
+          Quantity: 32
         - ReagentId: Vitamin
-          Quantity: 5
+          Quantity: 15
         - ReagentId: Wine # DeltaV we dont have Flavorol, changed to wine
           Quantity: 8
   - type: Tag
@@ -49,14 +49,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 35
+        maxVol: 60 # L5 more of the same, food is more nutritious yay
         reagents:
         - ReagentId: Nutriment
-          Quantity: 16 # DeltaV increase for lack of flavorol
+          Quantity: 34 # DeltaV increase for lack of flavorol
         - ReagentId: Vitamin
           Quantity: 12 # DeltaV increase for lack of flavorol
         - ReagentId: Theobromine
           Quantity: 3
+        - ReagentId: Cream
+          Quantity: 5
   - type: Tag
     tags:
     - Fruit
@@ -79,14 +81,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 25 # L5 if I match the ingredients the muffins are huge this feels a little more reasonable
         reagents:
         - ReagentId: Nutriment
-          Quantity: 7 # DeltaV increase for lack of flavorol
+          Quantity: 12 # DeltaV increase for lack of flavorol
         - ReagentId: Vitamin
-          Quantity: 5 # DeltaV increase for lack of flavorol
+          Quantity: 8 # DeltaV increase for lack of flavorol
         - ReagentId: Theobromine
-          Quantity: 1
+          Quantity: 3
   - type: Tag
     tags:
     - Fruit
@@ -102,6 +104,16 @@
     - sweet
     - cheesy
     - pear
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 45 # L5 this previously just took the basic pie values which is lame imo this is at least more meaty for a whole ass pie
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 28
+        - ReagentId: Vitamin
+          Quantity: 12
+
   - type: Sprite
     sprite: _NF/Objects/Consumable/Food/Baked/pie.rsi
     layers:

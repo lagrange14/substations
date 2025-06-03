@@ -18,7 +18,7 @@
     solutions:
       food:
         reagents:
-        - ReagentId: SalicylicAcid # Funkychem - no more bicaridine
+        - ReagentId: Bicaridine # Funkychem - no more bicaridine # L5 we still have bic
           Quantity: 20
   - type: StaticPrice
     price: 750
