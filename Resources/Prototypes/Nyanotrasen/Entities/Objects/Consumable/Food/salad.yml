@@ -17,12 +17,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 10
+        maxVol: 32 # L5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 7
+          Quantity: 12
         - ReagentId: Protein
-          Quantity: 3
+          Quantity: 10
+        - ReagentId: Vitamin
+          Quantity: 6
   - type: Tag
     tags:
     - Fruit
@@ -46,14 +48,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 46 # L5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 12
+          Quantity: 24
         - ReagentId: Vitamin
-          Quantity: 5
+          Quantity: 12
         - ReagentId: Protein
-          Quantity: 3
+          Quantity: 6
   - type: Tag
     tags:
       - ClothMade # Mothic Food
@@ -68,7 +70,7 @@
   components:
   - type: FlavorProfile
     flavors:
-      - cheesy
+      #- cheesy # L5 why? there's no cheese anywhere near it?
       - leafy
       - cotton
   - type: Sprite
@@ -77,14 +79,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 40 # L5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 5
+          Quantity: 15
         - ReagentId: Vitamin
-          Quantity: 7
+          Quantity: 12
         - ReagentId: Fiber
-          Quantity: 5
+          Quantity: 8
   - type: Tag
     tags:
       - ClothMade # Mothic Food
@@ -107,14 +109,16 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 56 # L5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 12
+          Quantity: 28
         - ReagentId: Vitamin
-          Quantity: 2
+          Quantity: 12
         - ReagentId: Protein
           Quantity: 6
+        - ReagentId: CapsaicinOil
+          Quantity: 5
   - type: Tag
     tags:
       - ClothMade # Mothic Food
