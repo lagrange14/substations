@@ -140,8 +140,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.25
     baseSprintSpeed: 3.6
-  - type: StaticPrice
-    price: 3000
+  - type: StaticPrice # L5 yea baby become a mech factory woo
+    price: 3000 # L5
 
 - type: entity
   id: MechRipleyBattery

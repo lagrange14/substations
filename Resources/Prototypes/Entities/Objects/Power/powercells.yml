@@ -73,8 +73,6 @@
   - type: Tag
     tags:
       - PowerCellSmall
-  - type: StaticPrice # L5 if batteries use lithium and lithium is valuable, reselling batteries good? Recycle?
-    price: 500 # L5 also the below prototype hopefully makes printing and selling cells NOT worthwhile bc duh
 
 - type: entity
   id: PowerCellSmallPrinted
@@ -104,8 +102,6 @@
     autoRechargeRate: 36 # 10 seconds to recharge
     autoRechargePause: true
     autoRechargePauseTime: 30
-  - type: StaticPrice # L5 idk what this is but it isn't the microreactor so, cheapo
-    price: 750
 
 - type: entity
   name: medium-capacity power cell
@@ -124,8 +120,6 @@
   - type: Battery
     maxCharge: 720
     startingCharge: 720
-  - type: StaticPrice # L5
-    price: 800
 
 - type: entity
   id: PowerCellMediumPrinted
@@ -165,8 +159,6 @@
     difficulty: 3
     recipes:
     - PowerCellHyper
-  - type: StaticPrice # L5
-    price: 1200
 
 - type: entity
   id: PowerCellHighPrinted
@@ -206,8 +198,6 @@
     difficulty: 4
     recipes:
     - PowerCellMicroreactor
-  - type: StaticPrice # L5
-    price: 1600
 
 - type: entity
   id: PowerCellHyperPrinted
@@ -246,8 +236,6 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 12 # takes 1 minute to charge itself back to full
-  - type: StaticPrice # L5 a nuclear powered self recharging battery should be worth a lot
-    price: 2250
 
 - type: entity
   parent: PowerCellMicroreactor
@@ -288,8 +276,6 @@
       difficulty: 4
       recipes:
       - PowerCellMicroreactor
-    - type: StaticPrice # L5 Higher capacity than a high cap, almost 4x better recharge than a micro
-      price: 3750 # L5 bigger price jump to account for this is an antique and intended for arms, valuable for research
 
 # Power cage (big heavy power cell for big devices)
 
