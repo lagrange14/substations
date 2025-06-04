@@ -29,7 +29,7 @@
   - type: BorgModule
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: no-action }
-  - type: StaticPrice
+  - type: StaticPrice # L5 make them idk vaguely worth selling?
     price: 350
   - type: Tag
     tags:
