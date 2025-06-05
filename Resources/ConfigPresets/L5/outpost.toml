@@ -10,4 +10,4 @@ map_enabled    = false
 
 [server]
 id                     = "lagrange14_outpost"
-uptime_restart_minutes = -1 # Don't auto restart; we'll do it after each round
+uptime_restart_minutes = 0 # Don't auto restart; we'll do it after each round
