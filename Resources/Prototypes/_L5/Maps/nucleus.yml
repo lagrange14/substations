@@ -13,6 +13,8 @@
         nameGenerator:
           !type:NanotrasenNameGenerator
           prefixCreator: 'NY'
+      - type: StationBankAccount
+        increasePerSecond: 0 # tbh should be negative with how good we are
       - type: StationJobs
         availableJobs:
           Captain: [ 1, 1 ]
