@@ -209,6 +209,10 @@ public sealed partial class RadioDeviceSystem : EntitySystem // L5 - made partia
         if (HasComp<RadioSpeakerComponent>(args.Source))
             return; // no feedback loops please.
 
+        // L5, comes up a lot with no speaking in space:
+        if (!_xform.InRange(uid, args.Source, ChatSystem.WhisperClearRange))
+            return; // Don't bother picking up stuff it can barely hear.
+
         var channel = _protoMan.Index<RadioChannelPrototype>(component.BroadcastChannel)!;
         if (_recentlySent.Add((args.Message, args.Source, channel)))
             _radio.SendRadioMessage(args.Source, args.Message, channel, uid);

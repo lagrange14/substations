@@ -6,6 +6,8 @@ namespace Content.Server.Radio.EntitySystems;
 
 public sealed partial class RadioDeviceSystem
 {
+    [Dependency] private readonly SharedTransformSystem _xform = default!;
+
     private void ToggleHandheldMic(Entity<RadioMicrophoneComponent, RadioSpeakerComponent> ent,
         EntityUid user)
     {
