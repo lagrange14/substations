@@ -1,4 +1,5 @@
 using Content.Shared._L5.CCVar;
+using Content.Shared.Ghost;
 using Robust.Shared.Configuration;
 
 namespace Content.Shared._L5.Traits.HardOfHearing;
@@ -18,6 +19,6 @@ public sealed class SignLanguageSystem : EntitySystem
 
     public bool CanSign(Entity<SignLanguageComponent?> ent)
     {
-        return _canAllSign || HasComp<SignLanguageComponent>(ent);
+        return _canAllSign || HasComp<SignLanguageComponent>(ent) || HasComp<GhostComponent>(ent);
     }
 }
