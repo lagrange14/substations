@@ -1,15 +1,18 @@
 using Content.Server.Radio.Components;
 using Content.Shared.Hands;
 using Content.Shared.Verbs;
+using Robust.Server.Audio;
 
 namespace Content.Server.Radio.EntitySystems;
 
 public sealed partial class RadioDeviceSystem
 {
+    [Dependency] private readonly AudioSystem _audio = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
 
     private void ToggleHandheldMic(Entity<RadioMicrophoneComponent, RadioSpeakerComponent> ent,
-        EntityUid user)
+        EntityUid user,
+        bool manualToggle = true)
     {
         var micComp = ent.Comp1;
         var speakerState = ent.Comp2.Enabled;
@@ -22,10 +25,14 @@ public sealed partial class RadioDeviceSystem
             return;
         }
 
-        micComp.EnabledAutomatically = false;
+        micComp.EnabledAutomatically = !manualToggle;
         SetMicrophoneEnabled(ent, user, newMicState, true, micComp);
+
         var message = Loc.GetString(newMicState ? "handheld-radio-mic-enable" : "handheld-radio-mic-disable");
         _popup.PopupEntity(message, ent, user);
+
+        var sound = newMicState ? micComp.SoundActivate : micComp.SoundDeactivate;
+        _audio.PlayEntity(sound, user, ent);
     }
 
     private void ToggleHandheldSpeaker(Entity<RadioMicrophoneComponent, RadioSpeakerComponent> ent,
@@ -45,19 +52,26 @@ public sealed partial class RadioDeviceSystem
 
     private void OnGotMicEquipped(Entity<RadioMicrophoneComponent> ent, ref GotEquippedHandEvent args)
     {
+        // Will double-fire if you transfer it from one hand to the other... Oh well.
         if (!ent.Comp.ToggleOnVerb || ent.Comp.Enabled)
             return;
 
+        if (!TryComp<RadioSpeakerComponent>(ent, out var speakerComponent) || !speakerComponent.Enabled)
+            return;
+
         ent.Comp.EnabledAutomatically = true;
-        SetMicrophoneEnabled(ent, args.User, true, true);
+        ToggleHandheldMic((ent, ent.Comp, speakerComponent), args.User, false);
     }
 
     private void OnGotMicUnequipped(Entity<RadioMicrophoneComponent> ent, ref GotUnequippedHandEvent args)
     {
-        if (!ent.Comp.ToggleOnVerb || !ent.Comp.EnabledAutomatically)
+        if (!ent.Comp.ToggleOnVerb || !ent.Comp.EnabledAutomatically || !ent.Comp.Enabled)
             return;
 
-        SetMicrophoneEnabled(ent, args.User, false, true);
+        if (!TryComp<RadioSpeakerComponent>(ent, out var speakerComponent) || !speakerComponent.Enabled)
+            return;
+
+        ToggleHandheldMic((ent, ent.Comp, speakerComponent), args.User, false);
     }
 
     private void OnGetMicVerbs(Entity<RadioMicrophoneComponent> ent, ref GetVerbsEvent<ActivationVerb> args)
