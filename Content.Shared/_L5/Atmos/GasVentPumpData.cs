@@ -50,6 +50,53 @@ public sealed partial class GasVentPumpData
         PressureLockoutOverride = false,
     };
 
+    // FilterInlet but just disabled
+    public static GasVentPumpData PanicModeInletPreset = new()
+    {
+        Enabled = false,
+        PumpDirection = VentPumpDirection.Releasing,
+        PressureChecks = VentPressureBound.ExternalBound,
+        VentFlowmosMode = VentPumpFlowmos.Inlet,
+        ExternalPressureBound = Atmospherics.OneAtmosphere + Atmospherics.AirVentPressureDelta,
+        InternalPressureBound = 0f,
+        PressureLockoutOverride = false,
+    };
+
+    // FilterOutlet but external pressure bound set to 0 kPa
+    public static GasVentPumpData PanicModeOutletPreset = new()
+    {
+        Enabled = true,
+        PumpDirection = VentPumpDirection.Siphoning,
+        PressureChecks = VentPressureBound.ExternalBound,
+        VentFlowmosMode = VentPumpFlowmos.Outlet,
+        ExternalPressureBound = 0f,
+        InternalPressureBound = 0f,
+        PressureLockoutOverride = false,
+    };
+
+    // FilterInlet but pressure lockout overriden and max external pressure bound
+    public static GasVentPumpData FillModeInletPreset = new()
+    {
+        Enabled = true,
+        PumpDirection = VentPumpDirection.Releasing,
+        PressureChecks = VentPressureBound.ExternalBound,
+        VentFlowmosMode = VentPumpFlowmos.Inlet,
+        ExternalPressureBound = Atmospherics.OneAtmosphere * 50,
+        InternalPressureBound = 0f,
+        PressureLockoutOverride = true,
+    };
+
+    // FilterOutlet but disabled
+    public static GasVentPumpData FillModeOutletPreset = new()
+    {
+        Enabled = false,
+        PumpDirection = VentPumpDirection.Siphoning,
+        PressureChecks = VentPressureBound.ExternalBound,
+        VentFlowmosMode = VentPumpFlowmos.Outlet,
+        ExternalPressureBound = Atmospherics.OneAtmosphere - Atmospherics.AirVentPressureDelta,
+        InternalPressureBound = 0f,
+        PressureLockoutOverride = false,
+    };
 
     [Flags]
     [Serializable, NetSerializable]

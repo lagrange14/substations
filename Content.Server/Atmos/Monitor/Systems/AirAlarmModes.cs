@@ -193,16 +193,10 @@ public sealed class AirAlarmPanicMode : AirAlarmModeExecutor
             switch (device.VentFlowmosMode)
             {
                 case GasVentPumpData.VentPumpFlowmos.Inlet:
-                    var inletPreset = GasVentPumpData.FilterInletPreset;
-                    inletPreset.Enabled = false;
-
-                    AirAlarmSystem.SetData(uid, addr, inletPreset);
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.PanicModeInletPreset);
                     break;
                 case GasVentPumpData.VentPumpFlowmos.Outlet:
-                    var outletPreset = GasVentPumpData.FilterOutletPreset;
-                    outletPreset.ExternalPressureBound = 0;
-
-                    AirAlarmSystem.SetData(uid, addr, outletPreset);
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.PanicModeOutletPreset);
                     break;
                 default:
                     AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FillModePreset);
@@ -231,16 +225,10 @@ public sealed class AirAlarmFillMode : AirAlarmModeExecutor
             switch (device.VentFlowmosMode)
             {
                 case GasVentPumpData.VentPumpFlowmos.Inlet:
-                    var inletPreset = GasVentPumpData.FilterInletPreset;
-                    inletPreset.PressureLockoutOverride = true;
-                    inletPreset.ExternalPressureBound = GasVentPumpData.FillModePreset.ExternalPressureBound;
-
-                    AirAlarmSystem.SetData(uid, addr, inletPreset);
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FillModeInletPreset);
                     break;
                 case GasVentPumpData.VentPumpFlowmos.Outlet:
-                    var outletPreset = GasVentPumpData.FilterOutletPreset;
-                    outletPreset.Enabled = false;
-                    AirAlarmSystem.SetData(uid, addr, outletPreset);
+                    AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FillModeOutletPreset);
                     break;
                 default:
                     AirAlarmSystem.SetData(uid, addr, GasVentPumpData.FillModePreset);
