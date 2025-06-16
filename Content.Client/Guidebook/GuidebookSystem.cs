@@ -77,6 +77,7 @@ public sealed class GuidebookSystem : EntitySystem
         {
             Text = Loc.GetString("guide-help-verb"),
             Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/information.svg.192dpi.png")),
+            Priority = -1, // L5 - verb priority tweaks for hiding vent verb
             Act = () => OnGuidebookOpen?.Invoke(component.Guides, null, null, component.IncludeChildren, component.Guides[0]),
             ClientExclusive = true,
             CloseMenu = true
