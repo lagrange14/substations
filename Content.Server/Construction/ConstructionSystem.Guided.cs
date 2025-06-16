@@ -56,7 +56,6 @@ namespace Content.Server.Construction
             Verb verb = new();
             //verb.Category = VerbCategories.Construction;
             //TODO VERBS add more construction verbs? Until then, removing construction category
-            verb.Priority = -1; // L5 - verb priority tweaks for hiding vent verb
             verb.Text = Loc.GetString("deconstructible-verb-begin-deconstruct");
             verb.Icon = new SpriteSpecifier.Texture(
                 new ("/Textures/Interface/hammer_scaled.svg.192dpi.png"));

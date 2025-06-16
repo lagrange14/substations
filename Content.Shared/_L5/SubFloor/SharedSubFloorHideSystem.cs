@@ -21,7 +21,7 @@ public abstract partial class SharedSubFloorHideSystem
 
         args.Verbs.Add(new Verb
         {
-            Priority = 0,
+            Priority = 1,
             Text = Loc.GetString("subfloor-disguise-" + (ent.Comp.Enabled ? "hide" : "reveal")),
             DoContactInteraction = true, // Det's gonna get you, ya vent hider
             Act = () => _tool.UseTool(tool,

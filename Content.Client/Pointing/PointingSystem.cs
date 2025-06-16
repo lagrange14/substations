@@ -47,7 +47,6 @@ public sealed partial class PointingSystem : SharedPointingSystem
         {
             Text = Loc.GetString("pointing-verb-get-data-text"),
             Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/point.svg.192dpi.png")),
-            Priority = -1, // L5 - verb priority tweaks for hiding vent verb
             ClientExclusive = true,
             Act = () => RaiseNetworkEvent(new PointingAttemptEvent(GetNetEntity(args.Target)))
         };
