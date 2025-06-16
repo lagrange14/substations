@@ -36,12 +36,17 @@ public abstract partial class SharedSubFloorHideSystem
 
     private void OnHideVentUnderSubfloor(Entity<SubFloorHideComponent> ent, ref TryHideVentUnderSubfloorEvent args)
     {
-        if (args.Cancelled)
+        // Check that pre-conditions are still true
+        if (args.Cancelled || !ent.Comp.Toggleable || !ent.Comp.IsUnderCover)
             return;
 
         ent.Comp.Enabled = !ent.Comp.Enabled;
         Dirty(ent);
+
+        // We need to also dirty the appearance comp to force all clients to
+        // process an appearance change, even though technically no appearance
+        // data has changed.
         if (TryComp<AppearanceComponent>(ent, out var appearance))
-            Appearance.QueueUpdate(ent, appearance);
+            Dirty(ent, appearance);
     }
 }
