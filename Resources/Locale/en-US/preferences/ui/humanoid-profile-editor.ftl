@@ -59,6 +59,7 @@ humanoid-profile-editor-no-traits = No traits available
 
 humanoid-profile-editor-trait-count-hint = Points available: [{$current}/{$max}]
 
-trait-category-disabilities = Disabilities
+# L5, was "Disabilities".
+trait-category-disabilities = Physical traits
 trait-category-speech = Speech traits
 trait-category-quirks = Quirks

@@ -1,3 +1,7 @@
+# Nnrgh I hate how the internal category ID is "Disabilities" but that's how
+# it's specified by upstream. User-facing label we changed but still it irks
+# me. At least I get to rename this file. —Perry
+
 - type: trait
   id: LowMobility
   name: trait-lowmobility-name
