@@ -1,5 +1,6 @@
 using Content.Server.Access.Systems;
 using Content.Server.Actions;
+using Content.Server.Cloning;
 using Content.Server.Polymorph.Systems;
 using Content.Server.Popups;
 using Content.Shared._DV.Abilities.Kitsune;
@@ -12,17 +13,20 @@ using Content.Shared.NPC.Systems;
 using Content.Shared.Polymorph;
 using Content.Shared.Speech.Components;
 using Robust.Shared.Player;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._DV.Abilities.Kitsune;
 
 public sealed class KitsuneSystem : SharedKitsuneSystem
 {
+    [Dependency] private readonly IPrototypeManager _prototype = default!; // L5 - Kitsune comp cloning
     [Dependency] private readonly AccessReaderSystem _reader = default!;
     [Dependency] private readonly AccessSystem _access = default!;
     [Dependency] private readonly NpcFactionSystem _faction = default!;
     [Dependency] private readonly PolymorphSystem _polymorph = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly CloningSystem _cloning = default!; // L5 - Kitsune comp cloning
 
     public override void Initialize()
     {
@@ -75,6 +79,10 @@ public sealed class KitsuneSystem : SharedKitsuneSystem
             EnsureComp<NpcFactionMemberComponent>(newEntity);
             _faction.AddFactions(newEntity, factions.Factions);
         }
+
+        // L5 - Kitsune comp cloning (this does overwrite the npc faction stuff above lol)
+        if (_prototype.TryIndex(oldEntity.Comp.ClonePrototype, out var cloneSettings))
+            _cloning.CloneComponents(oldEntity, newEntity, cloneSettings);
 
         _popup.PopupEntity(Loc.GetString("kitsune-popup-morph-message-others", ("entity", args.NewEntity)), args.NewEntity, Filter.PvsExcept(args.NewEntity), true);
         _popup.PopupEntity(Loc.GetString("kitsune-popup-morph-message-user"), args.NewEntity, args.NewEntity);

@@ -17,7 +17,7 @@
   # traits
   # - LegsParalyzed (you get healed)
   - LightweightDrunk
-  - Monochromacy
+  #  - Monochromacy # L5 - we don't have
   - Muted
   - Narcolepsy
   - Pacified
@@ -41,7 +41,7 @@
   - DamagedSiliconAccent
   - FrenchAccent
   - FrontalLisp
-  - GermanAccent
+  # - GermanAccent # L5 - we don't have
   - LizardAccent
   - MobsterAccent
   - MonkeyAccent
@@ -73,6 +73,28 @@
   - UltraVision
   - Unborgable
   # End DeltaV Additions
+  # Begin L5 Additions
+  - BeerHUD
+  - CPRTraining
+  - DairyAllergy
+  - GlutenAllergy
+  - HalalRestriction
+  - HardOfHearing
+  - KosherRestriction
+  - LatexAllergy
+  - LowMobility
+  - MedicalHUD
+  - MothDiet
+  - NightshadeAllergy
+  - PescetarianRestriction
+  - ReptilianDiet
+  - SecurityHUD
+  - SignLanguage
+  - SurgerySpeedModifier
+  - Synth
+  - VeganRestriction
+  - VegetarianRestriction
+  # End L5 additions
   blacklist:
     components:
     - AttachedClothing # helmets, which are part of the suit
