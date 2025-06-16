@@ -37,6 +37,7 @@
         - GasVent
         - Unstackable
     - type: SubFloorHide
+      toggleable: true # L5 - hideable vents
       visibleLayers:
       - enum.SubfloorLayers.FirstLayer
     - type: Sprite
@@ -128,6 +129,7 @@
         - GasScrubber
         - Unstackable
     - type: SubFloorHide
+      toggleable: true # L5 - hideable vents
       visibleLayers:
       - enum.SubfloorLayers.FirstLayer
     - type: Sprite

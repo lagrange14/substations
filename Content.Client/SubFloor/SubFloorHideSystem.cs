@@ -74,16 +74,21 @@ public sealed class SubFloorHideSystem : SharedSubFloorHideSystem
 
         // Is there some layer that is always visible?
         var hasVisibleLayer = false;
-        foreach (var layerKey in component.VisibleLayers)
+        // Begin L5 - hideable vents; add if enabled
+        if (component.Enabled)
         {
-            if (!_sprite.LayerMapTryGet((uid, args.Sprite), layerKey, out var layerIndex, false))
-                continue;
+            foreach (var layerKey in component.VisibleLayers)
+            {
+                if (!_sprite.LayerMapTryGet((uid, args.Sprite), layerKey, out var layerIndex, false))
+                    continue;
 
-            var layer = args.Sprite[layerIndex];
-            layer.Visible = true;
-            layer.Color = layer.Color.WithAlpha(1f);
-            hasVisibleLayer = true;
+                var layer = args.Sprite[layerIndex];
+                layer.Visible = true;
+                layer.Color = layer.Color.WithAlpha(1f);
+                hasVisibleLayer = true;
+            }
         }
+        // End L5
 
         _sprite.SetVisible((uid, args.Sprite), hasVisibleLayer || revealed);
 
