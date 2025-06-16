@@ -18,6 +18,7 @@
         visible: false
         shader: unshaded
   - type: Organ
+    slotId: brain
   - type: Input
     context: "ghost"
   - type: Brain
