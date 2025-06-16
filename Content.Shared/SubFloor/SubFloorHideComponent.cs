@@ -9,6 +9,7 @@ namespace Content.Shared.SubFloor
     /// </summary>
     /// <seealso cref="P:Content.Shared.Maps.ContentTileDefinition.IsSubFloor" />
     [NetworkedComponent]
+    [AutoGenerateComponentState] // L5
     [RegisterComponent]
     [Access(typeof(SharedSubFloorHideSystem))]
     public sealed partial class SubFloorHideComponent : Component

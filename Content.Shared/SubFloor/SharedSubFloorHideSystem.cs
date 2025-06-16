@@ -45,6 +45,7 @@ namespace Content.Shared.SubFloor
             SubscribeLocalEvent<SubFloorHideComponent, AnchorAttemptEvent>(OnAnchorAttempt);
             SubscribeLocalEvent<SubFloorHideComponent, UnanchorAttemptEvent>(OnUnanchorAttempt);
             SubscribeLocalEvent<SubFloorHideComponent, GetVerbsEvent<Verb>>(OnGetVerbs); // L5 - hideable vents
+            SubscribeLocalEvent<SubFloorHideComponent, TryHideVentUnderSubfloorEvent>(OnHideVentUnderSubfloor); // L5 - hideable vents
         }
 
         private void OnAnchorAttempt(EntityUid uid, SubFloorHideComponent component, AnchorAttemptEvent args)
