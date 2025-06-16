@@ -7,9 +7,10 @@
     sprite: Markers/jobs.rsi
     layers:
       - state: green
-  - type: ConditionalSpawner
-    prototypes:
-      - SalvageHumanCorpse
+  # L5 - no salvage corpses
+  #  - type: ConditionalSpawner
+  #    prototypes:
+  #      - SalvageHumanCorpse
 
 - type: entity
   name: Random Service Corpse Spawner
@@ -20,9 +21,10 @@
     layers:
       - state: botanist
       - state: green
-  - type: ConditionalSpawner
-    prototypes:
-      - MobRandomServiceCorpse
+  # L5 - no salvage corpses
+  #  - type: ConditionalSpawner
+  #    prototypes:
+  #      - MobRandomServiceCorpse
 
 - type: entity
   name: Random Engineer Corpse Spawner
@@ -33,9 +35,10 @@
     layers:
       - state: engineer
       - state: green
-  - type: ConditionalSpawner
-    prototypes:
-      - MobRandomEngineerCorpse
+  # L5 - no salvage corpses
+  #  - type: ConditionalSpawner
+  #    prototypes:
+  #      - MobRandomEngineerCorpse
 
 - type: entity
   name: Random Logistics Corpse Spawner # DeltaV - Logistics Department replacing Cargo
@@ -46,9 +49,10 @@
     layers:
       - state: cargo_tech
       - state: green
-  - type: ConditionalSpawner
-    prototypes:
-      - MobRandomCargoCorpse
+  # L5 - no salvage corpses
+  #  - type: ConditionalSpawner
+  #    prototypes:
+  #      - MobRandomCargoCorpse
 
 - type: entity
   name: Random Medic Corpse Spawner
@@ -59,9 +63,10 @@
     layers:
       - state: doctor
       - state: green
-  - type: ConditionalSpawner
-    prototypes:
-      - MobRandomMedicCorpse
+  # L5 - no salvage corpses
+  #  - type: ConditionalSpawner
+  #    prototypes:
+  #      - MobRandomMedicCorpse
 
 - type: entity
   name: Random Epistemics Corpse Spawner # DeltaV - Epistemics Department replacing Science
@@ -72,9 +77,10 @@
     layers:
       - state: scientist
       - state: green
-  - type: ConditionalSpawner
-    prototypes:
-      - MobRandomScienceCorpse
+  # L5 - no salvage corpses
+  #  - type: ConditionalSpawner
+  #    prototypes:
+  #      - MobRandomScienceCorpse
 
 - type: entity
   name: Random Security Corpse Spawner
@@ -86,9 +92,10 @@
     layers:
       - state: security_officer
       - state: green
-  - type: ConditionalSpawner
-    prototypes:
-      - MobRandomServiceCorpse # DeltaV - Prevent Security corpses from spawning and instead spawn Service corpses
+  # L5 - no salvage corpses
+  #  - type: ConditionalSpawner
+  #    prototypes:
+  #      - MobRandomServiceCorpse # DeltaV - Prevent Security corpses from spawning and instead spawn Service corpses
 
 - type: entity
   name: Random Command Corpse Spawner
@@ -99,6 +106,7 @@
     layers:
       - state: captain
       - state: green
-  - type: ConditionalSpawner
-    prototypes:
-      - MobRandomCommandCorpse
+  # L5 - no salvage corpses
+  #  - type: ConditionalSpawner
+  #    prototypes:
+  #      - MobRandomCommandCorpse
