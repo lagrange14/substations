@@ -155,8 +155,7 @@ namespace Content.Shared.SubFloor
         private void SetUnderCover(Entity<SubFloorHideComponent> entity, bool value)
         {
             // If it's not undercover or it always has visible layers then normal visibility.
-            // L5 - hideable vents. Add || comp.Enabled.
-            _visibility.SetLayer(entity.Owner, value && (entity.Comp.VisibleLayers.Count == 0 || !entity.Comp.Enabled) ? (ushort) VisibilityFlags.Subfloor : (ushort) VisibilityFlags.Normal);
+            _visibility.SetLayer(entity.Owner, value && entity.Comp.VisibleLayers.Count == 0 ? (ushort) VisibilityFlags.Subfloor : (ushort) VisibilityFlags.Normal);
 
             if (entity.Comp.IsUnderCover == value)
                 return;
