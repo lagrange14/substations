@@ -24,6 +24,7 @@ using Content.Shared.Lathe;
 using Content.Shared.Lathe.Prototypes;
 using Content.Shared.Localizations;
 using Content.Shared.Materials;
+using Content.Shared.Materials.OreSilo;
 using Content.Shared.Power;
 using Content.Shared.ReagentSpeed;
 using Content.Shared.Research.Components;
@@ -225,7 +226,12 @@ namespace Content.Server.Lathe
             if (!Resolve(uid, ref comp, ref prodComp, false))
                 return;
 
-            if (comp.CurrentRecipe != null)
+            // Begin L5 - ore processor silo support
+            var finishEv = new LatheFinishPrintingEvent((uid, comp), false);
+            RaiseLocalEvent(uid, ref finishEv);
+
+            if (comp.CurrentRecipe != null && !finishEv.Handled)
+            // End L5
             {
                 if (comp.CurrentRecipe.Result is { } resultProto)
                 {

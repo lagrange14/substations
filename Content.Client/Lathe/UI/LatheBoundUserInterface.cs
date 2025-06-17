@@ -1,5 +1,6 @@
 using Content.Shared._DV.Salvage; // DeltaV
 using Content.Shared.Lathe;
+using Content.Shared.Materials.OreSilo;
 using Content.Shared.Research.Components;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
@@ -33,6 +34,9 @@ namespace Content.Client.Lathe.UI
             };
 
             _menu.OnClaimMiningPoints += () => SendMessage(new LatheClaimMiningPointsMessage()); // DeltaV
+
+            // L5 - ore processor silo support
+            _menu.OnEnableSiloPressed += enabled => SendMessage(new EnableSiloButtonPressed(enabled));
         }
 
         protected override void UpdateState(BoundUserInterfaceState state)

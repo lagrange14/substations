@@ -33,6 +33,7 @@ public sealed partial class LatheMenu : DefaultWindow
     public event Action<BaseButton.ButtonEventArgs>? OnServerListButtonPressed;
     public event Action<string, int>? RecipeQueueAction;
     public event Action? OnClaimMiningPoints; // DeltaV
+    public event Action<bool>? OnEnableSiloPressed; // L5
 
     public List<ProtoId<LatheRecipePrototype>> Recipes = new();
 
@@ -66,6 +67,9 @@ public sealed partial class LatheMenu : DefaultWindow
         FilterOption.OnItemSelected += OnItemSelected;
 
         ServerListButton.OnPressed += a => OnServerListButtonPressed?.Invoke(a);
+
+        // L5 - ore processor silo support
+        MaterialsList.OnEnableSiloPressed += a => OnEnableSiloPressed?.Invoke(a);
     }
 
     public void SetEntity(EntityUid uid)

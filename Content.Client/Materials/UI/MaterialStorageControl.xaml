@@ -6,6 +6,13 @@
         <BoxContainer Name="MaterialList" Orientation="Vertical" VerticalExpand="True">
             <Label Name="NoMatsLabel" Text="{Loc 'lathe-menu-no-materials-message'}" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalExpand="True"/>
         </BoxContainer>
-        <Label Name="SiloLinkedLabel" Text="{Loc 'lathe-menu-silo-linked-message'}" StyleClasses="LabelSubText" Visible="False" HorizontalAlignment="Center"/>
+        <!-- Begin L5 changes - ore processor silo support -->
+        <BoxContainer Name="SiloLinkedBox" Orientation="Horizontal" Visible="False">
+            <Label Name="SiloLinkedLabel" Text="{Loc 'lathe-menu-silo-linked-message'}" StyleClasses="LabelSubText"
+                   HorizontalAlignment="Center" HorizontalExpand="True" />
+            <CheckBox Name="SiloEnableCheckbox" Text="{Loc 'lathe-menu-silo-enabled'}" Pressed="True"
+                      Visible="False" HorizontalAlignment="Right" Margin="0 0 10 0"/>
+        </BoxContainer>
+        <!-- End L5 changes -->
     </BoxContainer>
 </ScrollContainer>

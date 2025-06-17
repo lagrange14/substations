@@ -1,10 +1,11 @@
+using Content.Shared.Lathe;
 using Content.Shared.Power.EntitySystems;
 using JetBrains.Annotations;
 using Robust.Shared.Utility;
 
 namespace Content.Shared.Materials.OreSilo;
 
-public abstract class SharedOreSiloSystem : EntitySystem
+public abstract partial class SharedOreSiloSystem : EntitySystem // L5 - made partial
 {
     [Dependency] private readonly SharedMaterialStorageSystem _materialStorage = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _powerReceiver = default!;
@@ -23,10 +24,14 @@ public abstract class SharedOreSiloSystem : EntitySystem
             subs.Event<BoundUIOpenedEvent>(OnBoundUIOpened);
         });
 
+        // L5
+        Subs.BuiEvents<OreSiloClientComponent>(LatheUiKey.Key,
+            subs => subs.Event<EnableSiloButtonPressed>(OnSiloButtonPressed));
 
         SubscribeLocalEvent<OreSiloClientComponent, GetStoredMaterialsEvent>(OnGetStoredMaterials);
         SubscribeLocalEvent<OreSiloClientComponent, ConsumeStoredMaterialsEvent>(OnConsumeStoredMaterials);
         SubscribeLocalEvent<OreSiloClientComponent, ComponentShutdown>(OnClientShutdown);
+        SubscribeLocalEvent<OreSiloClientComponent, LatheFinishPrintingEvent>(OnLatheFinishPrinting); // L5
 
         _clientQuery = GetEntityQuery<OreSiloClientComponent>();
     }
@@ -52,14 +57,18 @@ public abstract class SharedOreSiloSystem : EntitySystem
             if (!CanTransmitMaterials((ent, ent), client))
                 return;
 
-            var clientMats = _materialStorage.GetStoredMaterials(client, true);
-            var inverseMats = new Dictionary<string, int>();
-            foreach (var (mat, amount) in clientMats)
+            // L5 - ore processor silo support; add if source
+            if (!clientComp.Source)
             {
-                inverseMats.Add(mat, -amount);
+                var clientMats = _materialStorage.GetStoredMaterials(client, true);
+                var inverseMats = new Dictionary<string, int>();
+                foreach (var (mat, amount) in clientMats)
+                {
+                    inverseMats.Add(mat, -amount);
+                }
+                _materialStorage.TryChangeMaterialAmount(client, inverseMats, localOnly: true);
+                _materialStorage.TryChangeMaterialAmount(ent.Owner, clientMats);
             }
-            _materialStorage.TryChangeMaterialAmount(client, inverseMats, localOnly: true);
-            _materialStorage.TryChangeMaterialAmount(ent.Owner, clientMats);
 
             ent.Comp.Clients.Add(client);
             Dirty(ent);
@@ -97,6 +106,10 @@ public abstract class SharedOreSiloSystem : EntitySystem
         if (args.LocalOnly)
             return;
 
+        // L5
+        if (ent.Comp.Source)
+            return;
+
         if (ent.Comp.Silo is not { } silo)
             return;
 
@@ -119,6 +132,10 @@ public abstract class SharedOreSiloSystem : EntitySystem
     private void OnConsumeStoredMaterials(Entity<OreSiloClientComponent> ent, ref ConsumeStoredMaterialsEvent args)
     {
         if (args.LocalOnly)
+            return;
+
+        // L5
+        if (ent.Comp.Source)
             return;
 
         if (ent.Comp.Silo is not { } silo || !TryComp<MaterialStorageComponent>(silo, out var materialStorage))

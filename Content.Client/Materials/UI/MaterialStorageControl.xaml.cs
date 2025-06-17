@@ -15,6 +15,8 @@ namespace Content.Client.Materials.UI;
 [GenerateTypedNameReferences]
 public sealed partial class MaterialStorageControl : ScrollContainer
 {
+    public event Action<bool>? OnEnableSiloPressed; // L5 - ore processor silo support
+
     [Dependency] private readonly IEntityManager _entityManager = default!;
     private readonly MaterialStorageSystem _materialStorage;
 
@@ -28,6 +30,9 @@ public sealed partial class MaterialStorageControl : ScrollContainer
         IoCManager.InjectDependencies(this);
 
         _materialStorage = _entityManager.System<MaterialStorageSystem>();
+
+        // L5 - ore processor silo support
+        SiloEnableCheckbox.OnPressed += args => OnEnableSiloPressed?.Invoke(args.Button.Pressed);
     }
 
     public void SetOwner(EntityUid owner)
@@ -94,6 +99,12 @@ public sealed partial class MaterialStorageControl : ScrollContainer
 
         _currentMaterials = mats;
         NoMatsLabel.Visible = MaterialList.ChildCount == 1;
-        SiloLinkedLabel.Visible = _entityManager.TryGetComponent<OreSiloClientComponent>(_owner.Value, out var client) && client.Silo != null;
+        // Begin L5 changes - ore processor silo support
+        var siloLinked = _entityManager.TryGetComponent<OreSiloClientComponent>(_owner.Value, out var client)
+                              && client.Silo != null;
+        SiloLinkedBox.Visible = siloLinked;
+        SiloEnableCheckbox.Visible = siloLinked && client!.Source;
+        SiloEnableCheckbox.Pressed = siloLinked && client!.Enabled;
+        // End L5 changes
     }
 }
