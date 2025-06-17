@@ -8,6 +8,8 @@
       collection: FelinidScreams
     Laugh:
       collection: MaleLaugh
+      params:
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -51,7 +53,7 @@
     Laugh:
       collection: FemaleLaugh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -65,11 +67,11 @@
     Sigh:
       collection: FemaleSigh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Crying:
       collection: FemaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Whistle:
       collection: Whistles
     Weh:

@@ -9,7 +9,7 @@
     Laugh:
       collection: MaleLaugh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -53,7 +53,7 @@
     Laugh:
       collection: FemaleLaugh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -75,11 +75,11 @@
     Sigh:
       collection: FemaleSigh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Crying:
       collection: FemaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Whistle:
       collection: Whistles
     Weh:
@@ -101,7 +101,7 @@
     Laugh:
       path: /Audio/Animals/lizard_happy.ogg
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Hiss:
       collection: ReptillianHiss # Impstation
     Honk:
@@ -111,7 +111,7 @@
     Crying:
       collection: MaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Weh:
       collection: Weh
     Hew:
@@ -141,7 +141,7 @@
     Laugh:
       path: /Audio/Animals/lizard_happy.ogg
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Hiss:
       collection: ReptillianHiss # Impstation
     Honk:
@@ -151,7 +151,7 @@
     Crying:
       collection: FemaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Weh:
       collection: Weh
     Hew:
@@ -164,7 +164,7 @@
     Sigh:
       collection: FemaleSigh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Yawn:
       collection: FemaleYawn
     # End DeltaV Additions
@@ -183,7 +183,7 @@
     Laugh:
       collection: MaleLaugh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -206,8 +206,6 @@
       collection: MaleSigh
     Crying:
       collection: MaleCry
-      params:
-        variation: 0.05
     Whistle:
       collection: Whistles
     Weh:
@@ -231,7 +229,7 @@
     Laugh:
       collection: FemaleLaugh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -253,11 +251,11 @@
     Sigh:
       collection: FemaleSigh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Crying:
       collection: FemaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Whistle:
       collection: Whistles
     Weh:
@@ -349,6 +347,8 @@
       collection: MaleScreams
     Laugh:
       collection: MaleLaugh
+      params:
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -393,7 +393,7 @@
     Laugh:
       collection: FemaleLaugh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -413,13 +413,13 @@
     Sigh:
       collection: FemaleSigh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Honk:
       collection: BikeHorn
     Crying:
       collection: FemaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Whistle:
       collection: Whistles
     Weh:

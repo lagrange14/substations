@@ -84,6 +84,8 @@
       collection: KitsuneScream # L5
     Laugh:
       collection: MaleLaugh
+      params:
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -129,7 +131,7 @@
     Laugh:
       collection: FemaleLaugh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -143,11 +145,11 @@
     Sigh:
       collection: FemaleSigh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Crying:
       collection: FemaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Whistle:
       collection: Whistles
     Weh:
@@ -198,6 +200,8 @@
       path: /Audio/_DV/Voice/Kitsune/fox_squeal1.ogg # L5
     Laugh:
       collection: MaleLaugh
+      params:
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -235,7 +239,7 @@
     Laugh:
       collection: FemaleLaugh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -249,11 +253,11 @@
     Sigh:
       collection: FemaleSigh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Crying:
       collection: FemaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Whistle:
       collection: Whistles
     Weh:
@@ -283,7 +287,7 @@
     Crying:
       collection: FemaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Weh:
       collection: Weh
     Hew:
@@ -310,6 +314,8 @@
       collection: MaleScreams
     Laugh:
       collection: MaleLaugh
+      params:
+        variation: 0.05 # L5 - reduce variance
     Snore:
       collection: Snores
     Honk:
@@ -347,7 +353,7 @@
     Laugh:
       collection: FemaleLaugh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -361,11 +367,11 @@
     Sigh:
       collection: FemaleSigh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Crying:
       collection: FemaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Whistle:
       collection: Whistles
     Weh:
@@ -388,6 +394,8 @@
       collection: KitsuneScream
     Laugh:
       collection: MaleLaugh
+      params:
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -427,7 +435,7 @@
     Laugh:
       collection: FemaleLaugh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Sneeze:
       collection: FemaleSneezes
     Cough:
@@ -441,11 +449,11 @@
     Sigh:
       collection: FemaleSigh
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Crying:
       collection: FemaleCry
       params:
-        variation: 0.05
+        variation: 0.05 # L5 - reduce variance
     Whistle:
       collection: Whistles
     Weh:
