@@ -15,11 +15,11 @@ permanent-blindness-trait-examined = [color=lightblue]{CAPITALIZE(POSS-ADJ($targ
 trait-lightweight-name = Lightweight drunk
 trait-lightweight-desc = Alcohol has a stronger effect on you.
 
-trait-monochromancy-name = Monochromancy
+trait-monochromancy-name = Monochromacy
 trait-monochromancy-desc = You are fully colorblind, everything you perceive ranges from blacks to whites.
-
-trait-muted-name = Muted
-trait-muted-desc = You can't speak.
+# L5 fixed a typo above, made the muted trait text less offensive hopefully?
+trait-muted-name = Non-speaking
+trait-muted-desc = You do not speak.
 
 trait-paracusia-name = Paracusia
 trait-paracusia-desc = You hear sounds that aren't really there.
