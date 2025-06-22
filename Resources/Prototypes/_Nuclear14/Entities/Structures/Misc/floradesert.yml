@@ -7,13 +7,13 @@
   - type: Sprite
     sprite: _Nuclear14/Structures/Misc/floradesert.rsi
     state: cactus
-    offset: 0,0
+    offset: 0.5,0.6 # L5
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeAabb
-            bounds: "-0.7,-0.3,-0.4,-1.2"
+            bounds: "-0.15,-0.2,0.15,0.2" # L5
         density: 1000
         layer:
         - WallLayer
@@ -26,12 +26,13 @@
   components:
   - type: Sprite
     state: joshua_1
+    offset: 0,0.6 # L5
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeAabb
-            bounds: "0.3,-0.3,-0.2,-1.2"
+            bounds: "-0.15,-0.2,0.15,0.2" # L5
         density: 1000
         layer:
         - WallLayer
@@ -66,12 +67,13 @@
   - type: Sprite
     sprite: _Nuclear14/Structures/Misc/trees-ms.rsi
     state: bald
+    offset: 0,1.9 # L5
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeAabb
-            bounds: "0.2,-1.4,-0.2,-1.8"
+            bounds: "-0.15,-0.1,0.15,0.3" # L5
         density: 1000
         layer:
         - WallLayer
