@@ -19,22 +19,22 @@
   id: MobOniMarkingLimits
   points:
     Hair:
-      points: 3 # L5 - Increase Limit from 1
+      points: 9 # L5 - Increase Limit from 1
       required: false
     FacialHair:
-      points: 3 # L5 - Increase Limit from 1
+      points: 9 # L5 - Increase Limit from 1
       required: false
     HeadTop:
-      points: 3 # L5 - Increase Limit from 1
+      points: 9 # L5 - Increase Limit from 1
       required: false # L5 - Disable requirement to allow for multiple simultaneous options
     HeadSide:
-      points: 3 # L5 - Increase Limit from 1
+      points: 9 # L5 - Increase Limit from 1
       required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Snout:
-      points: 3 # L5 - Increase Limit from 2
+      points: 9 # L5 - Increase Limit from 2
       required: false
     Chest:
-      points: 2 # L5 - Increase Limit from 1
+      points: 9 # L5 - Increase Limit from 1
       required: false
     Legs:
       points: 6

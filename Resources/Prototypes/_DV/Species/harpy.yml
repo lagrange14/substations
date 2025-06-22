@@ -41,26 +41,26 @@
   id: MobHarpyMarkingLimits
   points:
     Hair:
-      points: 3 # L5 - Increase Limit From 1
+      points: 9 # L5 - Increase Limit From 1
       required: false
     FacialHair:
-      points: 3 # L5 - Increase Limit From 1
+      points: 9 # L5 - Increase Limit From 1
       required: false
     Tail:
-      points: 3 # L5 - Increase Limit From 1
+      points: 9 # L5 - Increase Limit From 1
       required: false # L5 - Disable requirement to allow for multiple simultaneous options
     HeadTop:
-      points: 3 # L5 - Increase Limit From 1
+      points: 9 # L5 - Increase Limit From 1
       required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Chest:
       points: 2
       required: true
       defaultMarkings: [ HarpyChestDefault ]
     Legs:
-      points: 3 # L5 - Increase Limit From 2
+      points: 9 # L5 - Increase Limit From 2
       required: false
     Arms:
-      points: 3 # L5 - Increase Limit From 1
+      points: 9 # L5 - Increase Limit From 1
       required: false # L5 - Disable requirement to allow for multiple simultaneous options
 
 - type: humanoidBaseSprite

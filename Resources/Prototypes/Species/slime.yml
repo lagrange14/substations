@@ -36,13 +36,13 @@
   id: MobSlimeMarkingLimits
   points:
     Face: # Floof
-      points: 3 # L5 Increase Limit From 1
+      points: 9 # L5 Increase Limit From 1
       required: false
     Hair:
-      points: 3 # L5 Increase Limit From 1
+      points: 9 # L5 Increase Limit From 1
       required: false
     FacialHair:
-      points: 3 # L5 Increase Limit From 1
+      points: 9 # L5 Increase Limit From 1
       required: false
     Chest:
       points: 2

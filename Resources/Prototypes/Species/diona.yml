@@ -40,28 +40,28 @@
   onlyWhitelisted: true
   points:
     Head:
-      points: 3 # L5 Increase Limit from 2
+      points: 9 # L5 Increase Limit from 2
       required: false
     HeadTop:
-      points: 3 # L5 Increase Limit from 1
+      points: 9 # L5 Increase Limit from 1
       required: false
     HeadSide:
-      points: 3 # L5 Increase Limit from 1
+      points: 9 # L5 Increase Limit from 1
       required: false
     UndergarmentTop:
-      points: 3 # L5 Increase Limit from 1
+      points: 9 # L5 Increase Limit from 1
       required: false
     UndergarmentBottom:
-      points: 3 # L5 Increase Limit from 1
+      points: 9 # L5 Increase Limit from 1
       required: false
     Chest:
-      points: 3 # L5 Increase Limit from 2
+      points: 9 # L5 Increase Limit from 2
       required: false
     Legs:
-      points: 3 # L5 Increase Limit from 2
+      points: 9 # L5 Increase Limit from 2
       required: false
     Arms:
-      points: 3 # L5 Increase Limit from 2
+      points: 9 # L5 Increase Limit from 2
       required: false
     Overlay:
       points: 1

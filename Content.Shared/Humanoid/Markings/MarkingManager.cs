@@ -67,6 +67,7 @@ namespace Content.Shared.Humanoid.Markings
 
             foreach (var (key, marking) in MarkingsByCategory(category))
             {
+                // L5 - verify that our markingPoints.Points actually has a value associated with its key so we don't crash if it doesn't
                 if ((markingPoints.OnlyWhitelisted || !markingPoints.Points.TryGetValue(category, out var val) || val.OnlyWhitelisted) && marking.SpeciesRestrictions == null)
                 {
                     continue;

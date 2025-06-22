@@ -59,7 +59,7 @@
       points: 3 # DeltaV - Fixes hair not displaying L5 - Increase Limit from 1
       required: false
     Tail: # DeltaV - Adds ability to use more marking types
-      points: 3 # L5 - Increase Limit from 1
+      points: 9 # L5 - Increase Limit from 1
       required: false
     Eyes: # DeltaV - Moves screen to the eyes layer
       points: 1
@@ -82,10 +82,10 @@
       required: true
       defaultMarkings: [ MobIPCLArmDefault, MobIPCLHandDefault, MobIPCRArmDefault, MobIPCRHandDefault ]
     Snout: # DeltaV - Adds ability to use more marking types
-      points: 3 # L5 - Increase Limit from 1
+      points: 9 # L5 - Increase Limit from 1
       required: false
     HeadSide:
-      points: 3 # L5 - Increase Limit from 1
+      points: 9 # L5 - Increase Limit from 1
       required: false
 
 - type: humanoidBaseSprite
