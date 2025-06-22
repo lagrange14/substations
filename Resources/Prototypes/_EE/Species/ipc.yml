@@ -53,20 +53,20 @@
   id: MobIPCMarkingLimits
   points:
     Hair:
-      points: 1 # DeltaV - Fixes hair not displaying
+      points: 3 # DeltaV - Fixes hair not displaying L5 - Increase Limit from 1
       required: false
     FacialHair:
-      points: 1 # DeltaV - Fixes hair not displaying
+      points: 3 # DeltaV - Fixes hair not displaying L5 - Increase Limit from 1
       required: false
     Tail: # DeltaV - Adds ability to use more marking types
-      points: 1
+      points: 3 # L5 - Increase Limit from 1
       required: false
     Eyes: # DeltaV - Moves screen to the eyes layer
-      points: 1
+      points: 3 # L5 - Increase Limit from 1
       required: true
       defaultMarkings: [ MobIPCEyesDefault ]
     Head:
-      points: 1
+      points: 3 # L5 - Increase Limit from 1
       required: true
       defaultMarkings: [ MobIPCHeadDefault ]
     Chest:
@@ -82,10 +82,10 @@
       required: true
       defaultMarkings: [ MobIPCLArmDefault, MobIPCLHandDefault, MobIPCRArmDefault, MobIPCRHandDefault ]
     Snout: # DeltaV - Adds ability to use more marking types
-        points: 1
+        points: # L5 - Increase Limit from 1
         required: false
     HeadSide:
-      points: 1
+      points: 3 # L5 - Increase Limit from 1
       required: false
 
 - type: humanoidBaseSprite

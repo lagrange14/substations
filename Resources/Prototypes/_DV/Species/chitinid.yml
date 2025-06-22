@@ -53,21 +53,21 @@
       points: 0
       required: false
     Tail:
-      points: 1
+      points: 3 # Increase Limit from 1
       required: true
       defaultMarkings: [ ChitinidWingsDefault ]
     Snout:
-      points: 1
+      points: 3 # Increase Limit from 1
       required: false
     HeadTop:
-      points: 1
+      points: 3 # Increase Limit from 1
       required: true
       defaultMarkings: [ ChitinidAntennasDefault ]
     HeadSide:
-      points: 1
+      points: 3 # Increase Limit from 1
       required: false
     Head:
-      points: 1
+      points: 3 # Increase Limit from 1
       required: false
     Chest:
       points: 1
