@@ -48,12 +48,10 @@
       required: false
     Tail:
       points: 3 # L5 - Increase Limit From 1
-      required: true
-      defaultMarkings: [ HarpyTailPhoenix ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     HeadTop:
       points: 3 # L5 - Increase Limit From 1
-      required: true
-      defaultMarkings: [ HarpyEarsDefault ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Chest:
       points: 2
       required: true
@@ -63,8 +61,7 @@
       required: false
     Arms:
       points: 3 # L5 - Increase Limit From 1
-      required: false
-      defaultMarkings: [ HarpyWingDefaultHuescale ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
 
 - type: humanoidBaseSprite
   id: MobHarpyHead

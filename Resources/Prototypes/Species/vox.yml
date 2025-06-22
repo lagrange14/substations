@@ -53,8 +53,7 @@
       required: true
     Snout:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ VoxBeak ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Arms:
       points: 4
       required: true
@@ -74,8 +73,7 @@
       required: false
     Tail:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ VoxTail ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
 
 - type: humanoidBaseSprite
   id: MobVoxEyes

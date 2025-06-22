@@ -54,15 +54,13 @@
       required: false
     Tail:
       points: 3 # Increase Limit from 1
-      required: true
-      defaultMarkings: [ ChitinidWingsDefault ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Snout:
       points: 3 # Increase Limit from 1
       required: false
     HeadTop:
       points: 3 # Increase Limit from 1
-      required: true
-      defaultMarkings: [ ChitinidAntennasDefault ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     HeadSide:
       points: 3 # Increase Limit from 1
       required: false

@@ -48,12 +48,10 @@
       required: false
     Tail:
       points: 3 # L5 Increase Limit from 1
-      required: true
-      defaultMarkings: [ LizardTailSmooth ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Snout:
       points: 3 # L5 Increase Limit from 1
-      required: true
-      defaultMarkings: [ LizardSnoutRound ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     HeadTop:
       points: 3 # L5 Increase Limit from 2
       required: false

@@ -1,7 +1,7 @@
 - type: species
   id: Monkey
   name: species-name-monkey
-  roundStart: true # L5 - Sure, why not I guess
+  roundStart: false # sad...
   prototype: MobMonkey
   sprites: MobMonkeySprites
   dollPrototype: MobMonkeyDummy
@@ -135,10 +135,10 @@
   id: MobMonkeyMarkingLimits
   points:
     Special: # the cat ear joke
-      points: 3 # Corvax-Sponsors L5 - Increase Limit from 1
+      points: 1 # Corvax-Sponsors
       required: false
     HeadTop:
-      points: 3 # L5 - Increase Limit from 1
+      points: 1
       required: false
     Chest:
       points: 1

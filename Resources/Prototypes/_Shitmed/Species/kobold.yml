@@ -1,7 +1,7 @@
 - type: species
   id: Kobold
   name: species-name-kobold
-  roundStart: true # L5 - Sure, why not I guess
+  roundStart: false # sad...
   prototype: MobKobold
   sprites: MobKoboldSprites
   dollPrototype: MobKoboldDummy
@@ -143,7 +143,7 @@
   id: MobKoboldMarkingLimits
   points:
     Special: # the cat ear joke
-      points: 3 # L5 - Increase Limit from 1
+      points: 1
       required: false
     Chest:
       points: 1

@@ -52,12 +52,10 @@
       required: false
     HeadTop:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ FeroxiEars ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Snout:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ FeroxiSnout ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Chest:
       points: 3
       required: false
@@ -69,8 +67,7 @@
       required: false
     Tail:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ FeroxiTailAndDorsal ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
 
 - type: humanoidBaseSprite
   id: MobFeroxiHead

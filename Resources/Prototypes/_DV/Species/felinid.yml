@@ -22,12 +22,10 @@
       required: false
     Tail:
       points: 3 # L5 Increase Limit from 1
-      required: true
-      defaultMarkings: [ FelinidTailBasic ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     HeadTop:
       points: 3 # L5 Increase Limit from 1
-      required: true
-      defaultMarkings: [ FelinidEarsBasic ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Chest:
       points: 2
       required: false

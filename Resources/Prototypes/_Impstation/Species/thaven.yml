@@ -51,8 +51,7 @@
       required: false
     HeadSide:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ ThavenEars1 ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Head:
       points: 4
       required: false

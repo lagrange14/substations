@@ -52,8 +52,7 @@
       required: false
     Tail:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ RodentiaTailDefault ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Legs:
       points: 6
       required: false
@@ -65,8 +64,7 @@
       required: false
     HeadTop:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ RodentiaHeadTopEarDefault ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     HeadSide:
       points: 3 # L5 - Increase Limit from 1
       required: false

@@ -25,12 +25,10 @@
       required: false
     Tail:
       points: 3 # L5 - Increase Limit From 1
-      required: true
-      defaultMarkings: [ KitsuneTailDefault ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     HeadTop:
       points: 3 # L5 - Increase Limit From 1
-      required: true
-      defaultMarkings: [ KitsuneEarsDefault ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     UndergarmentTop:
       points: 3 # L5 - Increase Limit From 1
       required: false

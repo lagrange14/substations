@@ -49,8 +49,7 @@
       required: false
     Tail:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ VulpTail ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Head:
       points: 3
       required: false
@@ -65,8 +64,7 @@
       required: false
     HeadTop:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ VulpEar ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
 
 - type: humanoidBaseSprite
   id: MobVulpkaninHead

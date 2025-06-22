@@ -26,12 +26,10 @@
       required: false
     HeadTop:
       points: 3 # L5 - Increase Limit from 1
-      required: true
-      defaultMarkings: [ OniHornDoubleCurved ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     HeadSide:
       points: 3 # L5 - Increase Limit from 1
-      required: false
-      defaultMarkings: [ PointyEarsUpwards ]
+      required: false # L5 - Disable requirement to allow for multiple simultaneous options
     Snout:
       points: 3 # L5 - Increase Limit from 2
       required: false

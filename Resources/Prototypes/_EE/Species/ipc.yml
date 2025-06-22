@@ -62,11 +62,11 @@
       points: 3 # L5 - Increase Limit from 1
       required: false
     Eyes: # DeltaV - Moves screen to the eyes layer
-      points: 3 # L5 - Increase Limit from 1
+      points: 1
       required: true
       defaultMarkings: [ MobIPCEyesDefault ]
     Head:
-      points: 3 # L5 - Increase Limit from 1
+      points: 1
       required: true
       defaultMarkings: [ MobIPCHeadDefault ]
     Chest:
@@ -82,8 +82,8 @@
       required: true
       defaultMarkings: [ MobIPCLArmDefault, MobIPCLHandDefault, MobIPCRArmDefault, MobIPCRHandDefault ]
     Snout: # DeltaV - Adds ability to use more marking types
-        points: # L5 - Increase Limit from 1
-        required: false
+      points: 3 # L5 - Increase Limit from 1
+      required: false
     HeadSide:
       points: 3 # L5 - Increase Limit from 1
       required: false
