@@ -15,6 +15,7 @@ public abstract partial class SharedOreSiloSystem
             return;
 
         if (!TryComp<OreSiloClientComponent>(ent, out var client)
+            || !client.Source
             || !client.Enabled)
             return;
 
