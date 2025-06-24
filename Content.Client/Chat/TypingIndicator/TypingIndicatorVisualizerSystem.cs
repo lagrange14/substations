@@ -47,7 +47,8 @@ public sealed class TypingIndicatorVisualizerSystem : VisualizerSystem<TypingInd
             layer = _sprite.LayerMapReserve((uid, args.Sprite), TypingIndicatorLayers.Base);
 
         // L5 - synth typing indicators
-        if (component.UseSyntheticVariant)
+        var useSynth = component.UseSyntheticVariant && !proto.NoSynthVariant;
+        if (useSynth)
             _sprite.LayerSetRsi((uid, args.Sprite), layer, proto.SynthSpritePath);
         else
             _sprite.LayerSetRsi((uid, args.Sprite), layer, proto.SpritePath, proto.TypingState);
@@ -61,13 +62,13 @@ public sealed class TypingIndicatorVisualizerSystem : VisualizerSystem<TypingInd
         {
             // Begin L5 changes - synth typing indicators
             case TypingIndicatorState.Idle:
-                if (component.UseSyntheticVariant)
+                if (useSynth)
                     _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.SynthIdleState);
                 else
                     _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.IdleState);
                 break;
             case TypingIndicatorState.Typing:
-                if (component.UseSyntheticVariant && !proto.HasSynthVariant)
+                if (useSynth && !proto.HasSynthVariant)
                     _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.SynthFallbackState);
                 else
                     _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.TypingState);
