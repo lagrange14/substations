@@ -46,15 +46,11 @@ public sealed class TypingIndicatorVisualizerSystem : VisualizerSystem<TypingInd
         if (!layerExists)
             layer = _sprite.LayerMapReserve((uid, args.Sprite), TypingIndicatorLayers.Base);
 
-        _sprite.LayerSetRsi((uid, args.Sprite), layer, proto.SpritePath, proto.TypingState);
-
-        if (component.UseSyntheticVariant  && currentTypingIndicator != new ProtoId<TypingIndicatorPrototype>("paper")) // L5: Synthetic talk sprites
-        {
+        // L5 - synth typing indicators
+        if (component.UseSyntheticVariant)
             _sprite.LayerSetRsi((uid, args.Sprite), layer, proto.SynthSpritePath);
-            // hardcoded string bad, but i have no idea how else to refer to this sprite state or ensure it exists
-            _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.HasSynthVariant ? proto.TypingState : "default0");
-        }
-
+        else
+            _sprite.LayerSetRsi((uid, args.Sprite), layer, proto.SpritePath, proto.TypingState);
 
         args.Sprite.LayerSetShader(layer, proto.Shader);
         _sprite.LayerSetOffset((uid, args.Sprite), layer, proto.Offset);
@@ -63,15 +59,20 @@ public sealed class TypingIndicatorVisualizerSystem : VisualizerSystem<TypingInd
         _sprite.LayerSetVisible((uid, args.Sprite), layer, state != TypingIndicatorState.None);
         switch (state)
         {
+            // Begin L5 changes - synth typing indicators
             case TypingIndicatorState.Idle:
-                if (component.UseSyntheticVariant) // L5 - synth typing indicators
+                if (component.UseSyntheticVariant)
                     _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.SynthIdleState);
                 else
                     _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.IdleState);
                 break;
             case TypingIndicatorState.Typing:
-                _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.TypingState);
+                if (component.UseSyntheticVariant && !proto.HasSynthVariant)
+                    _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.SynthFallbackState);
+                else
+                    _sprite.LayerSetRsiState((uid, args.Sprite), layer, proto.TypingState);
                 break;
+            // End L5 changes
         }
     }
 }

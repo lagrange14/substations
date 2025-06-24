@@ -27,22 +27,4 @@ public sealed partial class TypingIndicatorPrototype : IPrototype
 
     [DataField("shader")]
     public string Shader = "shaded";
-
-    /// <summary>
-    /// L5: Sprite path for synth variant of talk sprite.
-    /// </summary>
-    [DataField]
-    public ResPath SynthSpritePath = new("/Textures/_L5/Effects/speech_synth.rsi");
-
-    /// <summary>
-    /// L5: Whether there is a synth variant for this talk sprite.
-    /// </summary>
-    [DataField]
-    public bool HasSynthVariant;
-
-    /// <summary>
-    /// L5: the idle state sprite for synths.
-    /// </summary>
-    [DataField]
-    public string SynthIdleState = "thinking";
 }
