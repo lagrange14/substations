@@ -134,7 +134,12 @@ namespace Content.Client.Cargo.BUI
 
             OrderCapacity = cState.Capacity;
             OrderCount = cState.Count;
-            BankBalance = _cargoSystem.GetBalanceFromAccount(station, orderConsole.Account);
+            // Begin L5 changes - disable departmental economy; show primary account balance
+            // BankBalance = _cargoSystem.GetBalanceFromAccount(station, orderConsole.Account);
+            BankBalance = 0;
+            if (EntMan.TryGetComponent<StationBankAccountComponent>(station, out var bankAccount))
+                BankBalance = _cargoSystem.GetBalanceFromAccount((station, bankAccount), bankAccount.PrimaryAccount);
+            // End L5 changes
 
             AccountName = cState.Name;
 

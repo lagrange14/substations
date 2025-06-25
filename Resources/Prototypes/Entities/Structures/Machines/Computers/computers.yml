@@ -1167,8 +1167,9 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: FundingAllocationConsole
-  - type: ActivatableUI
-    key: enum.FundingAllocationConsoleUiKey.Key
+    # L5 - disable departmental economy
+#  - type: ActivatableUI
+#    key: enum.FundingAllocationConsoleUiKey.Key
   - type: ActivatableUIRequiresAccess
   - type: AccessReader
     access: [["Funding"]] # DeltaV - separate funding access

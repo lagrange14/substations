@@ -71,6 +71,11 @@ namespace Content.Client.Cargo.UI
 
             TabContainer.SetTabTitle(0, Loc.GetString("cargo-console-menu-tab-title-orders"));
             TabContainer.SetTabTitle(1, Loc.GetString("cargo-console-menu-tab-title-funds"));
+            // Begin L5 additions - disable departmental economy
+            TabContainer.TabsVisible = false;
+            TabContainer.SetTabVisible(0, false);
+            TabContainer.SetTabVisible(1, false);
+            // End L5 additions
 
             ActionOptions.OnItemSelected += idx =>
             {
@@ -279,8 +284,8 @@ namespace Content.Client.Cargo.UI
             {
                 return;
             }
-
-            var balance = _cargoSystem.GetBalanceFromAccount((_station.Value, bankAccount), orderConsole.Account);
+             // L5 - disable departmental economy; use primary account:
+            var balance = _cargoSystem.GetBalanceFromAccount((_station.Value, bankAccount), bankAccount.PrimaryAccount);
             PointsLabel.Text = Loc.GetString("cargo-console-menu-points-amount", ("amount", balance));
             TransferLimitLabel.Text = Loc.GetString("cargo-console-menu-account-action-transfer-limit",
                 ("limit", (int) (balance * orderConsole.TransferLimit)));

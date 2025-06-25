@@ -50,6 +50,10 @@ auto_call_time                 = 0 # don't automatically call the shuttle
 emergency_early_launch_allowed = true # MRP server command ban time
 recall_turning_point           = 0.33
 
+[cargo]
+# Departmental-economy-b-gone
+allow_primary_cut_adjustment = false
+
 [biomass]
 easy_mode = false # reclaimer can work on soul-ful bodies, mrp server
 

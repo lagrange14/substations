@@ -203,7 +203,7 @@ namespace Content.Server.Cargo.Systems
             }
 
             var cost = order.Price * order.OrderQuantity;
-            var accountBalance = GetBalanceFromAccount((station.Value, bank), order.Account);
+            var accountBalance = GetBalanceFromAccount((station.Value, bank), bank.PrimaryAccount); // L5 - disable departmental economy; use primary account
 
             // Not enough balance
             if (cost > accountBalance)
@@ -256,7 +256,7 @@ namespace Content.Server.Cargo.Systems
                 $"{ToPrettyString(player):user} approved order [orderId:{order.OrderId}, quantity:{order.OrderQuantity}, product:{order.ProductId}, requester:{order.Requester}, reason:{order.Reason}] on account {order.Account} with balance at {accountBalance}");
 
             orderDatabase.Orders[component.Account].Remove(order);
-            UpdateBankAccount((station.Value, bank), -cost, order.Account);
+            UpdateBankAccount((station.Value, bank), -cost, bank.PrimaryAccount); // L5 - disable departmental economy; use primary account
             UpdateOrders(station.Value);
         }
 

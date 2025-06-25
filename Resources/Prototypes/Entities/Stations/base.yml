@@ -9,6 +9,26 @@
   abstract: true
   components:
     - type: StationBankAccount
+      # Begin L5 additions - disable departmental economy
+      primaryCut: 1
+      lockboxCut: 0
+      accounts:
+        Cargo: 8000
+        Engineering: 0
+        Medical: 0
+        Science: 0
+        Security: 0
+        Service: 0
+        Justice: 0
+      revenueDistribution:
+        Cargo: 1
+        Engineering: 0
+        Medical: 0
+        Science: 0
+        Security: 0
+        Service: 0
+        Justice: 0
+      # End L5 additions
     - type: StationCargoOrderDatabase
       orders:
         Cargo: [ ]
