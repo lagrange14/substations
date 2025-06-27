@@ -176,6 +176,12 @@
       types:
         Blunt: 5
   - type: SleepEmitSound
+    # L5 - shut the up snoring
+    snore:
+      collection: Snores
+      params:
+        maxDistance: 2.5
+        volume: -2
   - type: SSDIndicator
   - type: StandingState
   - type: Dna
