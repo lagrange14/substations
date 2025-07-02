@@ -73,6 +73,12 @@ website    = "https://lagrange14.com/"
 wiki       = "https://lagrange14.com/wiki/Main_Page"
 bug_report = "https://github.com/lagrange14/substations/issues/new/choose"
 
+[tips]
+tippy_chance = 0.05 # Better with Motes
+
+[tippy]
+entity = "Motes" # The best tipster...
+
 [net]
 max_connections = 1024
 tickrate        = 30

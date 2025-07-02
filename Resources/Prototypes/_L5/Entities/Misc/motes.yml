@@ -1,0 +1,21 @@
+- type: entity
+  parent: Tippy
+  id: Motes
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - sprite: /Textures/_L5/Tips/motes.rsi
+      visible: false
+      state: left
+      map: [ "revealing" ]
+    - sprite: /Textures/_L5/Tips/motes.rsi
+      state: right
+      map: [ "hiding" ]
+      visible: false
+    - sprite: /Textures/_L5/Tips/motes.rsi
+      state: down
+      visible: true
+      map: [ "speaking" ]
+  - type: FootstepModifier
+    footstepSoundCollection: null # Silent skunk
