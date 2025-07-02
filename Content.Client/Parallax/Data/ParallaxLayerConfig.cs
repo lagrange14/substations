@@ -66,5 +66,11 @@ public sealed partial class ParallaxLayerConfig
     [DataField("scrolling")] public Vector2 Scrolling = Vector2.Zero;
 
     [DataField("shader")] public string? Shader = "unshaded";
+
+    /// <summary>
+    /// L5: whether the shader used for this layer should be made unique.
+    /// </summary>
+    [DataField]
+    public bool NeedsUniqueShader;
 }
 

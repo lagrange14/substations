@@ -53,15 +53,26 @@ public sealed class ParallaxOverlay : Overlay
 
         var layers = _parallax.GetParallaxLayers(args.MapId);
         var realTime = (float) _timing.RealTime.TotalSeconds;
+        var curTime = (float)_timing.CurTime.TotalSeconds; // L5
 
         foreach (var layer in layers)
         {
-            ShaderInstance? shader;
-
+            // Begin L5 changes
+            ShaderInstance? shader = null;
             if (!string.IsNullOrEmpty(layer.Config.Shader))
-                shader = _prototypeManager.Index<ShaderPrototype>(layer.Config.Shader).Instance();
-            else
-                shader = null;
+            {
+                var proto = _prototypeManager.Index<ShaderPrototype>(layer.Config.Shader);
+                if (layer.Config.NeedsUniqueShader)
+                {
+                    shader = proto.InstanceUnique();
+                    shader.SetParameter("curTime", curTime);
+                }
+                else
+                {
+                    shader = proto.Instance();
+                }
+            }
+            // End L5 changes
 
             worldHandle.UseShader(shader);
             var tex = layer.Texture;
