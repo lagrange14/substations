@@ -105,6 +105,7 @@
     guides:
     - TeslaEngine
     - SingularityTeslaEngine
+  - type: SupermatterImmune # imp
 
 - type: entity
   id: TeslaGroundingRod
@@ -191,3 +192,5 @@
     guides:
     - TeslaEngine
     - SingularityTeslaEngine
+  - type: SupermatterImmune # imp
+

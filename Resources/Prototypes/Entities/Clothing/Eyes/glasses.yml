@@ -68,6 +68,9 @@
   - type: Tag
     tags:
     - SecDogWearable # DeltaV - let Laika wear meson goggles
+  - type: ClothingGrantComponent # imp
+    component:
+    - type: SupermatterHallucinationImmune
 
 - type: entity
   parent: ClothingEyesBase

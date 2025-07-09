@@ -31,6 +31,8 @@
     HoPBookIanDossierStealObjective: 1 # DeltaV - HoP steal objective, see Resources/Prototypes/_DV/Objectives/traitor.yml
     HoSGunStealObjective: 0.5 # DeltaV
     BibleMystagogueStealObjective: 0.5 # DeltaV - Mysta steal objective see Resources/Prototypes/_DV/Objectives/traitor.yml
+    #StealSupermatterSliverObjective: 0.5
+    #StealSupermatterSliverObjective: 0.5 # imp, disabled until StealCondition can verify the supermatter's existence
 
 - type: weightedRandom
   id: TraitorObjectiveGroupKill

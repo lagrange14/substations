@@ -304,6 +304,7 @@
   - TEG
   - RTG
   - SolarPanels
+  - Supermatter # imp
 
 - type: guideEntry
   id: AME

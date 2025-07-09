@@ -264,6 +264,8 @@
     producingSound: /Audio/Machines/circuitprinter.ogg
     idleState: icon
     runningState: building
+    staticRecipes:
+    - SupermatterComputerCircuitboard # imp
     staticPacks:
     - ScienceBoardsStatic
     - ServiceBoardsStatic
