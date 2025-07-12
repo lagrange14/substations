@@ -6,4 +6,4 @@
   description: Releases a bothersome spray of foam darts that cause severe welching.
   components:
   - type: Sprite
-    sprite: Objects/Fun/Foam/foam_crossbow.rsi # L5 - rsi moved
+    sprite: Objects/Fun/Foam/foam_grenade.rsi # L5 - rsi moved
