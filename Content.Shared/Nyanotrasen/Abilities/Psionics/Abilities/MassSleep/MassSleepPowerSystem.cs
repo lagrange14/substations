@@ -16,7 +16,7 @@ namespace Content.Shared.Abilities.Psionics
         [Dependency] private readonly SharedActionsSystem _actions = default!;
         [Dependency] private readonly EntityLookupSystem _lookup = default!;
         [Dependency] private readonly SharedPsionicAbilitiesSystem _psionics = default!;
-        [Dependency] private readonly SharedStatusEffectsSystem _statusEffects = default!;
+        [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
 
         public override void Initialize()
         {
