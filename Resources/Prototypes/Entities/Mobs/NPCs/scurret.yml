@@ -135,6 +135,8 @@
         32:
           sprite: Mobs/Animals/scurret/displacement.rsi
           state: hand
+  - type: Body # L5 - workaround shitmed's hand stuff
+    prototype: Scurret
 
   - type: InventorySlots
   - type: Food

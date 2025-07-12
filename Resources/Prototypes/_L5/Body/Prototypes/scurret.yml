@@ -1,0 +1,54 @@
+- type: entity
+  id: ScurretHand
+  parent: [ HandsAnimal, BaseLeftHand ]
+  name: scurret hand
+  components:
+  - type: BodyPart
+    symmetry: Left
+    partType: Hand
+    slotId: ""  #  Idk why but this is needed
+    toolName: a left hand
+
+- type: entity
+  id: ScurretTorso
+  parent: TorsoAnimal
+  name: scurret torso
+  components:
+  - type: BodyPart
+    children:
+      left hand: # no arm because funny and I'm lazy
+        id: left hand
+        type: Hand
+
+- type: body
+  id: Scurret
+  name: scurret
+  root: torso
+  slots:
+    head:
+      part: HeadAnimal
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain # Don't worry about it.
+        eyes: OrganHumanEyes
+    torso:
+      part: ScurretTorso
+      connections:
+      - left hand
+      - legs
+      - head
+      organs:
+        lungs: OrganAnimalLungs
+        stomach: OrganAnimalStomach
+        liver: OrganAnimalLiver
+        heart: OrganAnimalHeart
+        kidneys: OrganAnimalKidneys
+    left hand:
+      part: ScurretHand
+    legs:
+      part: LegsAnimal
+      connections:
+      - feet
+    feet:
+      part: FeetAnimal
