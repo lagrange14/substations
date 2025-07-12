@@ -1440,9 +1440,9 @@
         clownedon:
           True: {visible: true}
           False: {visible: false}
-  - type: Body # Shitmed Change
-    prototype: Monkey
-    requiredLegs: 2
+  - type: Body
+    prototype: Primate
+    requiredLegs: 1 # TODO: More than 1 leg
   - type: UserInterface # Shitmed
     interfaces:
       enum.StrippingUiKey.Key:
@@ -1512,9 +1512,13 @@
   parent: MobBaseAncestor
   description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
   components:
-  # L5 - moved from shitmed's addition to MobBaseAncestor:
+  # Begin L5 addition - moved from shitmed's addition to MobBaseAncestor:
   - type: HumanoidAppearance
     species: Monkey
+  - type: Body # Shitmed Change
+    prototype: Monkey
+    requiredLegs: 2
+  # End L5 addition
   - type: NameIdentifier
     group: Monkey
   - type: Speech
@@ -1552,9 +1556,14 @@
   description: New church of neo-darwinists actually believe that EVERY animal evolved from a monkey. Tastes like pork, and killing them is both fun and relaxing.
   suffix: syndicate base
   components:
-    # L5 - moved from shitmed's addition to MobBaseAncestor:
+  # Begin L5 addition - moved from shitmed's addition to MobBaseAncestor:
+  # In ideal world there'd be MobBaseAncestorMonkey but oh well
   - type: HumanoidAppearance
     species: Monkey
+  - type: Body # Shitmed Change
+    prototype: Monkey
+    requiredLegs: 2
+  # End L5 addition
   - type: NameIdentifier
     group: Monkey
   - type: SentienceTarget
