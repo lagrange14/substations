@@ -17,7 +17,7 @@ public sealed class SSDIndicatorSystem : EntitySystem
 
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly SharedStatusEffectsSystem _statusEffects = default!;
+    [Dependency] private readonly StatusEffectsSystem _statusEffects = default!;
     [Dependency] private readonly INetManager _net = default!;
 
     private bool _icSsdSleep;
