@@ -17,6 +17,7 @@
   - type: Action
     useDelay: 2
     checkCanInteract: false
+    raiseOnUser: true
   - type: InstantAction
     event: !type:ToggleEvent
 
@@ -41,6 +42,7 @@
       toggleOffSound: /Audio/_L5/Effects/HUD/MedHudDisable.ogg
 
 - type: entity
+  parent: BaseActionToggleHud
   id: ActionToggleMedHud
   name: Toggle Med Hud
   description: Toggles your medical HUD.
@@ -60,6 +62,7 @@
       toggleOffSound: /Audio/_L5/Effects/HUD/BeerHudDisable.ogg
 
 - type: entity
+  parent: BaseActionToggleHud
   id: ActionToggleBeerHud
   name: Toggle Beer Hud
   description: Toggles your beer HUD.
