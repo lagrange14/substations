@@ -80,3 +80,6 @@ trait-hud-beer-desc = A Beer HUD is installed in your display. Still doesn't mak
 
 trait-hud-chemical-name = Chemical Analysis HUD
 trait-hud-chemical-desc = A Chemical Analysis HUD is installed in your display. For when you need your Double Ice Cream to have 99.1% Purity.
+
+trait-hud-diagnostic-name = Diagnostic HUD
+trait-hud-diagnostic-desc = You have an integrated diagnostic HUD for troubleshooting and repairing silicons around the station.

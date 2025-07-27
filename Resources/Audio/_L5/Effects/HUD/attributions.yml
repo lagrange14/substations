@@ -1,0 +1,8 @@
+﻿- files: [ "BeerHudEnable.ogg", "BeerHudDisable.ogg",
+           "MedHudEnable.ogg", "MedHudDisable.ogg",
+           "SecHudEnable.ogg", "SecHudDisable.ogg",
+           "DiagnosticHudEnable.ogg", "DiagnosticHudDisable.ogg",
+           "AiHudEnable.ogg", "AiHudDisable.ogg" ]
+  license: "CC-BY-NC-4.0"
+  copyright: "created by Cheeses-The-Mac on github"
+  source: "https://github.com/lagrange14/substations/pull/396"

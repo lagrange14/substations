@@ -85,3 +85,59 @@
       components:
       - type: ShowThirstIcons
       - type: SolutionScanner
+
+- type: trait
+  category: Skills
+  id: DiagnosticHUD
+  name: trait-hud-diagnostic-name
+  description: trait-hud-diagnostic-desc
+  components:
+  - type: DiagnosticHudTrait
+    actions: [ActionToggleDiagnosticHud, ActionToggleHudDiagnosticAICamera]
+
+- type: entity
+  parent: BaseActionToggleHud
+  id: ActionToggleDiagnosticHud
+  name: Toggle Diagnostic Hud
+  description: Toggles your diagnostic HUD.
+  components:
+  - type: Action
+    sound:
+      path: /Audio/_L5/Effects/HUD/DiagnosticHudEnable.ogg
+      params: { volume: -8 }
+    soundOff:
+      path: /Audio/_L5/Effects/HUD/DiagnosticHudDisable.ogg
+      params: { volume: -8 }
+    icon:
+      sprite: Clothing/Eyes/Hud/diag.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:RelayedActionComponentChangeEvent
+      components:
+      - type: ShowHealthBars # FIXME - mispredicting in a weird way
+        damageContainers:
+        - Inorganic
+        - Silicon
+        - HumanoidSilicon
+
+- type: entity
+  parent: BaseActionToggleHud
+  id: ActionToggleHudDiagnosticAICamera # Basically dupe of ActionToggleHudDiagnosticCamera but with event
+  name: Toggle SSR Overlay
+  description: View an overlay of what the SSR is able to see around you.
+  components:
+  - type: Action
+    sound:
+      path: /Audio/_L5/Effects/HUD/AiHudEnable.ogg
+      params: { volume: -8 }
+    soundOff:
+      path: /Audio/_L5/Effects/HUD/AiHudDisable.ogg
+      params: { volume: -8 }
+    icon:
+      sprite: Mobs/Silicon/station_ai.rsi
+      state: ai_camera
+  - type: InstantAction
+    event: !type:RelayedActionComponentChangeEvent
+      components:
+      - type: StationAiOverlay
+        cosmetic: true
