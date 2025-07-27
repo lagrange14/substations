@@ -1,14 +1,3 @@
-- type: trait
-  category: Skills
-  id: SecurityHUD
-  name: trait-hud-security-name
-  description: trait-hud-security-desc
-  components:
-  - type: ToggleSecHud
-    toggleAction: ActionToggleSecHud
-    toggleOnSound: /Audio/_L5/Effects/HUD/SecHudEnable.ogg
-    toggleOffSound: /Audio/_L5/Effects/HUD/SecHudDisable.ogg
-
 - type: entity
   abstract: true
   parent: BaseAction
@@ -21,6 +10,15 @@
   - type: InstantAction
     event: !type:ToggleEvent
 
+- type: trait
+  category: Skills
+  id: SecurityHUD
+  name: trait-hud-security-name
+  description: trait-hud-security-desc
+  components:
+  - type: SecHudTrait
+    actions: [ActionToggleSecHud]
+
 - type: entity
   parent: BaseActionToggleHud
   id: ActionToggleSecHud
@@ -29,6 +27,14 @@
   components:
   - type: Action
     icon: _L5/Interface/Actions/sechud.png
+    sound: /Audio/_L5/Effects/HUD/SecHudEnable.ogg
+    soundOff: /Audio/_L5/Effects/HUD/SecHudDisable.ogg
+  - type: InstantAction
+    event: !type:RelayedActionComponentChangeEvent
+      components:
+      - type: ShowJobIcons
+      - type: ShowMindShieldIcons
+      - type: ShowCriminalRecordIcons
 
 - type: trait
   category: Skills
@@ -36,10 +42,8 @@
   name: trait-hud-medical-name
   description: trait-hud-medical-desc
   components:
-    - type: ToggleMedHud
-      toggleAction: ActionToggleMedHud
-      toggleOnSound: /Audio/_L5/Effects/HUD/MedHudEnable.ogg
-      toggleOffSound: /Audio/_L5/Effects/HUD/MedHudDisable.ogg
+  - type: MedHudTrait
+    actions: [ActionToggleMedHud]
 
 - type: entity
   parent: BaseActionToggleHud
@@ -49,6 +53,13 @@
   components:
   - type: Action
     icon: _L5/Interface/Actions/medhud.png
+    sound: /Audio/_L5/Effects/HUD/MedHudEnable.ogg
+    soundOff: /Audio/_L5/Effects/HUD/MedHudDisable.ogg
+  - type: InstantAction
+    event: !type:RelayedActionComponentChangeEvent
+      components:
+      - type: ShowHealthBars
+      - type: ShowHealthIcons
 
 - type: trait
   category: Skills
@@ -56,10 +67,8 @@
   name: trait-hud-beer-name
   description: trait-hud-beer-desc
   components:
-    - type: ToggleBeerHud
-      toggleAction: ActionToggleBeerHud
-      toggleOnSound: /Audio/_L5/Effects/HUD/BeerHudEnable.ogg
-      toggleOffSound: /Audio/_L5/Effects/HUD/BeerHudDisable.ogg
+  - type: BeerHudTrait
+    actions: [ActionToggleBeerHud]
 
 - type: entity
   parent: BaseActionToggleHud
@@ -69,3 +78,10 @@
   components:
   - type: Action
     icon: _L5/Interface/Actions/beerhud.png
+    sound: /Audio/_L5/Effects/HUD/BeerHudEnable.ogg
+    soundOff: /Audio/_L5/Effects/HUD/BeerHudDisable.ogg
+  - type: InstantAction
+    event: !type:RelayedActionComponentChangeEvent
+      components:
+      - type: ShowThirstIcons
+      - type: SolutionScanner

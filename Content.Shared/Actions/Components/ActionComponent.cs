@@ -194,6 +194,13 @@ public sealed partial class ActionComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public SoundSpecifier? Sound;
+
+    /// <summary>
+    /// L5: Sound to use when toggling the action off. Takes precedence over
+    /// <see cref="Sound" />.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public SoundSpecifier? SoundOff;
 }
 
 [DataRecord, Serializable, NetSerializable]

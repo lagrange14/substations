@@ -568,7 +568,12 @@ public abstract class SharedActionsSystem : EntitySystem
         if (ev?.Toggle == true)
             SetToggled((action, action), !action.Comp.Toggled);
 
-        _audio.PlayPredicted(action.Comp.Sound, performer, predicted ? performer : null);
+        // Begin L5 changes - action off sounds
+        var sound = action.Comp is { Toggled: false, SoundOff: not null }
+            ? action.Comp.SoundOff
+            : action.Comp.Sound;
+        _audio.PlayPredicted(sound, performer, predicted ? performer : null);
+        // End L5 changes
 
         // TODO: move to ActionCooldown ActionPerformedEvent?
         RemoveCooldown((action, action));
