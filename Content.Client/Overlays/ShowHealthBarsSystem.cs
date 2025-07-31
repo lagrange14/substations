@@ -35,15 +35,13 @@ public sealed class ShowHealthBarsSystem : EquipmentHudSystem<ShowHealthBarsComp
     {
         base.UpdateInternal(component);
 
-        foreach (var comp in component.Components)
-        {
-            foreach (var damageContainerId in comp.DamageContainers)
-            {
-                _overlay.DamageContainers.Add(damageContainerId);
-            }
+        // Begin L5 modifications - early merge of space-wizards/space-station-14#39288
+        _overlay.DamageContainers = component.Components
+            .SelectMany(x => x.DamageContainers.Select(proto => proto.Id))
+            .ToHashSet();
 
-            _overlay.StatusIcon = comp.HealthStatusIcon;
-        }
+        _overlay.StatusIcon = component.Components.FirstOrDefault()?.HealthStatusIcon;
+        // End L5 modifications
 
         if (!_overlayMan.HasOverlay<EntityHealthBarOverlay>())
         {

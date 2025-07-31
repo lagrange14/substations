@@ -114,7 +114,7 @@
   - type: InstantAction
     event: !type:RelayedActionComponentChangeEvent
       components:
-      - type: ShowHealthBars # FIXME - mispredicting in a weird way
+      - type: ShowHealthBars
         damageContainers:
         - Inorganic
         - Silicon

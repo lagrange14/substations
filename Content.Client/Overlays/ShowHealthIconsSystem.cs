@@ -32,10 +32,11 @@ public sealed class ShowHealthIconsSystem : EquipmentHudSystem<ShowHealthIconsCo
     {
         base.UpdateInternal(component);
 
-        foreach (var damageContainerId in component.Components.SelectMany(x => x.DamageContainers))
-        {
-            DamageContainers.Add(damageContainerId);
-        }
+        // Begin L5 modifications - early merge of space-wizards/space-station-14#39288
+        DamageContainers = component.Components
+            .SelectMany(x => x.DamageContainers.Select(proto => proto.Id))
+            .ToHashSet();
+        // End L5 modifications
     }
 
     protected override void DeactivateInternal()
