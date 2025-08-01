@@ -60,6 +60,7 @@
       components:
       - type: ShowHealthBars
       - type: ShowHealthIcons
+      - type: ShowTriageIcons
 
 - type: trait
   category: Skills
