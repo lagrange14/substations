@@ -3,7 +3,7 @@
   id: Cryptid
   name: UNCS Cryptid
   description: A very large, luxurious library, bringing knowledge to stations near and far.
-  price: 71000
+  price: 40000
   path: /Maps/_L5/Shuttles/cryptid.yml
   categories:
   - Civilian
@@ -13,7 +13,7 @@
   id: Borough
   name: UNCS Borough
   description: A little foodtruck for zooming around and serving snacks to hungry folk everywhere.
-  price: 40000 # L5 - price increase
+  price: 40000
   path: /Maps/_L5/Shuttles/borough.yml
   categories:
   - Civilian

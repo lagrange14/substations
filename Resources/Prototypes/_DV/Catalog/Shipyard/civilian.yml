@@ -36,7 +36,7 @@
   id: Eden
   name: USSPS Eden
   description: A modestly sized botanical garden with a chemistry lab for pushing the bounds of hydroponics.
-  price: 77500
+  price: 78000 # L5 - price adjustments
   path: /Maps/_DV/Shuttles/USSPS_Eden.yml
   categories:
   - Civilian
@@ -47,7 +47,7 @@
   id: Orit
   name: USSPS Orit
   description: A small medical vessel designed for the fast search and retrieval of patients in deep space.
-  price: 33500
+  price: 33750 # L5 - price adjustments
   path: /Maps/_DV/Shuttles/USSPS_Orit.yml
   categories:
   - Civilian
@@ -58,7 +58,7 @@
   id: Miriam
   name: USSPS Miriam
   description: A modestly sized medical vessel with all the equipment to operate a cryogenics laboratory.
-  price: 64000
+  price: 64250 # L5 - price adjustments
   path: /Maps/_DV/Shuttles/USSPS_Miriam.yml
   categories:
   - Civilian
@@ -69,7 +69,7 @@
   id: Prospector
   name: NT-7 Prospector
   description: A small mining vessel designed to assist salvage operations.
-  price: 25800
+  price: 26500 # L5 - price adjustments
   path: /Maps/_DV/Shuttles/prospector.yml
   categories:
   - Civilian
@@ -80,7 +80,7 @@
   id: Nomad
   name: NTCV Nomad
   description: A small shuttle for transporting up to 3 passengers with relative comfort.
-  price: 22000
+  price: 22500 # L5 - price adjustments
   path: /Maps/_DV/Shuttles/ntcv-nomad.yml
   categories:
   - Civilian
@@ -91,7 +91,7 @@
   id: Tote
   name: NTSV Tote
   description: A small shipping vessel, adapted from the Nomad line of shuttles with room for 2 passengers.
-  price: 24000
+  price: 24500 # L5 - price adjustments
   path: /Maps/_DV/Shuttles/ntsv-tote.yml
   categories:
   - Civilian
@@ -102,7 +102,7 @@
   id: Pulse
   name: NTV Pulse
   description: A moderately sized shuttle intended for all-purpose use. It can comfortably accomodate a crew of up to ten people.
-  price: 59000
+  price: 60000 # L5 - price adjustments
   path: /Maps/_DV/Shuttles/ntv-pulse.yml
   categories:
   - Civilian
