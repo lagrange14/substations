@@ -710,9 +710,9 @@ public sealed partial class ChatSystem : SharedChatSystem
             ("entity", ent),
             ("message", FormattedMessage.RemoveMarkupOrThrow(action)));
 
-        if (checkEmote &&
-            !TryEmoteChatInput(source, action))
-            return;
+        // L5 - allow emote fall-through
+        if (checkEmote)
+            TryEmoteChatInput(source, action);
 
         SendInVoiceRange(
             ChatChannel.Emotes,
