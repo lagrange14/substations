@@ -13,7 +13,7 @@ public sealed partial class SubFloorHideComponent
     [DataField, AutoNetworkedField]
     public bool Toggleable;
 
-    [ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public bool Enabled = true;
 
     [DataField]
