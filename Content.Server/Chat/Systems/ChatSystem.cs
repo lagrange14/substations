@@ -26,6 +26,7 @@ using Content.Shared.Players;
 using Content.Shared.Players.RateLimiting;
 using Content.Shared.Radio;
 using Content.Shared.Speech.Hushing; // DeltaV
+using Content.Shared.Tag;
 using Content.Shared.Whitelist;
 using Robust.Server.Player;
 using Robust.Shared.Audio;
@@ -66,6 +67,9 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
+    [Dependency] private readonly TagSystem _tags = default!; // L5
+
+    private static readonly ProtoId<TagPrototype> StationAiTag = "StationAi"; // L5
 
     //Nyano - Summary: pulls in the nyano chat system for psionics.
     [Dependency] private readonly NyanoChatSystem _nyanoChatSystem = default!;
@@ -887,10 +891,12 @@ public sealed partial class ChatSystem : SharedChatSystem
                 float transmitRange = VoiceRange;
                 if (currentSourcePressure < minPresure || currentRecipientPressure < minPresure)
                     transmitRange = inSpaceRange;
-                // end L5 - Pressure affects sound transmission
 
-                if (!data.Observer && distance > transmitRange)
+                // AI is handled in OnExpandICChatRecipients, so we don't
+                // disqualify it here. (Slightly hacky hardcode but eh)
+                if (!data.Observer && distance > transmitRange && !_tags.HasTag(playerEntity, StationAiTag))
                     continue;
+                // end L5 - Pressure affects sound transmission
             }
             var entRange = MessageRangeCheck(session, data, range);
             if (entRange == MessageRangeCheckResult.Disallowed)
