@@ -28,6 +28,7 @@
     - Synth # L5
     - Bot
     - Unimplantable
+    - SiliconMob # Den
   - type: MobState
     allowedStates:
       - Alive
