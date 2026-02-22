@@ -47,7 +47,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Feroxi ]
+          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Feroxi ]
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -317,20 +317,6 @@
         effectProto: StatusEffectForcedSleeping
         time: 3
         type: Update
-      # DeltaV - anesthesia changes
-      - !type:GenericStatusEffect
-        conditions:
-        - !type:ReagentCondition
-          reagent: NitrousOxide
-          min: 1
-        - !type:MetabolizerTypeCondition
-          type: [ Slime ]
-          inverted: true
-        key: Anesthesia
-        component: Anesthesia
-        time: 200
-        type: Add
-      # END DeltaV
       - !type:HealthChange
         minScale: 3.5
         conditions:

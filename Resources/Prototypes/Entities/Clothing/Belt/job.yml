@@ -187,7 +187,6 @@
       - Pill
       - HandLabeler
       - Defibrillator # DeltaV - Add PortaFib to EMT belt
-      - SurgeryTool # Shitmed
   - type: ItemMapper
     sprite: *BeltOverlay
     mapLayers:

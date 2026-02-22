@@ -10,6 +10,7 @@ using System.Linq;
 using System.Numerics;
 using Content.Client.Stealth;
 using Content.Shared._Goobstation.Overlays;
+using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Stealth.Components;
 using Robust.Client.GameObjects;

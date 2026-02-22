@@ -3,6 +3,7 @@ using Content.Shared.Armor;
 using Content.Shared.Body.Events;
 using Content.Shared.Clothing.Components;
 using Content.Shared.DoAfter;
+using Content.Shared.Gibbing;
 using Content.Shared.Hands;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
@@ -576,7 +577,7 @@ public abstract partial class InventorySystem
             // Give me liberty, give me death
             // TODO: Give me an API that can tell the difference between a virtual item and an electropak being removed.
             if (!HasComp<AttachedClothingComponent>(item))
-                args.GibbedParts.Add(item);
+                args.Giblets.Add(item);
         }
     }
 }

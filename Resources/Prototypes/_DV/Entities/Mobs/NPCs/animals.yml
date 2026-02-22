@@ -424,7 +424,6 @@
   - type: CanEscapeInventory
   - type: Body
     prototype: Mothroach
-  - type: SurgeryTarget # Shitmed
   - type: TypingIndicator
     proto: moth
   - type: Destructible
@@ -444,8 +443,6 @@
     interfaces:
       enum.StrippingUiKey.Key:
         type: StrippableBoundUserInterface
-      enum.SurgeryUIKey.Key: # Shitmed
-        type: SurgeryBui
   - type: InventorySlots
   - type: Inventory
     speciesId: hamster

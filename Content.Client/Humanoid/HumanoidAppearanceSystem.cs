@@ -88,7 +88,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         foreach (var (key, info) in component.CustomBaseLayers)
         {
             oldLayers.Remove(key);
-            // Shitmed Change: For whatever reason these weren't actually ignoring the skin color as advertised.
+            // L5 (via Shitmed) - For whatever reason these weren't actually ignoring the skin color as advertised.
             SetLayerData(entity, key, info.Id, sexMorph: false, color: info.Color, overrideSkin: true);
         }
 
@@ -107,7 +107,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         string? protoId,
         bool sexMorph = false,
         Color? color = null,
-        bool overrideSkin = false) // Shitmed Change
+        bool overrideSkin = false) // L5
     {
         var component = entity.Comp1;
         var sprite = entity.Comp2;
@@ -128,7 +128,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         var proto = _prototypeManager.Index<HumanoidSpeciesSpriteLayer>(protoId);
         component.BaseLayers[key] = proto;
 
-        if (proto.MatchSkin && !overrideSkin) // Shitmed Change
+        if (proto.MatchSkin && !overrideSkin) // L5
             layer.Color = component.SkinColor.WithAlpha(proto.LayerAlpha);
 
         if (proto.BaseSprite != null)
@@ -301,25 +301,26 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
     private void RemoveMarking(Marking marking, Entity<SpriteComponent> spriteEnt)
     {
         if (!_markingManager.TryGetMarking(marking, out var prototype))
-        {
             return;
-        }
 
         foreach (var sprite in prototype.Sprites)
         {
             if (sprite is not SpriteSpecifier.Rsi rsi)
-            {
                 continue;
-            }
 
             var layerId = $"{marking.MarkingId}-{rsi.RsiState}";
             if (!_sprite.LayerMapTryGet(spriteEnt.AsNullable(), layerId, out var index, false))
-            {
                 continue;
-            }
 
             _sprite.LayerMapRemove(spriteEnt.AsNullable(), layerId);
             _sprite.RemoveLayer(spriteEnt.AsNullable(), index);
+
+            // If this marking is one that can be displaced, we need to remove the displacement as well; otherwise
+            // altering a marking at runtime can lead to the renderer falling over.
+            // The Vulps must be shaved.
+            // (https://github.com/space-wizards/space-station-14/issues/40135).
+            if (prototype.CanBeDisplaced)
+                _displacement.EnsureDisplacementIsNotOnSprite(spriteEnt, layerId);
         }
     }
 
@@ -403,9 +404,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             var markingSprite = markingPrototype.Sprites[j];
 
             if (markingSprite is not SpriteSpecifier.Rsi rsi)
-            {
-                continue;
-            }
+                return;
 
             // FLOOF CHANGE START
             var layerSlot = markingPrototype.BodyPart;
@@ -461,9 +460,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
             _sprite.LayerSetVisible((entity.Owner, sprite), layerId, visible);
 
             if (!visible || setting == null) // this is kinda implied
-            {
                 continue;
-            }
 
             // Okay so if the marking prototype is modified but we load old marking data this may no longer be valid
             // and we need to check the index is correct.

@@ -33,9 +33,12 @@ public sealed class MedicalRecordsSystem : SharedMedicalRecordsSystem
         _records.Synchronize(key);
     }
 
-    public MedicalRecord? GetMedicalRecords(EntityUid patient)
+    public MedicalRecord? GetMedicalRecords(EntityUid? patient)
     {
-        _access.FindStationRecordKeys(patient, out var keys);
+        if  (patient == null)
+            return null;
+
+        _access.FindStationRecordKeys(patient.Value, out var keys);
         foreach (var key in keys)
         {
             if (_records.TryGetRecord<MedicalRecord>(key, out var record))

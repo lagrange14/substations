@@ -15,13 +15,6 @@
   - Medical
   - Chemistry
   - Maintenance
-  # Shitmed Change, DeltaV - role modifiers bad
-  # special:
-  # - !type:AddComponentSpecial
-  #   components:
-  #   - type: SurgerySpeedModifier
-  #    speedModifier: 1.75
-  # TODO: L5 - make this a trait
   special:
   - !type:AddComponentSpecial
     components:

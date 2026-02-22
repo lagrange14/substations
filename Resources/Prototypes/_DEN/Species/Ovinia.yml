@@ -11,8 +11,9 @@
   maleFirstNames: NamesFirstMale
   femaleFirstNames: NamesFirstFemale
   lastNames: NamesLast
-  minHeight: 0.8
-  maxHeight: 1.05
+# L5 — no limits on species size
+#  minHeight: 0.8
+#  maxHeight: 1.05
 
 - type: speciesBaseSprites
   id: MobOviniaSprites
@@ -37,6 +38,7 @@
     RLeg: MobOviniaRLeg
     LFoot: MobOviniaLFoot
     RFoot: MobOviniaRFoot
+
 - type: markingPoints
   id: MobOviniaMarkingLimits
   points:

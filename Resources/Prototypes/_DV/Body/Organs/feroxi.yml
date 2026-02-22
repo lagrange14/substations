@@ -26,7 +26,7 @@
           Quantity: 5
 
 - type: entity
-  parent: BaseHumanOrgan
+  parent: OrganHuman # Nubody
   id: OrganFeroxiLungs
   name: feroxian lungs and gills
   description: "A pair of amphibious lungs along with gills, filtering oxygen out of the air continuously."

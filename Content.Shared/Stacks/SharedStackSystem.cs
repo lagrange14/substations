@@ -178,18 +178,7 @@ public abstract partial class SharedStackSystem : EntitySystem
 
     private void OnEaten(Entity<StackComponent> eaten, ref IngestedEvent args)
     {
-        if (!TryUse(eaten.AsNullable(), 1))
-            return;
-
-        // We haven't eaten the whole stack yet or are unable to eat it completely.
-        if (eaten.Comp.Count > 0)
-        {
-            args.Refresh = true;
-            return;
-        }
-
-        // Here to tell the food system to do destroy stuff.
-        args.Destroy = true;
+        ReduceCount(eaten.AsNullable(), 1);
     }
 
     private void OnStackAlternativeInteract(Entity<StackComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)

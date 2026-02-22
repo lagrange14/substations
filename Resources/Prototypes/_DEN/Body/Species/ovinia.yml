@@ -1,0 +1,77 @@
+- type: entity
+  parent: BaseSpeciesAppearance
+  name: ovinia appearance
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      body_organs: !type:AllSelector
+        children:
+        - id: OrganOviniaTorso
+        - id: OrganOviniaHead
+        - id: OrganOviniaArmLeft
+        - id: OrganOviniaArmRight
+        - id: OrganOviniaHandRight
+        - id: OrganOviniaHandLeft
+        - id: OrganOviniaLegLeft
+        - id: OrganOviniaLegRight
+        - id: OrganOviniaFootLeft
+        - id: OrganOviniaFootRight
+        - id: OrganOviniaBrain
+        - id: OrganOviniaEyes
+        - id: OrganOviniaTongue
+        - id: OrganOviniaAppendix
+        - id: OrganOviniaEars
+        - id: OrganOviniaLungs
+        - id: OrganOviniaHeart
+        - id: OrganOviniaStomach
+        - id: OrganOviniaLiver
+        - id: OrganOviniaKidneys
+  - type: HumanoidAppearance
+    species: Ovinia
+    hideLayersOnEquip:
+    - Snout
+    - SnoutCover
+    - HeadTop
+    - HeadSide
+    - FacialHair
+    - Hair
+    markingsDisplacement:
+      Hair:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: hair
+  - type: Inventory
+    speciesId: ovinia
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: jumpsuit
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: outerclothing_hardsuit
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: jumpsuit-female
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: outerclothing_hardsuit

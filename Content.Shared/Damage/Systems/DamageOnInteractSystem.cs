@@ -13,9 +13,8 @@ using Content.Shared.Random;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Effects;
 using Content.Shared.Stunnable;
-using Content.Shared._Shitmed.Targeting; // Shitmed Change
 using Content.Shared.Hands.Components;
-using Content.Shared.Hands.EntitySystems; // Shitmed Change
+using Content.Shared.Hands.EntitySystems; // L5
 
 namespace Content.Shared.Damage.Systems;
 
@@ -24,7 +23,6 @@ public sealed class DamageOnInteractSystem : EntitySystem
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
     [Dependency] private readonly DamageableSystem _damageableSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
-    [Dependency] private readonly SharedHandsSystem _hands = default!; // L5 - hands system refactor
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
     [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
@@ -78,26 +76,6 @@ public sealed class DamageOnInteractSystem : EntitySystem
                 totalDamage = DamageSpecifier.ApplyModifierSet(totalDamage, protectiveEntity.Comp.DamageProtection);
             }
         }
-
-        // Shitmed Change Start
-        TargetBodyPart? targetPart = null;
-        var hands = CompOrNull<HandsComponent>(args.User);
-        // Begin L5 changes - hands system refactor
-        if (_hands.TryGetHand((args.User, hands),
-                _hands.GetActiveHand((args.User, hands)),
-                out var hand))
-        {
-            targetPart = hand.Value.Location switch
-        // End L5 changes
-            {
-                HandLocation.Left => TargetBodyPart.LeftHand,
-                HandLocation.Right => TargetBodyPart.RightHand,
-                _ => null
-            };
-        }
-
-        totalDamage = _damageableSystem.ChangeDamage(args.User, totalDamage, origin: args.Target, targetPart: targetPart);
-        // Shitmed Change End
 
         if (totalDamage.AnyPositive())
         {

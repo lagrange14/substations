@@ -229,8 +229,6 @@
           type: HumanoidMarkingModifierBoundUserInterface
         enum.StrippingUiKey.Key:
           type: StrippableBoundUserInterface
-        enum.SurgeryUIKey.Key: # Shitmed
-          type: SurgeryBui
     - type: Emoting
     - type: Grammar
       attributes:
@@ -323,7 +321,6 @@
     - type: FootPrints
     - type: Carriable
     - type: Targeting
-    - type: SurgeryTarget
     - type: Fiber # DeltaV - IPCs leave fibers instead of prints
       fiberMaterial: fibers-steel
     - type: Anesthesia # DeltaV - IPCs can be operated on without anesthesia

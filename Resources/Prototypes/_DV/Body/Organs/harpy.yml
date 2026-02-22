@@ -1,6 +1,6 @@
 - type: entity
   id: OrganHarpyLungs
-  parent: BaseHumanOrgan
+  parent: OrganHuman # Nubody
   name: lungs
   description: "An advanced pair of avian lungs. Filters oxygen by way of moving air constantly through air sacs."
   components:

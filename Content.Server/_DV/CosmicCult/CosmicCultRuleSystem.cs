@@ -61,6 +61,8 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using System.Collections.Immutable;
 using System.Linq;
+using Content.Shared.Body;
+using Content.Shared.Gibbing;
 
 namespace Content.Server._DV.CosmicCult;
 
@@ -77,6 +79,7 @@ public sealed class CosmicCultRuleSystem : GameRuleSystem<CosmicCultRuleComponen
     [Dependency] private readonly EmergencyShuttleSystem _emergency = default!;
     [Dependency] private readonly EuiManager _euiMan = default!;
     [Dependency] private readonly GhostSystem _ghost = default!;
+    [Dependency] private readonly GibbingSystem _gib = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly IConfigurationManager _config = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -91,7 +94,6 @@ public sealed class CosmicCultRuleSystem : GameRuleSystem<CosmicCultRuleComponen
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly RoundEndSystem _roundEnd = default!;
     [Dependency] private readonly ServerGlobalSoundSystem _sound = default!;
-    [Dependency] private readonly SharedBodySystem _body = default!;
     [Dependency] private readonly SharedEyeSystem _eye = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
@@ -415,7 +417,7 @@ public sealed class CosmicCultRuleSystem : GameRuleSystem<CosmicCultRuleComponen
         Spawn(cultRule.WarpVFX, spawnTgt);
         Spawn(cultRule.WarpVFX, Transform(player).Coordinates);
         _audio.PlayPvs(cultRule.WarpSFX, spawnTgt, AudioParams.Default.WithVolume(3f));
-        _body.GibBody(player); // you don't need that body anymore
+        _gib.Gib(player); // you don't need that body anymore
     }
 
     private static void SetWinType(Entity<CosmicCultRuleComponent> ent, WinType type)

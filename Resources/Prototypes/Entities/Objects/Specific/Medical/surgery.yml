@@ -13,8 +13,6 @@
   - type: Tag
     tags:
     - SurgeryTool
-  - type: SurgeryTool
-  - type: SurgeryDirtiness # DeltaV - make sure surgery tools start with surgery dirtiness component
 
 # Cautery
 
@@ -36,14 +34,6 @@
         Heat: 5
     soundHit:
       path: /Audio/Effects/lightburn.ogg
-  # Shitmed Change
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/cautery1.ogg
-    endSound:
-      path: /Audio/_Shitmed/Medical/Surgery/cautery2.ogg
-  - type: Cautery
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 # Drill
 
@@ -69,12 +59,6 @@
       path: /Audio/Items/drill_hit.ogg
   - type: StaticPrice
     price: 40
-  # Shitmed Change
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/saw.ogg
-  - type: Drill
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 # Scalpel
 
@@ -108,14 +92,6 @@
         Slash: 8
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
-  # Shitmed Change
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/scalpel1.ogg
-    endSound:
-      path: /Audio/_Shitmed/Medical/Surgery/scalpel2.ogg
-  - type: Scalpel
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 - type: entity
   name: shiv
@@ -149,13 +125,6 @@
         Slash: 8
     soundHit:
       path: /Audio/Weapons/bladeslice.ogg
-  # Shitmed Change
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/scalpel1.ogg
-    endSound:
-      path: /Audio/_Shitmed/Medical/Surgery/scalpel2.ogg
-  - type: Scalpel
   # END DeltaV
   - type: Fixtures
     fixtures:
@@ -186,9 +155,6 @@
     damage:
       types:
         Slash: 12
-  - type: Scalpel # Shitmed
-    speed: 1.25
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 - type: entity
   name: laser scalpel
@@ -203,10 +169,6 @@
     sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
     storedRotation: 90
     heldPrefix: laser
-  - type: Scalpel # Shitmed
-    speed: 1.5
-  # TODO: prevent bleeding from incisions
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 # Retractor
 
@@ -222,14 +184,6 @@
   - type: Item
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/retractor.rsi
     storedRotation: 90
-  # Shitmed Change
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/retractor1.ogg
-    endSound:
-      path: /Audio/_Shitmed/Medical/Surgery/retractor2.ogg
-  - type: Retractor
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 # Hemostat
 
@@ -246,16 +200,6 @@
     heldPrefix: hemostat
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/hemostat.rsi # Shitmed Change
     storedRotation: 90
-  # Shitmed Change
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/retractor1.ogg
-    endSound:
-      path: /Audio/_Shitmed/Medical/Surgery/hemostat1.ogg
-  - type: Hemostat
-  - type: Tweezers # Shitmed
-  - type: Tending # Shitmed
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 # Bone setter - Shitmed Change
 - type: entity
@@ -269,8 +213,6 @@
     state: bonesetter
   - type: Item
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/bonesetter.rsi
-  - type: BoneSetter
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 # Bone Gel - Shitmed Change
 - type: entity
@@ -282,8 +224,6 @@
   - type: Sprite
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/bone-gel.rsi
     state: bone-gel
-  - type: BoneGel
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 # Saws
 - type: entity
@@ -306,13 +246,6 @@
   - type: Tool
     qualities:
       - Sawing
-  # Shitmed Change
-  - type: BoneSaw
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/saw.ogg
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
-  # No melee for regular saw because have you ever seen someone use a band saw as a weapon? It's dumb.
 
 - type: entity
   name: choppa
@@ -333,8 +266,6 @@
       path: /Audio/Weapons/bladeslice.ogg
   - type: Tool
     speedModifier: 0.5
-  - type: BoneSaw # Shitmed
-    speed: 0.5
 
 - type: entity
   name: circular saw
@@ -356,9 +287,6 @@
       path: /Audio/Items/drill_hit.ogg
   - type: Tool
     speedModifier: 1.5
-  - type: BoneSaw # Shitmed
-    speed: 1.5
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 - type: entity
   name: advanced circular saw
@@ -378,9 +306,6 @@
     attackRate: 1.5
   - type: Tool
     speedModifier: 2.0
-  - type: BoneSaw # Shitmed
-    speed: 2
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 # Shitmed Tools
 
@@ -400,21 +325,13 @@
       - state: inhand-left-on
       right:
       - state: inhand-right-on
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/cautery1.ogg
-    endSound:
-      path: /Audio/_Shitmed/Medical/Surgery/cautery2.ogg
   - type: MeleeWeapon
     damage:
       types:
         Piercing: 10
         Heat: 1
-  - type: Cautery
-    speed: 1.5
   - type: Drill
     speed: 1.5
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 - type: entity
   name: energy scalpel
@@ -432,21 +349,11 @@
       - state: inhand-left-on
       right:
       - state: inhand-right-on
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/scalpel1.ogg
-    endSound:
-      path: /Audio/_Shitmed/Medical/Surgery/scalpel2.ogg
   - type: MeleeWeapon
     damage:
       types:
         Slash: 10
         Heat: 1
-  - type: Scalpel
-    speed: 1.5
-  - type: BoneSaw
-    speed: 1.5
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 - type: entity
   name: mechanical pinches
@@ -464,25 +371,11 @@
       - state: inhand-left-on
       right:
       - state: inhand-right-on
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/retractor1.ogg
-    endSound:
-      path: /Audio/_Shitmed/Medical/Surgery/retractor2.ogg
   - type: MeleeWeapon
     damage:
       types:
         Slash: 6.5
         Heat: 1
-  - type: Hemostat
-    speed: 1.5
-  - type: Retractor
-    speed: 1.5
-  - type: Tweezers
-    speed: 1.5
-  - type: Tending
-    speed: 1.5
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 - type: entity
   name: medical multitool
@@ -494,30 +387,6 @@
     state: omnimed
   - type: Item
     sprite: _Shitmed/Objects/Specific/Medical/Surgery/omnimed.rsi
-  - type: SurgeryTool
-    startSound:
-      path: /Audio/_Shitmed/Medical/Surgery/saw.ogg
-  - type: Hemostat
-    speed: 2
-  - type: Scalpel
-    speed: 2
-  - type: Drill
-    speed: 2
-  - type: BoneSetter
-    speed: 2
-  - type: Retractor
-    speed: 2
-  - type: Cautery
-    speed: 2
-  - type: BoneGel
-    speed: 2
-  - type: BoneSaw
-    speed: 2
-  - type: Tweezers
-    speed: 2
-  - type: Tending
-    speed: 2
-  - type: MedicalSurgeryTool # DeltaV Shitmed - Used for borg hand whitelists for surgery module
 
 - type: entity
   parent: [ OmnimedTool, BaseSyndicateContraband ]

@@ -19,6 +19,7 @@ using Content.Shared.Popups;
 using Content.Shared.Speech.Muting;
 using Content.Shared.StatusEffect;
 using Content.Shared._L5.Traits.Synthetic;
+using Content.Shared.Body;
 using Content.Shared.Body.Components;
 using Content.Shared.Chat;
 using Content.Shared.Emp;
@@ -143,8 +144,9 @@ public sealed class SynthSystem : SharedSynthSystem
         var species = humanoidAppearanceComponent.Species;
 
         // dionae turn into nymphs when you gib them, so don't mess with their brains
-        if (species != SpeciesDionaId)
-            ReplaceBrain(uid);
+        // Skipped with Nubody
+        // if (species != SpeciesDionaId)
+        //     ReplaceBrain(uid);
 
         if (!TryComp<TransformComponent>(uid, out var transform)
             || !_mobStateQuery.TryComp(uid, out var mobStateComponent)
@@ -166,6 +168,7 @@ public sealed class SynthSystem : SharedSynthSystem
         _appearance.SetData(uid, SynthVisorVisuals.Alive, mobStateComponent.CurrentState != MobState.Dead, appearance);
     }
 
+    /* Removal of organs with nubody
     /// <summary>
     /// Replaces the brain of a given entity with a synth one.
     /// </summary>
@@ -225,6 +228,7 @@ public sealed class SynthSystem : SharedSynthSystem
             _sawmill.Error($"Couldn't insert new brain into {uid}! They are now brainless.");
         }
     }
+    */
 
     /// <summary>
     ///  Handles the ability for synthetics to use borg emotes.
